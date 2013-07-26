@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+	android:id="@+id/widget41"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/bg"
+	android:padding="10dp"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+    <!-- <ListView
+		android:id="@+id/listHistory"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:background="#000000"
+		android:divider="@android:color/transparent"
+	  	android:dividerHeight="10.0sp" />-->
+	  	
+    <com.tjerkw.slideexpandable.library.ActionSlideExpandableListView
+		android:id="@+id/list"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:layout_margin="5dp"
+		android:divider="@android:color/transparent"
+	  	android:dividerHeight="10.0sp"/>
+    
+</TableLayout>

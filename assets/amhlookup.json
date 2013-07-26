@@ -1,0 +1,2235 @@
+{"LookupTable":[
+	{
+		"Age": "23.00",
+		"Log Adusted Pred AMH": "0.775196102",
+		"95% Pred Lim1": "0.282230233",
+		"95% Pred Lim2": "1.268161972"
+	},
+	{
+		"Age": "23.08",
+		"Log Adusted Pred AMH": "0.775474187",
+		"95% Pred Lim1": "0.282519848",
+		"95% Pred Lim2": "1.268428526"
+	},
+	{
+		"Age": "23.17",
+		"Log Adusted Pred AMH": "0.775750551",
+		"95% Pred Lim1": "0.282808362",
+		"95% Pred Lim2": "1.26869274"
+	},
+	{
+		"Age": "23.25",
+		"Log Adusted Pred AMH": "0.776024085",
+		"95% Pred Lim1": "0.283094583",
+		"95% Pred Lim2": "1.268953586"
+	},
+	{
+		"Age": "23.33",
+		"Log Adusted Pred AMH": "0.776293559",
+		"95% Pred Lim1": "0.283377197",
+		"95% Pred Lim2": "1.26920992"
+	},
+	{
+		"Age": "23.42",
+		"Log Adusted Pred AMH": "0.776557624",
+		"95% Pred Lim1": "0.283654769",
+		"95% Pred Lim2": "1.269460479"
+	},
+	{
+		"Age": "23.50",
+		"Log Adusted Pred AMH": "0.776814821",
+		"95% Pred Lim1": "0.283925749",
+		"95% Pred Lim2": "1.269703892"
+	},
+	{
+		"Age": "23.58",
+		"Log Adusted Pred AMH": "0.777063583",
+		"95% Pred Lim1": "0.284188485",
+		"95% Pred Lim2": "1.269938681"
+	},
+	{
+		"Age": "23.67",
+		"Log Adusted Pred AMH": "0.777302246",
+		"95% Pred Lim1": "0.284441224",
+		"95% Pred Lim2": "1.270163268"
+	},
+	{
+		"Age": "23.75",
+		"Log Adusted Pred AMH": "0.777529052",
+		"95% Pred Lim1": "0.284682125",
+		"95% Pred Lim2": "1.270375979"
+	},
+	{
+		"Age": "23.83",
+		"Log Adusted Pred AMH": "0.777742158",
+		"95% Pred Lim1": "0.284909264",
+		"95% Pred Lim2": "1.270575052"
+	},
+	{
+		"Age": "23.92",
+		"Log Adusted Pred AMH": "0.777939641",
+		"95% Pred Lim1": "0.285120642",
+		"95% Pred Lim2": "1.270758641"
+	},
+	{
+		"Age": "24.00",
+		"Log Adusted Pred AMH": "0.77811951",
+		"95% Pred Lim1": "0.285314195",
+		"95% Pred Lim2": "1.270924826"
+	},
+	{
+		"Age": "24.08",
+		"Log Adusted Pred AMH": "0.778279709",
+		"95% Pred Lim1": "0.285487803",
+		"95% Pred Lim2": "1.271071616"
+	},
+	{
+		"Age": "24.17",
+		"Log Adusted Pred AMH": "0.778418129",
+		"95% Pred Lim1": "0.285639299",
+		"95% Pred Lim2": "1.271196959"
+	},
+	{
+		"Age": "24.25",
+		"Log Adusted Pred AMH": "0.778532613",
+		"95% Pred Lim1": "0.285766476",
+		"95% Pred Lim2": "1.27129875"
+	},
+	{
+		"Age": "24.33",
+		"Log Adusted Pred AMH": "0.778620966",
+		"95% Pred Lim1": "0.285867097",
+		"95% Pred Lim2": "1.271374835"
+	},
+	{
+		"Age": "24.42",
+		"Log Adusted Pred AMH": "0.778680965",
+		"95% Pred Lim1": "0.285938905",
+		"95% Pred Lim2": "1.271423025"
+	},
+	{
+		"Age": "24.50",
+		"Log Adusted Pred AMH": "0.778710365",
+		"95% Pred Lim1": "0.285979631",
+		"95% Pred Lim2": "1.271441099"
+	},
+	{
+		"Age": "24.58",
+		"Log Adusted Pred AMH": "0.778706909",
+		"95% Pred Lim1": "0.285987001",
+		"95% Pred Lim2": "1.271426816"
+	},
+	{
+		"Age": "24.67",
+		"Log Adusted Pred AMH": "0.778668336",
+		"95% Pred Lim1": "0.28595875",
+		"95% Pred Lim2": "1.271377922"
+	},
+	{
+		"Age": "24.75",
+		"Log Adusted Pred AMH": "0.778592391",
+		"95% Pred Lim1": "0.285892624",
+		"95% Pred Lim2": "1.271292158"
+	},
+	{
+		"Age": "24.83",
+		"Log Adusted Pred AMH": "0.778476835",
+		"95% Pred Lim1": "0.285786395",
+		"95% Pred Lim2": "1.271167275"
+	},
+	{
+		"Age": "24.92",
+		"Log Adusted Pred AMH": "0.778319448",
+		"95% Pred Lim1": "0.285637864",
+		"95% Pred Lim2": "1.271001032"
+	},
+	{
+		"Age": "25.00",
+		"Log Adusted Pred AMH": "0.778118045",
+		"95% Pred Lim1": "0.285444873",
+		"95% Pred Lim2": "1.270791218"
+	},
+	{
+		"Age": "25.08",
+		"Log Adusted Pred AMH": "0.777870479",
+		"95% Pred Lim1": "0.28520531",
+		"95% Pred Lim2": "1.270535649"
+	},
+	{
+		"Age": "25.17",
+		"Log Adusted Pred AMH": "0.777574653",
+		"95% Pred Lim1": "0.284917118",
+		"95% Pred Lim2": "1.270232188"
+	},
+	{
+		"Age": "25.25",
+		"Log Adusted Pred AMH": "0.777228524",
+		"95% Pred Lim1": "0.284578304",
+		"95% Pred Lim2": "1.269878745"
+	},
+	{
+		"Age": "25.33",
+		"Log Adusted Pred AMH": "0.776830117",
+		"95% Pred Lim1": "0.284186943",
+		"95% Pred Lim2": "1.269473291"
+	},
+	{
+		"Age": "25.42",
+		"Log Adusted Pred AMH": "0.776377527",
+		"95% Pred Lim1": "0.283741187",
+		"95% Pred Lim2": "1.269013866"
+	},
+	{
+		"Age": "25.50",
+		"Log Adusted Pred AMH": "0.775868929",
+		"95% Pred Lim1": "0.283239272",
+		"95% Pred Lim2": "1.268498587"
+	},
+	{
+		"Age": "25.58",
+		"Log Adusted Pred AMH": "0.775302589",
+		"95% Pred Lim1": "0.282679521",
+		"95% Pred Lim2": "1.267925656"
+	},
+	{
+		"Age": "25.67",
+		"Log Adusted Pred AMH": "0.774676863",
+		"95% Pred Lim1": "0.282060356",
+		"95% Pred Lim2": "1.267293369"
+	},
+	{
+		"Age": "25.75",
+		"Log Adusted Pred AMH": "0.773990209",
+		"95% Pred Lim1": "0.281380297",
+		"95% Pred Lim2": "1.266600122"
+	},
+	{
+		"Age": "25.83",
+		"Log Adusted Pred AMH": "0.773241196",
+		"95% Pred Lim1": "0.280637971",
+		"95% Pred Lim2": "1.265844421"
+	},
+	{
+		"Age": "25.92",
+		"Log Adusted Pred AMH": "0.772428502",
+		"95% Pred Lim1": "0.279832117",
+		"95% Pred Lim2": "1.265024888"
+	},
+	{
+		"Age": "26.00",
+		"Log Adusted Pred AMH": "0.771550927",
+		"95% Pred Lim1": "0.27896159",
+		"95% Pred Lim2": "1.264140265"
+	},
+	{
+		"Age": "26.08",
+		"Log Adusted Pred AMH": "0.770607395",
+		"95% Pred Lim1": "0.278025364",
+		"95% Pred Lim2": "1.263189426"
+	},
+	{
+		"Age": "26.17",
+		"Log Adusted Pred AMH": "0.769596958",
+		"95% Pred Lim1": "0.277022541",
+		"95% Pred Lim2": "1.262171375"
+	},
+	{
+		"Age": "26.25",
+		"Log Adusted Pred AMH": "0.768518803",
+		"95% Pred Lim1": "0.275952347",
+		"95% Pred Lim2": "1.261085259"
+	},
+	{
+		"Age": "26.33",
+		"Log Adusted Pred AMH": "0.767372255",
+		"95% Pred Lim1": "0.274814142",
+		"95% Pred Lim2": "1.259930367"
+	},
+	{
+		"Age": "26.42",
+		"Log Adusted Pred AMH": "0.766156778",
+		"95% Pred Lim1": "0.273607419",
+		"95% Pred Lim2": "1.258706138"
+	},
+	{
+		"Age": "26.50",
+		"Log Adusted Pred AMH": "0.764871984",
+		"95% Pred Lim1": "0.27233181",
+		"95% Pred Lim2": "1.257412159"
+	},
+	{
+		"Age": "26.58",
+		"Log Adusted Pred AMH": "0.76351763",
+		"95% Pred Lim1": "0.270987085",
+		"95% Pred Lim2": "1.256048174"
+	},
+	{
+		"Age": "26.67",
+		"Log Adusted Pred AMH": "0.76209362",
+		"95% Pred Lim1": "0.269573155",
+		"95% Pred Lim2": "1.254614085"
+	},
+	{
+		"Age": "26.75",
+		"Log Adusted Pred AMH": "0.760600013",
+		"95% Pred Lim1": "0.268090074",
+		"95% Pred Lim2": "1.253109951"
+	},
+	{
+		"Age": "26.83",
+		"Log Adusted Pred AMH": "0.759037016",
+		"95% Pred Lim1": "0.266538042",
+		"95% Pred Lim2": "1.25153599"
+	},
+	{
+		"Age": "26.92",
+		"Log Adusted Pred AMH": "0.757404992",
+		"95% Pred Lim1": "0.264917402",
+		"95% Pred Lim2": "1.249892581"
+	},
+	{
+		"Age": "27.00",
+		"Log Adusted Pred AMH": "0.755704454",
+		"95% Pred Lim1": "0.263228643",
+		"95% Pred Lim2": "1.248180264"
+	},
+	{
+		"Age": "27.08",
+		"Log Adusted Pred AMH": "0.753936069",
+		"95% Pred Lim1": "0.2614724",
+		"95% Pred Lim2": "1.246399738"
+	},
+	{
+		"Age": "27.17",
+		"Log Adusted Pred AMH": "0.752100656",
+		"95% Pred Lim1": "0.259649453",
+		"95% Pred Lim2": "1.244551859"
+	},
+	{
+		"Age": "27.25",
+		"Log Adusted Pred AMH": "0.750199183",
+		"95% Pred Lim1": "0.257760726",
+		"95% Pred Lim2": "1.24263764"
+	},
+	{
+		"Age": "27.33",
+		"Log Adusted Pred AMH": "0.748232768",
+		"95% Pred Lim1": "0.255807288",
+		"95% Pred Lim2": "1.240658248"
+	},
+	{
+		"Age": "27.42",
+		"Log Adusted Pred AMH": "0.746202674",
+		"95% Pred Lim1": "0.253790348",
+		"95% Pred Lim2": "1.238614999"
+	},
+	{
+		"Age": "27.50",
+		"Log Adusted Pred AMH": "0.744110309",
+		"95% Pred Lim1": "0.251711258",
+		"95% Pred Lim2": "1.236509359"
+	},
+	{
+		"Age": "27.58",
+		"Log Adusted Pred AMH": "0.74195722",
+		"95% Pred Lim1": "0.249571506",
+		"95% Pred Lim2": "1.234342934"
+	},
+	{
+		"Age": "27.67",
+		"Log Adusted Pred AMH": "0.739745094",
+		"95% Pred Lim1": "0.247372716",
+		"95% Pred Lim2": "1.232117472"
+	},
+	{
+		"Age": "27.75",
+		"Log Adusted Pred AMH": "0.737475748",
+		"95% Pred Lim1": "0.245116645",
+		"95% Pred Lim2": "1.22983485"
+	},
+	{
+		"Age": "27.83",
+		"Log Adusted Pred AMH": "0.735151127",
+		"95% Pred Lim1": "0.242805177",
+		"95% Pred Lim2": "1.227497078"
+	},
+	{
+		"Age": "27.92",
+		"Log Adusted Pred AMH": "0.732773303",
+		"95% Pred Lim1": "0.240440321",
+		"95% Pred Lim2": "1.225106284"
+	},
+	{
+		"Age": "28.00",
+		"Log Adusted Pred AMH": "0.730344463",
+		"95% Pred Lim1": "0.23802421",
+		"95% Pred Lim2": "1.222664716"
+	},
+	{
+		"Age": "28.08",
+		"Log Adusted Pred AMH": "0.727866908",
+		"95% Pred Lim1": "0.235559089",
+		"95% Pred Lim2": "1.220174727"
+	},
+	{
+		"Age": "28.17",
+		"Log Adusted Pred AMH": "0.725343046",
+		"95% Pred Lim1": "0.233047314",
+		"95% Pred Lim2": "1.217638778"
+	},
+	{
+		"Age": "28.25",
+		"Log Adusted Pred AMH": "0.722775385",
+		"95% Pred Lim1": "0.230491349",
+		"95% Pred Lim2": "1.215059421"
+	},
+	{
+		"Age": "28.33",
+		"Log Adusted Pred AMH": "0.720166527",
+		"95% Pred Lim1": "0.227893755",
+		"95% Pred Lim2": "1.2124393"
+	},
+	{
+		"Age": "28.42",
+		"Log Adusted Pred AMH": "0.717519161",
+		"95% Pred Lim1": "0.225257186",
+		"95% Pred Lim2": "1.209781136"
+	},
+	{
+		"Age": "28.50",
+		"Log Adusted Pred AMH": "0.714836055",
+		"95% Pred Lim1": "0.222584383",
+		"95% Pred Lim2": "1.207087728"
+	},
+	{
+		"Age": "28.58",
+		"Log Adusted Pred AMH": "0.712120051",
+		"95% Pred Lim1": "0.219878166",
+		"95% Pred Lim2": "1.204361936"
+	},
+	{
+		"Age": "28.67",
+		"Log Adusted Pred AMH": "0.709374054",
+		"95% Pred Lim1": "0.217141428",
+		"95% Pred Lim2": "1.20160668"
+	},
+	{
+		"Age": "28.75",
+		"Log Adusted Pred AMH": "0.706601026",
+		"95% Pred Lim1": "0.214377124",
+		"95% Pred Lim2": "1.198824929"
+	},
+	{
+		"Age": "28.83",
+		"Log Adusted Pred AMH": "0.70380398",
+		"95% Pred Lim1": "0.211588267",
+		"95% Pred Lim2": "1.196019692"
+	},
+	{
+		"Age": "28.92",
+		"Log Adusted Pred AMH": "0.700985967",
+		"95% Pred Lim1": "0.20877792",
+		"95% Pred Lim2": "1.193194014"
+	},
+	{
+		"Age": "29.00",
+		"Log Adusted Pred AMH": "0.698150072",
+		"95% Pred Lim1": "0.205949181",
+		"95% Pred Lim2": "1.190350963"
+	},
+	{
+		"Age": "29.08",
+		"Log Adusted Pred AMH": "0.695299404",
+		"95% Pred Lim1": "0.203105184",
+		"95% Pred Lim2": "1.187493625"
+	},
+	{
+		"Age": "29.17",
+		"Log Adusted Pred AMH": "0.692437089",
+		"95% Pred Lim1": "0.200249082",
+		"95% Pred Lim2": "1.184625096"
+	},
+	{
+		"Age": "29.25",
+		"Log Adusted Pred AMH": "0.689566257",
+		"95% Pred Lim1": "0.197384042",
+		"95% Pred Lim2": "1.181748472"
+	},
+	{
+		"Age": "29.33",
+		"Log Adusted Pred AMH": "0.686690042",
+		"95% Pred Lim1": "0.194513238",
+		"95% Pred Lim2": "1.178866845"
+	},
+	{
+		"Age": "29.42",
+		"Log Adusted Pred AMH": "0.683811563",
+		"95% Pred Lim1": "0.191639835",
+		"95% Pred Lim2": "1.175983291"
+	},
+	{
+		"Age": "29.50",
+		"Log Adusted Pred AMH": "0.680933925",
+		"95% Pred Lim1": "0.188766987",
+		"95% Pred Lim2": "1.173100864"
+	},
+	{
+		"Age": "29.58",
+		"Log Adusted Pred AMH": "0.678060207",
+		"95% Pred Lim1": "0.185897824",
+		"95% Pred Lim2": "1.17022259"
+	},
+	{
+		"Age": "29.67",
+		"Log Adusted Pred AMH": "0.675193451",
+		"95% Pred Lim1": "0.183035443",
+		"95% Pred Lim2": "1.167351459"
+	},
+	{
+		"Age": "29.75",
+		"Log Adusted Pred AMH": "0.672336659",
+		"95% Pred Lim1": "0.180182902",
+		"95% Pred Lim2": "1.164490417"
+	},
+	{
+		"Age": "29.83",
+		"Log Adusted Pred AMH": "0.669492783",
+		"95% Pred Lim1": "0.177343207",
+		"95% Pred Lim2": "1.161642358"
+	},
+	{
+		"Age": "29.92",
+		"Log Adusted Pred AMH": "0.666664714",
+		"95% Pred Lim1": "0.174519305",
+		"95% Pred Lim2": "1.158810123"
+	},
+	{
+		"Age": "30.00",
+		"Log Adusted Pred AMH": "0.663855281",
+		"95% Pred Lim1": "0.171714079",
+		"95% Pred Lim2": "1.155996484"
+	},
+	{
+		"Age": "30.08",
+		"Log Adusted Pred AMH": "0.661067239",
+		"95% Pred Lim1": "0.168930332",
+		"95% Pred Lim2": "1.153204146"
+	},
+	{
+		"Age": "30.17",
+		"Log Adusted Pred AMH": "0.658303262",
+		"95% Pred Lim1": "0.166170787",
+		"95% Pred Lim2": "1.150435737"
+	},
+	{
+		"Age": "30.25",
+		"Log Adusted Pred AMH": "0.65556594",
+		"95% Pred Lim1": "0.163438077",
+		"95% Pred Lim2": "1.147693804"
+	},
+	{
+		"Age": "30.33",
+		"Log Adusted Pred AMH": "0.652857768",
+		"95% Pred Lim1": "0.160734733",
+		"95% Pred Lim2": "1.144980803"
+	},
+	{
+		"Age": "30.42",
+		"Log Adusted Pred AMH": "0.650181141",
+		"95% Pred Lim1": "0.158063184",
+		"95% Pred Lim2": "1.142299098"
+	},
+	{
+		"Age": "30.50",
+		"Log Adusted Pred AMH": "0.647538352",
+		"95% Pred Lim1": "0.155425748",
+		"95% Pred Lim2": "1.139650956"
+	},
+	{
+		"Age": "30.58",
+		"Log Adusted Pred AMH": "0.644931581",
+		"95% Pred Lim1": "0.152824625",
+		"95% Pred Lim2": "1.137038538"
+	},
+	{
+		"Age": "30.67",
+		"Log Adusted Pred AMH": "0.642362894",
+		"95% Pred Lim1": "0.15026189",
+		"95% Pred Lim2": "1.134463897"
+	},
+	{
+		"Age": "30.75",
+		"Log Adusted Pred AMH": "0.639834234",
+		"95% Pred Lim1": "0.147739495",
+		"95% Pred Lim2": "1.131928973"
+	},
+	{
+		"Age": "30.83",
+		"Log Adusted Pred AMH": "0.637347422",
+		"95% Pred Lim1": "0.145259256",
+		"95% Pred Lim2": "1.129435588"
+	},
+	{
+		"Age": "30.92",
+		"Log Adusted Pred AMH": "0.63490415",
+		"95% Pred Lim1": "0.142822855",
+		"95% Pred Lim2": "1.126985445"
+	},
+	{
+		"Age": "31.00",
+		"Log Adusted Pred AMH": "0.632505977",
+		"95% Pred Lim1": "0.140431833",
+		"95% Pred Lim2": "1.124580121"
+	},
+	{
+		"Age": "31.08",
+		"Log Adusted Pred AMH": "0.630154327",
+		"95% Pred Lim1": "0.138087591",
+		"95% Pred Lim2": "1.122221063"
+	},
+	{
+		"Age": "31.17",
+		"Log Adusted Pred AMH": "0.627850487",
+		"95% Pred Lim1": "0.135791384",
+		"95% Pred Lim2": "1.119909589"
+	},
+	{
+		"Age": "31.25",
+		"Log Adusted Pred AMH": "0.625595602",
+		"95% Pred Lim1": "0.133544321",
+		"95% Pred Lim2": "1.117646883"
+	},
+	{
+		"Age": "31.33",
+		"Log Adusted Pred AMH": "0.623390678",
+		"95% Pred Lim1": "0.131347363",
+		"95% Pred Lim2": "1.115433993"
+	},
+	{
+		"Age": "31.42",
+		"Log Adusted Pred AMH": "0.621236577",
+		"95% Pred Lim1": "0.129201326",
+		"95% Pred Lim2": "1.113271827"
+	},
+	{
+		"Age": "31.50",
+		"Log Adusted Pred AMH": "0.619134015",
+		"95% Pred Lim1": "0.127106874",
+		"95% Pred Lim2": "1.111161155"
+	},
+	{
+		"Age": "31.58",
+		"Log Adusted Pred AMH": "0.617083567",
+		"95% Pred Lim1": "0.125064528",
+		"95% Pred Lim2": "1.109102606"
+	},
+	{
+		"Age": "31.67",
+		"Log Adusted Pred AMH": "0.615085662",
+		"95% Pred Lim1": "0.123074658",
+		"95% Pred Lim2": "1.107096666"
+	},
+	{
+		"Age": "31.75",
+		"Log Adusted Pred AMH": "0.613140586",
+		"95% Pred Lim1": "0.121137492",
+		"95% Pred Lim2": "1.105143679"
+	},
+	{
+		"Age": "31.83",
+		"Log Adusted Pred AMH": "0.611248481",
+		"95% Pred Lim1": "0.119253114",
+		"95% Pred Lim2": "1.103243848"
+	},
+	{
+		"Age": "31.92",
+		"Log Adusted Pred AMH": "0.609409351",
+		"95% Pred Lim1": "0.117421469",
+		"95% Pred Lim2": "1.101397233"
+	},
+	{
+		"Age": "32.00",
+		"Log Adusted Pred AMH": "0.607623057",
+		"95% Pred Lim1": "0.115642362",
+		"95% Pred Lim2": "1.099603752"
+	},
+	{
+		"Age": "32.08",
+		"Log Adusted Pred AMH": "0.605889326",
+		"95% Pred Lim1": "0.113915466",
+		"95% Pred Lim2": "1.097863186"
+	},
+	{
+		"Age": "32.17",
+		"Log Adusted Pred AMH": "0.604207748",
+		"95% Pred Lim1": "0.11224032",
+		"95% Pred Lim2": "1.096175175"
+	},
+	{
+		"Age": "32.25",
+		"Log Adusted Pred AMH": "0.602577783",
+		"95% Pred Lim1": "0.11061634",
+		"95% Pred Lim2": "1.094539227"
+	},
+	{
+		"Age": "32.33",
+		"Log Adusted Pred AMH": "0.600998764",
+		"95% Pred Lim1": "0.109042817",
+		"95% Pred Lim2": "1.092954712"
+	},
+	{
+		"Age": "32.42",
+		"Log Adusted Pred AMH": "0.5994699",
+		"95% Pred Lim1": "0.107518924",
+		"95% Pred Lim2": "1.091420875"
+	},
+	{
+		"Age": "32.50",
+		"Log Adusted Pred AMH": "0.597990278",
+		"95% Pred Lim1": "0.106043724",
+		"95% Pred Lim2": "1.089936831"
+	},
+	{
+		"Age": "32.58",
+		"Log Adusted Pred AMH": "0.596558872",
+		"95% Pred Lim1": "0.104616169",
+		"95% Pred Lim2": "1.088501575"
+	},
+	{
+		"Age": "32.67",
+		"Log Adusted Pred AMH": "0.595174546",
+		"95% Pred Lim1": "0.103235109",
+		"95% Pred Lim2": "1.087113983"
+	},
+	{
+		"Age": "32.75",
+		"Log Adusted Pred AMH": "0.593836057",
+		"95% Pred Lim1": "0.101899298",
+		"95% Pred Lim2": "1.085772817"
+	},
+	{
+		"Age": "32.83",
+		"Log Adusted Pred AMH": "0.592542066",
+		"95% Pred Lim1": "0.100607398",
+		"95% Pred Lim2": "1.084476733"
+	},
+	{
+		"Age": "32.92",
+		"Log Adusted Pred AMH": "0.591291135",
+		"95% Pred Lim1": "0.099357986",
+		"95% Pred Lim2": "1.083224285"
+	},
+	{
+		"Age": "33.00",
+		"Log Adusted Pred AMH": "0.590081743",
+		"95% Pred Lim1": "0.098149557",
+		"95% Pred Lim2": "1.082013929"
+	},
+	{
+		"Age": "33.08",
+		"Log Adusted Pred AMH": "0.588912284",
+		"95% Pred Lim1": "0.096980534",
+		"95% Pred Lim2": "1.080844034"
+	},
+	{
+		"Age": "33.17",
+		"Log Adusted Pred AMH": "0.587781078",
+		"95% Pred Lim1": "0.095849273",
+		"95% Pred Lim2": "1.079712884"
+	},
+	{
+		"Age": "33.25",
+		"Log Adusted Pred AMH": "0.586686377",
+		"95% Pred Lim1": "0.094754065",
+		"95% Pred Lim2": "1.078618689"
+	},
+	{
+		"Age": "33.33",
+		"Log Adusted Pred AMH": "0.585626368",
+		"95% Pred Lim1": "0.093693147",
+		"95% Pred Lim2": "1.077559588"
+	},
+	{
+		"Age": "33.42",
+		"Log Adusted Pred AMH": "0.584599184",
+		"95% Pred Lim1": "0.092664706",
+		"95% Pred Lim2": "1.076533663"
+	},
+	{
+		"Age": "33.50",
+		"Log Adusted Pred AMH": "0.583602912",
+		"95% Pred Lim1": "0.091666886",
+		"95% Pred Lim2": "1.075538937"
+	},
+	{
+		"Age": "33.58",
+		"Log Adusted Pred AMH": "0.582635592",
+		"95% Pred Lim1": "0.090697791",
+		"95% Pred Lim2": "1.074573392"
+	},
+	{
+		"Age": "33.67",
+		"Log Adusted Pred AMH": "0.581695232",
+		"95% Pred Lim1": "0.089755494",
+		"95% Pred Lim2": "1.073634971"
+	},
+	{
+		"Age": "33.75",
+		"Log Adusted Pred AMH": "0.580779814",
+		"95% Pred Lim1": "0.088838042",
+		"95% Pred Lim2": "1.072721586"
+	},
+	{
+		"Age": "33.83",
+		"Log Adusted Pred AMH": "0.579887295",
+		"95% Pred Lim1": "0.087943462",
+		"95% Pred Lim2": "1.071831128"
+	},
+	{
+		"Age": "33.92",
+		"Log Adusted Pred AMH": "0.57901562",
+		"95% Pred Lim1": "0.087069766",
+		"95% Pred Lim2": "1.070961474"
+	},
+	{
+		"Age": "34.00",
+		"Log Adusted Pred AMH": "0.578162726",
+		"95% Pred Lim1": "0.086214956",
+		"95% Pred Lim2": "1.070110496"
+	},
+	{
+		"Age": "34.08",
+		"Log Adusted Pred AMH": "0.577326549",
+		"95% Pred Lim1": "0.085377032",
+		"95% Pred Lim2": "1.069276066"
+	},
+	{
+		"Age": "34.17",
+		"Log Adusted Pred AMH": "0.576505032",
+		"95% Pred Lim1": "0.084553996",
+		"95% Pred Lim2": "1.068456067"
+	},
+	{
+		"Age": "34.25",
+		"Log Adusted Pred AMH": "0.575696126",
+		"95% Pred Lim1": "0.083743856",
+		"95% Pred Lim2": "1.067648397"
+	},
+	{
+		"Age": "34.33",
+		"Log Adusted Pred AMH": "0.574897805",
+		"95% Pred Lim1": "0.082944632",
+		"95% Pred Lim2": "1.066850978"
+	},
+	{
+		"Age": "34.42",
+		"Log Adusted Pred AMH": "0.574108064",
+		"95% Pred Lim1": "0.082154364",
+		"95% Pred Lim2": "1.066061763"
+	},
+	{
+		"Age": "34.50",
+		"Log Adusted Pred AMH": "0.573324927",
+		"95% Pred Lim1": "0.081371113",
+		"95% Pred Lim2": "1.065278742"
+	},
+	{
+		"Age": "34.58",
+		"Log Adusted Pred AMH": "0.572546456",
+		"95% Pred Lim1": "0.080592966",
+		"95% Pred Lim2": "1.064499945"
+	},
+	{
+		"Age": "34.67",
+		"Log Adusted Pred AMH": "0.57177075",
+		"95% Pred Lim1": "0.079818045",
+		"95% Pred Lim2": "1.063723455"
+	},
+	{
+		"Age": "34.75",
+		"Log Adusted Pred AMH": "0.570995954",
+		"95% Pred Lim1": "0.079044505",
+		"95% Pred Lim2": "1.062947404"
+	},
+	{
+		"Age": "34.83",
+		"Log Adusted Pred AMH": "0.570220265",
+		"95% Pred Lim1": "0.078270544",
+		"95% Pred Lim2": "1.062169987"
+	},
+	{
+		"Age": "34.92",
+		"Log Adusted Pred AMH": "0.56944193",
+		"95% Pred Lim1": "0.077494403",
+		"95% Pred Lim2": "1.061389457"
+	},
+	{
+		"Age": "35.00",
+		"Log Adusted Pred AMH": "0.568659255",
+		"95% Pred Lim1": "0.076714373",
+		"95% Pred Lim2": "1.060604137"
+	},
+	{
+		"Age": "35.08",
+		"Log Adusted Pred AMH": "0.567870607",
+		"95% Pred Lim1": "0.075928796",
+		"95% Pred Lim2": "1.059812417"
+	},
+	{
+		"Age": "35.17",
+		"Log Adusted Pred AMH": "0.567074417",
+		"95% Pred Lim1": "0.075136072",
+		"95% Pred Lim2": "1.059012762"
+	},
+	{
+		"Age": "35.25",
+		"Log Adusted Pred AMH": "0.566269181",
+		"95% Pred Lim1": "0.074334656",
+		"95% Pred Lim2": "1.058203706"
+	},
+	{
+		"Age": "35.33",
+		"Log Adusted Pred AMH": "0.565453467",
+		"95% Pred Lim1": "0.073523069",
+		"95% Pred Lim2": "1.057383866"
+	},
+	{
+		"Age": "35.42",
+		"Log Adusted Pred AMH": "0.564625911",
+		"95% Pred Lim1": "0.072699892",
+		"95% Pred Lim2": "1.056551929"
+	},
+	{
+		"Age": "35.50",
+		"Log Adusted Pred AMH": "0.563785221",
+		"95% Pred Lim1": "0.071863778",
+		"95% Pred Lim2": "1.055706665"
+	},
+	{
+		"Age": "35.58",
+		"Log Adusted Pred AMH": "0.56293018",
+		"95% Pred Lim1": "0.071013443",
+		"95% Pred Lim2": "1.054846917"
+	},
+	{
+		"Age": "35.67",
+		"Log Adusted Pred AMH": "0.562059642",
+		"95% Pred Lim1": "0.070147676",
+		"95% Pred Lim2": "1.053971607"
+	},
+	{
+		"Age": "35.75",
+		"Log Adusted Pred AMH": "0.561172536",
+		"95% Pred Lim1": "0.069265339",
+		"95% Pred Lim2": "1.053079734"
+	},
+	{
+		"Age": "35.83",
+		"Log Adusted Pred AMH": "0.560267865",
+		"95% Pred Lim1": "0.068365362",
+		"95% Pred Lim2": "1.052170368"
+	},
+	{
+		"Age": "35.92",
+		"Log Adusted Pred AMH": "0.559344702",
+		"95% Pred Lim1": "0.067446751",
+		"95% Pred Lim2": "1.051242653"
+	},
+	{
+		"Age": "36.00",
+		"Log Adusted Pred AMH": "0.558402193",
+		"95% Pred Lim1": "0.066508583",
+		"95% Pred Lim2": "1.050295802"
+	},
+	{
+		"Age": "36.08",
+		"Log Adusted Pred AMH": "0.557439554",
+		"95% Pred Lim1": "0.065550009",
+		"95% Pred Lim2": "1.049329099"
+	},
+	{
+		"Age": "36.17",
+		"Log Adusted Pred AMH": "0.556456069",
+		"95% Pred Lim1": "0.06457025",
+		"95% Pred Lim2": "1.048341887"
+	},
+	{
+		"Age": "36.25",
+		"Log Adusted Pred AMH": "0.555451085",
+		"95% Pred Lim1": "0.063568597",
+		"95% Pred Lim2": "1.047333573"
+	},
+	{
+		"Age": "36.33",
+		"Log Adusted Pred AMH": "0.554424013",
+		"95% Pred Lim1": "0.062544408",
+		"95% Pred Lim2": "1.046303618"
+	},
+	{
+		"Age": "36.42",
+		"Log Adusted Pred AMH": "0.553374325",
+		"95% Pred Lim1": "0.061497111",
+		"95% Pred Lim2": "1.045251539"
+	},
+	{
+		"Age": "36.50",
+		"Log Adusted Pred AMH": "0.552301545",
+		"95% Pred Lim1": "0.060426191",
+		"95% Pred Lim2": "1.044176899"
+	},
+	{
+		"Age": "36.58",
+		"Log Adusted Pred AMH": "0.551205253",
+		"95% Pred Lim1": "0.059331199",
+		"95% Pred Lim2": "1.043079308"
+	},
+	{
+		"Age": "36.67",
+		"Log Adusted Pred AMH": "0.550085075",
+		"95% Pred Lim1": "0.058211739",
+		"95% Pred Lim2": "1.041958411"
+	},
+	{
+		"Age": "36.75",
+		"Log Adusted Pred AMH": "0.54894068",
+		"95% Pred Lim1": "0.057067466",
+		"95% Pred Lim2": "1.040813894"
+	},
+	{
+		"Age": "36.83",
+		"Log Adusted Pred AMH": "0.547771776",
+		"95% Pred Lim1": "0.055898086",
+		"95% Pred Lim2": "1.039645467"
+	},
+	{
+		"Age": "36.92",
+		"Log Adusted Pred AMH": "0.546578107",
+		"95% Pred Lim1": "0.054703345",
+		"95% Pred Lim2": "1.038452869"
+	},
+	{
+		"Age": "37.00",
+		"Log Adusted Pred AMH": "0.545359442",
+		"95% Pred Lim1": "0.053483026",
+		"95% Pred Lim2": "1.037235858"
+	},
+	{
+		"Age": "37.08",
+		"Log Adusted Pred AMH": "0.544115577",
+		"95% Pred Lim1": "0.052236946",
+		"95% Pred Lim2": "1.035994208"
+	},
+	{
+		"Age": "37.17",
+		"Log Adusted Pred AMH": "0.542846324",
+		"95% Pred Lim1": "0.050964947",
+		"95% Pred Lim2": "1.034727702"
+	},
+	{
+		"Age": "37.25",
+		"Log Adusted Pred AMH": "0.541551508",
+		"95% Pred Lim1": "0.049666887",
+		"95% Pred Lim2": "1.033436129"
+	},
+	{
+		"Age": "37.33",
+		"Log Adusted Pred AMH": "0.540230961",
+		"95% Pred Lim1": "0.048342641",
+		"95% Pred Lim2": "1.03211928"
+	},
+	{
+		"Age": "37.42",
+		"Log Adusted Pred AMH": "0.538884516",
+		"95% Pred Lim1": "0.046992091",
+		"95% Pred Lim2": "1.030776941"
+	},
+	{
+		"Age": "37.50",
+		"Log Adusted Pred AMH": "0.537512001",
+		"95% Pred Lim1": "0.045615114",
+		"95% Pred Lim2": "1.029408888"
+	},
+	{
+		"Age": "37.58",
+		"Log Adusted Pred AMH": "0.536113235",
+		"95% Pred Lim1": "0.044211585",
+		"95% Pred Lim2": "1.028014886"
+	},
+	{
+		"Age": "37.67",
+		"Log Adusted Pred AMH": "0.534688017",
+		"95% Pred Lim1": "0.042781357",
+		"95% Pred Lim2": "1.026594677"
+	},
+	{
+		"Age": "37.75",
+		"Log Adusted Pred AMH": "0.533236132",
+		"95% Pred Lim1": "0.041324274",
+		"95% Pred Lim2": "1.02514799"
+	},
+	{
+		"Age": "37.83",
+		"Log Adusted Pred AMH": "0.531757332",
+		"95% Pred Lim1": "0.039840144",
+		"95% Pred Lim2": "1.023674519"
+	},
+	{
+		"Age": "37.92",
+		"Log Adusted Pred AMH": "0.530251337",
+		"95% Pred Lim1": "0.038328742",
+		"95% Pred Lim2": "1.022173933"
+	},
+	{
+		"Age": "38.00",
+		"Log Adusted Pred AMH": "0.528717834",
+		"95% Pred Lim1": "0.036789805",
+		"95% Pred Lim2": "1.020645863"
+	},
+	{
+		"Age": "38.08",
+		"Log Adusted Pred AMH": "0.527156464",
+		"95% Pred Lim1": "0.035223023",
+		"95% Pred Lim2": "1.019089904"
+	},
+	{
+		"Age": "38.17",
+		"Log Adusted Pred AMH": "0.525566825",
+		"95% Pred Lim1": "0.033628038",
+		"95% Pred Lim2": "1.017505613"
+	},
+	{
+		"Age": "38.25",
+		"Log Adusted Pred AMH": "0.523948461",
+		"95% Pred Lim1": "0.032004428",
+		"95% Pred Lim2": "1.015892495"
+	},
+	{
+		"Age": "38.33",
+		"Log Adusted Pred AMH": "0.522300864",
+		"95% Pred Lim1": "0.030351715",
+		"95% Pred Lim2": "1.014250012"
+	},
+	{
+		"Age": "38.42",
+		"Log Adusted Pred AMH": "0.520623465",
+		"95% Pred Lim1": "0.028669355",
+		"95% Pred Lim2": "1.012577575"
+	},
+	{
+		"Age": "38.50",
+		"Log Adusted Pred AMH": "0.518915639",
+		"95% Pred Lim1": "0.026956736",
+		"95% Pred Lim2": "1.010874542"
+	},
+	{
+		"Age": "38.58",
+		"Log Adusted Pred AMH": "0.517176692",
+		"95% Pred Lim1": "0.025213171",
+		"95% Pred Lim2": "1.009140214"
+	},
+	{
+		"Age": "38.67",
+		"Log Adusted Pred AMH": "0.515405868",
+		"95% Pred Lim1": "0.023437902",
+		"95% Pred Lim2": "1.007373835"
+	},
+	{
+		"Age": "38.75",
+		"Log Adusted Pred AMH": "0.513602342",
+		"95% Pred Lim1": "0.021630095",
+		"95% Pred Lim2": "1.00557459"
+	},
+	{
+		"Age": "38.83",
+		"Log Adusted Pred AMH": "0.511765219",
+		"95% Pred Lim1": "0.019788837",
+		"95% Pred Lim2": "1.003741602"
+	},
+	{
+		"Age": "38.92",
+		"Log Adusted Pred AMH": "0.509893537",
+		"95% Pred Lim1": "0.017913141",
+		"95% Pred Lim2": "1.001873933"
+	},
+	{
+		"Age": "39.00",
+		"Log Adusted Pred AMH": "0.507986262",
+		"95% Pred Lim1": "0.016001943",
+		"95% Pred Lim2": "0.999970581"
+	},
+	{
+		"Age": "39.08",
+		"Log Adusted Pred AMH": "0.506042297",
+		"95% Pred Lim1": "0.014054109",
+		"95% Pred Lim2": "0.998030485"
+	},
+	{
+		"Age": "39.17",
+		"Log Adusted Pred AMH": "0.504060469",
+		"95% Pred Lim1": "0.012068423",
+		"95% Pred Lim2": "0.996052515"
+	},
+	{
+		"Age": "39.25",
+		"Log Adusted Pred AMH": "0.502039548",
+		"95% Pred Lim1": "0.01004361",
+		"95% Pred Lim2": "0.994035486"
+	},
+	{
+		"Age": "39.33",
+		"Log Adusted Pred AMH": "0.499978232",
+		"95% Pred Lim1": "0.007978321",
+		"95% Pred Lim2": "0.991978143"
+	},
+	{
+		"Age": "39.42",
+		"Log Adusted Pred AMH": "0.497875167",
+		"95% Pred Lim1": "0.005871153",
+		"95% Pred Lim2": "0.989879181"
+	},
+	{
+		"Age": "39.50",
+		"Log Adusted Pred AMH": "0.495728936",
+		"95% Pred Lim1": "0.00372064",
+		"95% Pred Lim2": "0.987737232"
+	},
+	{
+		"Age": "39.58",
+		"Log Adusted Pred AMH": "0.493538072",
+		"95% Pred Lim1": "0.001525269",
+		"95% Pred Lim2": "0.985550875"
+	},
+	{
+		"Age": "39.67",
+		"Log Adusted Pred AMH": "0.491301064",
+		"95% Pred Lim1": "-0.000716515",
+		"95% Pred Lim2": "0.983318642"
+	},
+	{
+		"Age": "39.75",
+		"Log Adusted Pred AMH": "0.489016351",
+		"95% Pred Lim1": "-0.003006311",
+		"95% Pred Lim2": "0.981039012"
+	},
+	{
+		"Age": "39.83",
+		"Log Adusted Pred AMH": "0.486682344",
+		"95% Pred Lim1": "-0.005345741",
+		"95% Pred Lim2": "0.978710429"
+	},
+	{
+		"Age": "39.92",
+		"Log Adusted Pred AMH": "0.484297422",
+		"95% Pred Lim1": "-0.007736455",
+		"95% Pred Lim2": "0.976331299"
+	},
+	{
+		"Age": "40.00",
+		"Log Adusted Pred AMH": "0.481859946",
+		"95% Pred Lim1": "-0.010180108",
+		"95% Pred Lim2": "0.9739"
+	},
+	{
+		"Age": "40.08",
+		"Log Adusted Pred AMH": "0.479368257",
+		"95% Pred Lim1": "-0.01267837",
+		"95% Pred Lim2": "0.971414883"
+	},
+	{
+		"Age": "40.17",
+		"Log Adusted Pred AMH": "0.476820694",
+		"95% Pred Lim1": "-0.015232901",
+		"95% Pred Lim2": "0.96887429"
+	},
+	{
+		"Age": "40.25",
+		"Log Adusted Pred AMH": "0.474215603",
+		"95% Pred Lim1": "-0.017845349",
+		"95% Pred Lim2": "0.966276554"
+	},
+	{
+		"Age": "40.33",
+		"Log Adusted Pred AMH": "0.471551338",
+		"95% Pred Lim1": "-0.020517338",
+		"95% Pred Lim2": "0.963620014"
+	},
+	{
+		"Age": "40.42",
+		"Log Adusted Pred AMH": "0.46882628",
+		"95% Pred Lim1": "-0.02325046",
+		"95% Pred Lim2": "0.960903021"
+	},
+	{
+		"Age": "40.50",
+		"Log Adusted Pred AMH": "0.466038843",
+		"95% Pred Lim1": "-0.026046264",
+		"95% Pred Lim2": "0.958123949"
+	},
+	{
+		"Age": "40.58",
+		"Log Adusted Pred AMH": "0.463187487",
+		"95% Pred Lim1": "-0.028906241",
+		"95% Pred Lim2": "0.955281214"
+	},
+	{
+		"Age": "40.67",
+		"Log Adusted Pred AMH": "0.460270718",
+		"95% Pred Lim1": "-0.031831832",
+		"95% Pred Lim2": "0.952373268"
+	},
+	{
+		"Age": "40.75",
+		"Log Adusted Pred AMH": "0.457287121",
+		"95% Pred Lim1": "-0.034824391",
+		"95% Pred Lim2": "0.949398634"
+	},
+	{
+		"Age": "40.83",
+		"Log Adusted Pred AMH": "0.454235353",
+		"95% Pred Lim1": "-0.037885196",
+		"95% Pred Lim2": "0.946355903"
+	},
+	{
+		"Age": "40.92",
+		"Log Adusted Pred AMH": "0.451114157",
+		"95% Pred Lim1": "-0.041015435",
+		"95% Pred Lim2": "0.943243749"
+	},
+	{
+		"Age": "41.00",
+		"Log Adusted Pred AMH": "0.447922383",
+		"95% Pred Lim1": "-0.044216185",
+		"95% Pred Lim2": "0.940060951"
+	},
+	{
+		"Age": "41.08",
+		"Log Adusted Pred AMH": "0.444658988",
+		"95% Pred Lim1": "-0.047488419",
+		"95% Pred Lim2": "0.936806396"
+	},
+	{
+		"Age": "41.17",
+		"Log Adusted Pred AMH": "0.441323056",
+		"95% Pred Lim1": "-0.050832984",
+		"95% Pred Lim2": "0.933479096"
+	},
+	{
+		"Age": "41.25",
+		"Log Adusted Pred AMH": "0.437913807",
+		"95% Pred Lim1": "-0.054250596",
+		"95% Pred Lim2": "0.930078209"
+	},
+	{
+		"Age": "41.33",
+		"Log Adusted Pred AMH": "0.434430604",
+		"95% Pred Lim1": "-0.057741831",
+		"95% Pred Lim2": "0.92660304"
+	},
+	{
+		"Age": "41.42",
+		"Log Adusted Pred AMH": "0.430872977",
+		"95% Pred Lim1": "-0.061307112",
+		"95% Pred Lim2": "0.923053066"
+	},
+	{
+		"Age": "41.50",
+		"Log Adusted Pred AMH": "0.427240604",
+		"95% Pred Lim1": "-0.064946718",
+		"95% Pred Lim2": "0.919427927"
+	},
+	{
+		"Age": "41.58",
+		"Log Adusted Pred AMH": "0.423533366",
+		"95% Pred Lim1": "-0.068660742",
+		"95% Pred Lim2": "0.915727475"
+	},
+	{
+		"Age": "41.67",
+		"Log Adusted Pred AMH": "0.419751319",
+		"95% Pred Lim1": "-0.072449112",
+		"95% Pred Lim2": "0.91195175"
+	},
+	{
+		"Age": "41.75",
+		"Log Adusted Pred AMH": "0.41589471",
+		"95% Pred Lim1": "-0.07631158",
+		"95% Pred Lim2": "0.908101"
+	},
+	{
+		"Age": "41.83",
+		"Log Adusted Pred AMH": "0.411964007",
+		"95% Pred Lim1": "-0.080247693",
+		"95% Pred Lim2": "0.904175708"
+	},
+	{
+		"Age": "41.92",
+		"Log Adusted Pred AMH": "0.407959879",
+		"95% Pred Lim1": "-0.084256814",
+		"95% Pred Lim2": "0.900176572"
+	},
+	{
+		"Age": "42.00",
+		"Log Adusted Pred AMH": "0.403883222",
+		"95% Pred Lim1": "-0.088338092",
+		"95% Pred Lim2": "0.896104536"
+	},
+	{
+		"Age": "42.08",
+		"Log Adusted Pred AMH": "0.399735156",
+		"95% Pred Lim1": "-0.092490471",
+		"95% Pred Lim2": "0.891960783"
+	},
+	{
+		"Age": "42.17",
+		"Log Adusted Pred AMH": "0.395517023",
+		"95% Pred Lim1": "-0.096712687",
+		"95% Pred Lim2": "0.887746733"
+	},
+	{
+		"Age": "42.25",
+		"Log Adusted Pred AMH": "0.391230424",
+		"95% Pred Lim1": "-0.10100323",
+		"95% Pred Lim2": "0.883464079"
+	},
+	{
+		"Age": "42.33",
+		"Log Adusted Pred AMH": "0.386877164",
+		"95% Pred Lim1": "-0.105360402",
+		"95% Pred Lim2": "0.879114729"
+	},
+	{
+		"Age": "42.42",
+		"Log Adusted Pred AMH": "0.382459324",
+		"95% Pred Lim1": "-0.109782233",
+		"95% Pred Lim2": "0.874700882"
+	},
+	{
+		"Age": "42.50",
+		"Log Adusted Pred AMH": "0.377979196",
+		"95% Pred Lim1": "-0.114266559",
+		"95% Pred Lim2": "0.870224951"
+	},
+	{
+		"Age": "42.58",
+		"Log Adusted Pred AMH": "0.373439322",
+		"95% Pred Lim1": "-0.118810964",
+		"95% Pred Lim2": "0.865689608"
+	},
+	{
+		"Age": "42.67",
+		"Log Adusted Pred AMH": "0.368842489",
+		"95% Pred Lim1": "-0.123412793",
+		"95% Pred Lim2": "0.861097771"
+	},
+	{
+		"Age": "42.75",
+		"Log Adusted Pred AMH": "0.364191707",
+		"95% Pred Lim1": "-0.128069168",
+		"95% Pred Lim2": "0.856452581"
+	},
+	{
+		"Age": "42.83",
+		"Log Adusted Pred AMH": "0.359490222",
+		"95% Pred Lim1": "-0.132776968",
+		"95% Pred Lim2": "0.851757412"
+	},
+	{
+		"Age": "42.92",
+		"Log Adusted Pred AMH": "0.354741497",
+		"95% Pred Lim1": "-0.137532851",
+		"95% Pred Lim2": "0.847015845"
+	},
+	{
+		"Age": "43.00",
+		"Log Adusted Pred AMH": "0.349949201",
+		"95% Pred Lim1": "-0.142333256",
+		"95% Pred Lim2": "0.842231658"
+	},
+	{
+		"Age": "43.08",
+		"Log Adusted Pred AMH": "0.345117236",
+		"95% Pred Lim1": "-0.147174376",
+		"95% Pred Lim2": "0.837408847"
+	},
+	{
+		"Age": "43.17",
+		"Log Adusted Pred AMH": "0.340249667",
+		"95% Pred Lim1": "-0.152052221",
+		"95% Pred Lim2": "0.832551556"
+	},
+	{
+		"Age": "43.25",
+		"Log Adusted Pred AMH": "0.335350756",
+		"95% Pred Lim1": "-0.15696259",
+		"95% Pred Lim2": "0.827664102"
+	},
+	{
+		"Age": "43.33",
+		"Log Adusted Pred AMH": "0.33042494",
+		"95% Pred Lim1": "-0.161901078",
+		"95% Pred Lim2": "0.822750959"
+	},
+	{
+		"Age": "43.42",
+		"Log Adusted Pred AMH": "0.32547678",
+		"95% Pred Lim1": "-0.166863137",
+		"95% Pred Lim2": "0.817816697"
+	},
+	{
+		"Age": "43.50",
+		"Log Adusted Pred AMH": "0.320510999",
+		"95% Pred Lim1": "-0.171844027",
+		"95% Pred Lim2": "0.812866025"
+	},
+	{
+		"Age": "43.58",
+		"Log Adusted Pred AMH": "0.315532435",
+		"95% Pred Lim1": "-0.176838871",
+		"95% Pred Lim2": "0.807903741"
+	},
+	{
+		"Age": "43.67",
+		"Log Adusted Pred AMH": "0.310545999",
+		"95% Pred Lim1": "-0.18184269",
+		"95% Pred Lim2": "0.802934689"
+	},
+	{
+		"Age": "43.75",
+		"Log Adusted Pred AMH": "0.305556709",
+		"95% Pred Lim1": "-0.186850375",
+		"95% Pred Lim2": "0.797963794"
+	},
+	{
+		"Age": "43.83",
+		"Log Adusted Pred AMH": "0.300569603",
+		"95% Pred Lim1": "-0.191856772",
+		"95% Pred Lim2": "0.792995978"
+	},
+	{
+		"Age": "43.92",
+		"Log Adusted Pred AMH": "0.295589777",
+		"95% Pred Lim1": "-0.196856649",
+		"95% Pred Lim2": "0.788036203"
+	},
+	{
+		"Age": "44.00",
+		"Log Adusted Pred AMH": "0.290622311",
+		"95% Pred Lim1": "-0.201844772",
+		"95% Pred Lim2": "0.783089393"
+	},
+	{
+		"Age": "44.08",
+		"Log Adusted Pred AMH": "0.285672275",
+		"95% Pred Lim1": "-0.2068159",
+		"95% Pred Lim2": "0.778160451"
+	},
+	{
+		"Age": "44.17",
+		"Log Adusted Pred AMH": "0.280744682",
+		"95% Pred Lim1": "-0.211764848",
+		"95% Pred Lim2": "0.773254211"
+	},
+	{
+		"Age": "44.25",
+		"Log Adusted Pred AMH": "0.275844486",
+		"95% Pred Lim1": "-0.216686475",
+		"95% Pred Lim2": "0.768375448"
+	},
+	{
+		"Age": "44.33",
+		"Log Adusted Pred AMH": "0.270976512",
+		"95% Pred Lim1": "-0.221575782",
+		"95% Pred Lim2": "0.763528806"
+	},
+	{
+		"Age": "44.42",
+		"Log Adusted Pred AMH": "0.266145471",
+		"95% Pred Lim1": "-0.226427883",
+		"95% Pred Lim2": "0.758718824"
+	},
+	{
+		"Age": "44.50",
+		"Log Adusted Pred AMH": "0.261355901",
+		"95% Pred Lim1": "-0.231238083",
+		"95% Pred Lim2": "0.753949885"
+	},
+	{
+		"Age": "44.58",
+		"Log Adusted Pred AMH": "0.256612162",
+		"95% Pred Lim1": "-0.236001887",
+		"95% Pred Lim2": "0.74922621"
+	},
+	{
+		"Age": "44.67",
+		"Log Adusted Pred AMH": "0.251918372",
+		"95% Pred Lim1": "-0.240715064",
+		"95% Pred Lim2": "0.744551807"
+	},
+	{
+		"Age": "44.75",
+		"Log Adusted Pred AMH": "0.247278431",
+		"95% Pred Lim1": "-0.245373637",
+		"95% Pred Lim2": "0.739930498"
+	},
+	{
+		"Age": "44.83",
+		"Log Adusted Pred AMH": "0.242695951",
+		"95% Pred Lim1": "-0.249973952",
+		"95% Pred Lim2": "0.735365854"
+	},
+	{
+		"Age": "44.92",
+		"Log Adusted Pred AMH": "0.238174208",
+		"95% Pred Lim1": "-0.254512736",
+		"95% Pred Lim2": "0.730861151"
+	},
+	{
+		"Age": "45.00",
+		"Log Adusted Pred AMH": "0.233716205",
+		"95% Pred Lim1": "-0.25898703",
+		"95% Pred Lim2": "0.726419439"
+	},
+	{
+		"Age": "45.08",
+		"Log Adusted Pred AMH": "0.229324532",
+		"95% Pred Lim1": "-0.263394337",
+		"95% Pred Lim2": "0.722043401"
+	},
+	{
+		"Age": "45.17",
+		"Log Adusted Pred AMH": "0.225001431",
+		"95% Pred Lim1": "-0.267732558",
+		"95% Pred Lim2": "0.717735421"
+	},
+	{
+		"Age": "45.25",
+		"Log Adusted Pred AMH": "0.220748735",
+		"95% Pred Lim1": "-0.27200005",
+		"95% Pred Lim2": "0.713497521"
+	},
+	{
+		"Age": "45.33",
+		"Log Adusted Pred AMH": "0.216567859",
+		"95% Pred Lim1": "-0.276195634",
+		"95% Pred Lim2": "0.709331352"
+	},
+	{
+		"Age": "45.42",
+		"Log Adusted Pred AMH": "0.212459726",
+		"95% Pred Lim1": "-0.280318664",
+		"95% Pred Lim2": "0.705238117"
+	},
+	{
+		"Age": "45.50",
+		"Log Adusted Pred AMH": "0.208424881",
+		"95% Pred Lim1": "-0.284368911",
+		"95% Pred Lim2": "0.701218674"
+	},
+	{
+		"Age": "45.58",
+		"Log Adusted Pred AMH": "0.204463337",
+		"95% Pred Lim1": "-0.288346707",
+		"95% Pred Lim2": "0.697273381"
+	},
+	{
+		"Age": "45.67",
+		"Log Adusted Pred AMH": "0.200574622",
+		"95% Pred Lim1": "-0.29225289",
+		"95% Pred Lim2": "0.693402135"
+	},
+	{
+		"Age": "45.75",
+		"Log Adusted Pred AMH": "0.1967578",
+		"95% Pred Lim1": "-0.296088778",
+		"95% Pred Lim2": "0.689604377"
+	},
+	{
+		"Age": "45.83",
+		"Log Adusted Pred AMH": "0.193011434",
+		"95% Pred Lim1": "-0.299856185",
+		"95% Pred Lim2": "0.685879052"
+	},
+	{
+		"Age": "45.92",
+		"Log Adusted Pred AMH": "0.189333554",
+		"95% Pred Lim1": "-0.303557451",
+		"95% Pred Lim2": "0.68222456"
+	},
+	{
+		"Age": "46.00",
+		"Log Adusted Pred AMH": "0.185721743",
+		"95% Pred Lim1": "-0.307195341",
+		"95% Pred Lim2": "0.678638827"
+	},
+	{
+		"Age": "46.08",
+		"Log Adusted Pred AMH": "0.18217304",
+		"95% Pred Lim1": "-0.310773125",
+		"95% Pred Lim2": "0.675119204"
+	},
+	{
+		"Age": "46.17",
+		"Log Adusted Pred AMH": "0.178684083",
+		"95% Pred Lim1": "-0.314294425",
+		"95% Pred Lim2": "0.671662592"
+	},
+	{
+		"Age": "46.25",
+		"Log Adusted Pred AMH": "0.175250993",
+		"95% Pred Lim1": "-0.317763322",
+		"95% Pred Lim2": "0.668265309"
+	},
+	{
+		"Age": "46.33",
+		"Log Adusted Pred AMH": "0.17186944",
+		"95% Pred Lim1": "-0.321184275",
+		"95% Pred Lim2": "0.664923156"
+	},
+	{
+		"Age": "46.42",
+		"Log Adusted Pred AMH": "0.168534727",
+		"95% Pred Lim1": "-0.324562028",
+		"95% Pred Lim2": "0.661631483"
+	},
+	{
+		"Age": "46.50",
+		"Log Adusted Pred AMH": "0.165241723",
+		"95% Pred Lim1": "-0.327901671",
+		"95% Pred Lim2": "0.658385117"
+	},
+	{
+		"Age": "46.58",
+		"Log Adusted Pred AMH": "0.161984973",
+		"95% Pred Lim1": "-0.331208522",
+		"95% Pred Lim2": "0.655178469"
+	},
+	{
+		"Age": "46.67",
+		"Log Adusted Pred AMH": "0.158758691",
+		"95% Pred Lim1": "-0.334488136",
+		"95% Pred Lim2": "0.652005518"
+	},
+	{
+		"Age": "46.75",
+		"Log Adusted Pred AMH": "0.155556814",
+		"95% Pred Lim1": "-0.337746246",
+		"95% Pred Lim2": "0.648859875"
+	},
+	{
+		"Age": "46.83",
+		"Log Adusted Pred AMH": "0.152373121",
+		"95% Pred Lim1": "-0.340988655",
+		"95% Pred Lim2": "0.645734897"
+	},
+	{
+		"Age": "46.92",
+		"Log Adusted Pred AMH": "0.149201123",
+		"95% Pred Lim1": "-0.344221344",
+		"95% Pred Lim2": "0.642623591"
+	},
+	{
+		"Age": "47.00",
+		"Log Adusted Pred AMH": "0.146034279",
+		"95% Pred Lim1": "-0.347450279",
+		"95% Pred Lim2": "0.639518838"
+	},
+	{
+		"Age": "47.08",
+		"Log Adusted Pred AMH": "0.142866025",
+		"95% Pred Lim1": "-0.350681387",
+		"95% Pred Lim2": "0.636413437"
+	},
+	{
+		"Age": "47.17",
+		"Log Adusted Pred AMH": "0.139689798",
+		"95% Pred Lim1": "-0.353920555",
+		"95% Pred Lim2": "0.63330015"
+	},
+	{
+		"Age": "47.25",
+		"Log Adusted Pred AMH": "0.13649908",
+		"95% Pred Lim1": "-0.357173604",
+		"95% Pred Lim2": "0.630171765"
+	},
+	{
+		"Age": "47.33",
+		"Log Adusted Pred AMH": "0.133287591",
+		"95% Pred Lim1": "-0.360446126",
+		"95% Pred Lim2": "0.627021309"
+	},
+	{
+		"Age": "47.42",
+		"Log Adusted Pred AMH": "0.130049274",
+		"95% Pred Lim1": "-0.363743518",
+		"95% Pred Lim2": "0.623842065"
+	},
+	{
+		"Age": "47.50",
+		"Log Adusted Pred AMH": "0.126778407",
+		"95% Pred Lim1": "-0.367070897",
+		"95% Pred Lim2": "0.620627712"
+	},
+	{
+		"Age": "47.58",
+		"Log Adusted Pred AMH": "0.123469651",
+		"95% Pred Lim1": "-0.370433088",
+		"95% Pred Lim2": "0.61737239"
+	},
+	{
+		"Age": "47.67",
+		"Log Adusted Pred AMH": "0.120118185",
+		"95% Pred Lim1": "-0.373834502",
+		"95% Pred Lim2": "0.614070872"
+	},
+	{
+		"Age": "47.75",
+		"Log Adusted Pred AMH": "0.116719809",
+		"95% Pred Lim1": "-0.377279069",
+		"95% Pred Lim2": "0.610718686"
+	},
+	{
+		"Age": "47.83",
+		"Log Adusted Pred AMH": "0.113270898",
+		"95% Pred Lim1": "-0.380770298",
+		"95% Pred Lim2": "0.607312094"
+	},
+	{
+		"Age": "47.92",
+		"Log Adusted Pred AMH": "0.109768721",
+		"95% Pred Lim1": "-0.384310981",
+		"95% Pred Lim2": "0.603848422"
+	},
+	{
+		"Age": "48.00",
+		"Log Adusted Pred AMH": "0.106211324",
+		"95% Pred Lim1": "-0.387903317",
+		"95% Pred Lim2": "0.600325965"
+	},
+	{
+		"Age": "48.08",
+		"Log Adusted Pred AMH": "0.102597608",
+		"95% Pred Lim1": "-0.391548844",
+		"95% Pred Lim2": "0.59674406"
+	},
+	{
+		"Age": "48.17",
+		"Log Adusted Pred AMH": "0.09892763",
+		"95% Pred Lim1": "-0.395248136",
+		"95% Pred Lim2": "0.593103396"
+	},
+	{
+		"Age": "48.25",
+		"Log Adusted Pred AMH": "0.095202415",
+		"95% Pred Lim1": "-0.39900098",
+		"95% Pred Lim2": "0.589405809"
+	},
+	{
+		"Age": "48.33",
+		"Log Adusted Pred AMH": "0.091424248",
+		"95% Pred Lim1": "-0.402806064",
+		"95% Pred Lim2": "0.58565456"
+	},
+	{
+		"Age": "48.42",
+		"Log Adusted Pred AMH": "0.087596535",
+		"95% Pred Lim1": "-0.406661099",
+		"95% Pred Lim2": "0.58185417"
+	},
+	{
+		"Age": "48.50",
+		"Log Adusted Pred AMH": "0.083724043",
+		"95% Pred Lim1": "-0.410562536",
+		"95% Pred Lim2": "0.578010621"
+	},
+	{
+		"Age": "48.58",
+		"Log Adusted Pred AMH": "0.079812834",
+		"95% Pred Lim1": "-0.414505588",
+		"95% Pred Lim2": "0.574131256"
+	},
+	{
+		"Age": "48.67",
+		"Log Adusted Pred AMH": "0.075870329",
+		"95% Pred Lim1": "-0.418484125",
+		"95% Pred Lim2": "0.570224783"
+	},
+	{
+		"Age": "48.75",
+		"Log Adusted Pred AMH": "0.071905374",
+		"95% Pred Lim1": "-0.422490547",
+		"95% Pred Lim2": "0.566301295"
+	},
+	{
+		"Age": "48.83",
+		"Log Adusted Pred AMH": "0.067928206",
+		"95% Pred Lim1": "-0.426515761",
+		"95% Pred Lim2": "0.562372173"
+	},
+	{
+		"Age": "48.92",
+		"Log Adusted Pred AMH": "0.063950434",
+		"95% Pred Lim1": "-0.430549142",
+		"95% Pred Lim2": "0.558450009"
+	},
+	{
+		"Age": "49.00",
+		"Log Adusted Pred AMH": "0.059985087",
+		"95% Pred Lim1": "-0.434578423",
+		"95% Pred Lim2": "0.554548598"
+	},
+	{
+		"Age": "49.08",
+		"Log Adusted Pred AMH": "0.056046584",
+		"95% Pred Lim1": "-0.438589682",
+		"95% Pred Lim2": "0.55068285"
+	},
+	{
+		"Age": "49.17",
+		"Log Adusted Pred AMH": "0.05215055",
+		"95% Pred Lim1": "-0.442567467",
+		"95% Pred Lim2": "0.546868568"
+	},
+	{
+		"Age": "49.25",
+		"Log Adusted Pred AMH": "0.048313909",
+		"95% Pred Lim1": "-0.446494682",
+		"95% Pred Lim2": "0.543122501"
+	},
+	{
+		"Age": "49.33",
+		"Log Adusted Pred AMH": "0.044554649",
+		"95% Pred Lim1": "-0.450352796",
+		"95% Pred Lim2": "0.539462094"
+	},
+	{
+		"Age": "49.42",
+		"Log Adusted Pred AMH": "0.040891856",
+		"95% Pred Lim1": "-0.454121807",
+		"95% Pred Lim2": "0.535905518"
+	},
+	{
+		"Age": "49.50",
+		"Log Adusted Pred AMH": "0.037345372",
+		"95% Pred Lim1": "-0.457780606",
+		"95% Pred Lim2": "0.532471351"
+	},
+	{
+		"Age": "49.58",
+		"Log Adusted Pred AMH": "0.033935787",
+		"95% Pred Lim1": "-0.461307028",
+		"95% Pred Lim2": "0.529178602"
+	},
+	{
+		"Age": "49.67",
+		"Log Adusted Pred AMH": "0.030684203",
+		"95% Pred Lim1": "-0.464678144",
+		"95% Pred Lim2": "0.526046549"
+	},
+	{
+		"Age": "49.75",
+		"Log Adusted Pred AMH": "0.027611935",
+		"95% Pred Lim1": "-0.467870652",
+		"95% Pred Lim2": "0.523094521"
+	},
+	{
+		"Age": "49.83",
+		"Log Adusted Pred AMH": "0.024740414",
+		"95% Pred Lim1": "-0.470861081",
+		"95% Pred Lim2": "0.520341908"
+	},
+	{
+		"Age": "49.92",
+		"Log Adusted Pred AMH": "0.022090756",
+		"95% Pred Lim1": "-0.473626347",
+		"95% Pred Lim2": "0.517807859"
+	},
+	{
+		"Age": "50.00",
+		"Log Adusted Pred AMH": "0.019683587",
+		"95% Pred Lim1": "-0.47614407",
+		"95% Pred Lim2": "0.515511244"
+	},
+	{
+		"Age": "50.08",
+		"Log Adusted Pred AMH": "0.017538623",
+		"95% Pred Lim1": "-0.478393137",
+		"95% Pred Lim2": "0.513470384"
+	},
+	{
+		"Age": "50.17",
+		"Log Adusted Pred AMH": "0.015674302",
+		"95% Pred Lim1": "-0.48035422",
+		"95% Pred Lim2": "0.511702824"
+	},
+	{
+		"Age": "50.25",
+		"Log Adusted Pred AMH": "0.014107637",
+		"95% Pred Lim1": "-0.482010059",
+		"95% Pred Lim2": "0.510225333"
+	},
+	{
+		"Age": "50.33",
+		"Log Adusted Pred AMH": "0.012853352",
+		"95% Pred Lim1": "-0.48334644",
+		"95% Pred Lim2": "0.509053144"
+	},
+	{
+		"Age": "50.42",
+		"Log Adusted Pred AMH": "0.011923926",
+		"95% Pred Lim1": "-0.484352238",
+		"95% Pred Lim2": "0.50820009"
+	},
+	{
+		"Age": "50.50",
+		"Log Adusted Pred AMH": "0.011329075",
+		"95% Pred Lim1": "-0.485019972",
+		"95% Pred Lim2": "0.507678121"
+	},
+	{
+		"Age": "50.58",
+		"Log Adusted Pred AMH": "0.011075022",
+		"95% Pred Lim1": "-0.485346517",
+		"95% Pred Lim2": "0.507496562"
+	},
+	{
+		"Age": "50.67",
+		"Log Adusted Pred AMH": "0.011164268",
+		"95% Pred Lim1": "-0.485333257",
+		"95% Pred Lim2": "0.507661794"
+	},
+	{
+		"Age": "50.75",
+		"Log Adusted Pred AMH": "0.011595261",
+		"95% Pred Lim1": "-0.484986253",
+		"95% Pred Lim2": "0.508176775"
+	},
+	{
+		"Age": "50.83",
+		"Log Adusted Pred AMH": "0.012361705",
+		"95% Pred Lim1": "-0.484316697",
+		"95% Pred Lim2": "0.509040107"
+	},
+	{
+		"Age": "50.92",
+		"Log Adusted Pred AMH": "0.013452257",
+		"95% Pred Lim1": "-0.483340911",
+		"95% Pred Lim2": "0.510245426"
+	},
+	{
+		"Age": "51.00",
+		"Log Adusted Pred AMH": "0.014850009",
+		"95% Pred Lim1": "-0.482080475",
+		"95% Pred Lim2": "0.511780493"
+	},
+	{
+		"Age": "51.08",
+		"Log Adusted Pred AMH": "0.016532583",
+		"95% Pred Lim1": "-0.480561692",
+		"95% Pred Lim2": "0.513626859"
+	},
+	{
+		"Age": "51.17",
+		"Log Adusted Pred AMH": "0.018470987",
+		"95% Pred Lim1": "-0.478816267",
+		"95% Pred Lim2": "0.51575824"
+	},
+	{
+		"Age": "51.25",
+		"Log Adusted Pred AMH": "0.020630204",
+		"95% Pred Lim1": "-0.476880235",
+		"95% Pred Lim2": "0.518140642"
+	},
+	{
+		"Age": "51.33",
+		"Log Adusted Pred AMH": "0.022968608",
+		"95% Pred Lim1": "-0.474794127",
+		"95% Pred Lim2": "0.520731343"
+	},
+	{
+		"Age": "51.42",
+		"Log Adusted Pred AMH": "0.025437966",
+		"95% Pred Lim1": "-0.472602631",
+		"95% Pred Lim2": "0.523478562"
+	},
+	{
+		"Age": "51.50",
+		"Log Adusted Pred AMH": "0.02798339",
+		"95% Pred Lim1": "-0.470354448",
+		"95% Pred Lim2": "0.526321228"
+	},
+	{
+		"Age": "51.58",
+		"Log Adusted Pred AMH": "0.030543849",
+		"95% Pred Lim1": "-0.468101821",
+		"95% Pred Lim2": "0.529189519"
+	},
+	{
+		"Age": "51.67",
+		"Log Adusted Pred AMH": "0.033052288",
+		"95% Pred Lim1": "-0.46590071",
+		"95% Pred Lim2": "0.532005286"
+	},
+	{
+		"Age": "51.75",
+		"Log Adusted Pred AMH": "0.035436305",
+		"95% Pred Lim1": "-0.463810754",
+		"95% Pred Lim2": "0.534683363"
+	},
+	{
+		"Age": "51.83",
+		"Log Adusted Pred AMH": "0.037618845",
+		"95% Pred Lim1": "-0.461895577",
+		"95% Pred Lim2": "0.537133267"
+	},
+	{
+		"Age": "51.92",
+		"Log Adusted Pred AMH": "0.039519649",
+		"95% Pred Lim1": "-0.460222745",
+		"95% Pred Lim2": "0.539262043"
+	},
+	{
+		"Age": "52.00",
+		"Log Adusted Pred AMH": "0.041056208",
+		"95% Pred Lim1": "-0.45886459",
+		"95% Pred Lim2": "0.540977005"
+	},
+	{
+		"Age": "52.08",
+		"Log Adusted Pred AMH": "0.042145727",
+		"95% Pred Lim1": "-0.457898355",
+		"95% Pred Lim2": "0.542189808"
+	},
+	{
+		"Age": "52.17",
+		"Log Adusted Pred AMH": "0.042707409",
+		"95% Pred Lim1": "-0.457406244",
+		"95% Pred Lim2": "0.542821062"
+	},
+	{
+		"Age": "52.25",
+		"Log Adusted Pred AMH": "0.042664674",
+		"95% Pred Lim1": "-0.457475564",
+		"95% Pred Lim2": "0.542804911"
+	},
+	{
+		"Age": "52.33",
+		"Log Adusted Pred AMH": "0.041948921",
+		"95% Pred Lim1": "-0.458197088",
+		"95% Pred Lim2": "0.54209493"
+	},
+	{
+		"Age": "52.42",
+		"Log Adusted Pred AMH": "0.040502488",
+		"95% Pred Lim1": "-0.459663623",
+		"95% Pred Lim2": "0.540668599"
+	},
+	{
+		"Age": "52.50",
+		"Log Adusted Pred AMH": "0.038283796",
+		"95% Pred Lim1": "-0.461965308",
+		"95% Pred Lim2": "0.5385329"
+	},
+	{
+		"Age": "52.58",
+		"Log Adusted Pred AMH": "0.035271818",
+		"95% Pred Lim1": "-0.465183971",
+		"95% Pred Lim2": "0.535727606"
+	},
+	{
+		"Age": "52.67",
+		"Log Adusted Pred AMH": "0.031471993",
+		"95% Pred Lim1": "-0.469383816",
+		"95% Pred Lim2": "0.532327802"
+	},
+	{
+		"Age": "52.75",
+		"Log Adusted Pred AMH": "0.026923685",
+		"95% Pred Lim1": "-0.474597818",
+		"95% Pred Lim2": "0.528445187"
+	},
+	{
+		"Age": "52.83",
+		"Log Adusted Pred AMH": "0.021707435",
+		"95% Pred Lim1": "-0.480811237",
+		"95% Pred Lim2": "0.524226106"
+	},
+	{
+		"Age": "52.92",
+		"Log Adusted Pred AMH": "0.015953516",
+		"95% Pred Lim1": "-0.48794086",
+		"95% Pred Lim2": "0.519847892"
+	},
+	{
+		"Age": "53.00",
+		"Log Adusted Pred AMH": "0.009853002",
+		"95% Pred Lim1": "-0.495809555",
+		"95% Pred Lim2": "0.515515559"
+	},
+	{
+		"Age": "53.08",
+		"Log Adusted Pred AMH": "0.00366836",
+		"95% Pred Lim1": "-0.504120972",
+		"95% Pred Lim2": "0.511457691"
+	},
+	{
+		"Age": "53.17",
+		"Log Adusted Pred AMH": "-0.00225303",
+		"95% Pred Lim1": "-0.512434264",
+		"95% Pred Lim2": "0.507928203"
+	},
+	{
+		"Age": "53.25",
+		"Log Adusted Pred AMH": "-0.007464731",
+		"95% Pred Lim1": "-0.520146258",
+		"95% Pred Lim2": "0.505216796"
+	},
+	{
+		"Age": "53.33",
+		"Log Adusted Pred AMH": "-0.011404436",
+		"95% Pred Lim1": "-0.526486779",
+		"95% Pred Lim2": "0.503677907"
+	},
+	{
+		"Age": "53.42",
+		"Log Adusted Pred AMH": "-0.01337632",
+		"95% Pred Lim1": "-0.530540481",
+		"95% Pred Lim2": "0.50378784"
+	},
+	{
+		"Age": "53.50",
+		"Log Adusted Pred AMH": "-0.012530079",
+		"95% Pred Lim1": "-0.531310249",
+		"95% Pred Lim2": "0.506250092"
+	},
+	{
+		"Age": "53.58",
+		"Log Adusted Pred AMH": "-0.007838031",
+		"95% Pred Lim1": "-0.527850161",
+		"95% Pred Lim2": "0.512174099"
+	},
+	{
+		"Age": "53.67",
+		"Log Adusted Pred AMH": "0.001929411",
+		"95% Pred Lim1": "-0.519506912",
+		"95% Pred Lim2": "0.523365734"
+	},
+	{
+		"Age": "53.75",
+		"Log Adusted Pred AMH": "0.018233044",
+		"95% Pred Lim1": "-0.506313094",
+		"95% Pred Lim2": "0.542779182"
+	},
+	{
+		"Age": "53.83",
+		"Log Adusted Pred AMH": "0.042794654",
+		"95% Pred Lim1": "-0.48956017",
+		"95% Pred Lim2": "0.575149477"
+	},
+	{
+		"Age": "54.00",
+		"Log Adusted Pred AMH": "0.122446841",
+		"95% Pred Lim1": "-0.460829382",
+		"95% Pred Lim2": "0.705723063"
+	}
+]
+}

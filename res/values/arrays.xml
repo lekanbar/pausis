@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>	
+	<string-array name="array_years">
+		<item>@string/choosebirthyear</item>
+		<item>1990</item>
+		<item>1989</item>
+		<item>1988</item>
+		<item>1987</item>
+		<item>1986</item>
+		<item>1985</item>
+		<item>1984</item>
+		<item>1983</item>
+		<item>1982</item>
+		<item>1981</item>
+		<item>1980</item>
+		<item>1979</item>
+		<item>1978</item>
+		<item>1977</item>
+		<item>1976</item>
+		<item>1975</item>
+		<item>1974</item>
+		<item>1973</item>
+		<item>1972</item>
+		<item>1971</item>
+		<item>1970</item>
+		<item>1969</item>
+		<item>1968</item>
+		<item>1967</item>
+		<item>1966</item>
+		<item>1965</item>
+		<item>1964</item>
+		<item>1963</item>
+		<item>1962</item>
+		<item>1961</item>
+		<item>1960</item>
+		<item>1959</item>
+	</string-array>
+	
+	<string-array name="array_months">
+		<item>@string/choosebirthmonth</item>
+		<item>January</item>
+		<item>February</item>
+		<item>March</item>
+		<item>April</item>
+		<item>May</item>
+		<item>June</item>
+		<item>July</item>
+		<item>August</item>
+		<item>September</item>
+		<item>October</item>
+		<item>November</item>
+		<item>December</item>
+	</string-array>
+</resources>
