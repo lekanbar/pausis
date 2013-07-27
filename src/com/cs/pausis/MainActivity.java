@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.core.pausis.R;
 import com.cs.pausis.controllers.OvaryReserve_Calculator;
+import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UsageHistory;
 
 import android.os.Bundle;
@@ -194,7 +195,7 @@ public class MainActivity extends Activity {
     	});
 	}
 	
-	public void done(ArrayList<String> results){
+	public void done(ArrayList<Result> results){
 		dialog.setProgress(dialog.getProgress() + 10);
 		
 		if(results.size() > 0){

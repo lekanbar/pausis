@@ -6,18 +6,16 @@ import com.core.pausis.R;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UsageHistory;
 import com.cs.pausis.models.UserPreference;
-import com.cs.pausis.models.Years;
 import com.tjerkw.slideexpandable.library.ActionSlideExpandableListView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Toast;
 
  public class Summary extends Activity {	 
 	 UserPreference pref;
@@ -27,6 +25,8 @@ import android.widget.Toast;
 	 double result;
 	 ArrayList<Result> results;
 	 ResultAdapter adapter;
+	 
+	 IDemoChart mChart = new ReserveGaugeChart();
 	 
 	Runnable updateTextView = new Runnable() {
 	   @Override
@@ -110,8 +110,16 @@ import android.widget.Toast;
 			public void onClick(View listView, View buttonview, int position) {
 				Result res = results.get(position);
 				
-				if(buttonview.getId() == R.id.buttonA) {
+				if(buttonview.getId() == R.id.buttonA) {					
+					//Set values
+					((ReserveGaugeChart)mChart).setMinimum(-3);
+					((ReserveGaugeChart)mChart).setMaximum(3);
+					((ReserveGaugeChart)mChart).setCurrent(Double.parseDouble(res.getValue()));
 					
+					Intent intent = mChart.execute(Summary.this);
+					
+					//Start intent
+					startActivity(intent);
 				} else {
 					
 				}

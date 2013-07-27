@@ -7,6 +7,7 @@ import com.cs.pausis.MainActivity;
 import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
 import com.cs.pausis.models.OvarianVolume;
+import com.cs.pausis.models.Result;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -23,7 +24,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     OvarianVolume ova;
     AFC afc;
 	
-    ArrayList<String> results = null;
+    ArrayList<Result> results = null;
     
 	public OvaryReserve_Calculator(int birthYear, int birthMonth, Double observedAMH, Double observedVolume, Double observedAFC, Context context){
 		this.birthYear = birthYear;
@@ -75,16 +76,61 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
  	}
 
     @Override
-    protected void onPostExecute(Drawable result){
-    	
-    	results = new ArrayList<String>();
+    protected void onPostExecute(Drawable result){    	
+    	results = new ArrayList<Result>();
     	try {
-    		if(this.observedAMH != null)
-    			results.add(String.valueOf(amh.getZScore()));
-    		if(this.observedVolume != null)
-    			results.add(String.valueOf(ova.getZScore()));
-    		if(this.observedAFC != null)
-    			results.add(String.valueOf(afc.getPercentile()));
+    		Result result2;
+    		
+    		if(this.observedAMH != null){
+    			result2 = new Result();
+    			double zscore = amh.getZScore();
+    			
+    			if(zscore <= 0)
+    				result2.setStatus(Result.Status.RED.toString());
+    			else if(zscore >= 1  && zscore <= 2)
+    				result2.setStatus(Result.Status.ORANGE.toString());
+    			else
+    				result2.setStatus(Result.Status.GREEN.toString());
+    			
+    			result2.setValue(String.valueOf(zscore));
+    			result2.setType(Result.Type.AMH.toString());
+    			
+    			results.add(result2);
+    		}
+    		if(this.observedVolume != null){
+    			result2 = new Result();
+    			double zscore = ova.getZScore();
+    			
+    			if(zscore <= 0)
+    				result2.setStatus(Result.Status.RED.toString());
+    			else if(zscore >= 1  && zscore <= 2)
+    				result2.setStatus(Result.Status.ORANGE.toString());
+    			else
+    				result2.setStatus(Result.Status.GREEN.toString());
+    			
+    			result2.setValue(String.valueOf(zscore));
+    			result2.setType(Result.Type.OVA.toString());
+    			
+    			results.add(result2);
+    		}
+    		if(this.observedAFC != null){
+    			result2 = new Result();
+    			int percentile = afc.getPercentile();
+    			
+    			if(percentile == 5)
+    				result2.setStatus(Result.Status.RED.toString());
+    			else if(percentile == 25)
+    				result2.setStatus(Result.Status.YELLOW.toString());
+    			else if(percentile == 50 || percentile == 75)
+    				result2.setStatus(Result.Status.ORANGE.toString());
+    			else
+    				result2.setStatus(Result.Status.GREEN.toString());
+    			
+    			result2.setValue(String.valueOf(percentile));
+    			result2.setType(Result.Type.AFC.toString());
+    			
+    			results.add(result2);
+    		}
     		
     		((MainActivity)this.context).done(results);
 		} catch (Exception e) {
