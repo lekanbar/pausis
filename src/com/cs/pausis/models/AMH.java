@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,20 +20,20 @@ public class AMH {
 	//High Precision Polynomial Order 20
 	//private double[] highPrecision = {6070, 0.460157176, 0.456975391, 0.250533758, 151.8960797};
 	
-	private double[] amhModelParameters = {0.268973253, 0.276929216, -0.187935755, -0.029868681, 0.068510338, -0.029956658,
-			                               0.007253793, -0.001161852, 0.000132573, -0.0000112147896142044, 0.000000720267962610566000000000, 
-			                               -0.000000035628081627990600000000, 0.000000001367701261690610000000, -0.000000000040823275726364100000,
-			                               0.000000000000943766141083695000, -0.000000000000016721408012587600, 0.000000000000000222660762771979,
-			                               -0.000000000000000002155234154709, 0.000000000000000000014309864009, -0.000000000000000000000058266124,
-			                               0.000000000000000000000000109677};
+	private BigDecimal[] amhModelParameters = {new BigDecimal(0.268973252734819), new BigDecimal(0.276929215744691), new BigDecimal(-0.187935754536451), new BigDecimal(-0.0298686809952054), 
+												new BigDecimal(0.0685103384848424), new BigDecimal(-0.0299566581771031),
+												new BigDecimal(0.00725379256607949), new BigDecimal(-0.00116185183747773), new BigDecimal(0.000132572801449005), 
+												new BigDecimal(-0.0000112147896142044), new BigDecimal(7.20267962610566E-07), 
+												new BigDecimal(-3.56280816279906E-08), new BigDecimal(1.36770126169061E-09), new BigDecimal(-4.08232757263641E-11),
+												new BigDecimal(9.43766141083695E-13), new BigDecimal(-1.67214080125876E-14), new BigDecimal(2.22660762771979E-16),
+												new BigDecimal(-2.15523415470886E-18), new BigDecimal(1.43098640088323E-20), new BigDecimal(-5.82661241989873E-23),
+												new BigDecimal(1.0967733955294E-25)};
 	
 	private AMH loadedItem;
-	private double age,
-	               observedAmhValue,
-	               zScore,
-	               lapa,
-	               pl1,
-	               pl2;
+	private double age, observedAmhValue,
+	               zScore, lapa,
+	               pl1, pl2;
+	private double[] sdvalues;
 	Context context;
 	
 	public AMH(){
@@ -41,9 +42,65 @@ public class AMH {
 	
 	public AMH(Context context){
 		this.context = context;
+		age = 0.0;
+		observedAmhValue = 0.0;
+		zScore = 0.0;
+		lapa = 0.0;
+		pl1 = 0.0;
+		pl2 = 0.0;
+		sdvalues = new double[7];
 		
 		if(!check())
 			initializeAMH();
+	}
+	
+	public void calculateAMH() throws Exception{
+		//Assert input values are valid before proceeding
+		if(checkInputValues()){	
+			//perform a look up of the age related values
+			vLookUp();
+			
+			if(loadedItem != null){
+				//Log Adjusted Obs AMH
+				double logAdjustedObsAMH = Math.log10(this.getObservedAmhValue() + 1);
+				
+				//Log Adjusted Pred AMH
+				double ageInput = this.getAge();
+				double logAdjustedPredAMH = 0.0;
+				for(int i = 0; i < amhModelParameters.length; i++) {
+					logAdjustedPredAMH += (amhModelParameters[i].doubleValue() * Math.pow(ageInput, i));
+				}
+				
+				double standardDeviation = (loadedItem.getPl2() - loadedItem.getLapa()) / 1.96;
+				
+				//Calculate zScore
+				double calcValue = (logAdjustedObsAMH - logAdjustedPredAMH) / standardDeviation; 
+				setZScore(calcValue);
+				
+				//Calculate SD values
+				int count = 3;
+				for (int i = 0; i < sdvalues.length; i++) {
+					if(i < 3){
+						sdvalues[i] = Math.pow(10, (logAdjustedPredAMH - count * standardDeviation)) - 1;
+						count--;
+					}
+					else if(i == 3) {
+						sdvalues[i] = Math.pow(10, (logAdjustedPredAMH)) - 1;
+						count++;
+					}
+					else {
+						sdvalues[i] = Math.pow(10, (logAdjustedPredAMH + count * standardDeviation)) - 1;
+						count++;
+					}						
+				}
+			}
+			else{
+				throw new Exception("Age does not exist in table.");
+			}
+		}
+		else {
+			throw new Exception("Invalid inputs entered.");
+		}
 	}
 	
 	private void initializeAMH(){
@@ -133,38 +190,6 @@ public class AMH {
 		return true;
 	}
 	
-	public void calculateAMH() throws Exception{
-		//Assert input values are valid before proceeding
-		if(checkInputValues()){	
-			//perform a look up of the age related values
-			vLookUp();
-			
-			if(loadedItem != null){
-				//Log Adjusted Obs AMH
-				double logAdjustedObsAMH = Math.log10(this.getObservedAmhValue() + 1);
-				
-				//Log Adjusted Pred AMH
-				double ageInput = this.getAge();
-				double logAdjustedPredAMH = 0.0;
-				for(int i = 0; i < amhModelParameters.length; i++){
-					logAdjustedPredAMH += (amhModelParameters[i] * Math.pow(ageInput, i));
-				}
-				
-				double standardDeviation = (loadedItem.getPl2() - loadedItem.getLapa()) / 1.96;
-				
-				//Calculate zScore
-				double calcValue = (logAdjustedObsAMH - logAdjustedPredAMH) / standardDeviation; 
-				setZScore(calcValue);
-			}
-			else{
-				throw new Exception("Age does not exist in table.");
-			}
-		}
-		else {
-			throw new Exception("Invalid inputs entered.");
-		}
-	}
-	
 	public void setAge(double value){
 		age = value;
 	}
@@ -205,5 +230,9 @@ public class AMH {
 	}
 	public double getPl2(){
 		return pl2;
+	}
+
+	public double[] getSdvalues() {
+		return sdvalues;
 	}
 }

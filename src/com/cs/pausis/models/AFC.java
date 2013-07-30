@@ -25,14 +25,15 @@ import android.database.sqlite.SQLiteDatabase;
  */
 public class AFC {
 	private AFC loadedItem;
-	private int Percentile;
-	private double Age,
-	               ObservedAfcValue,
+	private int Age, Percentile;
+	
+	private double ObservedAfcValue,
 	               Fifth,
 	               TwentyFifth,
 	               Fiftieth,
 	               SeventyFifth,
 	               NinetyFifth;
+	private double[] sdvalues = {5, 25, 50, 75, 95};
 	Context context;
 	
 	/**
@@ -82,7 +83,7 @@ public class AFC {
 	            String sql = "INSERT INTO " + DB.TABLE_AFC_LOOKUP + "(" + DB.KEY_AGE + ", " + DB.KEY_5TH_PERCENTILE + ", " + DB.KEY_25TH_PERCENTILE + ", " + 
 	                                          DB.KEY_50TH_PERCENTILE + ", " + DB.KEY_75TH_PERCENTILE + ", " + DB.KEY_95TH_PERCENTILE + 
 	                         ") VALUES('"   + 
-	            		                      value.getString("Age") + "','" 
+	            		                      value.getString("Age (y)") + "','" 
                                             + value.getString("5th") + "','" 
                                             + value.getString("25th") + "','" 
                                             + value.getString("50th") + "','" 
@@ -141,8 +142,6 @@ public class AFC {
 	private boolean checkInputValues() {
 		if(this.getAge() <= 0.0)
 			return false;
-		if(this.getObservedAfcValue() <= 0.0)
-			return false;
 		
 		return true;
 	}
@@ -181,11 +180,11 @@ public class AFC {
 		}
 	}
 
-	public double getAge() {
+	public int getAge() {
 		return Age;
 	}
 
-	public void setAge(double age) {
+	public void setAge(int age) {
 		Age = age;
 	}
 
@@ -243,5 +242,13 @@ public class AFC {
 
 	public void setNinetyFifth(double ninetyFifth) {
 		NinetyFifth = ninetyFifth;
+	}
+
+	public double[] getSdvalues() {
+		return sdvalues;
+	}
+
+	public void setSdvalues(double[] sdvalues) {
+		this.sdvalues = sdvalues;
 	}
 }

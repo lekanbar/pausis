@@ -21,6 +21,8 @@ import org.achartengine.renderer.DialRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 import org.achartengine.renderer.DialRenderer.Type;
 
+import com.cs.pausis.models.Result;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -31,6 +33,13 @@ import android.graphics.Color;
 public class ReserveGaugeChart extends AbstractDemoChart {
 	
 	double current, maximum, minimum;
+	DialRenderer renderer;
+	CategorySeries category;
+	Result result;
+	
+	public ReserveGaugeChart(Result result) {
+		this.result = result;
+	}
 	
   /**
    * Returns the chart name.
@@ -71,48 +80,84 @@ public class ReserveGaugeChart extends AbstractDemoChart {
   public void setMinimum(double minimum) {
 	this.minimum = minimum;
   }
+  
+  private void setSeriesForRenderer(){
+	  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+	  
+	  if(!result.getType().equals(Result.Type.AFC.toString())){
+	      for (int i = 0; i < result.getSdvalues().length; i++) {
+	    	  category.add("", result.getSdvalues()[i]);
+	    	
+	    	  if(i == 3){
+	    		 r = new SimpleSeriesRenderer();
+	    		 r.setColor(Color.GREEN);
+	    	     renderer.addSeriesRenderer(r);
+	    	  }
+	    	  else {
+	    		 r = new SimpleSeriesRenderer();
+	    	     r.setColor(Color.TRANSPARENT);
+	    	     renderer.addSeriesRenderer(r);
+			  }
+		  }
+	  }
+	  else {
+		  String legendName = "";
+		  for (int i = 0; i < result.getSdvalues().length; i++) {
+	    	  if(Double.parseDouble(result.getValue()) == result.getSdvalues()[i]){
+	    		 r = new SimpleSeriesRenderer();
+	    		 r.setColor(Color.GREEN);
+	    	     renderer.addSeriesRenderer(r);
+	    	     legendName = "You";
+	    	  }
+	    	  else {
+	    		 r = new SimpleSeriesRenderer();
+	    	     r.setColor(Color.TRANSPARENT);
+	    	     renderer.addSeriesRenderer(r);
+	    	     legendName = "";
+			  }
+	    	  
+	    	  category.add(legendName, result.getSdvalues()[i]);
+		  }
+	  }
+  }
 
   /**
    * Executes the chart demo.
    * @param context the context
    * @return the built intent
    */
-  public Intent execute(Context context) {
-    CategorySeries category = new CategorySeries("Ovary Gauge");
-    category.add("Current", getCurrent());
-    category.add("Minimum", getMinimum());
-    category.add("Maximum", getMaximum());
+  @Override
+  public Intent execute(Context context) {	  
+      category = new CategorySeries("Ovaries gauge");
+      category.add("Current", getCurrent());
     
-    DialRenderer renderer = new DialRenderer();
-    renderer.setChartTitleTextSize(20);
-    renderer.setLabelsTextSize(15);
-    renderer.setLegendTextSize(15);
-    renderer.setMargins(new int[] {20, 30, 15, 0});
+      renderer = new DialRenderer();
+      renderer.setChartTitleTextSize(20);
+      renderer.setLabelsTextSize(15);
+      renderer.setLegendTextSize(15);
+      renderer.setMargins(new int[] {20, 30, 15, 0});
     
-    SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-    r.setColor(Color.BLUE);
-    renderer.addSeriesRenderer(r);
+      //Set the chart series and their corresponding values
+      setSeriesForRenderer();
+     
+      renderer.setChartTitle("Your position by the provided " + result.getType() + " value");
+      renderer.setLabelsColor(Color.WHITE);
+      renderer.setAxesColor(Color.RED);
+      renderer.setShowLabels(true);
+      renderer.setVisualTypes(new DialRenderer.Type[] {Type.NEEDLE});
+      
+      renderer.setMinValue(0);
+      if(!result.getType().equals(Result.Type.AFC.toString())) {
+	      renderer.setMaxValue(Math.pow(10, Math.ceil(Math.log10(result.getSdvalues()[6]))));
+	      renderer.setMajorTicksSpacing(1);
+	      renderer.setMinorTicksSpacing(0.5);
+      }
+      else {
+	      renderer.setMaxValue(result.getSdvalues()[4]);
+	      renderer.setMajorTicksSpacing(5);
+	      renderer.setMinorTicksSpacing(5);
+	  }
     
-    r = new SimpleSeriesRenderer();
-    r.setColor(Color.RED);//.rgb(0, 150, 0)
-    renderer.addSeriesRenderer(r);
-    
-    r = new SimpleSeriesRenderer();
-    r.setColor(Color.GREEN);
-    renderer.addSeriesRenderer(r);
-    
-    renderer.setLabelsTextSize(10); 
-    renderer.setChartTitle("Chart of life");
-    renderer.setLabelsColor(Color.YELLOW);
-    renderer.setAxesColor(Color.RED);
-    renderer.setShowLabels(true);
-    renderer.setVisualTypes(new DialRenderer.Type[] {Type.ARROW, Type.NEEDLE, Type.NEEDLE});
-    renderer.setMinValue(-2);
-    renderer.setMaxValue(2);
-    renderer.setMajorTicksSpacing(1);
-    renderer.setMinorTicksSpacing(0.25);
-    
-    return ChartFactory.getDialChartIntent(context, category, renderer, "Weight indicator");
+      return ChartFactory.getDialChartIntent(context, category, renderer, "Indicator");
   }
-
 }

@@ -60,6 +60,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
             if (this.observedAFC != null) {
             	afc = new AFC(this.context);
 				afc.setAge(calculateAge());
+				afc.setObservedAfcValue(this.observedAFC.doubleValue());
 				afc.calculateAFC();
             	
             	((MainActivity)this.context).updateDialog();
@@ -94,6 +95,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.AMH.toString());
+    			result2.setSdvalues(amh.getSdvalues());
     			
     			results.add(result2);
     		}
@@ -110,6 +112,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.OVA.toString());
+    			result2.setSdvalues(ova.getSdvalues());
     			
     			results.add(result2);
     		}
@@ -128,6 +131,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(percentile));
     			result2.setType(Result.Type.AFC.toString());
+    			result2.setSdvalues(afc.getSdvalues());
     			
     			results.add(result2);
     		}
@@ -140,8 +144,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     
     private double calculateAgeWithMonth(){
     	Calendar c = Calendar.getInstance();
-		double calcage = (c.get(Calendar.YEAR) - this.birthYear) + (this.birthMonth/12);
-    	
+		double calcage = (c.get(Calendar.YEAR) - this.birthYear), 
+			   month = (this.birthMonth/12.0);
+		calcage += month;
+		
     	return calcage;
     }
     

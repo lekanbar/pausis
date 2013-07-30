@@ -21,8 +21,8 @@
     <string name="info">Information</string>
     <string name="birthyear">Birth Year:\u0020</string>
     <string name="birthmonth">Birth Month:\u0020</string>
-    <string name="choosebirthyear">Choose Birth Year</string>
-    <string name="choosebirthmonth">Choose Birth Month</string>
+    <string name="choosebirthyear">Select Year</string>
+    <string name="choosebirthmonth">Select Month</string>
     <string name="typecountry">Type to search</string>
     <string name="calcing">Calculating</string>
     <string name="calcvalue">Calculated value:\u0020</string>
@@ -34,6 +34,7 @@
     <string name="neutral">Neutral</string>
     <string name="plswait">Please wait....</string>
     <string name="resulttitle">No Result</string>
+    <string name="chartmenu">Visualization Menu</string>
     <string name="resultmessage">No result was generated for the values entered. Please ensure that you have entered valid values and try again.</string>
     <string name="gaugetitle">View Result</string>
     

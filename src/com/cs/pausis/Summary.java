@@ -9,7 +9,6 @@ import com.cs.pausis.models.UserPreference;
 import com.tjerkw.slideexpandable.library.ActionSlideExpandableListView;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -26,7 +25,7 @@ import android.view.View;
 	 ArrayList<Result> results;
 	 ResultAdapter adapter;
 	 
-	 IDemoChart mChart = new ReserveGaugeChart();
+	 IDemoChart mChart;
 	 
 	Runnable updateTextView = new Runnable() {
 	   @Override
@@ -40,23 +39,23 @@ import android.view.View;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
           	
-        Configuration conf = this.getResources().getConfiguration();    	
-    	if(conf.orientation == 2)
+        //Configuration conf = this.getResources().getConfiguration();    	
+    	//if(conf.orientation == 2)
     		setContentView(R.layout.summary);
     	//else
     		//setContentView(R.layout.summaryport);
     	
-    	if(isfirsttime){
+    	/*if(isfirsttime){
     		Bundle b = getIntent().getExtras();
         	usage = b.getParcelable("usage");
         	
         	//Calculate percentage
         	InitializeUI();
-        	CalculatePercentage();
+        	//CalculatePercentage();
         	
         	isfirsttime = false;
     	}
-    	else
+    	else*/
     		InitializeUI();
     }
     
@@ -90,12 +89,12 @@ import android.view.View;
 	    }
     }
     
-    private void CalculatePercentage(){
+    /*private void CalculatePercentage(){
     	if(!isviolated){
 	        //show result
 	        runOnUiThread(updateTextView);
     	}
-    }
+    }*/
     
     private void InitializeUI(){
     	results = getIntent().getExtras().getParcelableArrayList("results");
@@ -108,18 +107,11 @@ import android.view.View;
 
 			@Override
 			public void onClick(View listView, View buttonview, int position) {
-				Result res = results.get(position);
-				
-				if(buttonview.getId() == R.id.buttonA) {					
-					//Set values
-					((ReserveGaugeChart)mChart).setMinimum(-3);
-					((ReserveGaugeChart)mChart).setMaximum(3);
-					((ReserveGaugeChart)mChart).setCurrent(Double.parseDouble(res.getValue()));
-					
-					Intent intent = mChart.execute(Summary.this);
-					
-					//Start intent
-					startActivity(intent);
+				if(buttonview.getId() == R.id.buttonA) {	
+					Intent i = new Intent(getApplicationContext(), ChartOptionsMenu.class);
+					i.putExtra("position", position);
+					i.putExtra("results", results);
+					startActivity(i);
 				} else {
 					
 				}

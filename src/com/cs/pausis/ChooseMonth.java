@@ -36,11 +36,7 @@ public class ChooseMonth extends Activity {
         
         setContentView(R.layout.months);
         
-        String cou = getIntent().getExtras().getString("yearindex");
-        if(cou != null)
-        	monthindex = Integer.parseInt(cou);
-        else
-        	monthindex = 0;
+        monthindex = getIntent().getExtras().getInt("monthindex", 0);
     	
     	InitializeUI();
     }
@@ -60,7 +56,7 @@ public class ChooseMonth extends Activity {
     };
     
     public void InitializeUI(){
-    	setTitle(getString(R.string.choosebirthmonth));
+    	//setTitle(getString(R.string.choosebirthmonth));
         
         monthSearch = (EditText) findViewById(R.id.countrysearch_box);
         monthSearch.addTextChangedListener(filterTextWatcher);
@@ -87,11 +83,12 @@ public class ChooseMonth extends Activity {
 			public void onItemClick(AdapterView<?> adapter, View v, int pos, long arg3) {
 				// TODO Auto-generated method stub
 				Months chosenmonth = (Months)adapter.getItemAtPosition(pos);				
-				String month = chosenmonth.getMonth();
-				if(!month.toString().startsWith("Choose")){
+				int month = Integer.parseInt(chosenmonth.getID());
+				if(month > 0){
 					Intent i = new Intent();
-		        	i.putExtra("yearindex", pos);
+		        	i.putExtra("monthindex", pos);
 		        	i.putExtra("birthmonth", month);
+		        	i.putExtra("birthmonthtext", chosenmonth.getMonth());
 		        	setResult(RESULT_OK, i);
 		        	finish();
 				}

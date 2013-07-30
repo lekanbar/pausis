@@ -47,25 +47,25 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 		
 		//Get status based on color
 		String status = "";
-		if(statusString.equals(Result.Status.GREEN))
+		if(statusString.equals(Result.Status.GREEN.toString()))
 			status = context.getString(R.string.positive);
-		else if(statusString.equals(Result.Status.ORANGE))
+		else if(statusString.equals(Result.Status.ORANGE.toString()))
 			status = context.getString(R.string.neutral);
 		else
 			status = context.getString(R.string.negative);
 		
 		//Set result status image
-		if(statusString.equals(Result.Status.GREEN))
+		if(statusString.equals(Result.Status.GREEN.toString()))
 			indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.res_green));
-		else if(statusString.equals(Result.Status.ORANGE))
+		else if(statusString.equals(Result.Status.ORANGE.toString()))
 			indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.res_orange));
 		else
 			indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.res_red));
 		
 		//Set the result description
-		if(typeString.equals(Result.Type.AFC))
+		if(typeString.equals(Result.Type.AFC.toString()))
 			textView.setText(context.getString(R.string.afcresult) + status);
-		else if(typeString.equals(Result.Type.AMH))
+		else if(typeString.equals(Result.Type.AMH.toString()))
 			textView.setText(context.getString(R.string.amhresult) + status);
 		else
 			textView.setText(context.getString(R.string.ovaresult) + status);

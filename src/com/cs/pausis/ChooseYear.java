@@ -36,11 +36,7 @@ public class ChooseYear extends Activity {
         
         setContentView(R.layout.years);
         
-        String cou = getIntent().getExtras().getString("yearindex");
-        if(cou != null)
-        	yearindex = Integer.parseInt(cou);
-        else
-        	yearindex = 0;
+        yearindex = getIntent().getExtras().getInt("yearindex", 0);
     	
     	InitializeUI();
     }

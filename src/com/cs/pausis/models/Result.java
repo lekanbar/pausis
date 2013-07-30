@@ -9,19 +9,22 @@ public class Result implements Parcelable {
 				   value,
 				   description,
 				   type;
+	private double[] sdvalues;
 	
 	public enum Status {
 	   GREEN, ORANGE, RED, YELLOW
 	}
 	
 	public enum Type {
-		AFC, AMH, OVA
+	   AFC, AMH, OVA
 	}
 
 	public Result(){
 		iD = "";
 		status = "0";
 		value = "0";
+		description = "";
+		type = "";
 	}
 	
 	public String getiD() {
@@ -64,18 +67,38 @@ public class Result implements Parcelable {
 		this.type = type;
 	}
 
+	public double[] getSdvalues() {
+		return sdvalues;
+	}
+
+	public void setSdvalues(double[] sdvalues) {
+		this.sdvalues = sdvalues;
+	}
+
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
 		// TODO Auto-generated method stub
 		out.writeString(iD);
 		out.writeString(status);
 		out.writeString(value);
+		out.writeString(type);
+		out.writeDoubleArray(getSdvalues());
 	}
 	
 	private Result(Parcel in) {
 		this.setiD(in.readString());
 		this.setStatus(in.readString());
 		this.setValue(in.readString());
+		this.setType(in.readString());
+		
+		double[] values = null;
+		if (!this.getType().equals(Result.Type.AFC.toString()))
+			values = new double[7];
+		else
+			values = new double[5];
+		
+		in.readDoubleArray(values);
+		this.setSdvalues(values);
 	}
 	
 	public static final Parcelable.Creator<Result> CREATOR = new Parcelable.Creator<Result>() {

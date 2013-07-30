@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
 	static boolean isfirsttime = true;
 	ProgressDialog dialog;
 	
+	String monthText = "";
 	int birthYear, birthMonth;
 	
 	public static final int DO_CHOOSE_YEAR = 1;
@@ -51,6 +52,8 @@ public class MainActivity extends Activity {
 			else
 				usage = null;
 		}
+		
+		InitializeUI();
 	}
 	
 	public void InitializeUI(){
@@ -96,7 +99,12 @@ public class MainActivity extends Activity {
             }
         });
         
-    	String[] theList = {getString(R.string.choosebirthyear)};
+        String year = "";
+        if(birthYear == 0)
+        	year = getString(R.string.choosebirthyear);
+        else
+			year = birthYear + "";        	
+    	String[] theList = {year};
         Spinner spinner = (Spinner) findViewById(R.id.spinBirthYear);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, theList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -107,7 +115,8 @@ public class MainActivity extends Activity {
 			public boolean onTouch(View arg0, MotionEvent evt) {
 				// TODO Auto-generated method stub
 				if(evt.getAction() == MotionEvent.ACTION_DOWN || evt.getAction() == MotionEvent.ACTION_POINTER_DOWN){
-					Intent i = new Intent(getApplicationContext(), ChooseYear.class);					
+					Intent i = new Intent(getApplicationContext(), ChooseYear.class);
+					i.putExtra("yearindex", 0);
 					startActivityForResult(i, DO_CHOOSE_YEAR);
 				}
 				return true;
@@ -120,13 +129,16 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				if(keyCode == KeyEvent.KEYCODE_DPAD_CENTER){
 					Intent i = new Intent(getApplicationContext(), ChooseYear.class);
+					i.putExtra("yearindex", 0);
 					startActivityForResult(i, DO_CHOOSE_YEAR);
 				}
 				return true;
 			}
         });
         
-        String[] theList2 = {getString(R.string.choosebirthmonth)};
+        if(monthText.equals(""))
+        	monthText = getString(R.string.choosebirthmonth);
+        String[] theList2 = {monthText};
         Spinner spinner2 = (Spinner) findViewById(R.id.spinBirthMonth);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, theList2);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -138,6 +150,7 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				if(evt.getAction() == MotionEvent.ACTION_DOWN || evt.getAction() == MotionEvent.ACTION_POINTER_DOWN){
 					Intent i = new Intent(getApplicationContext(), ChooseMonth.class);
+					i.putExtra("monthindex", 0);
 					startActivityForResult(i, DO_CHOOSE_MONTH);
 				}
 				return true;
@@ -151,6 +164,7 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				if(keyCode == KeyEvent.KEYCODE_DPAD_CENTER){
 					Intent i = new Intent(getApplicationContext(), ChooseMonth.class);
+					i.putExtra("monthindex", 0);
 					startActivityForResult(i, DO_CHOOSE_MONTH);
 				}
 				return true;
@@ -233,13 +247,18 @@ public class MainActivity extends Activity {
 			    if (resCode == Activity.RESULT_OK) {
 			    	//int index = Integer.parseInt(data.getStringExtra("yearindex"));
 			    	birthYear = Integer.parseInt(data.getStringExtra("birthyear"));
+			    	InitializeUI();
 			    }
+			    break;
 		    }
 		    case (DO_CHOOSE_MONTH) : {
 			    if (resCode == Activity.RESULT_OK) {
 			    	//int index = Integer.parseInt(data.getStringExtra("monthindex"));
-			    	birthMonth = Integer.parseInt(data.getStringExtra("birthmonth"));
+			    	birthMonth = data.getIntExtra("birthmonth", 0);
+			    	monthText = data.getStringExtra("birthmonthtext");
+			    	InitializeUI();
 			    }
+			    break;
 		    }
 	    }
 	}

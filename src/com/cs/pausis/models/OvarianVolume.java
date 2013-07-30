@@ -1,18 +1,22 @@
 package com.cs.pausis.models;
 
+import java.math.BigDecimal;
+
 import android.content.Context;
 
 public class OvarianVolume {
-	private double[] ovarianModelParameters = {0.089238481, 0.110468789, -0.030505776, 0.005094503, -0.000434519, 0.0000248607385503967,
-			                                   -0.000001228073192789340000000000, 0.000000054349899895093800000000, -0.000000001885656863491330000000,
-			                                   0.000000000046563925396300600000, -0.000000000000787021809607684000, 0.000000000000008865632202665070, 
-			                                   -0.000000000000000063602270361560, 0.000000000000000000262939134526, -0.000000000000000000000477026953};
+	private BigDecimal[] ovarianModelParameters = {new BigDecimal(0.0892384806470678), new BigDecimal(0.110468789001642), new BigDecimal(-0.0305057761704427), new BigDecimal(0.00509450267640864), 
+			new BigDecimal(-0.000434519218703733), new BigDecimal(0.0000248607385503967),
+			new BigDecimal(-1.22807319278934E-06), new BigDecimal(5.43498998950938E-08), new BigDecimal(-1.88565686349133E-09),
+			new BigDecimal(4.65639253963006E-11), new BigDecimal(-7.87021809607684E-13), new BigDecimal(8.86563220266507E-15), 
+			new BigDecimal(-6.36022703615603E-17), new BigDecimal(2.62939134526092E-19), new BigDecimal(-4.77026953014042E-22)};
 	
 	//private OvarianVolume loadedItem;
 	private final double SD = 0.0878060117148268; 
 	private double Age,
 	               ObservedVolume,
 	               ZScore;
+	private double[] sdvalues;
 	Context context;
 	
 	public OvarianVolume(){
@@ -24,6 +28,7 @@ public class OvarianVolume {
 		Age = 0.0;
 		ObservedVolume = 0.0;
 		ZScore = 0.0;
+		sdvalues = new double[7];
 	}
 	
 	private boolean checkInputValues() {
@@ -42,13 +47,30 @@ public class OvarianVolume {
 			
 			//Log Adjusted Pred AMH
 			double logAdjustedPredVolume = 0.0;
-			for(int i = 0; i < ovarianModelParameters.length; i++){
-				logAdjustedPredVolume += (ovarianModelParameters[i] * Math.pow(this.getAge(), i));
+			for(int i = 0; i < ovarianModelParameters.length; i++) {
+				logAdjustedPredVolume += (ovarianModelParameters[i].doubleValue() * Math.pow(this.getAge(), i));
 			}
 			
 			//Calculate zScore
 			double calcValue = (logAdjustedObsVolume - logAdjustedPredVolume) / SD;
 			setZScore(calcValue);
+			
+			//Calculate SD values
+			int count = 3;
+			for (int i = 0; i < sdvalues.length; i++) {
+				if(i < 3) {
+					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume - count * SD)) - 1;
+					count--;
+				}
+				else if(i == 3) {
+					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume)) - 1;
+					count++;
+				}
+				else {
+					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume + count * SD)) - 1;
+					count++;
+				}						
+			}
 		}
 		else{
 			throw new Exception("Age does not exist in table");
@@ -77,5 +99,13 @@ public class OvarianVolume {
 
 	public void setZScore(double zScore) {
 		ZScore = zScore;
+	}
+
+	public double[] getSdvalues() {
+		return sdvalues;
+	}
+
+	public void setSdvalues(double[] sdvalues) {
+		this.sdvalues = sdvalues;
 	}
 }
