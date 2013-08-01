@@ -164,7 +164,9 @@ public class AMH {
 	
 	private void vLookUp() {	
 		SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
-		Cursor value = db.query(true, DB.TABLE_AMH_LOOKUP,  null, DB.KEY_AGE + " = ?", new String[]{String.valueOf(this.getAge())}, null, null, null, null);
+		java.text.DecimalFormat df = new java.text.DecimalFormat("#.00");
+    	String aged = df.format(this.getAge());
+		Cursor value = db.query(true, DB.TABLE_AMH_LOOKUP,  null, DB.KEY_AGE + " = ?", new String[]{aged}, null, null, null, null);
 		   
 	    if ((value.getCount() == 0) || !value.moveToFirst()) {
 	    	value.close();

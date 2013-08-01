@@ -2,6 +2,8 @@ package com.cs.pausis;
 
 import java.util.ArrayList;
 
+import org.achartengine.GraphicalView;
+
 import com.core.pausis.R;
 import com.cs.pausis.models.Result;
 
@@ -17,13 +19,14 @@ public class ChartOptionsMenu extends ListActivity  {
     
     TextView content;
     ArrayList<Result> results;
+    GraphicalView view;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {    
        super.onCreate(savedInstanceState);
        setContentView(R.layout.list_activity);
         
-       String[] values = new String[] { "Bar Chart", "Gauge Chart", "Line Chart"};
+       String[] values = new String[] { "Bar Chart", "Gauge Chart" };
 
        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
        // Assign adapter to List
@@ -36,22 +39,41 @@ public class ChartOptionsMenu extends ListActivity  {
    protected void onListItemClick(ListView l, View v, int position, long id) {        
 	   super.onListItemClick(l, v, position, id);
 	   // ListView Clicked item index
-	   int itemPosition = position;
-	   Intent intent;
-	   
+	   int itemPosition = position;	   
 	   int pos = getIntent().getIntExtra("position", 0);
-	   Result result = results.get(pos);	   
+	   Result result = results.get(pos);
 	   
-       if(itemPosition == 0){
-    	   ReserveXYBarChart mBarChart = new ReserveXYBarChart(ChartOptionsMenu.this, result);
-		   intent = mBarChart.execute();
-       }
-       else {
-    	   ReserveGaugeChart mGaugeChart = new ReserveGaugeChart(result);			
-    	   intent = mGaugeChart.execute(ChartOptionsMenu.this);
+	   if (itemPosition == 0) {
+		   ReserveXYBarChart mBarChart = new ReserveXYBarChart(ChartOptionsMenu.this, result);
+	  	   Intent intent = mBarChart.execute();
+	  	   startActivity(intent);
+		   /*Intent intent = new Intent(ChartOptionsMenu.this, ChartView.class);
+	       intent.putExtra("type", itemPosition);
+	       intent.putExtra("result", result);
+		   startActivity(intent);*/
 	   }
+	   else {
+      	   //ReserveGaugeChart mGaugeChart = new ReserveGaugeChart(result);
+      	   //Intent intent = mGaugeChart.execute(ChartOptionsMenu.this, 0);
+		   Intent intent = new Intent(ChartOptionsMenu.this, ChartView.class);
+	       intent.putExtra("type", itemPosition);
+	       intent.putExtra("result", result);
+      	   startActivity(intent);
+  	    }
+	   
+	   /*if (itemPosition == 0) {
+		   Intent intent = new Intent(ChartOptionsMenu.this, XYChartBuilder.class);
+	       intent.putExtra("type", itemPosition);
+	       intent.putExtra("result", result);
+		   startActivity(intent);
+	   }
+	   else {
+		   //Start intent
+	       Intent intent = new Intent(ChartOptionsMenu.this, ChartView.class);
+	       intent.putExtra("type", itemPosition);
+	       intent.putExtra("result", result);
+		   startActivity(intent);
+	   }*/
        
-       //Start intent
-	   startActivity(intent);
-   }
+   } 
 }

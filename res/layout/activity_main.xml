@@ -189,19 +189,38 @@
 							android:orientation="horizontal"
 							android:layout_gravity="center"
 							>
-							<EditText
-								android:id="@+id/txtVolume"
-								android:layout_width="fill_parent"
-								android:layout_height="50dp"
-								android:inputType="number"
-								android:hint="@string/volhint"
-								android:background="@drawable/bgeditshape"
-								android:textSize="18sp"
-								android:singleLine="true"
-								android:layout_toLeftOf="@+id/imgVolume"
-								android:layout_marginLeft="10dp"
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
 								android:layout_alignParentLeft="true"
-								android:maxLength="4"/>
+								android:layout_toLeftOf="@+id/imgVolume"
+								>
+								<EditText
+									android:id="@+id/txtVolume"
+									android:layout_width="wrap_content"
+									android:layout_height="50dp"
+									android:inputType="number"
+									android:hint="@string/leftov"
+									android:background="@drawable/bgeditshape"
+									android:textSize="18sp"
+									android:singleLine="true"
+									android:layout_weight="0.5"
+									android:layout_marginLeft="10dp"
+									android:maxLength="4"/>
+								<EditText
+									android:id="@+id/txtVolumeRight"
+									android:layout_width="wrap_content"
+									android:layout_height="50dp"
+									android:inputType="number"
+									android:hint="@string/rightov"
+									android:background="@drawable/bgeditshape"
+									android:layout_weight="0.5"
+									android:textSize="18sp"
+									android:singleLine="true"
+									android:layout_marginLeft="10dp"
+									android:maxLength="4"/>
+							</LinearLayout>
 							<ImageView
 								android:id="@+id/imgVolume"
 								android:layout_width="30dp"
@@ -237,19 +256,38 @@
 							android:layout_gravity="center"
 							android:layout_marginBottom="20dp"
 							>
-							<EditText
-								android:id="@+id/txtAfc"
+							<LinearLayout
 								android:layout_width="match_parent"
-								android:layout_height="50dp"
-								android:inputType="number"
-								android:hint="@string/afchint"
-								android:background="@drawable/bgeditshape"
-								android:textSize="18sp"
-								android:singleLine="true"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
 								android:layout_toLeftOf="@+id/imgAfc"
-								android:layout_marginLeft="10dp"
 								android:layout_alignParentLeft="true"
-								android:maxLength="4"/>
+								>
+								<EditText
+									android:id="@+id/txtAfc"
+									android:layout_width="wrap_content"
+									android:layout_height="50dp"
+									android:inputType="number"
+									android:hint="@string/leftov"
+									android:background="@drawable/bgeditshape"
+									android:textSize="18sp"
+									android:layout_weight="0.5"
+									android:singleLine="true"
+									android:layout_marginLeft="10dp"
+									android:maxLength="4"/>
+								<EditText
+									android:id="@+id/txtAfcRight"
+									android:layout_width="wrap_content"
+									android:layout_height="50dp"
+									android:inputType="number"
+									android:hint="@string/rightov"
+									android:background="@drawable/bgeditshape"
+									android:layout_weight="0.5"
+									android:textSize="18sp"
+									android:singleLine="true"
+									android:layout_marginLeft="10dp"
+									android:maxLength="4"/>
+							</LinearLayout>
 							<ImageView
 								android:id="@+id/imgAfc"
 								android:layout_width="30dp"

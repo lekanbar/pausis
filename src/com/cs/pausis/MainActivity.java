@@ -179,7 +179,9 @@ public class MainActivity extends Activity {
 				
 				EditText txtAmh = (EditText)findViewById(R.id.txtAMH);
 				EditText txtVol = (EditText)findViewById(R.id.txtVolume);
+				EditText txtVolRight = (EditText)findViewById(R.id.txtVolumeRight);
 				EditText txtAfc = (EditText)findViewById(R.id.txtAfc);
+				EditText txtAfcRight = (EditText)findViewById(R.id.txtAfcRight);
 				
 				int max = 10;
 				if(!txtAmh.getText().toString().equals("")){
@@ -187,11 +189,11 @@ public class MainActivity extends Activity {
 					max += 10;
 				}
 				if(!txtVol.getText().toString().equals("")){
-					obvol = Double.valueOf(txtVol.getText().toString());
+					obvol = (Double.valueOf(txtVol.getText().toString()) + Double.valueOf(txtVolRight.getText().toString())) / 2;
 					max += 10;
 				}
 				if(!txtAfc.getText().toString().equals("")){
-					obafc = Double.valueOf(txtAfc.getText().toString());
+					obafc = (Double.valueOf(txtAfc.getText().toString()) + Double.valueOf(txtAfcRight.getText().toString())) / 2;
 					max += 10;
 				}
 				

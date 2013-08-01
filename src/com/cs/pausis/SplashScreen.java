@@ -65,7 +65,7 @@ import android.view.MotionEvent;
 			finish();
     	}
     	else{
-    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
+    		Intent i = new Intent(getApplicationContext(), MainMenu.class);
 			startActivity(i);
 			finish();
     	}

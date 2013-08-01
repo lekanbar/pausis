@@ -51,4 +51,18 @@
 		<item>November</item>
 		<item>December</item>
 	</string-array>
+	
+	<string-array name="ranges">
+        <item>10</item>
+        <item>20</item>
+        <item>35</item>
+        <item>50</item>
+    </string-array>
+    
+    <string-array name="rangeColors">
+        <item>#E7202B</item>
+        <item>#E86F21</item>
+        <item>#E8E721</item>
+        <item>#1BCA21</item>
+    </string-array>
 </resources>

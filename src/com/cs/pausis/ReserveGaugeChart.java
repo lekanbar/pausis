@@ -16,6 +16,7 @@
 package com.cs.pausis;
 
 import org.achartengine.ChartFactory;
+import org.achartengine.GraphicalView;
 import org.achartengine.model.CategorySeries;
 import org.achartengine.renderer.DialRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
@@ -85,19 +86,22 @@ public class ReserveGaugeChart extends AbstractDemoChart {
 	  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
 	  
 	  if(!result.getType().equals(Result.Type.AFC.toString())){
+		  String legendName = "";
 	      for (int i = 0; i < result.getSdvalues().length; i++) {
-	    	  category.add("", result.getSdvalues()[i]);
-	    	
 	    	  if(i == 3){
 	    		 r = new SimpleSeriesRenderer();
 	    		 r.setColor(Color.GREEN);
 	    	     renderer.addSeriesRenderer(r);
+	    	     legendName = "You";
 	    	  }
 	    	  else {
 	    		 r = new SimpleSeriesRenderer();
 	    	     r.setColor(Color.TRANSPARENT);
 	    	     renderer.addSeriesRenderer(r);
+	    	     legendName = "";
 			  }
+	    	  
+	    	  category.add(legendName, result.getSdvalues()[i]);
 		  }
 	  }
 	  else {
@@ -126,16 +130,17 @@ public class ReserveGaugeChart extends AbstractDemoChart {
    * @param context the context
    * @return the built intent
    */
-  @Override
-  public Intent execute(Context context) {	  
+  public Intent execute(Context context, int p) {	  
       category = new CategorySeries("Ovaries gauge");
-      category.add("Current", getCurrent());
+      //category.add("Current", getCurrent());
     
       renderer = new DialRenderer();
       renderer.setChartTitleTextSize(20);
       renderer.setLabelsTextSize(15);
       renderer.setLegendTextSize(15);
       renderer.setMargins(new int[] {20, 30, 15, 0});
+      renderer.setApplyBackgroundColor(true);
+      renderer.setBackgroundColor(Color.BLACK);
     
       //Set the chart series and their corresponding values
       setSeriesForRenderer();
@@ -158,6 +163,12 @@ public class ReserveGaugeChart extends AbstractDemoChart {
 	      renderer.setMinorTicksSpacing(5);
 	  }
     
-      return ChartFactory.getDialChartIntent(context, category, renderer, "Indicator");
+      return ChartFactory.getDialChartIntent(context, category, renderer, "");
   }
+
+@Override
+public Intent execute(Context context) {
+	// TODO Auto-generated method stub
+	return null;
+}
 }

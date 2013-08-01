@@ -11,8 +11,239 @@ public final class R {
     public static final class array {
         public static final int array_months=0x7f040001;
         public static final int array_years=0x7f040000;
+        public static final int rangeColors=0x7f040003;
+        public static final int ranges=0x7f040002;
     }
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int divisions=0x7f010013;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int innerRimBorderWidth=0x7f01000c;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int innerRimWidth=0x7f01000b;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int needleHeight=0x7f01000e;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int needleWidth=0x7f01000d;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int outerBorderWidth=0x7f010009;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int outerRimWidth=0x7f01000a;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int outerShadowWidth=0x7f010008;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int rangeColors=0x7f010016;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int rangeValues=0x7f010015;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int scaleEndValue=0x7f010011;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int scalePosition=0x7f01000f;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int scaleStartAngle=0x7f010012;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int scaleStartValue=0x7f010010;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showInnerRim=0x7f010003;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showNeedle=0x7f010004;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showOuterBorder=0x7f010001;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showOuterRim=0x7f010002;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showOuterShadow=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showRanges=0x7f010006;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showScale=0x7f010005;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showText=0x7f010007;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int subdivisions=0x7f010014;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textShadowColor=0x7f01001d;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
+        public static final int textUnit=0x7f01001a;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textUnitColor=0x7f01001b;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textUnitSize=0x7f01001c;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
+        public static final int textValue=0x7f010017;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textValueColor=0x7f010018;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textValueSize=0x7f010019;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -26,71 +257,86 @@ public final class R {
     }
     public static final class drawable {
         public static final int about_us=0x7f020000;
-        public static final int bg=0x7f020001;
-        public static final int bgeditshape=0x7f020002;
-        public static final int bgshape=0x7f020003;
-        public static final int bgshape2=0x7f020004;
-        public static final int bgshape3=0x7f020005;
-        public static final int carbon_fibre=0x7f020006;
-        public static final int expbg=0x7f020007;
-        public static final int expmainbg=0x7f020008;
-        public static final int gauge_icon=0x7f020009;
-        public static final int gauge_icon_pressed=0x7f02000a;
-        public static final int gauge_selector=0x7f02000b;
-        public static final int i_letter=0x7f02000c;
-        public static final int i_letter_selector=0x7f02000d;
-        public static final int i_letter_small=0x7f02000e;
-        public static final int i_letter_small_pressed=0x7f02000f;
-        public static final int ic_launcher=0x7f020010;
-        public static final int logo=0x7f020011;
-        public static final int main_top=0x7f020012;
-        public static final int mesh_bg=0x7f020013;
-        public static final int privacypolicy=0x7f020014;
-        public static final int res_green=0x7f020015;
-        public static final int res_orange=0x7f020016;
-        public static final int res_red=0x7f020017;
-        public static final int splash_icon=0x7f020018;
-        public static final int toggle_down=0x7f020019;
+        public static final int background=0x7f020001;
+        public static final int bg=0x7f020002;
+        public static final int bgeditshape=0x7f020003;
+        public static final int bgshape=0x7f020004;
+        public static final int bgshape2=0x7f020005;
+        public static final int bgshape3=0x7f020006;
+        public static final int brushed_alu=0x7f020007;
+        public static final int brushed_alu2=0x7f020008;
+        public static final int carbon_fibre=0x7f020009;
+        public static final int expbg=0x7f02000a;
+        public static final int expmainbg=0x7f02000b;
+        public static final int gauge_icon=0x7f02000c;
+        public static final int gauge_icon_pressed=0x7f02000d;
+        public static final int gauge_selector=0x7f02000e;
+        public static final int i_letter=0x7f02000f;
+        public static final int i_letter_selector=0x7f020010;
+        public static final int i_letter_small=0x7f020011;
+        public static final int i_letter_small_pressed=0x7f020012;
+        public static final int ic_launcher=0x7f020013;
+        public static final int light_alu=0x7f020014;
+        public static final int logo=0x7f020015;
+        public static final int main_top=0x7f020016;
+        public static final int mesh_bg=0x7f020017;
+        public static final int privacypolicy=0x7f020018;
+        public static final int res_green=0x7f020019;
+        public static final int res_orange=0x7f02001a;
+        public static final int res_red=0x7f02001b;
+        public static final int splash_icon=0x7f02001c;
+        public static final int toggle_down=0x7f02001d;
     }
     public static final class id {
-        public static final int action_settings=0x7f090032;
-        public static final int buttonA=0x7f090022;
-        public static final int buttonB=0x7f090023;
-        public static final int calcvalue=0x7f090020;
-        public static final int calside=0x7f090024;
+        public static final int action_settings=0x7f09003b;
+        public static final int buttonA=0x7f090029;
+        public static final int buttonB=0x7f09002a;
+        public static final int calcvalue=0x7f090027;
+        public static final int calside=0x7f09002f;
+        public static final int chart=0x7f09001f;
         public static final int cmdOk=0x7f09000f;
-        public static final int cmdProceed=0x7f09001b;
-        public static final int countrysearch_box=0x7f09002d;
-        public static final int expandable=0x7f090021;
-        public static final int expandable_toggle_button=0x7f09001e;
+        public static final int cmdProceed=0x7f09001d;
+        public static final int countrysearch_box=0x7f090036;
+        public static final int expandable=0x7f090028;
+        public static final int expandable_toggle_button=0x7f090025;
+        public static final int gauge_view1=0x7f09002b;
+        public static final int gauge_view2=0x7f09002c;
         public static final int imgAMH=0x7f090016;
         public static final int imgAfc=0x7f09001a;
-        public static final int imgIndicator=0x7f09001d;
-        public static final int imgVolume=0x7f090018;
-        public static final int item=0x7f09001c;
-        public static final int lblPrivacy=0x7f09002f;
+        public static final int imgIndicator=0x7f090024;
+        public static final int imgVolume=0x7f090017;
+        public static final int imgchart=0x7f090020;
+        public static final int item=0x7f090023;
+        public static final int lblDetails=0x7f09002e;
+        public static final int lblPrivacy=0x7f090038;
+        public static final int lblTitle=0x7f09002d;
         public static final int lblbirth=0x7f090011;
         public static final int lblbirthmon=0x7f090013;
-        public static final int list=0x7f090030;
-        public static final int listBirth=0x7f09002e;
+        public static final int lbldescription=0x7f090022;
+        public static final int lblstatus=0x7f090021;
+        public static final int list=0x7f090039;
+        public static final int listBirth=0x7f090037;
         public static final int readmore1=0x7f090008;
         public static final int readmore2=0x7f09000b;
         public static final int readmore3=0x7f09000e;
-        public static final int rowCalendar=0x7f090028;
-        public static final int rowDate=0x7f090029;
-        public static final int rowDelete=0x7f090025;
-        public static final int rowMain=0x7f090026;
-        public static final int rowTime=0x7f09002a;
-        public static final int rowTransID=0x7f090027;
+        public static final int rowCalendar=0x7f090033;
+        public static final int rowDate=0x7f090034;
+        public static final int rowDelete=0x7f090030;
+        public static final int rowMain=0x7f090031;
+        public static final int rowTime=0x7f090035;
+        public static final int rowTransID=0x7f090032;
         public static final int scrollView2=0x7f090001;
         public static final int spinBirthMonth=0x7f090014;
         public static final int spinBirthYear=0x7f090012;
-        public static final int text=0x7f09001f;
+        public static final int text=0x7f090026;
+        public static final int title=0x7f09001e;
         public static final int txtAMH=0x7f090015;
-        public static final int txtAfc=0x7f090019;
-        public static final int txtVolume=0x7f090017;
+        public static final int txtAfc=0x7f09001b;
+        public static final int txtAfcRight=0x7f09001c;
+        public static final int txtVolume=0x7f090018;
+        public static final int txtVolumeRight=0x7f090019;
         public static final int txttop=0x7f090010;
-        public static final int webview1=0x7f090031;
+        public static final int webview1=0x7f09003a;
         public static final int wid112345=0x7f090007;
         public static final int wid321t3345=0x7f090009;
         public static final int wid3cxz3345=0x7f09000c;
@@ -100,76 +346,99 @@ public final class R {
         public static final int widget4212=0x7f090005;
         public static final int widget43=0x7f090004;
         public static final int widget43345=0x7f090006;
-        public static final int widget83=0x7f09002b;
-        public static final int widget84=0x7f09002c;
         public static final int widgetgyg=0x7f090002;
         public static final int wizaq8345=0x7f09000d;
     }
     public static final class layout {
         public static final int aboutus=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int expandable_list_item=0x7f030002;
-        public static final int list_item3=0x7f030003;
-        public static final int months=0x7f030004;
-        public static final int privacyinfo=0x7f030005;
-        public static final int splash=0x7f030006;
-        public static final int summary=0x7f030007;
-        public static final int webpage=0x7f030008;
-        public static final int years=0x7f030009;
+        public static final int chart_main=0x7f030002;
+        public static final int expandable_list_item=0x7f030003;
+        public static final int gaugeview=0x7f030004;
+        public static final int generaladvice=0x7f030005;
+        public static final int infopage=0x7f030006;
+        public static final int list_activity=0x7f030007;
+        public static final int list_item3=0x7f030008;
+        public static final int main_menu=0x7f030009;
+        public static final int months=0x7f03000a;
+        public static final int privacyinfo=0x7f03000b;
+        public static final int splash=0x7f03000c;
+        public static final int summary=0x7f03000d;
+        public static final int webpage=0x7f03000e;
+        public static final int years=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int aboutus=0x7f060028;
-        public static final int aboutus1=0x7f060029;
-        public static final int aboutus2=0x7f06002a;
-        public static final int aboutus3=0x7f06002b;
-        public static final int aboutus4=0x7f06002c;
-        public static final int aboutus5=0x7f06002d;
-        public static final int aboutus6=0x7f06002e;
+        public static final int aboutus=0x7f06003b;
+        public static final int aboutus1=0x7f06003c;
+        public static final int aboutus2=0x7f06003d;
+        public static final int aboutus3=0x7f06003e;
+        public static final int aboutus4=0x7f06003f;
+        public static final int aboutus5=0x7f060040;
+        public static final int aboutus6=0x7f060041;
         public static final int action_settings=0x7f060001;
-        public static final int afchint=0x7f060010;
-        public static final int afcresult=0x7f06001a;
-        public static final int afcvalue=0x7f06000f;
+        public static final int afc=0x7f060013;
+        public static final int afchint=0x7f060015;
+        public static final int afcresult=0x7f06001f;
+        public static final int afcvalue=0x7f060014;
         public static final int age=0x7f060004;
-        public static final int amhhint=0x7f06000c;
-        public static final int amhresult=0x7f06001b;
-        public static final int amhvalue=0x7f06000b;
+        public static final int amh=0x7f06000d;
+        public static final int amhhint=0x7f06000f;
+        public static final int amhresult=0x7f060020;
+        public static final int amhvalue=0x7f06000e;
         public static final int and=0x7f060008;
         public static final int app_name=0x7f060000;
-        public static final int birthmonth=0x7f060014;
-        public static final int birthyear=0x7f060013;
-        public static final int calcing=0x7f060018;
-        public static final int calcvalue=0x7f060019;
-        public static final int choosebirthmonth=0x7f060016;
-        public static final int choosebirthyear=0x7f060015;
+        public static final int average=0x7f060034;
+        public static final int birthmonth=0x7f060019;
+        public static final int birthyear=0x7f060018;
+        public static final int bmi=0x7f060036;
+        public static final int calcing=0x7f06001d;
+        public static final int calcvalue=0x7f06001e;
+        public static final int chartmenu=0x7f060028;
+        public static final int choosebirthmonth=0x7f06001b;
+        public static final int choosebirthyear=0x7f06001a;
+        public static final int description=0x7f06002d;
+        public static final int descriptiontitle=0x7f06002c;
         public static final int empty=0x7f060003;
-        public static final int gaugetitle=0x7f060023;
+        public static final int gaugetitle=0x7f06002b;
+        public static final int general=0x7f060033;
+        public static final int generaladvice=0x7f060032;
+        public static final int genetics=0x7f060037;
         public static final int howold=0x7f060006;
         public static final int iam=0x7f060007;
-        public static final int info=0x7f060012;
+        public static final int info=0x7f060017;
+        public static final int leftov=0x7f06000b;
         public static final int medic=0x7f060005;
         public static final int months=0x7f06000a;
-        public static final int negative=0x7f06001e;
-        public static final int neutral=0x7f06001f;
-        public static final int ok=0x7f060031;
-        public static final int ovaresult=0x7f06001c;
+        public static final int negative=0x7f060023;
+        public static final int neutral=0x7f060024;
+        public static final int ok=0x7f060044;
+        public static final int ovaresult=0x7f060021;
         public static final int ovaryres=0x7f060002;
-        public static final int paper=0x7f060027;
-        public static final int plswait=0x7f060020;
-        public static final int positive=0x7f06001d;
-        public static final int privacy=0x7f060024;
-        public static final int privacy2=0x7f060025;
-        public static final int privacytitle=0x7f060026;
-        public static final int proceed=0x7f060011;
-        public static final int readmore=0x7f06002f;
-        public static final int resultmessage=0x7f060022;
-        public static final int resulttitle=0x7f060021;
-        public static final int summary=0x7f060030;
-        public static final int typecountry=0x7f060017;
-        public static final int volhint=0x7f06000e;
-        public static final int volvalue=0x7f06000d;
+        public static final int paper=0x7f060031;
+        public static final int parity=0x7f060039;
+        public static final int plswait=0x7f060026;
+        public static final int positive=0x7f060022;
+        public static final int privacy=0x7f06002e;
+        public static final int privacy2=0x7f06002f;
+        public static final int privacytitle=0x7f060030;
+        public static final int proceed=0x7f060016;
+        public static final int race=0x7f060038;
+        public static final int readmore=0x7f060042;
+        public static final int resultmessage=0x7f06002a;
+        public static final int resultstatus=0x7f060029;
+        public static final int resulttitle=0x7f060027;
+        public static final int resvisual=0x7f060025;
+        public static final int rightov=0x7f06000c;
+        public static final int sampletext=0x7f06003a;
+        public static final int smoking=0x7f060035;
+        public static final int summary=0x7f060043;
+        public static final int typecountry=0x7f06001c;
+        public static final int vol=0x7f060010;
+        public static final int volhint=0x7f060012;
+        public static final int volvalue=0x7f060011;
         public static final int years=0x7f060009;
     }
     public static final class style {
@@ -200,4 +469,493 @@ public final class R {
          */
         public static final int AppTheme=0x7f070001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a GaugeView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #GaugeView_divisions com.core.pausis:divisions}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_innerRimBorderWidth com.core.pausis:innerRimBorderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_innerRimWidth com.core.pausis:innerRimWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_needleHeight com.core.pausis:needleHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_needleWidth com.core.pausis:needleWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_outerBorderWidth com.core.pausis:outerBorderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_outerRimWidth com.core.pausis:outerRimWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_outerShadowWidth com.core.pausis:outerShadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_rangeColors com.core.pausis:rangeColors}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_rangeValues com.core.pausis:rangeValues}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_scaleEndValue com.core.pausis:scaleEndValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_scalePosition com.core.pausis:scalePosition}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_scaleStartAngle com.core.pausis:scaleStartAngle}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_scaleStartValue com.core.pausis:scaleStartValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showInnerRim com.core.pausis:showInnerRim}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showNeedle com.core.pausis:showNeedle}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showOuterBorder com.core.pausis:showOuterBorder}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showOuterRim com.core.pausis:showOuterRim}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showOuterShadow com.core.pausis:showOuterShadow}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showRanges com.core.pausis:showRanges}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showScale com.core.pausis:showScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_showText com.core.pausis:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_subdivisions com.core.pausis:subdivisions}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textShadowColor com.core.pausis:textShadowColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textUnit com.core.pausis:textUnit}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textUnitColor com.core.pausis:textUnitColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textUnitSize com.core.pausis:textUnitSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textValue com.core.pausis:textValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textValueColor com.core.pausis:textValueColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeView_textValueSize com.core.pausis:textValueSize}</code></td><td></td></tr>
+           </table>
+           @see #GaugeView_divisions
+           @see #GaugeView_innerRimBorderWidth
+           @see #GaugeView_innerRimWidth
+           @see #GaugeView_needleHeight
+           @see #GaugeView_needleWidth
+           @see #GaugeView_outerBorderWidth
+           @see #GaugeView_outerRimWidth
+           @see #GaugeView_outerShadowWidth
+           @see #GaugeView_rangeColors
+           @see #GaugeView_rangeValues
+           @see #GaugeView_scaleEndValue
+           @see #GaugeView_scalePosition
+           @see #GaugeView_scaleStartAngle
+           @see #GaugeView_scaleStartValue
+           @see #GaugeView_showInnerRim
+           @see #GaugeView_showNeedle
+           @see #GaugeView_showOuterBorder
+           @see #GaugeView_showOuterRim
+           @see #GaugeView_showOuterShadow
+           @see #GaugeView_showRanges
+           @see #GaugeView_showScale
+           @see #GaugeView_showText
+           @see #GaugeView_subdivisions
+           @see #GaugeView_textShadowColor
+           @see #GaugeView_textUnit
+           @see #GaugeView_textUnitColor
+           @see #GaugeView_textUnitSize
+           @see #GaugeView_textValue
+           @see #GaugeView_textValueColor
+           @see #GaugeView_textValueSize
+         */
+        public static final int[] GaugeView = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
+            0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013,
+            0x7f010014, 0x7f010015, 0x7f010016, 0x7f010017,
+            0x7f010018, 0x7f010019, 0x7f01001a, 0x7f01001b,
+            0x7f01001c, 0x7f01001d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#divisions}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:divisions
+        */
+        public static final int GaugeView_divisions = 19;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#innerRimBorderWidth}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:innerRimBorderWidth
+        */
+        public static final int GaugeView_innerRimBorderWidth = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#innerRimWidth}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:innerRimWidth
+        */
+        public static final int GaugeView_innerRimWidth = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#needleHeight}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:needleHeight
+        */
+        public static final int GaugeView_needleHeight = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#needleWidth}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:needleWidth
+        */
+        public static final int GaugeView_needleWidth = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#outerBorderWidth}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:outerBorderWidth
+        */
+        public static final int GaugeView_outerBorderWidth = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#outerRimWidth}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:outerRimWidth
+        */
+        public static final int GaugeView_outerRimWidth = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#outerShadowWidth}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:outerShadowWidth
+        */
+        public static final int GaugeView_outerShadowWidth = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#rangeColors}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:rangeColors
+        */
+        public static final int GaugeView_rangeColors = 22;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#rangeValues}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:rangeValues
+        */
+        public static final int GaugeView_rangeValues = 21;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scaleEndValue}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:scaleEndValue
+        */
+        public static final int GaugeView_scaleEndValue = 17;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scalePosition}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:scalePosition
+        */
+        public static final int GaugeView_scalePosition = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scaleStartAngle}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:scaleStartAngle
+        */
+        public static final int GaugeView_scaleStartAngle = 18;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scaleStartValue}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:scaleStartValue
+        */
+        public static final int GaugeView_scaleStartValue = 16;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showInnerRim}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showInnerRim
+        */
+        public static final int GaugeView_showInnerRim = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showNeedle}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showNeedle
+        */
+        public static final int GaugeView_showNeedle = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showOuterBorder}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showOuterBorder
+        */
+        public static final int GaugeView_showOuterBorder = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showOuterRim}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showOuterRim
+        */
+        public static final int GaugeView_showOuterRim = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showOuterShadow}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showOuterShadow
+        */
+        public static final int GaugeView_showOuterShadow = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showRanges}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showRanges
+        */
+        public static final int GaugeView_showRanges = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showScale}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showScale
+        */
+        public static final int GaugeView_showScale = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showText}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:showText
+        */
+        public static final int GaugeView_showText = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#subdivisions}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:subdivisions
+        */
+        public static final int GaugeView_subdivisions = 20;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textShadowColor}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textShadowColor
+        */
+        public static final int GaugeView_textShadowColor = 29;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textUnit}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name android:textUnit
+        */
+        public static final int GaugeView_textUnit = 26;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textUnitColor}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textUnitColor
+        */
+        public static final int GaugeView_textUnitColor = 27;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textUnitSize}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textUnitSize
+        */
+        public static final int GaugeView_textUnitSize = 28;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textValue}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name android:textValue
+        */
+        public static final int GaugeView_textValue = 23;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textValueColor}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textValueColor
+        */
+        public static final int GaugeView_textValueColor = 24;
+        /**
+          <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textValueSize}
+          attribute's value can be found in the {@link #GaugeView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textValueSize
+        */
+        public static final int GaugeView_textValueSize = 25;
+    };
 }
