@@ -28,10 +28,20 @@ public class DB {
    public static final int OVARIAN_VOLUME_COLUMN = 3;
    public static final String KEY_AF_COUNT = "afcount";
    public static final int AF_COUNT_COLUMN = 4;
-   public static final String KEY_YEARS = "years";
-   public static final int YEARS_COLUMN = 5;
-   public static final String KEY_MONTHS = "months";
-   public static final int MONTHS_COLUMN = 6;
+   public static final String KEY_BIRTH_YEAR = "birthyear";
+   public static final int BIRTH_YEAR_COLUMN = 5;
+   public static final String KEY_BIRTH_MONTH = "birthmonth";
+   public static final int BIRTH_MONTH_COLUMN = 6;
+   public static final String KEY_FSH = "fsh";
+   public static final int FSH_COLUMN = 7;
+   public static final String KEY_MOTHER_MENOPAUSE_AGE = "menopauseage";
+   public static final int MENOPAUSE_AGE_COLUMN = 8;
+   public static final String KEY_REGULAR_PERIODS = "periods";
+   public static final int REGULAR_PERIODS_COLUMN = 9;
+   public static final String KEY_HEIGHT = "height";
+   public static final int HEIGHT_COLUMN = 10;
+   public static final String KEY_WEIGHT = "weight";
+   public static final int WEIGHT_COLUMN = 11;
    
    //Columns for AMH Lookup
    public static final String KEY_LOG_ADJUSTED_PRED_AMH = "logadjustedpredamh";
@@ -143,7 +153,9 @@ public class DB {
       
       private static final String DATABASE_CREATE2 = "create table " + TABLE_USAGE + " (" + KEY_ID + " integer primary key autoincrement, " + 
     		  KEY_AGE + " text not null, " + KEY_AMH_VOLUME + " text not null, " + KEY_OVARIAN_VOLUME + " text not null, " + 
-    		  KEY_AF_COUNT + " text not null, " + KEY_YEARS + " text not null, " + KEY_MONTHS + " text not null);";
+    		  KEY_AF_COUNT + " text not null, " + KEY_BIRTH_YEAR + " text not null, " + KEY_BIRTH_MONTH + " text not null, " + 
+    		  KEY_FSH + " text not null, " + KEY_MOTHER_MENOPAUSE_AGE + " text not null, " + KEY_REGULAR_PERIODS + " text not null, " + 
+    		  KEY_HEIGHT + " text not null, " + KEY_WEIGHT + " text not null);";
       
       private static final String DATABASE_CREATE3 = "create table " + TABLE_AMH_LOOKUP + " (" + KEY_ID + " integer primary key autoincrement, " + 
     		  KEY_AGE + " text not null, " + KEY_LOG_ADJUSTED_PRED_AMH + " text not null, " + KEY_95_PRED_LIM1 + " text not null, " + 

@@ -12,20 +12,24 @@ import android.os.Parcelable;
 public class UsageHistory implements Parcelable {
 	private String iD,
 				   age,
-				   amhvolume,
-				   ovarianvolume,
-				   afc,
-				   years,
-				   months;
+				   amhvolume, ovarianvolume,
+				   afc, birthyear, birthmonth,
+				   fsh, mothermenopauseage, regularperiods,
+				   height, weight;
 
 	public UsageHistory(){
 		iD = "";
-		age = "0";
-		amhvolume = "0";
-		ovarianvolume = "0";
-		afc = "0";
-		years = "0";
-		months = "0";
+		age = "";
+		amhvolume = "";
+		ovarianvolume = "";
+		afc = "";
+		birthyear = "";
+		birthmonth = "";
+		fsh = "";
+		mothermenopauseage = "";
+		regularperiods = "";
+		height = "";
+		weight = "";
 	}
 
    // Insert a new history
@@ -33,15 +37,23 @@ public class UsageHistory implements Parcelable {
 	   // Create a new row of values to insert.
 	   // Insert the row.
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
-                
+       
        String sql = "INSERT INTO " + DB.TABLE_USAGE + "(" + DB.KEY_AGE + ", " + DB.KEY_AMH_VOLUME + ", " + DB.KEY_OVARIAN_VOLUME + ", " 
-					 		       + DB.KEY_AF_COUNT + ", " + DB.KEY_YEARS + ", " + DB.KEY_MONTHS + ") VALUES('" 
+					 		       + DB.KEY_AF_COUNT + ", " + DB.KEY_BIRTH_YEAR + ", " + DB.KEY_BIRTH_MONTH + ", " + DB.KEY_FSH + ", "
+					 		       + DB.KEY_MOTHER_MENOPAUSE_AGE + ", " + DB.KEY_REGULAR_PERIODS + ", " + DB.KEY_HEIGHT + ", "
+					 		       + DB.KEY_WEIGHT +
+    		        ") VALUES('" 
     		                       + this.getAge() + "','" 
 					               + this.getAmhvolume() + "','" 
 					               + this.getOvarianvolume() + "','" 
 					               + this.getAfc() + "','"
-					               + this.getYears() + "','"
-					               + this.getMonths() + "');";
+					               + this.getBirthYear() + "','"
+					               + this.getBirthMonth() + "','"
+					               + this.getFsh() + "','"
+					               + this.getMotherMenopauseAge() + "','"
+					               + this.getRegularPeriods() + "','"
+					               + this.getHeight() + "','"
+					               + this.getWeight() + "');";
        db.execSQL(sql);
        db.close();
    }
@@ -63,8 +75,13 @@ public class UsageHistory implements Parcelable {
 	   newItem.setAmhvolume(history.getString(DB.AMH_VOLUME_COLUMN));
 	   newItem.setOvarianvolume(history.getString(DB.OVARIAN_VOLUME_COLUMN));
 	   newItem.setAfc(history.getString(DB.AF_COUNT_COLUMN));
-	   newItem.setYears(history.getString(DB.YEARS_COLUMN));
-	   newItem.setMonths(history.getString(DB.MONTHS_COLUMN));
+	   newItem.setBirthYear(history.getString(DB.BIRTH_YEAR_COLUMN));
+	   newItem.setBirthMonth(history.getString(DB.BIRTH_MONTH_COLUMN));
+	   newItem.setFsh(history.getString(DB.FSH_COLUMN));
+	   newItem.setMotherMenopauseAge(history.getString(DB.MENOPAUSE_AGE_COLUMN));
+	   newItem.setRegularPeriods(history.getString(DB.REGULAR_PERIODS_COLUMN));
+	   newItem.setHeight(history.getString(DB.HEIGHT_COLUMN));
+	   newItem.setWeight(history.getString(DB.WEIGHT_COLUMN));
 	   
 	   history.close();
 	   db.close();
@@ -87,8 +104,13 @@ public class UsageHistory implements Parcelable {
 			   newItem.setAmhvolume(histories.getString(DB.AMH_VOLUME_COLUMN));
 			   newItem.setOvarianvolume(histories.getString(DB.OVARIAN_VOLUME_COLUMN));
 			   newItem.setAfc(histories.getString(DB.AF_COUNT_COLUMN));
-			   newItem.setYears(histories.getString(DB.YEARS_COLUMN));
-			   newItem.setMonths(histories.getString(DB.MONTHS_COLUMN));
+			   newItem.setBirthYear(histories.getString(DB.BIRTH_YEAR_COLUMN));
+			   newItem.setBirthMonth(histories.getString(DB.BIRTH_MONTH_COLUMN));
+			   newItem.setFsh(histories.getString(DB.FSH_COLUMN));
+			   newItem.setMotherMenopauseAge(histories.getString(DB.MENOPAUSE_AGE_COLUMN));
+			   newItem.setRegularPeriods(histories.getString(DB.REGULAR_PERIODS_COLUMN));
+			   newItem.setHeight(histories.getString(DB.HEIGHT_COLUMN));
+			   newItem.setWeight(histories.getString(DB.WEIGHT_COLUMN));
 			   
 			   result.add(newItem);
 		   } while(histories.moveToNext());
@@ -161,22 +183,62 @@ public class UsageHistory implements Parcelable {
 		this.afc = afc;
 	}
 	
-	public String getYears() {
-		return years;
+	public String getBirthYear() {
+		return birthyear;
 	}
 
-	public void setYears(String years) {
-		this.years = years;
+	public void setBirthYear(String years) {
+		this.birthyear = years;
 	}
 
-	public String getMonths() {
-		return months;
+	public String getBirthMonth() {
+		return birthmonth;
 	}
 
-	public void setMonths(String months) {
-		this.months = months;
+	public void setBirthMonth(String months) {
+		this.birthmonth = months;
 	}
 	
+	public String getFsh() {
+		return fsh;
+	}
+
+	public void setFsh(String fsh) {
+		this.fsh = fsh;
+	}
+
+	public String getMotherMenopauseAge() {
+		return mothermenopauseage;
+	}
+
+	public void setMotherMenopauseAge(String mothermenopause) {
+		this.mothermenopauseage = mothermenopause;
+	}
+
+	public String getRegularPeriods() {
+		return regularperiods;
+	}
+
+	public void setRegularPeriods(String regularperiods) {
+		this.regularperiods = regularperiods;
+	}
+
+	public String getHeight() {
+		return height;
+	}
+
+	public void setHeight(String height) {
+		this.height = height;
+	}
+
+	public String getWeight() {
+		return weight;
+	}
+
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
+
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
 		// TODO Auto-generated method stub
