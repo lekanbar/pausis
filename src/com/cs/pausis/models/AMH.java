@@ -103,7 +103,7 @@ public class AMH {
 		}
 	}
 	
-	private void initializeAMH(){
+	public void initializeAMH(){
 	    // Create a new row of values to insert.
 	    // Insert the row.
 		JSONObject json = null;
@@ -146,7 +146,7 @@ public class AMH {
 		}
 	}
 	
-	private boolean check(){
+	public boolean check(){
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 	   
 	   Cursor lookup = db.query(DB.TABLE_AMH_LOOKUP, null, null, null, null, null, null);

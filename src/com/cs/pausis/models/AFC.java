@@ -50,7 +50,7 @@ public class AFC {
 			initializeAFC();
 	}
 	
-	private void initializeAFC(){
+	public void initializeAFC(){
 	    //Initialize json object
 		JSONObject json = null;
 		String datax = "" ;
@@ -102,7 +102,7 @@ public class AFC {
 		}
 	}
 	
-	private boolean check(){
+	public boolean check(){
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 	   
 	   Cursor lookup = db.query(DB.TABLE_AFC_LOOKUP, null, null, null, null, null, null);

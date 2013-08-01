@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Ovary Reserve</string>
+    <string name="app_name">My Ovaries</string>
     <string name="action_settings">Settings</string>
-    <string name="ovaryres">Ovary Reserve</string>
+    <string name="ovaryres">My Ovaries</string>
     <string name="empty"></string>
-    <string name="age">Age Details</string>
+    <string name="age">Personal Details</string>
     <string name="medic">Medical Details</string>
-    <string name="howold">How Old Are You?</string>
+    <string name="howold">Age</string>
+    <string name="required">(required)</string>
     <string name="iam">I am\u0020</string>
     <string name="and">\u0020and\u0020</string>
     <string name="years">years,</string>
     <string name="months">months.</string>
     <string name="leftov">Left Ovary</string>
     <string name="rightov">Right Ovary</string>
+    <string name="firstuse">Configuring app for first time use. Please wait....</string>
+    <string name="firstusetitle">App Configuration</string>
+    <string name="copyright">Copyright © Olalekan Baruwa. All rights reserved.</string>
+    <string name="weight">Weight</string>
+    <string name="weighthint">Enter your Weight</string>
+    <string name="height">Height</string>
+    <string name="chooseheight">Choose your Height</string>
+    <string name="body">Body</string>
+    <string name="fromblood">Blood Test</string>
+    <string name="fromultrasound">Ultrasound</string>
+    <string name="genetics2">Genetics</string>
+    <string name="menopause">"Mother's Age at Menopause"</string>
+    <string name="mage">"Enter mother's age"</string>
+    <string name="periods">Do you have your periods regularly?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="overall">Overall Advice</string>
+    <string name="history">History</string>
+    <string name="menu">Menu</string>
     
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>
     <string name="amhhint">Enter your AMH value</string>
+    
+    <string name="fsh">FSH value.</string>
+    <string name="fshvalue">FSH Value (ng/L or pm/L)</string>
+    <string name="fshhint">Enter your FSH value</string>
     
     <string name="vol">ovarian volume.</string>
     <string name="volvalue">Ovarian Volume (mL)</string>
@@ -32,18 +56,22 @@
     <string name="birthmonth">Birth Month:\u0020</string>
     <string name="choosebirthyear">Select Year</string>
     <string name="choosebirthmonth">Select Month</string>
+    
     <string name="typecountry">Type to search</string>
     <string name="calcing">Calculating</string>
     <string name="calcvalue">Calculated value:\u0020</string>
     <string name="afcresult">Result by Antral-follicle count is:\u0020</string>
     <string name="amhresult">Result by AMH volume is:\u0020</string>
     <string name="ovaresult">Result by Ovarian Volume is:\u0020</string>
+    
     <string name="positive">Positive</string>
     <string name="negative">Negative</string>
     <string name="neutral">Neutral</string>
+    
     <string name="resvisual">Result Visualization</string>
     <string name="plswait">Please wait....</string>
-    <string name="resulttitle">No Result</string>
+    <string name="resulttitle">Results</string>
+    <string name="result">View Result</string>
     <string name="chartmenu">Visualization Menu</string>
     <string name="resultstatus">Status:\u0020</string>
     <string name="resultmessage">No result was generated for the values entered. Please ensure that you have entered valid values and try again.</string>
@@ -59,7 +87,7 @@
 	<string name="general">General</string>
 	<string name="average">What is Average?</string>
 	<string name="smoking">Smoking</string>
-	<string name="bmi">BMI</string>
+	<string name="bmi">BMI (Height and Weight)</string>
 	<string name="genetics">Genetics</string>
 	<string name="race">Race</string>
 	<string name="parity">Parity</string>

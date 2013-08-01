@@ -1,10 +1,13 @@
 package com.cs.pausis;
 
 import com.core.pausis.R;
+import com.cs.pausis.models.AFC;
+import com.cs.pausis.models.AMH;
 import com.cs.pausis.models.DB;
 import com.cs.pausis.models.UserPreference;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -13,6 +16,7 @@ import android.view.MotionEvent;
  public class SplashScreen extends Activity {
 	 
 	 UserPreference pref;
+	 ProgressDialog  dialog;
 	 
 	 public SplashScreen(){
 		 super();
@@ -56,10 +60,29 @@ import android.view.MotionEvent;
     	DB db = new DB(this);
         db.open();
     	pref = db.getPreference(1);
-    	db.close();
+    	db.close();    	
     	
-    	
-    	if(pref == null){ 
+    	if(pref == null){
+    		dialog = new ProgressDialog(SplashScreen.this);
+	        dialog.setTitle(getString(R.string.firstusetitle));
+	        dialog.setMessage(getString(R.string.firstuse));
+	        dialog.setIndeterminate(true);
+	        dialog.show();
+	        
+    		//Run all necessary bootstrap for app's first time use
+    		AMH amh = new AMH();
+    		if(!amh.check()){
+    	        //initialize amh preset values from json
+    			amh.initializeAMH();
+    		}
+    		
+    		AFC afc = new AFC();
+    		if(!afc.check()){    	        
+    	        //initialize antral-follicle count preset values from json
+    			afc.initializeAFC();
+    		}
+    		dialog.dismiss();
+    		
     		Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
 			startActivity(i);
 			finish();

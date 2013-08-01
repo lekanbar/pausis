@@ -7,33 +7,151 @@
 	android:background="@drawable/expbg"
 	android:padding="10dp"
 	xmlns:android="http://schemas.android.com/apk/res/android">
-	
-    <!-- <ListView
-		android:id="@+id/listHistory"
-		android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:id="@+id/laytop"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="5dp"
-		android:background="#000000"
-		android:divider="@android:color/transparent"
-	  	android:dividerHeight="10.0sp" />-->
-	<TextView
-        android:id="@+id/txttop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+		android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
 	    android:paddingLeft="@dimen/activity_horizontal_margin"
-	    android:paddingRight="@dimen/activity_horizontal_margin"
-        android:textColor="#ffffff"
-        android:text="@string/ovaryres"
-        android:textSize="40sp" />
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:orientation="vertical">
+		
+        <RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_height="wrap_content">
+				<LinearLayout
+					android:layout_width="20dp"
+					android:layout_height="match_parent"
+					android:background="#CC00CC"/>
+				<TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="#ffffff"
+			        android:paddingLeft="2dp"
+			        android:text="@string/resulttitle"
+			        android:textSize="30sp" />
+			</LinearLayout>
+			<Button
+			    android:id="@+id/cmdOverall"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#CC00CC"
+			    android:textColor="#ffffff"
+			    android:padding="10dp"
+			    android:layout_alignParentRight="true"
+			    android:textSize="20sp"
+			    android:text="@string/overall" />
+		</RelativeLayout>
+		
+        <RelativeLayout
+            android:id="@+id/layfsh"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/expmainbg">
+			
+		    <ImageView
+				android:id="@+id/imgIndicator1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:contentDescription="@string/empty"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="5dp"
+				android:src="@drawable/res_red"
+				/>
+		    
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/text1"
+				android:text="@string/empty"
+				android:textSize="20sp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="5dp"
+				android:layout_toLeftOf="@+id/imgFSH"
+				android:layout_toRightOf="@+id/imgIndicator1"
+				/>
+			
+			<ImageButton
+				android:id="@+id/imgFSH"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:contentDescription="@string/empty"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="5dp"
+				android:layout_alignParentRight="true"
+				android:clickable="true"
+				android:background="@android:color/transparent"
+				android:src="@drawable/i_letter_selector"
+				/>
+	
+		</RelativeLayout>
+		
+        <RelativeLayout
+            android:id="@+id/laymma"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:background="@drawable/expmainbg">
+			
+		    <ImageView
+				android:id="@+id/imgIndicator2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:contentDescription="@string/empty"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="5dp"
+				android:src="@drawable/res_red"
+				/>
+		    
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/text2"
+				android:text="@string/empty"
+				android:textSize="20sp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="5dp"
+				android:layout_toLeftOf="@+id/imgMMA"
+				android:layout_toRightOf="@+id/imgIndicator2"
+				/>
+			
+			<ImageButton
+				android:id="@+id/imgMMA"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:contentDescription="@string/empty"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="5dp"
+				android:layout_alignParentRight="true"
+				android:clickable="true"
+				android:background="@android:color/transparent"
+				android:src="@drawable/i_letter_selector"
+				/>
+	
+		</RelativeLayout>
+	</LinearLayout>
 	  	
     <com.tjerkw.slideexpandable.library.ActionSlideExpandableListView
 		android:id="@+id/list"
 		android:layout_height="fill_parent"
 		android:layout_width="fill_parent"
 		android:layout_margin="5dp"
-		android:layout_below="@+id/txttop"
+		android:layout_below="@+id/laytop"
 		android:divider="@android:color/transparent"
 	  	android:dividerHeight="10.0sp"/>
     

@@ -65,4 +65,71 @@
         <item>#E8E721</item>
         <item>#1BCA21</item>
     </string-array>
+    
+    <string-array name="array_weight_units">
+        <item>kg</item>
+        <item>lbs</item>
+    </string-array>
+    
+    <string-array name="array_heights">
+        <item>@string/chooseheight</item>
+        <item>"5'0\""</item>
+        <item>"5'1\""</item>
+        <item>"5'2\""</item>
+        <item>"5'3\""</item>
+        <item>"5'4\""</item>
+        <item>"5'5\""</item>
+        <item>"5'6\""</item>
+        <item>"5'7\""</item>
+        <item>"5'8\""</item>
+        <item>"5'9\""</item>
+        <item>"5'10\""</item>
+        <item>"5'11\""</item>
+        <item>"6'0\""</item>
+        <item>"6'1\""</item>
+        <item>"6'2\""</item>
+        <item>"6'3\""</item>
+        <item>"6'4\""</item>
+        <item>"6'5\""</item>
+        <item>"6'6\""</item>
+        <item>"6'7\""</item>
+        <item>"6'8\""</item>
+        <item>"6'9\""</item>
+        <item>"6'10\""</item>
+        <item>"6'11\""</item>
+        <item>"7'0\""</item>
+        <item>"7'1\""</item>
+        <item>"7'2\""</item>
+    </string-array>
+    
+    <string-array name="array_heights_in_cm">
+        <item>@string/empty</item>
+        <item>"152.40"</item>
+        <item>"154.94"</item>
+        <item>"157.48"</item>
+        <item>"160.02"</item>
+        <item>"162.56"</item>
+        <item>"165.10"</item>
+        <item>"167.74"</item>
+        <item>"170.18"</item>
+        <item>"172.72"</item>
+        <item>"175.26"</item>
+        <item>"177.80"</item>
+        <item>"180.34"</item>
+        <item>"182.88"</item>
+        <item>"185.45"</item>
+        <item>"187.96"</item>
+        <item>"190.50"</item>
+        <item>"193.04"</item>
+        <item>"195.58"</item>
+        <item>"198.12"</item>
+        <item>"200.66"</item>
+        <item>"203.20"</item>
+        <item>"205.74"</item>
+        <item>"208.28"</item>
+        <item>"210.82"</item>
+        <item>"213.36"</item>
+        <item>"215.90"</item>
+        <item>"218.44"</item>
+    </string-array>
 </resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:padding="5dp"
+	android:background="@drawable/expmainbg"
+	android:id="@+id/item"
+	>
+			
+    <ImageView
+		android:id="@+id/imgIndicator"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:contentDescription="@string/empty"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp"
+		android:src="@drawable/res_red"
+		/>
+
+    <TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/text"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="5dp"
+		android:layout_toLeftOf="@+id/expandable_toggle_button"
+		android:layout_toRightOf="@+id/imgIndicator"
+		android:text="@string/empty"
+		android:textSize="20sp"/>
+	
+	<LinearLayout
+	    android:id="@+id/expandable_toggle_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="5dp"
+		android:layout_marginRight="5dp">
+		<ImageView
+			android:id="@+id/rowCalendar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/calendar"
+			android:layout_marginLeft="3dp"
+			android:contentDescription="@string/empty" />
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginLeft="5dp"
+			android:background="#ffffff">
+				<TextView
+				    android:id="@+id/rowDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="12sp"
+					android:text="@string/empty"
+					android:textColor="#FF0000" />
+				<TextView
+					android:id="@+id/rowTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/empty"
+					android:textSize="12sp"
+					android:textColor="#FF0000" />
+		</LinearLayout>
+	</LinearLayout>
+	
+</RelativeLayout>
