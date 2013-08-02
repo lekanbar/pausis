@@ -26,6 +26,7 @@
     <string name="fromultrasound">Ultrasound Results (if known)</string>
     <string name="genetics2">Genetics</string>
     <string name="menopause">"Mother's Age at Menopause (if known)"</string>
+    <string name="menopause2">"Mother's Age at Menopause"</string>
     <string name="mage">"Enter mother's age"</string>
     <string name="periods">Do you have regular periods?</string>
     <string name="yes">Yes</string>
@@ -34,6 +35,7 @@
     <string name="history">Usage History</string>
     <string name="menu">Menu</string>
     <string name="pcalc">Personalized Calculator</string>
+    <string name="nousage">No usage history available.</string>
     
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>

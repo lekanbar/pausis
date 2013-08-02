@@ -9,6 +9,7 @@ import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
 
 import android.os.Bundle;
+import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -36,8 +37,8 @@ public class MainActivity extends Activity {
 	static boolean isfirsttime = true;
 	ProgressDialog dialog;
 	
-	String monthText = "";
-	String birthYear, birthMonth;
+	String monthText = "", birthYear, birthMonth, observedAmh = "", observedOvarianVolume = "", observedAfc = "", observedFsh = "", motherMenopauseAge = "",
+		   regularPeriods = "", height = "", weight = "";
 	UserInputValues userInputValues;
 	int chosenAmhUnit, chosenWeightUnit; 
 	double chosenHeight;//height in meters
@@ -100,7 +101,7 @@ public class MainActivity extends Activity {
         spinHeight.setOnItemSelectedListener(new OnItemSelectedListener(){
         	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         		if(pos > 0)
-        			chosenHeight = Double.parseDouble(getResources().getStringArray(R.array.array_heights_in_cm)[pos]) * 0.01;//cONVERT HEIGHT to meters
+        			chosenHeight = Double.parseDouble(getResources().getStringArray(R.array.array_heights_in_cm)[pos]) * 0.01;//cONVERT HEIGHT to meters (1cm = 0.01m)
         		else
         			chosenHeight = 0.0;
             }
@@ -263,9 +264,6 @@ public class MainActivity extends Activity {
         cmdProceed_button.setOnClickListener(new OnClickListener(){
 
 			public void onClick(View arg0) {
-				String observedAmh = "", observedOvarianVolume = "", observedAfc = "", observedFsh = "", motherMenopauseAge = "",
-					   regularPeriods = "", height = "", weight = "";
-				
 				EditText txtAmh = (EditText)findViewById(R.id.txtAMH);
 				EditText txtVol = (EditText)findViewById(R.id.txtVolume);
 				EditText txtVolRight = (EditText)findViewById(R.id.txtVolumeRight);
@@ -277,9 +275,7 @@ public class MainActivity extends Activity {
 				
 				RadioButton radioYes = (RadioButton)findViewById(R.id.radioYes);
 				RadioButton radioNo = (RadioButton)findViewById(R.id.radioNo);
-				
-				//Spinner spinner
-				
+		        
 				int max = 10;
 				if(!txtAmh.getText().toString().equals("")){
 					//for dialog max value
@@ -332,10 +328,11 @@ public class MainActivity extends Activity {
 				if(chosenHeight > 0.0 && !txtWeight.getText().toString().equals("")){
 					//for dialog max value
 					weight = convertWeight(Double.valueOf(txtWeight.getText().toString()));
+					height = String.valueOf(chosenHeight);
 					max += 10;
 				}
 				
-				
+				//Show dialog to indicate progress
 				dialog = new ProgressDialog(MainActivity.this);
 		        dialog.setTitle(getString(R.string.calcing));
 		        dialog.setMessage(getString(R.string.plswait));
@@ -343,15 +340,6 @@ public class MainActivity extends Activity {
 		        dialog.setProgress(0);
 		        dialog.setMax(max);
 		        dialog.show();
-		        
-		        //Set input values
-		        userInputValues = new UserInputValues();
-		        userInputValues.setBirthYear(birthYear);
-		        userInputValues.setBirthMonth(birthMonth);
-		        userInputValues.setAmhvolume(observedAmh);
-		        userInputValues.setAfc(observedAfc);
-		        userInputValues.setOvarianvolume(observedOvarianVolume);
-		        //userInputValues.
 		        
 		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, MainActivity.this);
 		        ovcalc.execute("");
@@ -366,7 +354,7 @@ public class MainActivity extends Activity {
 			convertedValue = String.valueOf(amhvalue);
 		}
 		else {
-			convertedValue = String.valueOf((amhvalue * 7.143));
+			convertedValue = String.valueOf((amhvalue * 7.143)); //since 1pmol/L = 7.143ng/mL 
 		}
 		
 		return convertedValue;
@@ -375,25 +363,59 @@ public class MainActivity extends Activity {
 	private String convertWeight(double weightvalue){
 		String convertedValue = "";
 		
-		if(chosenAmhUnit == 0){
+		if(chosenWeightUnit == 0){
 			convertedValue = String.valueOf(weightvalue);
 		}
 		else {
-			convertedValue = String.valueOf((weightvalue * 0.453592));
+			convertedValue = String.valueOf((weightvalue * 0.453592)); //since 1lbs = 0.453592kg 
 		}
 		
 		return convertedValue;
 	}
 	
-	private void saveUsageHistory() {
-		
-		
-		Calendar c = Calendar.getInstance();
+	private void saveUsageHistory(ArrayList<Result> results) {
+		//Set input values and insert into DB
+        userInputValues = new UserInputValues();
+        userInputValues.setAge(String.valueOf(calculateAge()));
+        userInputValues.setBirthYear(birthYear);
+        userInputValues.setBirthMonth(birthMonth);
+        userInputValues.setAmhvolume(observedAmh);
+        userInputValues.setAfc(observedAfc);
+        userInputValues.setOvarianvolume(observedOvarianVolume);
+        userInputValues.setFsh(observedFsh);
+        userInputValues.setMotherMenopauseAge(motherMenopauseAge);
+        userInputValues.setRegularPeriods(regularPeriods);
+        userInputValues.setWeight(weight);
+        userInputValues.setHeight(height);
+        Calendar c = Calendar.getInstance();
 		String hour = (String.valueOf(c.get(Calendar.HOUR_OF_DAY)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.HOUR_OF_DAY)) : String.valueOf(c.get(Calendar.HOUR_OF_DAY))); 
     	String minute = (String.valueOf(c.get(Calendar.MINUTE)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.MINUTE)) : String.valueOf(c.get(Calendar.MINUTE)));
 		String datetime = String.valueOf(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH) + 1) + "/" +
 				                         c.get(Calendar.YEAR) + " " + hour + ":" + 
 				                         minute + (c.get(Calendar.AM_PM) == 0 ? " AM" : " PM"));
+        userInputValues.setDateTime(datetime);
+        
+        //calculate indicator based on dominance
+        int greencount = 0, redcount = 0, orangecount = 0;
+        for(Result result : results){
+	        if(result.getStatus().equals(Result.Status.GREEN.toString()))
+				greencount++;
+			else if(result.getStatus().equals(Result.Status.ORANGE.toString()))
+				orangecount++;
+			else
+				redcount++;
+        }
+        
+        if(redcount > 0)
+        	userInputValues.setResultIndicator(Result.Status.RED.toString());
+        else {
+			if(greencount > orangecount)
+				userInputValues.setResultIndicator(Result.Status.GREEN.toString());
+			else
+				userInputValues.setResultIndicator(Result.Status.ORANGE.toString());
+		}
+        
+        userInputValues.insertHistory(MainActivity.this);		
 	}
 	
 	public void done(ArrayList<Result> results){
@@ -401,7 +423,7 @@ public class MainActivity extends Activity {
 		
 		if(results.size() > 0){
 			//Save usage history
-			saveUsageHistory();
+			saveUsageHistory(results);
 			
 			//Go to summary page
 			Intent i = new Intent(MainActivity.this, Summary.class);
@@ -489,5 +511,12 @@ public class MainActivity extends Activity {
 		    }
 		    default: return false;
 	    }
+    }
+    
+    private int calculateAge(){
+    	Calendar c = Calendar.getInstance();
+		int calcage = c.get(Calendar.YEAR) - Integer.parseInt(this.birthYear);
+    	
+    	return calcage;
     }
 }
