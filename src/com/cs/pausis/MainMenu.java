@@ -1,12 +1,14 @@
 package com.cs.pausis;
 
+import java.util.ArrayList;
+
 import com.core.pausis.R;
+import com.cs.pausis.models.MenuItem;
 
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainMenu extends ListActivity {
@@ -20,11 +22,22 @@ public class MainMenu extends ListActivity {
 	}
 	
 	public void InitializeUI(){
-		String[] values = new String[] { "General Advice", "Personalized Calculator", "About Us", "Privacy Policy" };
+		ArrayList<MenuItem> values = new ArrayList<MenuItem>();
+		MenuItem value = new MenuItem();
+		value.setiD(0); values.add(value);
+		
+		value = new MenuItem();
+		value.setiD(0); values.add(value);
+		
+		value = new MenuItem();
+		value.setiD(0); values.add(value);
+		
+		value = new MenuItem();
+		value.setiD(0); values.add(value);
 
-       ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
-       // Assign adapter to List
-       setListAdapter(adapter);
+        MenuAdapter adapter = new MenuAdapter(this, R.layout.expandable_list_item3, values);
+        // Assign adapter to List
+        setListAdapter(adapter);
 	}
 	
 	@Override

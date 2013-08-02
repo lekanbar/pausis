@@ -20,17 +20,33 @@
 		android:src="@drawable/res_red"
 		/>
 
-    <TextView
+    <LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/text"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
 		android:layout_marginLeft="10dp"
 		android:layout_marginRight="10dp"
 		android:layout_marginTop="5dp"
 		android:layout_toLeftOf="@+id/expandable_toggle_button"
-		android:layout_toRightOf="@+id/imgIndicator"
-		android:text="@string/empty"
-		android:textSize="20sp"/>
+		android:layout_toRightOf="@+id/imgIndicator">
+		
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/birthyear"
+				android:text="@string/empty"
+				android:textStyle="italic"
+				android:textSize="14sp"/>
+		
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/birthmonth"
+				android:text="@string/empty"
+				android:textStyle="italic"
+				android:textSize="14sp"/>
+		
+	</LinearLayout>
 	
 	<LinearLayout
 	    android:id="@+id/expandable_toggle_button"

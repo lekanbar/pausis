@@ -27,7 +27,7 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 		Result item = getItem(position);
 		
 		String statusString = item.getStatus(),
-			   valueString = item.getValue(),
+			   //valueString = item.getValue(),
 		       //descriptionString = item.getDescription(),
 		       typeString = item.getType();
 		
@@ -42,7 +42,7 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 		}
 		
 		TextView textView = (TextView)resultView.findViewById(R.id.text);
-		TextView calcView = (TextView)resultView.findViewById(R.id.calcvalue);
+		//TextView calcView = (TextView)resultView.findViewById(R.id.calcvalue);
 		ImageView indicatorView = (ImageView)resultView.findViewById(R.id.imgIndicator);
 		
 		//Get status based on color
@@ -71,7 +71,7 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 			textView.setText(context.getString(R.string.ovaresult) + status);
 		
 		//Set result view
-		calcView.setText(context.getString(R.string.calcvalue) + valueString);		
+		//calcView.setText(context.getString(R.string.calcvalue) + valueString);		
 		
 		return resultView;
 	}

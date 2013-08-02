@@ -22,24 +22,25 @@
     <string name="height">Height</string>
     <string name="chooseheight">Choose your Height</string>
     <string name="body">Body</string>
-    <string name="fromblood">Blood Test</string>
-    <string name="fromultrasound">Ultrasound</string>
+    <string name="fromblood">Blood Test Results (if known)</string>
+    <string name="fromultrasound">Ultrasound Results (if known)</string>
     <string name="genetics2">Genetics</string>
-    <string name="menopause">"Mother's Age at Menopause"</string>
+    <string name="menopause">"Mother's Age at Menopause (if known)"</string>
     <string name="mage">"Enter mother's age"</string>
-    <string name="periods">Do you have your periods regularly?</string>
+    <string name="periods">Do you have regular periods?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="overall">Overall Advice</string>
-    <string name="history">History</string>
+    <string name="history">Usage History</string>
     <string name="menu">Menu</string>
+    <string name="pcalc">Personalized Calculator</string>
     
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>
     <string name="amhhint">Enter your AMH value</string>
     
     <string name="fsh">FSH value.</string>
-    <string name="fshvalue">FSH Value (ng/L or pm/L)</string>
+    <string name="fshvalue">FSH Value (mLU/mL)</string>
     <string name="fshhint">Enter your FSH value</string>
     
     <string name="vol">ovarian volume.</string>

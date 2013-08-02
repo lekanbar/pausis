@@ -1,13 +1,15 @@
 package com.cs.pausis;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import com.core.pausis.R;
 import com.cs.pausis.controllers.OvaryReserve_Calculator;
 import com.cs.pausis.models.Result;
-import com.cs.pausis.models.UsageHistory;
+import com.cs.pausis.models.UserInputValues;
 
 import android.os.Bundle;
+import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -20,20 +22,26 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 public class MainActivity extends Activity {
 
-	UsageHistory usage;
+	UserInputValues usage;
 	static boolean isfirsttime = true;
 	ProgressDialog dialog;
 	
 	String monthText = "";
-	int birthYear, birthMonth;
+	String birthYear, birthMonth;
+	UserInputValues userInputValues;
+	int chosenAmhUnit, weightUnit; 
+	double chosenHeight;
 	
 	public static final int DO_CHOOSE_YEAR = 1;
 	public static final int DO_CHOOSE_MONTH = 2;
@@ -44,8 +52,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		if(isfirsttime){
-			usage = new UsageHistory();
-			ArrayList<UsageHistory> history = usage.getAllHistory(this);
+			usage = new UserInputValues();
+			ArrayList<UserInputValues> history = usage.getAllHistory(this);
 			
 			if(history.size() > 0)
 				usage = history.get(0);
@@ -68,6 +76,23 @@ public class MainActivity extends Activity {
 	        txtAfc.setText(usage.getAfc());
 		}
 		
+		//Heights
+        Spinner spinHeight = (Spinner) findViewById(R.id.spinHeight);
+        ArrayAdapter<CharSequence> heightsAdapter = ArrayAdapter.createFromResource(this, R.array.array_heights, android.R.layout.simple_spinner_item);
+        heightsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinHeight.setAdapter(heightsAdapter);
+        spinHeight.setSelection(0, true);
+        spinHeight.setOnItemSelectedListener(new OnItemSelectedListener(){
+        	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        		if(pos > 0)
+        			chosenHeight = Double.parseDouble(getResources().getStringArray(R.array.array_heights_in_cm)[pos]) * 0.01;//cONVERT HEIGHT to meters
+            }
+
+            public void onNothingSelected(AdapterView<?> parent) {
+              // Do nothing.
+            }
+        });
+		
 		//show on imgGlobe
         ImageView imgAMH = (ImageView)findViewById(R.id.imgAMH);
         imgAMH.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +101,22 @@ public class MainActivity extends Activity {
             	Intent i = new Intent(MainActivity.this, WebPage.class);
             	i.putExtra("page", 1);
 				startActivity(i);
+            }
+        });
+        
+        //Set AMH unit list
+        Spinner spinAmhUnit = (Spinner) findViewById(R.id.spinAmhUnit);
+        ArrayAdapter<CharSequence> amhUnits = ArrayAdapter.createFromResource(this, R.array.array_amh_units, android.R.layout.simple_spinner_item);
+        amhUnits.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinAmhUnit.setAdapter(amhUnits);
+        spinAmhUnit.setSelection(0, true);
+        spinAmhUnit.setOnItemSelectedListener(new OnItemSelectedListener(){
+        	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+            	chosenAmhUnit = pos;
+            }
+
+            public void onNothingSelected(AdapterView<?> parent) {
+              // Do nothing.
             }
         });
         
@@ -100,7 +141,7 @@ public class MainActivity extends Activity {
         });
         
         String year = "";
-        if(birthYear == 0)
+        if(birthYear.equals(""))
         	year = getString(R.string.choosebirthyear);
         else
 			year = birthYear + "";        	
@@ -175,25 +216,69 @@ public class MainActivity extends Activity {
         cmdProceed_button.setOnClickListener(new OnClickListener(){
 
 			public void onClick(View arg0) {
-				Double obamh = null, obvol = null, obafc = null;
+				String observedAmh = "", observedOvarianVolume = "", observedAfc = "", observedFsh = "", motherMenopauseAge = "",
+					   regularPeriods = "", height = "", weight = "";
 				
 				EditText txtAmh = (EditText)findViewById(R.id.txtAMH);
 				EditText txtVol = (EditText)findViewById(R.id.txtVolume);
 				EditText txtVolRight = (EditText)findViewById(R.id.txtVolumeRight);
 				EditText txtAfc = (EditText)findViewById(R.id.txtAfc);
 				EditText txtAfcRight = (EditText)findViewById(R.id.txtAfcRight);
+				EditText txtFsh = (EditText)findViewById(R.id.txtFSH);
+				EditText txtMMenopauseAge = (EditText)findViewById(R.id.txtMMenopauseAge);
+				
+				RadioButton radioYes = (RadioButton)findViewById(R.id.radioYes);
+				RadioButton radioNo = (RadioButton)findViewById(R.id.radioNo);
+				
+				//Spinner spinner
 				
 				int max = 10;
 				if(!txtAmh.getText().toString().equals("")){
-					obamh = Double.valueOf(txtAmh.getText().toString());
+					//for dialog max value
+					observedAmh = convertAMH(Double.valueOf(txtAmh.getText().toString()));
 					max += 10;
 				}
-				if(!txtVol.getText().toString().equals("")){
-					obvol = (Double.valueOf(txtVol.getText().toString()) + Double.valueOf(txtVolRight.getText().toString())) / 2;
+				if(!txtVol.getText().toString().equals("") || !txtVolRight.getText().toString().equals("")){
+					double left = Double.valueOf(txtVol.getText().toString()),
+						   right = Double.valueOf(txtVolRight.getText().toString());					
+					
+					if(left > right)
+						observedOvarianVolume =  String.valueOf(left);
+					else if(right > left)
+						observedOvarianVolume =  String.valueOf(right);
+					else if(left == right)
+						observedOvarianVolume =  String.valueOf(left);
+					
+					//for dialog max value
 					max += 10;
 				}
 				if(!txtAfc.getText().toString().equals("")){
-					obafc = (Double.valueOf(txtAfc.getText().toString()) + Double.valueOf(txtAfcRight.getText().toString())) / 2;
+					double left = Double.valueOf(txtAfc.getText().toString()),
+						   right = Double.valueOf(txtAfcRight.getText().toString());					
+					
+					if(left > right)
+						observedAfc =  String.valueOf(left);
+					else if(right > left)
+						observedAfc =  String.valueOf(right);
+					else if(left == right)
+						observedAfc =  String.valueOf(left);
+					
+					//for dialog max value
+					max += 10;
+				}
+				if(!txtFsh.getText().toString().equals("")){
+					//for dialog max value
+					observedFsh = txtFsh.getText().toString();
+					max += 10;
+				}
+				if(!txtMMenopauseAge.getText().toString().equals("")){
+					//for dialog max value
+					motherMenopauseAge = txtMMenopauseAge.getText().toString();
+					max += 10;
+				}
+				if(radioYes.isChecked() || radioNo.isChecked()){
+					//for dialog max value
+					regularPeriods = (radioYes.isChecked() ? "yes" : "no");
 					max += 10;
 				}
 				
@@ -205,16 +290,52 @@ public class MainActivity extends Activity {
 		        dialog.setMax(max);
 		        dialog.show();
 		        
-		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(birthYear, birthMonth, obamh, obvol, obafc, MainActivity.this);
+		        //Set input values
+		        userInputValues = new UserInputValues();
+		        userInputValues.setBirthYear(birthYear);
+		        userInputValues.setBirthMonth(birthMonth);
+		        userInputValues.setAmhvolume(observedAmh);
+		        userInputValues.setAfc(observedAfc);
+		        userInputValues.setOvarianvolume(observedOvarianVolume);
+		        //userInputValues.
+		        
+		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, MainActivity.this);
 		        ovcalc.execute("");
 			}
     	});
+	}
+	
+	private String convertAMH(double amhvalue){
+		String convertedValue = "";
+		
+		if(chosenAmhUnit == 0){
+			convertedValue = String.valueOf(amhvalue);
+		}
+		else {
+			convertedValue = String.valueOf((amhvalue * 7.143));
+		}
+		
+		return convertedValue;
+	}
+	
+	private void saveUsageHistory() {
+		
+		
+		Calendar c = Calendar.getInstance();
+		String hour = (String.valueOf(c.get(Calendar.HOUR_OF_DAY)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.HOUR_OF_DAY)) : String.valueOf(c.get(Calendar.HOUR_OF_DAY))); 
+    	String minute = (String.valueOf(c.get(Calendar.MINUTE)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.MINUTE)) : String.valueOf(c.get(Calendar.MINUTE)));
+		String datetime = String.valueOf(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH) + 1) + "/" +
+				                         c.get(Calendar.YEAR) + " " + hour + ":" + 
+				                         minute + (c.get(Calendar.AM_PM) == 0 ? " AM" : " PM"));
 	}
 	
 	public void done(ArrayList<Result> results){
 		dialog.setProgress(dialog.getProgress() + 10);
 		
 		if(results.size() > 0){
+			//Save usage history
+			saveUsageHistory();
+			
 			//Go to summary page
 			Intent i = new Intent(MainActivity.this, Summary.class);
         	i.putExtra("results", results);
@@ -248,7 +369,7 @@ public class MainActivity extends Activity {
 		    case (DO_CHOOSE_YEAR) : {
 			    if (resCode == Activity.RESULT_OK) {
 			    	//int index = Integer.parseInt(data.getStringExtra("yearindex"));
-			    	birthYear = Integer.parseInt(data.getStringExtra("birthyear"));
+			    	birthYear = data.getStringExtra("birthyear");
 			    	InitializeUI();
 			    }
 			    break;
@@ -256,7 +377,7 @@ public class MainActivity extends Activity {
 		    case (DO_CHOOSE_MONTH) : {
 			    if (resCode == Activity.RESULT_OK) {
 			    	//int index = Integer.parseInt(data.getStringExtra("monthindex"));
-			    	birthMonth = data.getIntExtra("birthmonth", 0);
+			    	birthMonth = String.valueOf(data.getIntExtra("birthmonth", 0));
 			    	monthText = data.getStringExtra("birthmonthtext");
 			    	InitializeUI();
 			    }
@@ -269,11 +390,14 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
 	    super.onCreateOptionsMenu(menu);
 	    // Create and add new menu items.
-	    MenuItem itemTop = menu.add(0, Menu.FIRST, Menu.NONE, R.string.aboutus);
-	    itemTop.setShortcut('1', 'a'); itemTop.setIcon(R.drawable.about_us);
+	    MenuItem itemHis = menu.add(0, Menu.FIRST, Menu.NONE, R.string.history);
+	    itemHis.setShortcut('1', 'h'); itemHis.setIcon(R.drawable.history);
 	    
-	    MenuItem itemHis = menu.add(0, Menu.FIRST + 1, Menu.NONE, R.string.privacytitle);
-	    itemHis.setShortcut('2', 'p'); itemHis.setIcon(R.drawable.privacypolicy);
+	    MenuItem itemTop = menu.add(0, Menu.FIRST + 1, Menu.NONE, R.string.aboutus);
+	    itemTop.setShortcut('2', 'a'); itemTop.setIcon(R.drawable.about_us);
+	    
+	    MenuItem itemPri = menu.add(0, Menu.FIRST + 2, Menu.NONE, R.string.privacytitle);
+	    itemPri.setShortcut('3', 'p'); itemPri.setIcon(R.drawable.privacypolicy);
 	    return true;
     }
     
@@ -287,7 +411,12 @@ public class MainActivity extends Activity {
 		    	return true;
 		    }
 		    case (Menu.FIRST + 1): {
-		    	Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
+		    	Intent i = new Intent(getApplicationContext(), AboutUs.class);
+				startActivity(i);
+		    	return true;
+		    }
+		    case (Menu.FIRST + 2): {
+			    Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
 				startActivityForResult(i, 0);
 		    	return true;
 		    }

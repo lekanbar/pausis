@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.core.pausis.R;
 import com.cs.pausis.models.Result;
-import com.cs.pausis.models.UsageHistory;
+import com.cs.pausis.models.UserInputValues;
 import com.cs.pausis.models.UserPreference;
 import com.tjerkw.slideexpandable.library.ActionSlideExpandableListView;
 
@@ -18,7 +18,7 @@ import android.view.View;
 
  public class Summary extends Activity {	 
 	 UserPreference pref;
-	 UsageHistory usage;
+	 UserInputValues usage;
 	 static boolean isfirsttime = true;
 	 static boolean isviolated = false;
 	 double result;

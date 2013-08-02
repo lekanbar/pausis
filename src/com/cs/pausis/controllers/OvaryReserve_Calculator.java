@@ -8,6 +8,7 @@ import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
 import com.cs.pausis.models.OvarianVolume;
 import com.cs.pausis.models.Result;
+import com.cs.pausis.models.UserInputValues;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -18,7 +19,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 	private Drawable d;
     Context context;
     int birthYear, birthMonth; 
-    Double observedAMH, observedVolume, observedAFC;
+    Double observedAMH, observedOvarianVolume, observedAFC;
     
     AMH amh;
     OvarianVolume ova;
@@ -26,13 +27,12 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 	
     ArrayList<Result> results = null;
     
-	public OvaryReserve_Calculator(int birthYear, int birthMonth, Double observedAMH, Double observedVolume, Double observedAFC, Context context){
-		this.birthYear = birthYear;
-		this.birthMonth = birthMonth;
-		this.observedAFC = observedAFC;
-		this.observedAMH = observedAMH;
-		this.observedVolume = observedVolume;
-		
+	public OvaryReserve_Calculator(UserInputValues userInputValues, Context context){
+		this.birthYear = Integer.parseInt(userInputValues.getBirthYear());
+		this.birthMonth = Integer.parseInt(userInputValues.getBirthMonth());
+		this.observedAFC = (!userInputValues.getAfc().equals("") ? Double.valueOf(userInputValues.getAfc()) : null);
+		this.observedAMH = (!userInputValues.getAmhvolume().equals("") ? Double.valueOf(userInputValues.getAmhvolume()) : null);
+		this.observedOvarianVolume = (!userInputValues.getOvarianvolume().equals("") ? Double.valueOf(userInputValues.getOvarianvolume()) : null);	
 		this.context = context;
 	}
 	
@@ -49,7 +49,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				
 				((MainActivity)this.context).updateDialog();
 			}
-            if (this.observedVolume != null) {
+            if (this.observedOvarianVolume != null) {
             	ova = new OvarianVolume(this.context);
 				ova.setAge(calculateAgeWithMonth());
 				ova.setObservedVolume(this.observedAMH.doubleValue());
@@ -99,7 +99,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			results.add(result2);
     		}
-    		if(this.observedVolume != null){
+    		if(this.observedOvarianVolume != null){
     			result2 = new Result();
     			double zscore = ova.getZScore();
     			

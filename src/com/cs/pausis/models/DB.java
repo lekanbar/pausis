@@ -42,6 +42,10 @@ public class DB {
    public static final int HEIGHT_COLUMN = 10;
    public static final String KEY_WEIGHT = "weight";
    public static final int WEIGHT_COLUMN = 11;
+   public static final String KEY_DATETIME = "datetime";
+   public static final int DATETIME_COLUMN = 12;
+   public static final String KEY_RESULT_INDICATOR = "resultindicator";
+   public static final int RESULT_INDICATOR_COLUMN = 13;
    
    //Columns for AMH Lookup
    public static final String KEY_LOG_ADJUSTED_PRED_AMH = "logadjustedpredamh";
@@ -155,7 +159,8 @@ public class DB {
     		  KEY_AGE + " text not null, " + KEY_AMH_VOLUME + " text not null, " + KEY_OVARIAN_VOLUME + " text not null, " + 
     		  KEY_AF_COUNT + " text not null, " + KEY_BIRTH_YEAR + " text not null, " + KEY_BIRTH_MONTH + " text not null, " + 
     		  KEY_FSH + " text not null, " + KEY_MOTHER_MENOPAUSE_AGE + " text not null, " + KEY_REGULAR_PERIODS + " text not null, " + 
-    		  KEY_HEIGHT + " text not null, " + KEY_WEIGHT + " text not null);";
+    		  KEY_HEIGHT + " text not null, " + KEY_WEIGHT + " text not null, " + KEY_DATETIME + " text not null, " + 
+    		  KEY_RESULT_INDICATOR + " text not null);";
       
       private static final String DATABASE_CREATE3 = "create table " + TABLE_AMH_LOOKUP + " (" + KEY_ID + " integer primary key autoincrement, " + 
     		  KEY_AGE + " text not null, " + KEY_LOG_ADJUSTED_PRED_AMH + " text not null, " + KEY_95_PRED_LIM1 + " text not null, " + 

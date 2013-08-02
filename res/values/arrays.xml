@@ -71,6 +71,11 @@
         <item>lbs</item>
     </string-array>
     
+    <string-array name="array_amh_units">
+        <item>ng/mL</item>
+        <item>pm/L</item>
+    </string-array>
+    
     <string-array name="array_heights">
         <item>@string/chooseheight</item>
         <item>"5'0\""</item>

@@ -16,6 +16,7 @@
 		android:layout_marginLeft="5dp"
 		android:contentDescription="@string/empty"
 		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
 		android:layout_marginTop="5dp"
 		android:src="@drawable/imenu"
 		/>
@@ -28,6 +29,7 @@
 		android:layout_marginRight="10dp"
 		android:layout_marginTop="5dp"
 		android:layout_toRightOf="@+id/imgMenu"
+		android:layout_centerVertical="true"
 		android:text="@string/empty"
 		android:textSize="20sp"/>
 	

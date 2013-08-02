@@ -4,7 +4,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
-	android:background="@drawable/expbg"
+	android:background="@drawable/bg"
 	android:padding="10dp"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -33,7 +33,7 @@
 				<TextView
 			        android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        android:textColor="#ffffff"
+			        android:textColor="#000000"
 			        android:paddingLeft="2dp"
 			        android:text="@string/resulttitle"
 			        android:textSize="30sp" />
@@ -57,17 +57,6 @@
 			android:orientation="horizontal"
 			android:layout_marginTop="20dp"
 			android:background="@drawable/expmainbg">
-			
-		    <ImageView
-				android:id="@+id/imgIndicator1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="5dp"
-				android:contentDescription="@string/empty"
-				android:layout_alignParentLeft="true"
-				android:layout_marginTop="5dp"
-				android:src="@drawable/res_red"
-				/>
 		    
 			<TextView
 				android:layout_width="match_parent"
@@ -75,11 +64,11 @@
 				android:id="@+id/text1"
 				android:text="@string/empty"
 				android:textSize="20sp"
+				android:layout_centerVertical="true"
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp"
 				android:layout_marginTop="5dp"
 				android:layout_toLeftOf="@+id/imgFSH"
-				android:layout_toRightOf="@+id/imgIndicator1"
 				/>
 			
 			<ImageButton
@@ -89,6 +78,7 @@
 				android:contentDescription="@string/empty"
 				android:layout_marginTop="5dp"
 				android:layout_marginRight="5dp"
+				android:layout_centerVertical="true"
 				android:layout_alignParentRight="true"
 				android:clickable="true"
 				android:background="@android:color/transparent"
@@ -105,17 +95,6 @@
 			android:layout_marginTop="10dp"
 			android:layout_marginBottom="10dp"
 			android:background="@drawable/expmainbg">
-			
-		    <ImageView
-				android:id="@+id/imgIndicator2"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="5dp"
-				android:contentDescription="@string/empty"
-				android:layout_alignParentLeft="true"
-				android:layout_marginTop="5dp"
-				android:src="@drawable/res_red"
-				/>
 		    
 			<TextView
 				android:layout_width="match_parent"
@@ -123,11 +102,11 @@
 				android:id="@+id/text2"
 				android:text="@string/empty"
 				android:textSize="20sp"
+				android:layout_centerVertical="true"
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp"
 				android:layout_marginTop="5dp"
 				android:layout_toLeftOf="@+id/imgMMA"
-				android:layout_toRightOf="@+id/imgIndicator2"
 				/>
 			
 			<ImageButton
@@ -137,6 +116,7 @@
 				android:contentDescription="@string/empty"
 				android:layout_marginTop="5dp"
 				android:layout_marginRight="5dp"
+				android:layout_centerVertical="true"
 				android:layout_alignParentRight="true"
 				android:clickable="true"
 				android:background="@android:color/transparent"
