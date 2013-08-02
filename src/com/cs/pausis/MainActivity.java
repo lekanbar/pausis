@@ -9,7 +9,6 @@ import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
 
 import android.os.Bundle;
-import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -40,8 +39,8 @@ public class MainActivity extends Activity {
 	String monthText = "";
 	String birthYear, birthMonth;
 	UserInputValues userInputValues;
-	int chosenAmhUnit, weightUnit; 
-	double chosenHeight;
+	int chosenAmhUnit, chosenWeightUnit; 
+	double chosenHeight;//height in meters
 	
 	public static final int DO_CHOOSE_YEAR = 1;
 	public static final int DO_CHOOSE_MONTH = 2;
@@ -76,7 +75,23 @@ public class MainActivity extends Activity {
 	        txtAfc.setText(usage.getAfc());
 		}
 		
-		//Heights
+		//Weight units
+        Spinner spinWeightUnits = (Spinner) findViewById(R.id.spinWeightUnit);
+        ArrayAdapter<CharSequence> weightsAdapter = ArrayAdapter.createFromResource(this, R.array.array_weight_units, android.R.layout.simple_spinner_item);
+        weightsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinWeightUnits.setAdapter(weightsAdapter);
+        spinWeightUnits.setSelection(0, true);
+        spinWeightUnits.setOnItemSelectedListener(new OnItemSelectedListener(){
+        	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        		chosenWeightUnit = pos;
+            }
+
+            public void onNothingSelected(AdapterView<?> parent) {
+              // Do nothing.
+            }
+        });
+        
+        //Heights
         Spinner spinHeight = (Spinner) findViewById(R.id.spinHeight);
         ArrayAdapter<CharSequence> heightsAdapter = ArrayAdapter.createFromResource(this, R.array.array_heights, android.R.layout.simple_spinner_item);
         heightsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -86,21 +101,12 @@ public class MainActivity extends Activity {
         	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         		if(pos > 0)
         			chosenHeight = Double.parseDouble(getResources().getStringArray(R.array.array_heights_in_cm)[pos]) * 0.01;//cONVERT HEIGHT to meters
+        		else
+        			chosenHeight = 0.0;
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
               // Do nothing.
-            }
-        });
-		
-		//show on imgGlobe
-        ImageView imgAMH = (ImageView)findViewById(R.id.imgAMH);
-        imgAMH.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", 1);
-				startActivity(i);
             }
         });
         
@@ -120,12 +126,23 @@ public class MainActivity extends Activity {
             }
         });
         
+        //Set up information images
+        ImageView imgAMH = (ImageView)findViewById(R.id.imgAMH);
+        imgAMH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	Intent i = new Intent(MainActivity.this, WebPage.class);
+            	i.putExtra("page", WebPage.AMH_INFO);
+				startActivity(i);
+            }
+        });
+        
         ImageView imgVolume = (ImageView)findViewById(R.id.imgVolume);
         imgVolume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", 2);
+            	i.putExtra("page", WebPage.OVARIAN_VOL_INFO);
 				startActivity(i);
             }
         });
@@ -135,7 +152,37 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
             	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", 3);
+            	i.putExtra("page", WebPage.AFC_INFO);
+				startActivity(i);
+            }
+        });
+        
+        ImageView imgMMAge = (ImageView)findViewById(R.id.imgMMage);
+        imgMMAge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	Intent i = new Intent(MainActivity.this, WebPage.class);
+            	i.putExtra("page", WebPage.MMA_INFO);
+				startActivity(i);
+            }
+        });
+        
+        ImageView imgPeriod = (ImageView)findViewById(R.id.imgPeriod);
+        imgPeriod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	Intent i = new Intent(MainActivity.this, WebPage.class);
+            	i.putExtra("page", WebPage.PERIOD_INFO);
+				startActivity(i);
+            }
+        });
+        
+        ImageView imgFSH = (ImageView)findViewById(R.id.imgFSH);
+        imgFSH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	Intent i = new Intent(MainActivity.this, WebPage.class);
+            	i.putExtra("page", WebPage.FSH_INFO);
 				startActivity(i);
             }
         });
@@ -226,6 +273,7 @@ public class MainActivity extends Activity {
 				EditText txtAfcRight = (EditText)findViewById(R.id.txtAfcRight);
 				EditText txtFsh = (EditText)findViewById(R.id.txtFSH);
 				EditText txtMMenopauseAge = (EditText)findViewById(R.id.txtMMenopauseAge);
+				EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
 				
 				RadioButton radioYes = (RadioButton)findViewById(R.id.radioYes);
 				RadioButton radioNo = (RadioButton)findViewById(R.id.radioNo);
@@ -281,6 +329,12 @@ public class MainActivity extends Activity {
 					regularPeriods = (radioYes.isChecked() ? "yes" : "no");
 					max += 10;
 				}
+				if(chosenHeight > 0.0 && !txtWeight.getText().toString().equals("")){
+					//for dialog max value
+					weight = convertWeight(Double.valueOf(txtWeight.getText().toString()));
+					max += 10;
+				}
+				
 				
 				dialog = new ProgressDialog(MainActivity.this);
 		        dialog.setTitle(getString(R.string.calcing));
@@ -313,6 +367,19 @@ public class MainActivity extends Activity {
 		}
 		else {
 			convertedValue = String.valueOf((amhvalue * 7.143));
+		}
+		
+		return convertedValue;
+	}
+	
+	private String convertWeight(double weightvalue){
+		String convertedValue = "";
+		
+		if(chosenAmhUnit == 0){
+			convertedValue = String.valueOf(weightvalue);
+		}
+		else {
+			convertedValue = String.valueOf((weightvalue * 0.453592));
 		}
 		
 		return convertedValue;

@@ -3,22 +3,29 @@ package com.cs.pausis;
 import java.util.ArrayList;
 
 import com.core.pausis.R;
-import com.cs.pausis.models.UsageHistory;
+import com.cs.pausis.models.UserInputValues;
 
 import android.os.Bundle;
-import android.app.ListActivity;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.DialogInterface.OnClickListener;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class History extends ListActivity {
+public class History extends Activity {
 	
 	public boolean isfirsttime = true;
-	ArrayList<UsageHistory> values;
+	ArrayList<UserInputValues> values;
+	HistoryAdapter aa;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_menu);
+		setContentView(R.layout.history);
 		
 		if(isfirsttime){
 			InitializeUI();
@@ -28,18 +35,40 @@ public class History extends ListActivity {
 	
 	public void InitializeUI(){
 		//Get all usage history from DB
-		values = new ArrayList<UsageHistory>();
-		values = new UsageHistory().getAllHistory(this);
+		values = new ArrayList<UserInputValues>();
+		values = new UserInputValues().getAllHistory(this);
 
-        HistoryAdapter adapter = new HistoryAdapter(this, R.layout.expandable_list_item2, values);
-        // Assign adapter to List
-        setListAdapter(adapter);
-	}
+    	if(values.size() > 0)
+    	{
+    		ListView historyList = (ListView)findViewById(R.id.list);
+    		int resID = R.layout.expandable_list_item2;
+	        aa = new HistoryAdapter(History.this, resID, values);
+	        historyList.setAdapter(aa);
+	        
+	        historyList.setOnItemClickListener(new OnItemClickListener() {
+	            public void onItemClick(AdapterView<?> parent, View v,int position, long id) {
+	            	
+	            	final UserInputValues history = values.get(position);
+	            	
+	            	Intent i = new Intent(getApplicationContext(), Summary.class);
+					Bundle b = new Bundle();
+	    			b.putInt("index", Integer.parseInt(history.getID()));
+	    			i.putExtras(b);
+					startActivity(i);
+	            }
+	        });
+    	}
+	    else{
+	    	AlertDialog.Builder alert = new AlertDialog.Builder(this);
+			alert.setTitle("Oops");
+			alert.setMessage(R.string.nousage);
+			alert.setPositiveButton(R.string.ok, new OnClickListener(){
 	
-	@Override
-	protected void onListItemClick(ListView l, View v, int position, long id) {        
-	   super.onListItemClick(l, v, position, id);
-	   // ListView Clicked item index
-	   
+				public void onClick(DialogInterface arg0, int arg1) {
+					finish();
+				}
+			});
+			alert.show();
+	    }
 	}
 }
