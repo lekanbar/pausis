@@ -61,7 +61,7 @@
 			<TextView
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:id="@+id/text1"
+				android:id="@+id/txtFshResult"
 				android:text="@string/empty"
 				android:textSize="20sp"
 				android:layout_centerVertical="true"
@@ -99,7 +99,7 @@
 			<TextView
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:id="@+id/text2"
+				android:id="@+id/txtMMAResult"
 				android:text="@string/empty"
 				android:textSize="20sp"
 				android:layout_centerVertical="true"

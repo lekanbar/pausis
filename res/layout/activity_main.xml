@@ -434,20 +434,22 @@
 						android:layout_gravity="center"
 						android:background="@drawable/bgshape2"
 						>
+
 						<EditText
-							android:id="@+id/txtFSH"
-							android:layout_width="fill_parent"
-							android:layout_height="50dp"
-							android:inputType="number"
-							android:hint="@string/fshhint"
-							android:background="@drawable/bgeditshape"
-							android:textSize="18sp"
-							android:textColor="#000000"
-							android:singleLine="true"
-							android:layout_toLeftOf="@+id/imgFSH"
-							android:layout_marginLeft="10dp"
-							android:layout_alignParentLeft="true"
-							android:maxLength="4"/>
+						    android:id="@+id/txtFSH"
+						    android:layout_width="fill_parent"
+						    android:layout_height="50dp"
+						    android:layout_alignParentLeft="true"
+						    android:layout_marginLeft="10dp"
+						    android:layout_toLeftOf="@+id/imgFSH"
+						    android:background="@drawable/bgeditshape"
+						    android:hint="@string/fshhint"
+						    android:inputType="numberDecimal"
+						    android:maxLength="4"
+						    android:singleLine="true"
+						    android:textColor="#000000"
+						    android:textSize="18sp" />
+
 						<ImageView
 							android:id="@+id/imgFSH"
 							android:layout_width="30dp"
@@ -569,30 +571,33 @@
 							android:layout_alignParentLeft="true"
 							android:layout_toLeftOf="@+id/imgVolume"
 							>
+
 							<EditText
-								android:id="@+id/txtVolume"
-								android:layout_width="wrap_content"
-								android:layout_height="50dp"
-								android:inputType="number"
-								android:hint="@string/leftov"
-								android:background="@drawable/bgeditshape"
-								android:textSize="18sp"
-								android:singleLine="true"
-								android:layout_weight="0.5"
-								android:layout_marginLeft="10dp"
-								android:maxLength="4"/>
+							    android:id="@+id/txtVolume"
+							    android:layout_width="wrap_content"
+							    android:layout_height="50dp"
+							    android:layout_marginLeft="10dp"
+							    android:layout_weight="0.5"
+							    android:background="@drawable/bgeditshape"
+							    android:hint="@string/leftov"
+							    android:inputType="number"
+							    android:maxLength="4"
+							    android:singleLine="true"
+							    android:textSize="18sp" />
+
 							<EditText
-								android:id="@+id/txtVolumeRight"
-								android:layout_width="wrap_content"
-								android:layout_height="50dp"
-								android:inputType="number"
-								android:hint="@string/rightov"
-								android:background="@drawable/bgeditshape"
-								android:layout_weight="0.5"
-								android:textSize="18sp"
-								android:singleLine="true"
-								android:layout_marginLeft="10dp"
-								android:maxLength="4"/>
+							    android:id="@+id/txtVolumeRight"
+							    android:layout_width="wrap_content"
+							    android:layout_height="50dp"
+							    android:layout_marginLeft="10dp"
+							    android:layout_weight="0.5"
+							    android:background="@drawable/bgeditshape"
+							    android:hint="@string/rightov"
+							    android:inputType="number"
+							    android:maxLength="4"
+							    android:singleLine="true"
+							    android:textSize="18sp" />
+
 						</LinearLayout>
 						<ImageView
 							android:id="@+id/imgVolume"

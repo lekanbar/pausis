@@ -6,6 +6,8 @@ import java.util.Calendar;
 import com.cs.pausis.MainActivity;
 import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
+import com.cs.pausis.models.FSH;
+import com.cs.pausis.models.MMAge;
 import com.cs.pausis.models.OvarianVolume;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
@@ -19,11 +21,14 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 	private Drawable d;
     Context context;
     int birthYear, birthMonth; 
-    Double observedAMH, observedOvarianVolume, observedAFC;
+    Double observedAMH, observedOvarianVolume, observedAFC, observedFSH,
+           mothersMenopauseAge;
     
     AMH amh;
     OvarianVolume ova;
     AFC afc;
+    FSH fsh;
+    MMAge mmAge;
 	
     ArrayList<Result> results = null;
     
@@ -32,7 +37,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 		this.birthMonth = Integer.parseInt(userInputValues.getBirthMonth());
 		this.observedAFC = (!userInputValues.getAfc().equals("") ? Double.valueOf(userInputValues.getAfc()) : null);
 		this.observedAMH = (!userInputValues.getAmhvolume().equals("") ? Double.valueOf(userInputValues.getAmhvolume()) : null);
-		this.observedOvarianVolume = (!userInputValues.getOvarianvolume().equals("") ? Double.valueOf(userInputValues.getOvarianvolume()) : null);	
+		this.observedOvarianVolume = (!userInputValues.getOvarianvolume().equals("") ? Double.valueOf(userInputValues.getOvarianvolume()) : null);
+		this.observedFSH = (!userInputValues.getFsh().equals("") ? Double.valueOf(userInputValues.getFsh()) : null);
+		this.mothersMenopauseAge = (!userInputValues.getMotherMenopauseAge().equals("") ? Double.valueOf(userInputValues.getMotherMenopauseAge()) : null);
+		
 		this.context = context;
 	}
 	
@@ -62,6 +70,22 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				afc.setAge(calculateAge());
 				afc.setObservedAfcValue(this.observedAFC.doubleValue());
 				afc.calculateAFC();
+            	
+            	((MainActivity)this.context).updateDialog();
+			}
+            if (this.observedFSH != null) {
+            	fsh = new FSH(this.context);
+				fsh.setAge(calculateAge());
+				fsh.setObservedFsh(this.observedFSH.doubleValue());
+				fsh.calculateFsh();
+            	
+            	((MainActivity)this.context).updateDialog();
+			}
+            if (this.mothersMenopauseAge != null) {
+            	mmAge = new MMAge(this.context);
+				mmAge.setChildage(calculateAge());
+				mmAge.setMotherage(this.mothersMenopauseAge.doubleValue());
+			    mmAge.calculateMMage();
             	
             	((MainActivity)this.context).updateDialog();
 			}
@@ -132,6 +156,22 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2.setValue(String.valueOf(percentile));
     			result2.setType(Result.Type.AFC.toString());
     			result2.setSdvalues(afc.getSdvalues());
+    			
+    			results.add(result2);
+    		}
+    		if(this.observedFSH != null){
+    			result2 = new Result();    			
+    			result2.setValue(String.valueOf(fsh.getPercentage()));
+    			result2.setType(Result.Type.FSH.toString());
+    			//result2.setSdvalues(afc.getSdvalues());
+    			
+    			results.add(result2);
+    		}
+    		if(this.mothersMenopauseAge != null){
+    			result2 = new Result();    			
+    			result2.setValue(String.valueOf(mmAge.getPercentage()));
+    			result2.setType(Result.Type.MMA.toString());
+    			//result2.setSdvalues(afc.getSdvalues());
     			
     			results.add(result2);
     		}

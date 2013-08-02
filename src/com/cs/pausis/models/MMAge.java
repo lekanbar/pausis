@@ -25,6 +25,8 @@ public class MMAge {
 	
 	public MMAge(Context context){
 		this.context = context;
+		result = "MMAge percentage goes  here";
+		percentage = 40.0;
 	}
 	
 	public void calculateMMage() {

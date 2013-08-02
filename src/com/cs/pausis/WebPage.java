@@ -9,18 +9,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 public class WebPage extends Activity{
 	
 	ScrollView mScrollView;
-	
-	public static final int AMH_INFO = 1;
-	public static final int AFC_INFO = 2;
-	public static final int FSH_INFO = 3;
-	public static final int MMA_INFO = 4;
-	public static final int PERIOD_INFO = 5;
-	public static final int OVARIAN_VOL_INFO = 6;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,62 +26,8 @@ public class WebPage extends Activity{
 	public void InitializeUI(){
 		setTitle(getString(R.string.info));
 		
-		int page = getIntent().getIntExtra("page", 0);
-		
-		if (page == AMH_INFO) {
-			//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
-			//mWebView2.loadUrl("file:///android_asset/about.html");
-			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
-			lblTitle.setText(getString(R.string.amhvalue));
-			
-			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
-		}
-		else if (page == OVARIAN_VOL_INFO) {
-			//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
-			//mWebView2.loadUrl("file:///android_asset/about.html");
-			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
-			lblTitle.setText(getString(R.string.volvalue));
-			
-			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
-		}
-		else if (page == AFC_INFO) {
-			//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
-			//mWebView2.loadUrl("file:///android_asset/about.html");
-			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
-			lblTitle.setText(getString(R.string.afcvalue));
-			
-			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
-		}
-		else if (page == FSH_INFO) {
-			//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
-			//mWebView2.loadUrl("file:///android_asset/about.html");
-			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
-			lblTitle.setText(getString(R.string.fshvalue));
-			
-			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
-		}
-		else if (page == MMA_INFO) {
-			//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
-			//mWebView2.loadUrl("file:///android_asset/about.html");
-			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
-			lblTitle.setText(getString(R.string.menopause2));
-			
-			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
-		}
-		else if (page == PERIOD_INFO) {
-			//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
-			//mWebView2.loadUrl("file:///android_asset/about.html");
-			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
-			lblTitle.setText(getString(R.string.periods));
-			
-			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
-		}
+		//WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
+		//mWebView2.loadUrl("file:///android_asset/about.html");
 		
 		Button cmdSend_button = (Button)findViewById(R.id.cmdOk);
     	cmdSend_button.setOnClickListener(new OnClickListener(){

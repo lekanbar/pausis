@@ -15,6 +15,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
  public class Summary extends Activity {	 
 	 UserPreference pref;
@@ -25,38 +28,18 @@ import android.view.View;
 	 ArrayList<Result> results;
 	 ResultAdapter adapter;
 	 
-	 IDemoChart mChart;
+	 Result fshResult, mmaResult;
 	 
-	Runnable updateTextView = new Runnable() {
-	   @Override
-	   public void run() {
-	    	
-	   }
-	};
+	 IDemoChart mChart;
 	 
 	 /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-          	
-        //Configuration conf = this.getResources().getConfiguration();    	
-    	//if(conf.orientation == 2)
-    		setContentView(R.layout.summary);
-    	//else
-    		//setContentView(R.layout.summaryport);
-    	
-    	/*if(isfirsttime){
-    		Bundle b = getIntent().getExtras();
-        	usage = b.getParcelable("usage");
-        	
-        	//Calculate percentage
-        	InitializeUI();
-        	//CalculatePercentage();
-        	
-        	isfirsttime = false;
-    	}
-    	else*/
-    		InitializeUI();
+          
+		setContentView(R.layout.summary);
+	
+		InitializeUI();
     }
     
     @Override
@@ -89,15 +72,67 @@ import android.view.View;
 	    }
     }
     
-    /*private void CalculatePercentage(){
-    	if(!isviolated){
-	        //show result
-	        runOnUiThread(updateTextView);
-    	}
-    }*/
-    
     private void InitializeUI(){
     	results = getIntent().getExtras().getParcelableArrayList("results");
+    	
+    	String fshresultString = "", mmaresultString = "";
+    	for(Result result : results){
+    		if(result.getType().equals(Result.Type.FSH.toString())){
+    			fshresultString = getString(R.string.fshresult) + result.getValue() + "%";
+    			fshResult = result;
+    			results.remove(result);
+    		}
+    		else if(result.getType().equals(Result.Type.MMA.toString())) {
+    			mmaresultString = getString(R.string.mmaresult) + result.getValue() + "%";
+    			mmaResult = result;
+    			results.remove(result);
+			}
+    	}
+    	
+    	//FSH result information
+    	if(!fshresultString.equals("")){
+    		ImageView imgFsh = (ImageView)findViewById(R.id.imgFSH);
+    		imgFsh.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent i = new Intent(getApplicationContext(), InformationPage.class);
+					i.putExtra("type", InformationPage.SUMMARY_TYPE);
+					i.putExtra("result", fshResult);
+					startActivity(i);
+				}
+			});
+    		
+	    	TextView txtFshResult = (TextView)findViewById(R.id.txtFshResult);
+	    	txtFshResult.setText(fshresultString);
+    	}
+    	else {
+    		LinearLayout layfsh = (LinearLayout)findViewById(R.id.layfsh);
+			layfsh.setVisibility(View.GONE);
+		}
+    	
+    	//MMA result information
+    	if(!mmaresultString.equals("")){
+    		ImageView imgMma = (ImageView)findViewById(R.id.imgMMA);
+    		imgMma.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent i = new Intent(getApplicationContext(), InformationPage.class);
+					i.putExtra("type", InformationPage.SUMMARY_TYPE);
+					i.putExtra("result", mmaResult);
+					startActivity(i);
+				}
+			});
+    		
+	    	TextView txtMMAResult = (TextView)findViewById(R.id.txtMMAResult);
+	    	txtMMAResult.setText(mmaresultString);
+    	}
+    	else {
+			LinearLayout laymma = (LinearLayout)findViewById(R.id.laymma);
+			laymma.setVisibility(View.GONE);
+		}
+    	
     	adapter = new ResultAdapter(this, R.layout.expandable_list_item, results);
     	
     	ActionSlideExpandableListView list = (ActionSlideExpandableListView)this.findViewById(R.id.list);
@@ -107,13 +142,16 @@ import android.view.View;
 
 			@Override
 			public void onClick(View listView, View buttonview, int position) {
-				if(buttonview.getId() == R.id.buttonA) {	
-					Intent i = new Intent(getApplicationContext(), ChartOptionsMenu.class);
-					i.putExtra("position", position);
-					i.putExtra("results", results);
-					startActivity(i);
+				if(buttonview.getId() == R.id.buttonA) {
+					Intent intent = new Intent(Summary.this, ResultVisualizer.class);
+			        intent.putExtra("result", result);
+		      	    startActivity(intent);
 				} else {
-					
+					Result result = results.get(position);
+					Intent i = new Intent(getApplicationContext(), InformationPage.class);
+					i.putExtra("type", InformationPage.SUMMARY_TYPE);
+					i.putExtra("result", result);
+					startActivity(i);
 				}
 			}
 		}, R.id.buttonA, R.id.buttonB);
@@ -121,9 +159,6 @@ import android.view.View;
     
     public void onConfigurationChanged(Configuration _newConfig) {
     	super.onConfigurationChanged(_newConfig);
-    	
-    	//TextView lblResult = (TextView)findViewById(R.id.lblResult);
-        //lblResult.setText(result + " %");
     	
         setContentView(R.layout.summary);
 		InitializeUI();

@@ -9,7 +9,6 @@ import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
 
 import android.os.Bundle;
-import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -132,8 +131,9 @@ public class MainActivity extends Activity {
         imgAMH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", WebPage.AMH_INFO);
+            	Intent i = new Intent(MainActivity.this, InformationPage.class);
+            	i.putExtra("type", InformationPage.MAIN_PAGE_TYPE);
+            	i.putExtra("infotype", InformationPage.AMH_INFO);
 				startActivity(i);
             }
         });
@@ -142,8 +142,9 @@ public class MainActivity extends Activity {
         imgVolume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", WebPage.OVARIAN_VOL_INFO);
+            	Intent i = new Intent(MainActivity.this, InformationPage.class);
+            	i.putExtra("type", InformationPage.MAIN_PAGE_TYPE);
+            	i.putExtra("infotype", InformationPage.OVARIAN_VOL_INFO);
 				startActivity(i);
             }
         });
@@ -152,8 +153,9 @@ public class MainActivity extends Activity {
         imgAfc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", WebPage.AFC_INFO);
+            	Intent i = new Intent(MainActivity.this, InformationPage.class);
+            	i.putExtra("type", InformationPage.MAIN_PAGE_TYPE);
+            	i.putExtra("infotype", InformationPage.AFC_INFO);
 				startActivity(i);
             }
         });
@@ -162,8 +164,9 @@ public class MainActivity extends Activity {
         imgMMAge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", WebPage.MMA_INFO);
+            	Intent i = new Intent(MainActivity.this, InformationPage.class);
+            	i.putExtra("type", InformationPage.MAIN_PAGE_TYPE);
+            	i.putExtra("infotype", InformationPage.MMAge_INFO);
 				startActivity(i);
             }
         });
@@ -172,8 +175,9 @@ public class MainActivity extends Activity {
         imgPeriod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", WebPage.PERIOD_INFO);
+            	Intent i = new Intent(MainActivity.this, InformationPage.class);
+            	i.putExtra("type", InformationPage.MAIN_PAGE_TYPE);
+            	i.putExtra("infotype", InformationPage.PERIOD_INFO);
 				startActivity(i);
             }
         });
@@ -182,8 +186,9 @@ public class MainActivity extends Activity {
         imgFSH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent i = new Intent(MainActivity.this, WebPage.class);
-            	i.putExtra("page", WebPage.FSH_INFO);
+            	Intent i = new Intent(MainActivity.this, InformationPage.class);
+            	i.putExtra("type", InformationPage.MAIN_PAGE_TYPE);
+            	i.putExtra("infotype", InformationPage.FSH_INFO);
 				startActivity(i);
             }
         });

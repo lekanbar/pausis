@@ -237,12 +237,11 @@ public class GaugeView extends View {
 
 	private void readRanges(final Resources res, final int rangesId, final int colorsId) {
 		if (rangesId > 0 && colorsId > 0) {
-			//final String[] ranges = res.getStringArray(R.array.ranges);
-			//final String[] colors = res.getStringArray(R.array.rangeColors);
 			final String[] ranges = res.getStringArray(rangesId);
 			final String[] colors = res.getStringArray(colorsId);
-			if (ranges.length != colors.length) { throw new IllegalArgumentException(
-					"The ranges and colors arrays must have the same length."); }
+			if (ranges.length != colors.length) { 
+				throw new IllegalArgumentException("The ranges and colors arrays must have the same length."); 
+			}
 
 			final int length = ranges.length;
 			mRangeValues = new float[length];

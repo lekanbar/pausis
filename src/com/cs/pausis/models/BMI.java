@@ -20,7 +20,7 @@ public class BMI {
 	 * This is the default constructor for the BMI model
 	 */
 	public BMI(){
-		
+		result = "BMI result goes here";
 	}
 	
 	public BMI(Context context){
