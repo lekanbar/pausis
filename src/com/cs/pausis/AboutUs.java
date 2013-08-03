@@ -42,12 +42,12 @@ import android.widget.TextView;
     	lblLearnMore1.setMovementMethod(LinkMovementMethod.getInstance());
     	
     	TextView lblLearnMore2 = (TextView)findViewById(R.id.readmore2);
-    	lblLearnMore2.setText(Html.fromHtml("<a href=\"http://www.bristol.ac.uk/bhi/people/16893/index.html\">"
+    	lblLearnMore2.setText(Html.fromHtml("<a href=\"http://www.cs.st-andrews.ac.uk/~tom/\">"
                               + getString(R.string.readmore) + "</a>"));
     	lblLearnMore2.setMovementMethod(LinkMovementMethod.getInstance());
     	
     	TextView lblLearnMore3 = (TextView)findViewById(R.id.readmore3);
-    	lblLearnMore3.setText(Html.fromHtml("<a href=\"http://www.cs.st-andrews.ac.uk/~tom/\">"
+    	lblLearnMore3.setText(Html.fromHtml("<a href=\"http://uk.linkedin.com/in/lekanbaruwa/\">"
                               + getString(R.string.readmore) + "</a>"));
     	lblLearnMore3.setMovementMethod(LinkMovementMethod.getInstance());
     }

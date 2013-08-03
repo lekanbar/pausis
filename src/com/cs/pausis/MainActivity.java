@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.KeyEvent;
@@ -21,6 +22,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -64,7 +67,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void InitializeUI(){
-		if(usage != null){
+		//Close sot keyboard by default
+		EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(txtWeight.getWindowToken(), 0);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        
+		/*if(usage != null){
 			EditText txtAmh = (EditText)findViewById(R.id.txtAMH);
 	        txtAmh.setText(usage.getAmhvolume());
 	        
@@ -73,7 +82,13 @@ public class MainActivity extends Activity {
 	        
 	        EditText txtAfc = (EditText)findViewById(R.id.txtAfc);
 	        txtAfc.setText(usage.getAfc());
-		}
+	        
+	        EditText txtFsh = (EditText)findViewById(R.id.txtFSH);
+	        txtFsh.setText(usage.getFsh());
+	        
+	        txtWeight = (EditText)findViewById(R.id.txtWeight);
+	        txtWeight.setText(usage.getWeight());
+		}*/
 		
 		//Weight units
         Spinner spinWeightUnits = (Spinner) findViewById(R.id.spinWeightUnit);
@@ -346,6 +361,27 @@ public class MainActivity extends Activity {
 		        dialog.setMax(max);
 		        dialog.show();
 		        
+		        //Set input values and insert into DB
+		        userInputValues = new UserInputValues();
+		        userInputValues.setAge(String.valueOf(calculateAge()));
+		        userInputValues.setBirthYear(birthYear);
+		        userInputValues.setBirthMonth(birthMonth);
+		        userInputValues.setAmhvolume(observedAmh);
+		        userInputValues.setAfc(observedAfc);
+		        userInputValues.setOvarianvolume(observedOvarianVolume);
+		        userInputValues.setFsh(observedFsh);
+		        userInputValues.setMotherMenopauseAge(motherMenopauseAge);
+		        userInputValues.setRegularPeriods(regularPeriods);
+		        userInputValues.setWeight(weight);
+		        userInputValues.setHeight(height);
+		        Calendar c = Calendar.getInstance();
+				String hour = (String.valueOf(c.get(Calendar.HOUR_OF_DAY)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.HOUR_OF_DAY)) : String.valueOf(c.get(Calendar.HOUR_OF_DAY))); 
+		    	String minute = (String.valueOf(c.get(Calendar.MINUTE)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.MINUTE)) : String.valueOf(c.get(Calendar.MINUTE)));
+				String datetime = String.valueOf(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH) + 1) + "/" +
+						                         c.get(Calendar.YEAR) + " " + hour + ":" + 
+						                         minute + (c.get(Calendar.AM_PM) == 0 ? " AM" : " PM"));
+		        userInputValues.setDateTime(datetime);
+		        
 		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, MainActivity.this);
 		        ovcalc.execute("");
 			}
@@ -379,42 +415,19 @@ public class MainActivity extends Activity {
 	}
 	
 	private void saveUsageHistory(ArrayList<Result> results) {
-		//Set input values and insert into DB
-        userInputValues = new UserInputValues();
-        userInputValues.setAge(String.valueOf(calculateAge()));
-        userInputValues.setBirthYear(birthYear);
-        userInputValues.setBirthMonth(birthMonth);
-        userInputValues.setAmhvolume(observedAmh);
-        userInputValues.setAfc(observedAfc);
-        userInputValues.setOvarianvolume(observedOvarianVolume);
-        userInputValues.setFsh(observedFsh);
-        userInputValues.setMotherMenopauseAge(motherMenopauseAge);
-        userInputValues.setRegularPeriods(regularPeriods);
-        userInputValues.setWeight(weight);
-        userInputValues.setHeight(height);
-        Calendar c = Calendar.getInstance();
-		String hour = (String.valueOf(c.get(Calendar.HOUR_OF_DAY)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.HOUR_OF_DAY)) : String.valueOf(c.get(Calendar.HOUR_OF_DAY))); 
-    	String minute = (String.valueOf(c.get(Calendar.MINUTE)).length() == 1 ? "0" + String.valueOf(c.get(Calendar.MINUTE)) : String.valueOf(c.get(Calendar.MINUTE)));
-		String datetime = String.valueOf(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH) + 1) + "/" +
-				                         c.get(Calendar.YEAR) + " " + hour + ":" + 
-				                         minute + (c.get(Calendar.AM_PM) == 0 ? " AM" : " PM"));
-        userInputValues.setDateTime(datetime);
-        
         //calculate indicator based on dominance
-        int greencount = 0, redcount = 0, orangecount = 0;
+        int greencount = 0, redcount = 0;
         for(Result result : results){
 	        if(result.getStatus().equals(Result.Status.GREEN.toString()))
 				greencount++;
-			else if(result.getStatus().equals(Result.Status.ORANGE.toString()))
-				orangecount++;
-			else
+			else if(result.getStatus().equals(Result.Status.RED.toString()))
 				redcount++;
         }
         
-        if(redcount > 0)
+        if(redcount == results.size())
         	userInputValues.setResultIndicator(Result.Status.RED.toString());
         else {
-			if(greencount > orangecount)
+			if(greencount == results.size())
 				userInputValues.setResultIndicator(Result.Status.GREEN.toString());
 			else
 				userInputValues.setResultIndicator(Result.Status.ORANGE.toString());

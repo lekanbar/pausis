@@ -16,18 +16,20 @@
     <string name="rightov">Right Ovary</string>
     <string name="firstuse">Configuring app for first time use. Please wait....</string>
     <string name="firstusetitle">App Configuration</string>
-    <string name="copyright">Copyright © Olalekan Baruwa. All rights reserved.</string>
-    <string name="weight">Weight</string>
-    <string name="weighthint">Enter your Weight</string>
-    <string name="height">Height</string>
-    <string name="chooseheight">Choose your Height</string>
+    <string name="copyright">Copyright ©\u0020</string>
+    <string name="name">Olalekan Baruwa.\u0020</string>
+    <string name="allrights">All rights reserved.</string>
+    <string name="weight">Weight:\u0020</string>
+    <string name="weighthint">Your Weight</string>
+    <string name="height">Height:\u0020</string>
+    <string name="chooseheight">Your Height</string>
     <string name="body">Body</string>
     <string name="fromblood">Blood Test Results (if known)</string>
     <string name="fromultrasound">Ultrasound Results (if known)</string>
     <string name="genetics2">Genetics</string>
-    <string name="menopause">"Mother's Age at Menopause (if known)"</string>
+    <string name="menopause">"Your Mother's Age at Menopause (if known)"</string>
     <string name="menopause2">"Mother's Age at Menopause"</string>
-    <string name="mage">"Enter mother's age"</string>
+    <string name="mage">"Mother's age"</string>
     <string name="periods">Do you have regular periods?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -40,11 +42,11 @@
     
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>
-    <string name="amhhint">Enter your AMH value</string>
+    <string name="amhhint">Your AMH value</string>
     
     <string name="fsh">FSH value.</string>
     <string name="fshvalue">FSH Value (mLU/mL)</string>
-    <string name="fshhint">Enter your FSH value</string>
+    <string name="fshhint">Your FSH value</string>
     
     <string name="vol">ovarian volume.</string>
     <string name="volvalue">Ovarian Volume (mL)</string>
@@ -100,12 +102,12 @@
 	<string name="sampletext">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</string>
 	
 	<string name="aboutus">About Us</string>
-	<string name="aboutus1">Professor Scott Nelson is the Muirhead Professor of Obstetrics and Gynaecology at the University of Glasgow and an international expert in IVF.</string>
+	<string name="aboutus1">Professor Hamish Wallace MD is the Muirhead Professor of Obstetrics and Gynaecology at the University of Edinburgh and an international expert in IVF.</string>
 	<string name="aboutus2">"His research aims to understand and improve the health of women and their offspring throughout their reproductive life span. He is directly involved in looking after patients in Scotlan's two largest and most successful IVF units."</string>
-	<string name="aboutus3">Professor Debbie Lawlor is the Professor of Epidemiology at Bristol University and an international expert in translational research.</string>
-	<string name="aboutus4">"Debbie's research is underpinned by her interest in understanding how biological (including genetic), social and environmental exposures from across the life course affect the risk of chronic disease in adulthood and how, therefore, appropriate prevention of these conditions can be achieved."</string>
-	<string name="aboutus5">Dr Tom Kelsey is a Senior Lecturer at the University of Saint Andrews, and an international expert in mathematical models for biomedicine.</string>
-	<string name="aboutus6">Tom, together with his colleague Dr Chris Jefferson, were instrumental in developing the online calculator and smartphone apps.</string>
+	<string name="aboutus3">Dr Tom Kelsey is a Senior Lecturer at the University of Saint Andrews, and an international expert in mathematical models for biomedicine.</string>
+	<string name="aboutus4">Tom, together with his student, were instrumental in developing the smartphone apps.</string>
+	<string name="aboutus5">Mr Olalekan Baruwa is a MSc student at the University of Saint Andrews, and a software developer with a solid industrial experience in developing web and mobile applications.</string>
+	<string name="aboutus6">Olalekan, worked on this project under the direct supervision of Dr Tom Kelsey.</string>
 	<string name="readmore">read more</string>
 	
 	<string name="summary">Summary</string>

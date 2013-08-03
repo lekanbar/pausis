@@ -49,12 +49,13 @@ public class AMH {
 		pl1 = 0.0;
 		pl2 = 0.0;
 		sdvalues = new double[7];
-		
-		if(!check())
-			initializeAMH();
 	}
 	
 	public void calculateAMH() throws Exception{
+		//Re-check if the DB has been initialized with AMH values or not
+		if(!check())
+			initializeAMH();
+		
 		//Assert input values are valid before proceeding
 		if(checkInputValues()){	
 			//perform a look up of the age related values

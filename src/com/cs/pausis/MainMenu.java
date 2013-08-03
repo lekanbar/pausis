@@ -1,6 +1,7 @@
 package com.cs.pausis;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import com.core.pausis.R;
 import com.cs.pausis.models.MenuItem;
@@ -8,8 +9,11 @@ import com.cs.pausis.models.MenuItem;
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainMenu extends ListActivity {
 	
@@ -38,6 +42,17 @@ public class MainMenu extends ListActivity {
         MenuAdapter adapter = new MenuAdapter(this, R.layout.expandable_list_item3, values);
         // Assign adapter to List
         setListAdapter(adapter);
+        
+        //Set copyright information
+        Calendar c = Calendar.getInstance();
+		String year = String.valueOf(c.get(Calendar.YEAR));
+		
+        TextView lblCopyright = (TextView)findViewById(R.id.lblCopyright);
+        lblCopyright.setText(getString(R.string.copyright) + year + " ");
+        
+        TextView lblName = (TextView)findViewById(R.id.lblName);
+        lblName.setText(Html.fromHtml("<a href=\"http://uk.linkedin.com/in/lekanbaruwa/\">" + getString(R.string.name) + "</a>"));
+        lblName.setMovementMethod(LinkMovementMethod.getInstance());
 	}
 	
 	@Override

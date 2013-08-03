@@ -45,9 +45,6 @@ public class AFC {
 	
 	public AFC(Context context){
 		this.context = context;
-		
-		if(!check())
-			initializeAFC();
 	}
 	
 	public void initializeAFC(){
@@ -147,6 +144,10 @@ public class AFC {
 	}
 	
 	public void calculateAFC() throws Exception{
+		//Re-check if the DB has been initialized with AFC values or not
+		if(!check())
+			initializeAFC();
+		
 		//Assert input values are valid before proceeding
 		if(checkInputValues()){	
 			//perform a look up of the age related values

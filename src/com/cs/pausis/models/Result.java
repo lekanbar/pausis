@@ -82,7 +82,9 @@ public class Result implements Parcelable {
 		out.writeString(status);
 		out.writeString(value);
 		out.writeString(type);
-		out.writeDoubleArray(getSdvalues());
+		
+		if(getSdvalues() != null)
+			out.writeDoubleArray(getSdvalues());
 	}
 	
 	private Result(Parcel in) {

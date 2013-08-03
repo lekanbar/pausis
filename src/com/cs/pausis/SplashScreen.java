@@ -1,5 +1,7 @@
 package com.cs.pausis;
 
+import java.util.Calendar;
+
 import com.core.pausis.R;
 import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
@@ -11,7 +13,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.MotionEvent;
+import android.widget.TextView;
 
  public class SplashScreen extends Activity {
 	 
@@ -35,6 +40,17 @@ import android.view.MotionEvent;
         // Splash screen view
         setContentView(R.layout.splash);
         
+        //Set copyright information
+        Calendar c = Calendar.getInstance();
+		String year = String.valueOf(c.get(Calendar.YEAR));
+		
+        TextView lblCopyright = (TextView)findViewById(R.id.lblCopyright);
+        lblCopyright.setText(getString(R.string.copyright) + year + " ");
+        
+        TextView lblName = (TextView)findViewById(R.id.lblName);
+        lblName.setText(Html.fromHtml("<a href=\"http://uk.linkedin.com/in/lekanbaruwa/\">" + getString(R.string.name) + "</a>"));
+        lblName.setMovementMethod(LinkMovementMethod.getInstance());
+        
         // The thread to wait for splash screen events
         mSplashThread =  new Thread(){
             @Override
@@ -54,6 +70,24 @@ import android.view.MotionEvent;
         mSplashThread.start();
     }
     
+    Runnable showDialog = new Runnable() {
+	    @Override
+	    public void run() {
+	    	dialog = new ProgressDialog(SplashScreen.this);
+	        dialog.setTitle(getString(R.string.firstusetitle));
+	        dialog.setMessage(getString(R.string.firstuse));
+	        dialog.setIndeterminate(true);
+	        dialog.show();
+	    }
+    };
+    
+    Runnable dismissDialog = new Runnable() {
+	    @Override
+	    public void run() {
+	    	dialog.dismiss();
+	    }
+    };
+    
     //Go to next
     public void GoToNext(){
     	// Run next activity
@@ -63,25 +97,21 @@ import android.view.MotionEvent;
     	db.close();    	
     	
     	if(pref == null){
-    		dialog = new ProgressDialog(SplashScreen.this);
-	        dialog.setTitle(getString(R.string.firstusetitle));
-	        dialog.setMessage(getString(R.string.firstuse));
-	        dialog.setIndeterminate(true);
-	        dialog.show();
+    		runOnUiThread(showDialog);
 	        
     		//Run all necessary bootstrap for app's first time use
-    		AMH amh = new AMH();
+    		AMH amh = new AMH(SplashScreen.this);
     		if(!amh.check()){
     	        //initialize amh preset values from json
     			amh.initializeAMH();
     		}
     		
-    		AFC afc = new AFC();
+    		AFC afc = new AFC(SplashScreen.this);
     		if(!afc.check()){    	        
     	        //initialize antral-follicle count preset values from json
     			afc.initializeAFC();
     		}
-    		dialog.dismiss();
+    		runOnUiThread(dismissDialog);
     		
     		Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
 			startActivity(i);

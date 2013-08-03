@@ -133,12 +133,14 @@
 						android:text="@string/birthmonth"
 						android:textSize="16sp"
 						android:textStyle="bold"
+						android:layout_marginTop="2dp"
 						android:layout_marginLeft="22dp"
 						android:textColor="#000000" />
 					<Spinner
 						android:id="@+id/spinBirthMonth"
 						android:layout_marginRight="10dp"
 						android:layout_toRightOf="@+id/lblbirthmon"
+						android:layout_marginTop="2dp"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content" />
 				</RelativeLayout>
@@ -188,7 +190,7 @@
 					>
 					<TextView
 					    android:id="@+id/lblheight"
-						android:layout_width="100dp"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:text="@string/height"
 						android:layout_marginLeft="22dp"
@@ -203,39 +205,55 @@
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content" />
 				</RelativeLayout>
-				<LinearLayout
+				<RelativeLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:orientation="horizontal"
-					android:background="@drawable/bgshape2"
+					android:layout_gravity="center"
+					android:paddingBottom="10dp"
+					android:background="@drawable/bgshape3"
 					>
-					<TextView
-					    android:id="@+id/lblweight"
-						android:layout_width="100dp"
-						android:layout_height="wrap_content"
-						android:text="@string/weight"
-						android:layout_marginLeft="22dp"
-						android:textSize="16sp"
-						android:textStyle="bold"
-						android:textColor="#000000" />
-					<EditText
-						android:id="@+id/txtWeight"
-						android:layout_width="200dp"
-						android:layout_height="50dp"
-						android:inputType="numberDecimal"
-						android:hint="@string/weighthint"
-						android:background="@drawable/bgeditshape"
-						android:textSize="18sp"
-						android:textColor="#000000"
-						android:singleLine="true"
-						android:maxLength="4"/>
-					<Spinner
-						android:id="@+id/spinWeightUnit"
+					<LinearLayout
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_alignParentLeft="true"
+						android:layout_toLeftOf="@+id/spinWeightUnit"
+						>
+					    <TextView
+						    android:id="@+id/lblweight"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/weight"
+							android:layout_marginLeft="22dp"
+							android:layout_marginRight="5dp"
+							android:layout_marginTop="2dp"
+							android:textSize="16sp"
+							android:textStyle="bold"
+							android:textColor="#000000" />
+					    
+					    <EditText
+							android:id="@+id/txtWeight"
+							android:layout_width="match_parent"
+							android:layout_height="40dp"
+							android:inputType="numberDecimal"
+							android:hint="@string/weighthint"
+							android:layout_marginTop="2dp"
+							android:background="@drawable/bgeditshape"
+							android:textSize="18sp"
+							android:textColor="#000000"
+							android:singleLine="true"
+							android:maxLength="4"/>
+					</LinearLayout>
+					<Spinner
+						android:id="@+id/spinWeightUnit"
+						android:layout_width="70dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="2dp"
+						android:layout_alignParentRight="true"
 						android:layout_marginRight="10dp"
 						android:layout_marginLeft="5dp" />
-				</LinearLayout>
+				 </RelativeLayout>
 			</LinearLayout>
 			
 			<LinearLayout
@@ -299,7 +317,7 @@
 						android:text="@string/menopause"
 						android:textSize="16sp"
 						android:textStyle="bold"
-						android:layout_margin="10dp"
+						android:layout_margin="5dp"
 						android:textColor="#000000" />
 					<RelativeLayout
 						android:layout_width="match_parent"
@@ -317,6 +335,7 @@
 							android:background="@drawable/bgeditshape"
 							android:textSize="18sp"
 							android:textColor="#000000"
+							android:layout_centerVertical="true"
 							android:singleLine="true"
 							android:layout_toLeftOf="@+id/imgMMage"
 							android:layout_marginLeft="10dp"
@@ -329,7 +348,9 @@
 							android:clickable="true"
 							android:contentDescription="@string/empty"
 							android:layout_alignParentRight="true"
-							android:layout_margin="5dp"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
 							android:src="@drawable/i_letter"
 							/>
 					</RelativeLayout>
@@ -355,6 +376,7 @@
 					        android:layout_height="wrap_content"
 					        android:orientation="horizontal"
 							android:layout_gravity="center"
+							android:layout_centerVertical="true"
 							android:layout_marginLeft="10dp"
 							android:background="@drawable/bgshape2"
 					        >
@@ -375,6 +397,7 @@
 							android:layout_width="30dp"
 							android:layout_height="30dp"
 							android:clickable="true"
+							android:layout_centerVertical="true"
 							android:contentDescription="@string/empty"
 							android:layout_alignParentRight="true"
 							android:layout_margin="5dp"
@@ -425,7 +448,7 @@
 						android:text="@string/fshvalue"
 						android:textSize="16sp"
 						android:textStyle="bold"
-						android:layout_margin="10dp"
+						android:layout_margin="5dp"
 						android:textColor="#000000" />
 					<RelativeLayout
 						android:layout_width="match_parent"
@@ -445,6 +468,7 @@
 						    android:background="@drawable/bgeditshape"
 						    android:hint="@string/fshhint"
 						    android:inputType="numberDecimal"
+						    android:layout_centerVertical="true"
 						    android:maxLength="4"
 						    android:singleLine="true"
 						    android:textColor="#000000"
@@ -455,9 +479,11 @@
 							android:layout_width="30dp"
 							android:layout_height="30dp"
 							android:clickable="true"
+							android:layout_centerVertical="true"
 							android:contentDescription="@string/empty"
 							android:layout_alignParentRight="true"
-							android:layout_margin="5dp"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
 							android:src="@drawable/i_letter"
 							/>
 					</RelativeLayout>
@@ -475,41 +501,52 @@
 						android:layout_height="wrap_content"
 						android:orientation="horizontal"
 						android:layout_gravity="center"
-						android:background="@drawable/bgshape2"
+						android:background="@drawable/bgshape3"
 						>
-						<EditText
-							android:id="@+id/txtAMH"
-							android:layout_width="200dp"
-							android:layout_height="50dp"
-							android:inputType="numberDecimal"
-							android:hint="@string/amhhint"
-							android:background="@drawable/bgeditshape"
-							android:textSize="18sp"
-							android:textColor="#000000"
-							android:singleLine="true"
-							android:layout_marginLeft="10dp"
-							android:layout_alignParentLeft="true"
-							android:maxLength="4"/>
-						<Spinner
-							android:id="@+id/spinAmhUnit"
-							android:layout_width="wrap_content"
+						<LinearLayout
+							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_marginRight="10dp"
+							android:orientation="horizontal"
+							android:layout_centerVertical="true"
+							android:layout_alignParentLeft="true"
 							android:layout_toLeftOf="@+id/imgAMH"
-							android:layout_toRightOf="@+id/txtAMH"
-							android:layout_centerInParent="true"
-							android:layout_marginLeft="5dp" />
+							>
+						    <EditText
+								android:id="@+id/txtAMH"
+								android:layout_width="wrap_content"
+								android:layout_height="50dp"
+								android:inputType="numberDecimal"
+								android:hint="@string/amhhint"
+								android:background="@drawable/bgeditshape"
+								android:textSize="18sp"
+								android:textColor="#000000"
+								android:singleLine="true"
+								android:layout_weight="0.7"
+								android:layout_marginLeft="10dp"
+								android:layout_marginRight="5dp"
+								android:maxLength="4"/>
+						    
+						    <Spinner
+								android:id="@+id/spinAmhUnit"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+							    android:layout_weight="0.3"
+								android:layout_marginRight="10dp"
+								android:layout_marginLeft="5dp" />
+						</LinearLayout>
 						<ImageView
 							android:id="@+id/imgAMH"
 							android:layout_width="30dp"
 							android:layout_height="30dp"
 							android:clickable="true"
+							android:layout_centerVertical="true"
 							android:layout_alignParentRight="true"
 							android:contentDescription="@string/empty"
-							android:layout_margin="5dp"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
 							android:src="@drawable/i_letter"
 							/>
-					</RelativeLayout>
+					 </RelativeLayout>
 				</LinearLayout>
 				
 				<LinearLayout
@@ -568,6 +605,7 @@
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
 							android:orientation="horizontal"
+							android:layout_centerVertical="true"
 							android:layout_alignParentLeft="true"
 							android:layout_toLeftOf="@+id/imgVolume"
 							>
@@ -606,7 +644,9 @@
 							android:clickable="true"
 							android:contentDescription="@string/empty"
 							android:layout_alignParentRight="true"
-							android:layout_margin="5dp"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
 							android:src="@drawable/i_letter"
 							/>
 					</RelativeLayout>
@@ -638,6 +678,7 @@
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
 							android:orientation="horizontal"
+							android:layout_centerVertical="true"
 							android:layout_toLeftOf="@+id/imgAfc"
 							android:layout_alignParentLeft="true"
 							>
@@ -673,7 +714,9 @@
 							android:clickable="true"
 							android:contentDescription="@string/empty"
 							android:layout_alignParentRight="true"
-							android:layout_margin="5dp"
+							android:layout_centerVertical="true"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
 							android:src="@drawable/i_letter"
 							/>
 					</RelativeLayout>

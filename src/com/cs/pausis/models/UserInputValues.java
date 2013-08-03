@@ -270,6 +270,15 @@ public class UserInputValues implements Parcelable {
 		out.writeString(amhvolume);
 		out.writeString(ovarianvolume);
 		out.writeString(afc);
+		out.writeString(birthyear);
+		out.writeString(birthmonth);
+		out.writeString(fsh);
+		out.writeString(mothermenopauseage);
+		out.writeString(regularperiods);
+		out.writeString(height);
+		out.writeString(weight);
+		out.writeString(datetime);
+		out.writeString(resultindicator);
 	}
 	
 	private UserInputValues(Parcel in) {
@@ -277,6 +286,15 @@ public class UserInputValues implements Parcelable {
 		this.setAmhvolume(in.readString());
 		this.setOvarianvolume(in.readString());
 		this.setAfc(in.readString());
+		this.setBirthYear(in.readString());
+		this.setBirthMonth(in.readString());
+		this.setFsh(in.readString());
+		this.setMotherMenopauseAge(in.readString());
+		this.setRegularPeriods(in.readString());
+		this.setHeight(in.readString());
+		this.setWeight(in.readString());
+		this.setDateTime(in.readString());
+		this.setResultIndicator(in.readString());
 	}
 	
 	public static final Parcelable.Creator<UserInputValues> CREATOR = new Parcelable.Creator<UserInputValues>() {

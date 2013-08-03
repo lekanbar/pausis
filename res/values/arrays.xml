@@ -78,33 +78,33 @@
     
     <string-array name="array_heights">
         <item>@string/chooseheight</item>
-        <item>"5'0\""</item>
-        <item>"5'1\""</item>
-        <item>"5'2\""</item>
-        <item>"5'3\""</item>
-        <item>"5'4\""</item>
-        <item>"5'5\""</item>
-        <item>"5'6\""</item>
-        <item>"5'7\""</item>
-        <item>"5'8\""</item>
-        <item>"5'9\""</item>
-        <item>"5'10\""</item>
-        <item>"5'11\""</item>
-        <item>"6'0\""</item>
-        <item>"6'1\""</item>
-        <item>"6'2\""</item>
-        <item>"6'3\""</item>
-        <item>"6'4\""</item>
-        <item>"6'5\""</item>
-        <item>"6'6\""</item>
-        <item>"6'7\""</item>
-        <item>"6'8\""</item>
-        <item>"6'9\""</item>
-        <item>"6'10\""</item>
-        <item>"6'11\""</item>
-        <item>"7'0\""</item>
-        <item>"7'1\""</item>
-        <item>"7'2\""</item>
+        <item>"5'0\" (152.40cm)"</item>
+        <item>"5'1\" (154.94cm)"</item>
+        <item>"5'2\" (157.48cm)"</item>
+        <item>"5'3\" (160.02cm)"</item>
+        <item>"5'4\" (162.56cm)"</item>
+        <item>"5'5\" (165.10cm)"</item>
+        <item>"5'6\" (167.74cm)"</item>
+        <item>"5'7\" (170.18cm)"</item>
+        <item>"5'8\" (172.72cm)"</item>
+        <item>"5'9\" (175.26cm)"</item>
+        <item>"5'10\" (177.80cm)"</item>
+        <item>"5'11\" (180.34cm)"</item>
+        <item>"6'0\" (182.88cm)"</item>
+        <item>"6'1\" (185.45cm)"</item>
+        <item>"6'2\" (187.96cm)"</item>
+        <item>"6'3\" (190.50cm)"</item>
+        <item>"6'4\" (193.04cm)"</item>
+        <item>"6'5\" (195.58cm)"</item>
+        <item>"6'6\" (198.12cm)"</item>
+        <item>"6'7\" (200.66cm)"</item>
+        <item>"6'8\" (203.20cm)"</item>
+        <item>"6'9\" (205.74cm)"</item>
+        <item>"6'10\" (208.28cm)"</item>
+        <item>"6'11\" (210.82cm)"</item>
+        <item>"7'0\" (213.36cm)"</item>
+        <item>"7'1\" (215.90cm)"</item>
+        <item>"7'2\" (218.44cm)"</item>
     </string-array>
     
     <string-array name="array_heights_in_cm">
