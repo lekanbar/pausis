@@ -39,10 +39,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/laytop"
         android:paddingLeft="30dp"
+        android:layout_marginTop="10dp"
 		android:paddingRight="@dimen/activity_horizontal_margin"
 		android:divider="@android:color/transparent"
 	  	android:dividerHeight="10.0sp"
         android:layout_width="match_parent">
     </ListView>
+    
+    <TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/copyright"
+		android:textSize="12sp"
+		android:textStyle="bold"
+		android:layout_below="@android:id/list"
+		android:layout_alignParentBottom="true"
+		android:layout_margin="10dp"
+		android:textColor="#000000" />
     
 </RelativeLayout>

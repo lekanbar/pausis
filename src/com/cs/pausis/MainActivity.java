@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 	static boolean isfirsttime = true;
 	ProgressDialog dialog;
 	
-	String monthText = "", birthYear, birthMonth, observedAmh = "", observedOvarianVolume = "", observedAfc = "", observedFsh = "", motherMenopauseAge = "",
+	String monthText = "", birthYear = "", birthMonth = "", observedAmh = "", observedOvarianVolume = "", observedAfc = "", observedFsh = "", motherMenopauseAge = "",
 		   regularPeriods = "", height = "", weight = "";
 	UserInputValues userInputValues;
 	int chosenAmhUnit, chosenWeightUnit; 

@@ -27,13 +27,13 @@ public class MainMenu extends ListActivity {
 		value.setiD(0); values.add(value);
 		
 		value = new MenuItem();
-		value.setiD(0); values.add(value);
+		value.setiD(1); values.add(value);
 		
 		value = new MenuItem();
-		value.setiD(0); values.add(value);
+		value.setiD(2); values.add(value);
 		
 		value = new MenuItem();
-		value.setiD(0); values.add(value);
+		value.setiD(3); values.add(value);
 
         MenuAdapter adapter = new MenuAdapter(this, R.layout.expandable_list_item3, values);
         // Assign adapter to List

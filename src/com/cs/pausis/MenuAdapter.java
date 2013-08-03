@@ -40,7 +40,7 @@ public class MenuAdapter extends ArrayAdapter<MenuItem> {
 		
 		//Set menu item values
 		TextView textView = (TextView)resultView.findViewById(R.id.text);
-		ImageView indicatorView = (ImageView)resultView.findViewById(R.id.imgIndicator);
+		ImageView indicatorView = (ImageView)resultView.findViewById(R.id.imgMenu);
 		
 		//Set result status image
 		indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.imenu));

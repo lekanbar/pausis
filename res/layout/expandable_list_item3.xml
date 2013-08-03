@@ -31,6 +31,6 @@
 		android:layout_toRightOf="@+id/imgMenu"
 		android:layout_centerVertical="true"
 		android:text="@string/empty"
-		android:textSize="20sp"/>
+		android:textSize="16sp"/>
 	
 </RelativeLayout>
