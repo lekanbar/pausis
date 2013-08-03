@@ -1,6 +1,7 @@
 package com.cs.pausis;
 
 import com.core.pausis.R;
+import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserPreference;
 
 import android.app.Activity;
@@ -14,6 +15,7 @@ import android.widget.TextView;
  public class InformationPage extends Activity {
 	 
 	 UserPreference pref;
+	 Result result;
 	 int type;
 	 
 	 //Page type constants for choosing app theme
@@ -44,8 +46,25 @@ import android.widget.TextView;
     }
     
     private void InitializeUI(){
-    	int infotype = getIntent().getIntExtra("infotype", 0);
-    	//Result result = getIntent().getParcelableExtra("result");
+    	int infotype = 0;
+    	
+    	if(type == MAIN_PAGE_TYPE)
+    		infotype = getIntent().getIntExtra("infotype", 0);
+    	else {
+			result = getIntent().getParcelableExtra("result");
+			
+			if(result.getType().equals(Result.Type.AFC.toString()))
+				infotype = AFC_INFO;
+			else if(result.getType().equals(Result.Type.AMH.toString()))
+				infotype = AMH_INFO;
+			else if(result.getType().equals(Result.Type.FSH.toString()))
+				infotype = FSH_INFO;
+			else if(result.getType().equals(Result.Type.MMA.toString()))
+				infotype = MMAge_INFO;
+			else if(result.getType().equals(Result.Type.OVA.toString()))
+				infotype = OVARIAN_VOL_INFO;
+		}
+    	
     	
     	if (infotype == AMH_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);

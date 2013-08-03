@@ -83,7 +83,8 @@ public class Result implements Parcelable {
 		out.writeString(value);
 		out.writeString(type);
 		
-		if(getSdvalues() != null)
+		if (this.getType().equals(Result.Type.AFC.toString()) || this.getType().equals(Result.Type.AMH.toString()) 
+				|| this.getType().equals(Result.Type.OVA.toString()))
 			out.writeDoubleArray(getSdvalues());
 	}
 	
@@ -93,14 +94,17 @@ public class Result implements Parcelable {
 		this.setValue(in.readString());
 		this.setType(in.readString());
 		
-		double[] values = null;
-		if (!this.getType().equals(Result.Type.AFC.toString()))
-			values = new double[7];
-		else
-			values = new double[5];
-		
-		in.readDoubleArray(values);
-		this.setSdvalues(values);
+		if (this.getType().equals(Result.Type.AFC.toString()) || this.getType().equals(Result.Type.AMH.toString()) 
+				|| this.getType().equals(Result.Type.OVA.toString())){
+			double[] values = null;
+			if (!this.getType().equals(Result.Type.AFC.toString()))
+				values = new double[7];
+			else
+				values = new double[5];
+			
+			in.readDoubleArray(values);
+			this.setSdvalues(values);
+		}
 	}
 	
 	public static final Parcelable.Creator<Result> CREATOR = new Parcelable.Creator<Result>() {

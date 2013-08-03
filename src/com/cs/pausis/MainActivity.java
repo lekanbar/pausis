@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -44,6 +45,7 @@ public class MainActivity extends Activity {
 	UserInputValues userInputValues;
 	int chosenAmhUnit, chosenWeightUnit; 
 	double chosenHeight;//height in meters
+	ScrollView sc;
 	
 	public static final int DO_CHOOSE_YEAR = 1;
 	public static final int DO_CHOOSE_MONTH = 2;
@@ -61,6 +63,9 @@ public class MainActivity extends Activity {
 				usage = history.get(0);
 			else
 				usage = null;
+			
+			//Instantiate scroll view
+			sc = (ScrollView)findViewById(R.id.scrollView2);
 		}
 		
 		InitializeUI();
@@ -284,6 +289,20 @@ public class MainActivity extends Activity {
         cmdProceed_button.setOnClickListener(new OnClickListener(){
 
 			public void onClick(View arg0) {
+				if(birthYear.equals("") || birthYear.startsWith("Select") || birthMonth.equals("") || birthMonth.startsWith("Select")){
+					AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+					alert.setTitle(R.string.ageerrortitle);
+					alert.setMessage(R.string.ageerror);
+					alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
+
+						public void onClick(DialogInterface arg0, int arg1) {
+							
+						}
+					});
+					alert.show();
+					return;
+				}
+				
 				EditText txtAmh = (EditText)findViewById(R.id.txtAMH);
 				EditText txtVol = (EditText)findViewById(R.id.txtVolume);
 				EditText txtVolRight = (EditText)findViewById(R.id.txtVolumeRight);
@@ -298,37 +317,43 @@ public class MainActivity extends Activity {
 		        
 				int max = 10;
 				if(!txtAmh.getText().toString().equals("")){
-					//for dialog max value
-					observedAmh = convertAMH(Double.valueOf(txtAmh.getText().toString()));
-					max += 10;
+					if(!txtAmh.getText().toString().equals("0")){
+						//for dialog max value
+						observedAmh = convertAMH(Double.valueOf(txtAmh.getText().toString()));
+						max += 10;
+					}
 				}
 				if(!txtVol.getText().toString().equals("") || !txtVolRight.getText().toString().equals("")){
-					double left = Double.valueOf(txtVol.getText().toString()),
-						   right = Double.valueOf(txtVolRight.getText().toString());					
-					
-					if(left > right)
-						observedOvarianVolume =  String.valueOf(left);
-					else if(right > left)
-						observedOvarianVolume =  String.valueOf(right);
-					else if(left == right)
-						observedOvarianVolume =  String.valueOf(left);
-					
-					//for dialog max value
-					max += 10;
+					if(!txtVol.getText().toString().equals("0") && !txtVolRight.getText().toString().equals("0")){
+						double left = Double.valueOf(txtVol.getText().toString()),
+							   right = Double.valueOf(txtVolRight.getText().toString());					
+						
+						if(left > right)
+							observedOvarianVolume =  String.valueOf(left);
+						else if(right > left)
+							observedOvarianVolume =  String.valueOf(right);
+						else if(left == right)
+							observedOvarianVolume =  String.valueOf(left);
+						
+						//for dialog max value
+						max += 10;
+					}
 				}
 				if(!txtAfc.getText().toString().equals("")){
-					double left = Double.valueOf(txtAfc.getText().toString()),
-						   right = Double.valueOf(txtAfcRight.getText().toString());					
-					
-					if(left > right)
-						observedAfc =  String.valueOf(left);
-					else if(right > left)
-						observedAfc =  String.valueOf(right);
-					else if(left == right)
-						observedAfc =  String.valueOf(left);
-					
-					//for dialog max value
-					max += 10;
+					if(!txtAfc.getText().toString().equals("0") && !txtAfcRight.getText().toString().equals("0")){
+						double left = Double.valueOf(txtAfc.getText().toString()),
+							   right = Double.valueOf(txtAfcRight.getText().toString());					
+						
+						if(left > right)
+							observedAfc =  String.valueOf(left);
+						else if(right > left)
+							observedAfc =  String.valueOf(right);
+						else if(left == right)
+							observedAfc =  String.valueOf(left);
+						
+						//for dialog max value
+						max += 10;
+					}
 				}
 				if(!txtFsh.getText().toString().equals("")){
 					//for dialog max value
@@ -337,8 +362,10 @@ public class MainActivity extends Activity {
 				}
 				if(!txtMMenopauseAge.getText().toString().equals("")){
 					//for dialog max value
-					motherMenopauseAge = txtMMenopauseAge.getText().toString();
-					max += 10;
+					if(!txtMMenopauseAge.getText().toString().equals("0")){
+						motherMenopauseAge = txtMMenopauseAge.getText().toString();
+						max += 10;
+					}
 				}
 				if(radioYes.isChecked() || radioNo.isChecked()){
 					//for dialog max value
@@ -346,10 +373,12 @@ public class MainActivity extends Activity {
 					max += 10;
 				}
 				if(chosenHeight > 0.0 && !txtWeight.getText().toString().equals("")){
-					//for dialog max value
-					weight = convertWeight(Double.valueOf(txtWeight.getText().toString()));
-					height = String.valueOf(chosenHeight);
-					max += 10;
+					if(!txtWeight.getText().toString().equals("0")){
+						//for dialog max value
+						weight = convertWeight(Double.valueOf(txtWeight.getText().toString()));
+						height = String.valueOf(chosenHeight);
+						max += 10;
+					}
 				}
 				
 				//Show dialog to indicate progress
@@ -478,6 +507,13 @@ public class MainActivity extends Activity {
 			    	//int index = Integer.parseInt(data.getStringExtra("yearindex"));
 			    	birthYear = data.getStringExtra("birthyear");
 			    	InitializeUI();
+			    	
+			    	//Scroll up when done
+			    	sc.post(new Runnable() { 
+	        	        public void run() { 
+	        	             sc.scrollTo(0, sc.getTop());
+	        	        } 
+	        		});
 			    }
 			    break;
 		    }
@@ -487,6 +523,13 @@ public class MainActivity extends Activity {
 			    	birthMonth = String.valueOf(data.getIntExtra("birthmonth", 0));
 			    	monthText = data.getStringExtra("birthmonthtext");
 			    	InitializeUI();
+			    	
+			    	//Scroll up when done
+			    	sc.post(new Runnable() { 
+	        	        public void run() { 
+	        	             sc.scrollTo(0, sc.getTop());
+	        	        } 
+	        		});
 			    }
 			    break;
 		    }

@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity android:name="com.cs.pausis.SplashScreen"
@@ -30,6 +30,9 @@
             </intent-filter>
 		</activity>
 		
+        <activity android:name="org.achartengine.GraphicalActivity" />
+        <activity android:name="com.cs.pausis.XYChartBuilder" />
+		
 		<activity android:name="com.cs.pausis.PrivacyInfo"
             	  android:configChanges="orientation"
             	  android:theme="@android:style/Theme.Dialog"
@@ -41,10 +44,27 @@
 				  android:label="@string/summary">
 		</activity>
 		
+		<activity android:name="com.cs.pausis.GeneralAdvice"
+            	  android:configChanges="orientation">
+		</activity>
+		
+		<activity android:name="com.cs.pausis.MainMenu"
+            	  android:configChanges="orientation">
+		</activity>
+		
+		<activity android:name="com.cs.pausis.ResultVisualizer"
+            	  android:configChanges="orientation">
+		</activity>
+		
 		<activity android:name="com.cs.pausis.AboutUs"
             	  android:configChanges="orientation"
             	  android:theme="@android:style/Theme.Dialog"
 				  android:label="@string/aboutus">
+		</activity>
+		
+		<activity android:name="com.cs.pausis.InformationPage"
+            	  android:configChanges="orientation"
+				  android:label="@string/info">
 		</activity>
 		
 		<activity android:name="com.cs.pausis.WebPage"
@@ -63,6 +83,16 @@
             	  android:configChanges="orientation"
             	  android:theme="@android:style/Theme.Dialog"
 				  android:label="@string/choosebirthmonth">
+		</activity>
+		
+		<activity android:name="com.cs.pausis.ChartOptionsMenu"
+            	  android:configChanges="orientation"
+            	  android:theme="@android:style/Theme.Dialog"
+				  android:label="@string/chartmenu">
+		</activity>
+		
+		<activity android:name="com.cs.pausis.OverAllAdvice"
+            	  android:configChanges="orientation">
 		</activity>
     </application>
 

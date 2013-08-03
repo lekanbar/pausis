@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -74,16 +76,14 @@ import android.widget.TextView;
     	results = getIntent().getExtras().getParcelableArrayList("results");
     	
     	String fshresultString = "", mmaresultString = "";
-    	for(Result result : results){
-    		if(result.getType().equals(Result.Type.FSH.toString())){
-    			fshresultString = getString(R.string.fshresult) + result.getValue() + "%";
-    			fshResult = result;
-    			results.remove(result);
+    	for(int i = 0;i < results.size();i++){
+    		if(results.get(i).getType().equals(Result.Type.FSH.toString())){
+    			fshresultString = getString(R.string.fshresult) + results.get(i).getValue() + "%";
+    			fshResult = results.get(i);
     		}
-    		else if(result.getType().equals(Result.Type.MMA.toString())) {
-    			mmaresultString = getString(R.string.mmaresult) + result.getValue() + "%";
-    			mmaResult = result;
-    			results.remove(result);
+    		else if(results.get(i).getType().equals(Result.Type.MMA.toString())) {
+    			mmaresultString = getString(R.string.mmaresult) + results.get(i).getValue() + "%";
+    			mmaResult = results.get(i);
 			}
     	}
     	
@@ -103,6 +103,9 @@ import android.widget.TextView;
     		
 	    	TextView txtFshResult = (TextView)findViewById(R.id.txtFshResult);
 	    	txtFshResult.setText(fshresultString);
+	    	
+	    	//Remove fsh from the list
+	    	results.remove(fshResult);
     	}
     	else {
     		LinearLayout layfsh = (LinearLayout)findViewById(R.id.layfsh);
@@ -125,6 +128,9 @@ import android.widget.TextView;
     		
 	    	TextView txtMMAResult = (TextView)findViewById(R.id.txtMMAResult);
 	    	txtMMAResult.setText(mmaresultString);
+	    	
+	    	//Remove mma from the list
+	    	results.remove(mmaResult);
     	}
     	else {
 			LinearLayout laymma = (LinearLayout)findViewById(R.id.laymma);
@@ -153,6 +159,17 @@ import android.widget.TextView;
 				}
 			}
 		}, R.id.buttonA, R.id.buttonB);
+		
+		Button cmdProceed_button = (Button)findViewById(R.id.cmdProceed);
+        cmdProceed_button.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(), OverAllAdvice.class);
+				i.putExtra("results", results);
+				startActivity(i);
+			}        	
+        });
 	}
     
     public void onConfigurationChanged(Configuration _newConfig) {

@@ -39,6 +39,8 @@
     <string name="pcalc">Personalized Calculator</string>
     <string name="nousage">No usage history available.</string>
     <string name="web">Web</string>
+    <string name="ageerrortitle">Error</string>
+    <string name="ageerror">Your age is required before you can proceed. (Choose your birth year and month)</string>
     
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>

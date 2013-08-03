@@ -39,7 +39,7 @@
 					android:layout_height="wrap_content"
 					android:id="@+id/text"
 					android:text="@string/empty"
-					android:textSize="20sp"/>
+					android:textSize="16sp"/>
 			
 			<TextView
 					android:layout_width="match_parent"
@@ -92,7 +92,7 @@
 				android:layout_height="wrap_content"
 				android:layout_weight="0.5"
 				android:contentDescription="@string/empty"
-				android:drawableTop="@drawable/i_letter_selector"
+				android:drawableTop="@drawable/i_letter_medium_selector"
 				android:clickable="true"
 				android:padding="5dp"
 				android:text="@string/info"
