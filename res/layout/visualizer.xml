@@ -24,7 +24,7 @@
 	        android:textColor="#ffffff"
 	        android:paddingLeft="2dp"
 	        android:text="@string/gaugetitle"
-	        android:textSize="30sp" />
+	        android:textSize="20sp" />
 	</LinearLayout>
     
     <ScrollView 

@@ -27,7 +27,7 @@
         android:textColor="#000000"
         android:paddingLeft="2dp"
         android:text="@string/overall"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 </LinearLayout>
 <LinearLayout
 	android:id="@+id/widget4212"

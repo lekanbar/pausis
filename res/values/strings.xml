@@ -41,6 +41,12 @@
     <string name="web">Web</string>
     <string name="ageerrortitle">Error</string>
     <string name="ageerror">Your age is required before you can proceed. (Choose your birth year and month)</string>
+    <string name="todo">What would you like to do?</string>
+    <string name="view">View</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="goback">Go back</string>
+    <string name="delItem">Are you sure you want to delete this item?</string>
     
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>
@@ -66,7 +72,7 @@
     <string name="choosebirthmonth">Select Month</string>
     
     <string name="typecountry">Type to search</string>
-    <string name="calcing">Calculating</string>
+    <string name="calcing">Processing</string>
     <string name="calcvalue">Calculated value:\u0020</string>
     <string name="afcresult">Result by Antral-follicle count is:\u0020</string>
     <string name="amhresult">Result by AMH volume is:\u0020</string>

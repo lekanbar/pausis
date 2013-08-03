@@ -94,6 +94,10 @@
 		<activity android:name="com.cs.pausis.OverAllAdvice"
             	  android:configChanges="orientation">
 		</activity>
+		
+		<activity android:name="com.cs.pausis.History"
+            	  android:configChanges="orientation">
+		</activity>
     </application>
 
 </manifest>

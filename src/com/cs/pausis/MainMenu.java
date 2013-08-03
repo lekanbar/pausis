@@ -38,6 +38,9 @@ public class MainMenu extends ListActivity {
 		
 		value = new MenuItem();
 		value.setiD(3); values.add(value);
+		
+		value = new MenuItem();
+		value.setiD(4); values.add(value);
 
         MenuAdapter adapter = new MenuAdapter(this, R.layout.expandable_list_item3, values);
         // Assign adapter to List
@@ -70,10 +73,14 @@ public class MainMenu extends ListActivity {
 		   startActivity(i);
 	   }
 	   else if (itemPosition == 2) {
-		   Intent i = new Intent(MainMenu.this, AboutUs.class);
+		   Intent i = new Intent(MainMenu.this, History.class);
 		   startActivity(i);
 	   }
 	   else if (itemPosition == 3) {
+		   Intent i = new Intent(MainMenu.this, AboutUs.class);
+		   startActivity(i);
+	   }
+	   else if (itemPosition == 4) {
 		   Intent i = new Intent(MainMenu.this, PrivacyInfo.class);
 		   startActivity(i);
 	   }

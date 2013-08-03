@@ -3,6 +3,7 @@ package com.cs.pausis.controllers;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import com.cs.pausis.History;
 import com.cs.pausis.MainActivity;
 import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
@@ -20,7 +21,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 {
 	private Drawable d;
     Context context;
-    int birthYear, birthMonth; 
+    int birthYear, birthMonth, pageType; 
     Double observedAMH, observedOvarianVolume, observedAFC, observedFSH,
            mothersMenopauseAge;
     
@@ -29,10 +30,13 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     AFC afc;
     FSH fsh;
     MMAge mmAge;
+    
+    public static final int MAIN_TYPE = 1;
+    public static final int SUMMARY_TYPE = 2;
 	
     ArrayList<Result> results = null;
     
-	public OvaryReserve_Calculator(UserInputValues userInputValues, Context context){
+	public OvaryReserve_Calculator(UserInputValues userInputValues, Context context, int pageType){
 		this.birthYear = Integer.parseInt(userInputValues.getBirthYear());
 		this.birthMonth = Integer.parseInt(userInputValues.getBirthMonth());
 		this.observedAFC = (!userInputValues.getAfc().equals("") ? Double.valueOf(userInputValues.getAfc()) : null);
@@ -41,6 +45,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 		this.observedFSH = (!userInputValues.getFsh().equals("") ? Double.valueOf(userInputValues.getFsh()) : null);
 		this.mothersMenopauseAge = (!userInputValues.getMotherMenopauseAge().equals("") ? Double.valueOf(userInputValues.getMotherMenopauseAge()) : null);
 		
+		this.pageType = pageType;
 		this.context = context;
 	}
 	
@@ -55,7 +60,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				amh.setObservedAmhValue(this.observedAMH.doubleValue());
 				amh.calculateAMH();
 				
-				((MainActivity)this.context).updateDialog();
+				if(pageType == MAIN_TYPE)
+					((MainActivity)this.context).updateDialog();
+				else
+					((History)this.context).updateDialog();
 			}
             if (this.observedOvarianVolume != null) {
             	ova = new OvarianVolume(this.context);
@@ -63,7 +71,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				ova.setObservedVolume(this.observedAMH.doubleValue());
 				ova.calculateOvarianVolume();
 				
-				((MainActivity)this.context).updateDialog();
+				if(pageType == MAIN_TYPE)
+					((MainActivity)this.context).updateDialog();
+				else
+					((History)this.context).updateDialog();
 			}
             if (this.observedAFC != null) {
             	afc = new AFC(this.context);
@@ -71,7 +82,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				afc.setObservedAfcValue(this.observedAFC.doubleValue());
 				afc.calculateAFC();
             	
-            	((MainActivity)this.context).updateDialog();
+				if(pageType == MAIN_TYPE)
+					((MainActivity)this.context).updateDialog();
+				else
+					((History)this.context).updateDialog();
 			}
             if (this.observedFSH != null) {
             	fsh = new FSH(this.context);
@@ -79,7 +93,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				fsh.setObservedFsh(this.observedFSH.doubleValue());
 				fsh.calculateFsh();
             	
-            	((MainActivity)this.context).updateDialog();
+				if(pageType == MAIN_TYPE)
+					((MainActivity)this.context).updateDialog();
+				else
+					((History)this.context).updateDialog();
 			}
             if (this.mothersMenopauseAge != null) {
             	mmAge = new MMAge(this.context);
@@ -87,7 +104,10 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 				mmAge.setMotherage(this.mothersMenopauseAge.doubleValue());
 			    mmAge.calculateMMage();
             	
-            	((MainActivity)this.context).updateDialog();
+			    if(pageType == MAIN_TYPE)
+					((MainActivity)this.context).updateDialog();
+				else
+					((History)this.context).updateDialog();
 			}
         }
         catch (Exception e)
@@ -176,9 +196,17 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			results.add(result2);
     		}
     		
-    		((MainActivity)this.context).done(results);
+    		//Run done immediately after
+    		if(pageType == MAIN_TYPE)
+    			((MainActivity)this.context).done(results);
+			else
+				((History)this.context).done(results);
 		} catch (Exception e) {
-			((MainActivity)this.context).done(results);
+			//Run done when an exception is caught
+			if(pageType == MAIN_TYPE)
+    			((MainActivity)this.context).done(results);
+			else
+				((History)this.context).done(results);
 		}
     }
     

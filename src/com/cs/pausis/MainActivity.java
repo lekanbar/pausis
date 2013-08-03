@@ -411,7 +411,7 @@ public class MainActivity extends Activity {
 						                         minute + (c.get(Calendar.AM_PM) == 0 ? " AM" : " PM"));
 		        userInputValues.setDateTime(datetime);
 		        
-		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, MainActivity.this);
+		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, MainActivity.this, OvaryReserve_Calculator.MAIN_TYPE);
 		        ovcalc.execute("");
 			}
     	});
@@ -556,7 +556,7 @@ public class MainActivity extends Activity {
 	    super.onOptionsItemSelected(item);
 	    switch (item.getItemId()) {
 		    case (Menu.FIRST): {
-		    	Intent i = new Intent(getApplicationContext(), AboutUs.class);
+		    	Intent i = new Intent(getApplicationContext(), History.class);
 				startActivity(i);
 		    	return true;
 		    }

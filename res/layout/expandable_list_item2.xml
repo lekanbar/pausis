@@ -67,8 +67,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
-			android:layout_marginLeft="5dp"
-			android:background="#ffffff">
+			android:layout_marginLeft="5dp">
 				<TextView
 				    android:id="@+id/rowDate"
 					android:layout_width="wrap_content"

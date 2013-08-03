@@ -14,8 +14,6 @@
 		android:layout_height="wrap_content"
 		android:layout_alignParentTop="true"
 	    android:layout_centerHorizontal="true"
-	    android:paddingLeft="@dimen/activity_horizontal_margin"
-		android:paddingRight="@dimen/activity_horizontal_margin"
 		android:orientation="horizontal">
 		
         <LinearLayout
@@ -28,7 +26,7 @@
 	        android:textColor="#000000"
 	        android:paddingLeft="2dp"
 	        android:text="@string/history"
-	        android:textSize="30sp" />
+	        android:textSize="20sp" />
 	</LinearLayout>
 	  	
     <ListView

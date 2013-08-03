@@ -51,8 +51,10 @@ public class MenuAdapter extends ArrayAdapter<MenuItem> {
 		else if(id == 1)
 			textView.setText(context.getString(R.string.pcalc));
 		else if(id == 2)
-			textView.setText(context.getString(R.string.aboutus));
+			textView.setText(context.getString(R.string.history));
 		else if(id == 3)
+			textView.setText(context.getString(R.string.aboutus));
+		else if(id == 4)
 			textView.setText(context.getString(R.string.privacytitle));
 		
 		return resultView;

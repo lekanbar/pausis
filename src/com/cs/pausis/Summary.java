@@ -46,11 +46,14 @@ import android.widget.TextView;
     public boolean onCreateOptionsMenu(Menu menu) {
 	    super.onCreateOptionsMenu(menu);
 	    // Create and add new menu items.
-	    MenuItem itemTop = menu.add(0, Menu.FIRST, Menu.NONE, R.string.aboutus);
-	    itemTop.setShortcut('1', 'a'); itemTop.setIcon(R.drawable.about_us);
+	    MenuItem itemHis = menu.add(0, Menu.FIRST, Menu.NONE, R.string.history);
+	    itemHis.setShortcut('1', 'h'); itemHis.setIcon(R.drawable.history);
 	    
-	    MenuItem itemHis = menu.add(0, Menu.FIRST + 1, Menu.NONE, R.string.privacytitle);
-	    itemHis.setShortcut('2', 'p'); itemHis.setIcon(R.drawable.privacypolicy);
+	    MenuItem itemTop = menu.add(0, Menu.FIRST + 1, Menu.NONE, R.string.aboutus);
+	    itemTop.setShortcut('2', 'a'); itemTop.setIcon(R.drawable.about_us);
+	    
+	    MenuItem itemPri = menu.add(0, Menu.FIRST + 2, Menu.NONE, R.string.privacytitle);
+	    itemPri.setShortcut('3', 'p'); itemPri.setIcon(R.drawable.privacypolicy);
 	    return true;
     }
     
@@ -59,12 +62,17 @@ import android.widget.TextView;
 	    super.onOptionsItemSelected(item);
 	    switch (item.getItemId()) {
 		    case (Menu.FIRST): {
-		    	Intent i = new Intent(getApplicationContext(), AboutUs.class);
+		    	Intent i = new Intent(getApplicationContext(), History.class);
 				startActivity(i);
 		    	return true;
 		    }
 		    case (Menu.FIRST + 1): {
-		    	Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
+		    	Intent i = new Intent(getApplicationContext(), AboutUs.class);
+				startActivity(i);
+		    	return true;
+		    }
+		    case (Menu.FIRST + 2): {
+			    Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
 				startActivityForResult(i, 0);
 		    	return true;
 		    }
@@ -160,8 +168,8 @@ import android.widget.TextView;
 			}
 		}, R.id.buttonA, R.id.buttonB);
 		
-		Button cmdProceed_button = (Button)findViewById(R.id.cmdProceed);
-        cmdProceed_button.setOnClickListener(new OnClickListener(){
+		Button cmdOverall_button = (Button)findViewById(R.id.cmdOverall);
+		cmdOverall_button.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
