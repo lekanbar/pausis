@@ -30,9 +30,6 @@
             </intent-filter>
 		</activity>
 		
-        <activity android:name="org.achartengine.GraphicalActivity" />
-        <activity android:name="com.cs.pausis.XYChartBuilder" />
-		
 		<activity android:name="com.cs.pausis.PrivacyInfo"
             	  android:configChanges="orientation"
             	  android:theme="@android:style/Theme.Dialog"
@@ -83,12 +80,6 @@
             	  android:configChanges="orientation"
             	  android:theme="@android:style/Theme.Dialog"
 				  android:label="@string/choosebirthmonth">
-		</activity>
-		
-		<activity android:name="com.cs.pausis.ChartOptionsMenu"
-            	  android:configChanges="orientation"
-            	  android:theme="@android:style/Theme.Dialog"
-				  android:label="@string/chartmenu">
 		</activity>
 		
 		<activity android:name="com.cs.pausis.OverAllAdvice"

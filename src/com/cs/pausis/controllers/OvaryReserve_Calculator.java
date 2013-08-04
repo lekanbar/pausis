@@ -167,9 +167,9 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			if(percentile == 5)
     				result2.setStatus(Result.Status.RED.toString());
     			else if(percentile == 25)
-    				result2.setStatus(Result.Status.YELLOW.toString());
-    			else if(percentile == 50 || percentile == 75)
     				result2.setStatus(Result.Status.ORANGE.toString());
+    			else if(percentile == 50 || percentile == 75)
+    				result2.setStatus(Result.Status.YELLOW.toString());
     			else
     				result2.setStatus(Result.Status.GREEN.toString());
     			

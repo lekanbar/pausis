@@ -18,7 +18,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
  public class Summary extends Activity {	 
@@ -116,7 +116,7 @@ import android.widget.TextView;
 	    	results.remove(fshResult);
     	}
     	else {
-    		LinearLayout layfsh = (LinearLayout)findViewById(R.id.layfsh);
+    		RelativeLayout layfsh = (RelativeLayout)findViewById(R.id.layfsh);
 			layfsh.setVisibility(View.GONE);
 		}
     	
@@ -141,7 +141,7 @@ import android.widget.TextView;
 	    	results.remove(mmaResult);
     	}
     	else {
-			LinearLayout laymma = (LinearLayout)findViewById(R.id.laymma);
+    		RelativeLayout laymma = (RelativeLayout)findViewById(R.id.laymma);
 			laymma.setVisibility(View.GONE);
 		}
     	
@@ -154,12 +154,13 @@ import android.widget.TextView;
 
 			@Override
 			public void onClick(View listView, View buttonview, int position) {
+				Result result = results.get(position);
+				
 				if(buttonview.getId() == R.id.buttonA) {
 					Intent intent = new Intent(Summary.this, ResultVisualizer.class);
 			        intent.putExtra("result", result);
 		      	    startActivity(intent);
 				} else {
-					Result result = results.get(position);
 					Intent i = new Intent(getApplicationContext(), InformationPage.class);
 					i.putExtra("type", InformationPage.SUMMARY_TYPE);
 					i.putExtra("result", result);

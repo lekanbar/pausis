@@ -83,7 +83,7 @@
 				android:drawableTop="@drawable/gauge_selector"
 				android:clickable="true"
 				android:padding="5dp"
-				android:text="@string/gaugetitle"
+				android:text="@string/visualize"
 				android:textSize="12sp"/>
 
 		<Button

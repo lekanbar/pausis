@@ -23,7 +23,7 @@
 	        android:layout_height="wrap_content"
 	        android:textColor="#ffffff"
 	        android:paddingLeft="2dp"
-	        android:text="@string/gaugetitle"
+	        android:text="@string/visualizer"
 	        android:textSize="20sp" />
 	</LinearLayout>
     
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
 	    android:paddingLeft="@dimen/activity_horizontal_margin"
 	    android:paddingRight="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/laytop">
 	    
 	    <LinearLayout
@@ -41,27 +41,61 @@
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
 			>
-			<org.codeandmagic.android.gauge.GaugeView
-		        android:id="@+id/gauge_view1"
-		        android:layout_width="match_parent"
-		        android:layout_height="0dp"
-		        android:layout_gravity="center"
-		        android:layout_weight="1"
-		        gauge:rangeColors="@array/rangeColors" 
-        		gauge:rangeValues="@array/ranges" />
-
-	    	<org.codeandmagic.android.gauge.GaugeView
-		        android:id="@+id/gauge_view2"
-		        android:layout_width="150dp"
-		        android:layout_height="150dp"
-		        android:layout_marginTop="10dp"
-		        android:layout_gravity="center"
-		        gauge:showOuterShadow="true"
-		        gauge:showOuterRim="false"
-		        gauge:showNeedle="false"
-		        gauge:showRanges="false"
-		        gauge:showText="true"
-		        gauge:textUnit="" />
+			<LinearLayout
+			    android:id="@+id/laydefault"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:background="@drawable/custom_border"
+				>
+				<com.cs.pausis.GaugeView
+			        android:id="@+id/gauge_view1"
+			        android:layout_width="match_parent"
+			        android:layout_height="0dp"
+			        android:layout_gravity="center"
+			        android:layout_weight="1" />
+	
+		    	<com.cs.pausis.GaugeView
+			        android:id="@+id/gauge_view2"
+			        android:layout_width="150dp"
+			        android:layout_height="150dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_gravity="center"
+			        gauge:showOuterShadow="true"
+			        gauge:showOuterRim="false"
+			        gauge:showNeedle="false"
+			        gauge:showRanges="false"
+			        gauge:showText="true"
+			        gauge:textUnit="" />
+	    	</LinearLayout>
+	    	<LinearLayout
+			    android:id="@+id/layafc"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:visibility="gone"
+				android:background="@drawable/custom_border"
+				>
+				<com.cs.pausis.GaugeViewForAFC
+			        android:id="@+id/gauge_view3"
+			        android:layout_width="match_parent"
+			        android:layout_height="0dp"
+			        android:layout_gravity="center"
+			        android:layout_weight="1" />
+	
+		    	<com.cs.pausis.GaugeViewForAFC
+			        android:id="@+id/gauge_view4"
+			        android:layout_width="150dp"
+			        android:layout_height="150dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_gravity="center"
+			        gauge:showOuterShadow="true"
+			        gauge:showOuterRim="false"
+			        gauge:showNeedle="false"
+			        gauge:showRanges="false"
+			        gauge:showText="true"
+			        gauge:textUnit="" />
+	    	</LinearLayout>
 			
 	    	<LinearLayout
 				android:layout_width="match_parent"
@@ -85,6 +119,15 @@
 			        android:layout_marginTop="5dp"
 			        android:paddingLeft="2dp"
 			        android:text="@string/resultstatus"
+			        android:textSize="16sp" />
+				<TextView
+				    android:id="@+id/lblresearch"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="#ffffff"
+			        android:layout_marginTop="5dp"
+			        android:paddingLeft="2dp"
+			        android:text="@string/research"
 			        android:textSize="16sp" />
 			</LinearLayout>
 		</LinearLayout>
