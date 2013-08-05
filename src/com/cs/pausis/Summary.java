@@ -30,7 +30,7 @@ import android.widget.TextView;
 	 ArrayList<Result> results;
 	 ResultAdapter adapter;
 	 
-	 Result fshResult, mmaResult;
+	 Result fshResult, mmaResult, ngfResult;
 	 
 	 /** Called when the activity is first created. */
     @Override
@@ -83,7 +83,7 @@ import android.widget.TextView;
     private void InitializeUI(){
     	results = getIntent().getExtras().getParcelableArrayList("results");
     	
-    	String fshresultString = "", mmaresultString = "";
+    	String fshresultString = "", mmaresultString = "", ngfresultString = "";
     	for(int i = 0;i < results.size();i++){
     		if(results.get(i).getType().equals(Result.Type.FSH.toString())){
     			fshresultString = getString(R.string.fshresult) + results.get(i).getValue() + "%";
@@ -92,6 +92,10 @@ import android.widget.TextView;
     		else if(results.get(i).getType().equals(Result.Type.MMA.toString())) {
     			mmaresultString = getString(R.string.mmaresult) + results.get(i).getValue() + "%";
     			mmaResult = results.get(i);
+			}
+    		else if(results.get(i).getType().equals(Result.Type.NGF.toString())) {
+    			ngfresultString = getString(R.string.ngfresult) + results.get(i).getValue() + "%";
+    			ngfResult = results.get(i);
 			}
     	}
     	
@@ -143,6 +147,31 @@ import android.widget.TextView;
     	else {
     		RelativeLayout laymma = (RelativeLayout)findViewById(R.id.laymma);
 			laymma.setVisibility(View.GONE);
+		}
+    	
+    	//FSH result information
+    	if(!ngfresultString.equals("")){
+    		ImageView imgNgf = (ImageView)findViewById(R.id.imgNGF);
+    		imgNgf.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent i = new Intent(getApplicationContext(), InformationPage.class);
+					i.putExtra("type", InformationPage.SUMMARY_TYPE);
+					i.putExtra("result", ngfResult);
+					startActivity(i);
+				}
+			});
+    		
+	    	TextView txtNgfResult = (TextView)findViewById(R.id.txtNGFResult);
+	    	txtNgfResult.setText(ngfresultString);
+	    	
+	    	//Remove fsh from the list
+	    	results.remove(ngfResult);
+    	}
+    	else {
+    		RelativeLayout layfsh = (RelativeLayout)findViewById(R.id.layfsh);
+			layfsh.setVisibility(View.GONE);
 		}
     	
     	adapter = new ResultAdapter(this, R.layout.expandable_list_item, results);

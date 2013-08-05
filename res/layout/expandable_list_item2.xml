@@ -44,7 +44,7 @@
 				android:id="@+id/birthmonth"
 				android:text="@string/empty"
 				android:textStyle="italic"
-				android:textSize="14sp"/>
+				android:textSize="12sp"/>
 		
 	</LinearLayout>
 	

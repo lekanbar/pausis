@@ -9,6 +9,7 @@ import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
 import com.cs.pausis.models.FSH;
 import com.cs.pausis.models.MMAge;
+import com.cs.pausis.models.NGF;
 import com.cs.pausis.models.OvarianVolume;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
@@ -30,6 +31,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     AFC afc;
     FSH fsh;
     MMAge mmAge;
+    NGF ngf;
     
     public static final int MAIN_TYPE = 1;
     public static final int SUMMARY_TYPE = 2;
@@ -54,6 +56,16 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     {
         try
         {
+        	if(birthMonth != 0 && birthYear != 0){
+        		ngf = new NGF(this.context);
+        		ngf.setAge(calculateAge());
+        		ngf.calculateNgf();
+        		
+        		if(pageType == MAIN_TYPE)
+					((MainActivity)this.context).updateDialog();
+				else
+					((History)this.context).updateDialog();
+        	}        	
             if (this.observedAMH != null) {
 				amh = new AMH(this.context);
 				amh.setAge(calculateAgeWithMonth());
@@ -126,6 +138,13 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     	try {
     		Result result2;
     		
+    		if(birthMonth != 0 && birthYear != 0){
+    			result2 = new Result();    			
+    			result2.setValue(String.valueOf(ngf.getPercentage()));
+    			result2.setType(Result.Type.NGF.toString());
+    			
+    			results.add(result2);
+    		}    		
     		if(this.observedAMH != null){
     			result2 = new Result();
     			double zscore = amh.getZScore();

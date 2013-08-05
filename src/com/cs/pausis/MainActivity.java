@@ -77,23 +77,6 @@ public class MainActivity extends Activity {
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(txtWeight.getWindowToken(), 0);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        
-		/*if(usage != null){
-			EditText txtAmh = (EditText)findViewById(R.id.txtAMH);
-	        txtAmh.setText(usage.getAmhvolume());
-	        
-	        EditText txtVolume = (EditText)findViewById(R.id.txtVolume);
-	        txtVolume.setText(usage.getOvarianvolume());
-	        
-	        EditText txtAfc = (EditText)findViewById(R.id.txtAfc);
-	        txtAfc.setText(usage.getAfc());
-	        
-	        EditText txtFsh = (EditText)findViewById(R.id.txtFSH);
-	        txtFsh.setText(usage.getFsh());
-	        
-	        txtWeight = (EditText)findViewById(R.id.txtWeight);
-	        txtWeight.setText(usage.getWeight());
-		}*/
 		
 		//Weight units
         Spinner spinWeightUnits = (Spinner) findViewById(R.id.spinWeightUnit);

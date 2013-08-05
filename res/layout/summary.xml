@@ -10,7 +10,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical">
 	
-       <RelativeLayout
+    <RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal">
@@ -44,8 +44,44 @@
 		    android:text="@string/overall" />
 	</RelativeLayout>
 	
-       <RelativeLayout
-           android:id="@+id/layfsh"
+    <RelativeLayout
+        android:id="@+id/layngf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/expmainbg">
+	    
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/txtNGFResult"
+			android:text="@string/empty"
+			android:textSize="16sp"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="5dp"
+			android:layout_toLeftOf="@+id/imgNGF"
+			/>
+		
+		<ImageButton
+			android:id="@+id/imgNGF"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/empty"
+			android:layout_marginTop="5dp"
+			android:layout_marginRight="5dp"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:clickable="true"
+			android:background="@android:color/transparent"
+			android:src="@drawable/i_letter_selector"
+			/>
+	</RelativeLayout>
+	
+    <RelativeLayout
+        android:id="@+id/layfsh"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
@@ -81,8 +117,8 @@
 
 	</RelativeLayout>
 	
-       <RelativeLayout
-           android:id="@+id/laymma"
+    <RelativeLayout
+        android:id="@+id/laymma"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
@@ -119,11 +155,11 @@
 
 	</RelativeLayout>
 	
-       <com.tjerkw.slideexpandable.library.ActionSlideExpandableListView
-			android:id="@+id/list"
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:layout_margin="5dp"
-			android:divider="@android:color/transparent"
-		  	android:dividerHeight="10.0sp"/>
+    <com.tjerkw.slideexpandable.library.ActionSlideExpandableListView
+		android:id="@+id/list"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:layout_margin="5dp"
+		android:divider="@android:color/transparent"
+	  	android:dividerHeight="10.0sp"/>
 </LinearLayout>

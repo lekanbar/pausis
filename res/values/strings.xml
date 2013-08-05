@@ -64,6 +64,8 @@
     <string name="afcvalue">Antral-Follicle Count</string>
     <string name="afchint">Enter AFC value</string>
     
+    <string name="ngfvalue">NGF (Age-based)</string>
+    
     <string name="proceed">Proceed</string>
     <string name="info">Information</string>
     <string name="birthyear">Birth Year:\u0020</string>
@@ -79,6 +81,7 @@
     <string name="ovaresult">Result by Ovarian Volume is:\u0020</string>
     <string name="fshresult">Chance of Live Birth by FSH is:\u0020</string>
     <string name="mmaresult">"Chance of Live Birth by Mother's Menopause Age is:\u0020"</string>
+    <string name="ngfresult">"Chance of Live Birth by NGF is:\u0020"</string>
     
     <string name="positive">Positive</string>
     <string name="negative">Negative</string>

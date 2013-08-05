@@ -29,6 +29,7 @@ import android.widget.TextView;
 	 public static final int BMI_INFO = 5;
 	 public static final int MMAge_INFO = 6;
 	 public static final int PERIOD_INFO = 7;
+	 public static final int NGF_INFO = 8;
 	 
 	 /** Called when the activity is first created. */
     @Override
@@ -63,12 +64,21 @@ import android.widget.TextView;
 				infotype = MMAge_INFO;
 			else if(result.getType().equals(Result.Type.OVA.toString()))
 				infotype = OVARIAN_VOL_INFO;
+			else if(result.getType().equals(Result.Type.NGF.toString()))
+				infotype = NGF_INFO;
 		}
     	
     	
     	if (infotype == AMH_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.amhvalue));
+			
+			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
+			lblDetails.setText(getString(R.string.sampletext));
+		}
+    	else if (infotype == NGF_INFO) {
+			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
+			lblTitle.setText(getString(R.string.ngfvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
 			lblDetails.setText(getString(R.string.sampletext));

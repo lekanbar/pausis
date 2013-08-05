@@ -16,7 +16,7 @@ public class Result implements Parcelable {
 	}
 	
 	public enum Type {
-	   AFC, AMH, OVA, FSH, MMA
+	   AFC, AMH, OVA, FSH, MMA, NGF
 	}
 
 	public Result(){
