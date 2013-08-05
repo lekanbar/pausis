@@ -130,9 +130,9 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2 = new Result();
     			double zscore = amh.getZScore();
     			
-    			if(zscore <= 0)
+    			if(zscore < 0)
     				result2.setStatus(Result.Status.RED.toString());
-    			else if(zscore >= 1  && zscore <= 2)
+    			else if(zscore >= 0  && zscore < 2)
     				result2.setStatus(Result.Status.ORANGE.toString());
     			else
     				result2.setStatus(Result.Status.GREEN.toString());
@@ -147,9 +147,9 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2 = new Result();
     			double zscore = ova.getZScore();
     			
-    			if(zscore <= 0)
+    			if(zscore < 0)
     				result2.setStatus(Result.Status.RED.toString());
-    			else if(zscore >= 1  && zscore <= 2)
+    			else if(zscore >= 0  && zscore < 2)
     				result2.setStatus(Result.Status.ORANGE.toString());
     			else
     				result2.setStatus(Result.Status.GREEN.toString());

@@ -49,8 +49,18 @@ public class HistoryAdapter extends ArrayAdapter<UserInputValues> {
 		TextView timeView = (TextView)historyView.findViewById(R.id.rowTime);
 		ImageView indicatorView = (ImageView)historyView.findViewById(R.id.imgIndicator);
 		
-		textYearView.setText(context.getString(R.string.birthyear) + ": " + byear);
-		textMonthView.setText(context.getString(R.string.birthmonth) + ": " + bmonth);
+		textYearView.setText(context.getString(R.string.birthyear) + byear + ", " + context.getString(R.string.birthmonth) + bmonth);
+		
+		String base = "";
+		if(!item.getAfc().equals(""))
+			base += "AFC|";
+		if(!item.getAmhvolume().equals(""))
+			base += "AMH|";
+		if(!item.getOvarianvolume().equals(""))
+			base += "OVA|";
+		if(!item.getFsh().equals(""))
+			base += "FSH|";
+		textMonthView.setText(base);
 		
 		//Set the menu title
 		if(indicator.equals(Result.Status.GREEN.toString()))

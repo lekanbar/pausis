@@ -652,7 +652,7 @@ public class GaugeView extends View {
 	}
 
 	private void drawText(final Canvas canvas) {
-		final String textValue = (!TextUtils.isEmpty(mTextValue) ? mTextValue : mCurrentValue == 0 ? valueString(mCurrentValue) : "+" + valueString(mCurrentValue));
+		final String textValue = (!TextUtils.isEmpty(mTextValue) ? mTextValue : mCurrentValue <= 0 ? valueString(mCurrentValue) : "+" + valueString(mCurrentValue));
 		final float textValueWidth = mTextValuePaint.measureText(textValue);
 		final float textUnitWidth = !TextUtils.isEmpty(mTextUnit) ? mTextUnitPaint.measureText(mTextUnit) : 0;
 

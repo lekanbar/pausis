@@ -46,7 +46,6 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:orientation="vertical"
-				android:background="@drawable/custom_border"
 				>
 				<com.cs.pausis.GaugeView
 			        android:id="@+id/gauge_view1"
@@ -74,7 +73,6 @@
 				android:layout_height="wrap_content"
 				android:orientation="vertical"
 				android:visibility="gone"
-				android:background="@drawable/custom_border"
 				>
 				<com.cs.pausis.GaugeViewForAFC
 			        android:id="@+id/gauge_view3"
@@ -96,6 +94,14 @@
 			        gauge:showText="true"
 			        gauge:textUnit="" />
 	    	</LinearLayout>
+	    	
+	    	<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@drawable/custom_border"
+				android:layout_marginTop="0dp"
+				android:orientation="horizontal">
+			</LinearLayout>
 			
 	    	<LinearLayout
 				android:layout_width="match_parent"
@@ -121,6 +127,15 @@
 			        android:text="@string/resultstatus"
 			        android:textSize="16sp" />
 				<TextView
+				    android:id="@+id/lblrecommendation"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="#ffffff"
+			        android:layout_marginTop="5dp"
+			        android:paddingLeft="2dp"
+			        android:text="@string/positiverecommendation"
+			        android:textSize="16sp" />
+				<TextView
 				    android:id="@+id/lblresearch"
 			        android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
@@ -129,6 +144,17 @@
 			        android:paddingLeft="2dp"
 			        android:text="@string/research"
 			        android:textSize="16sp" />
+				
+				<Button
+					android:id="@+id/cmdOk"
+					android:layout_width="150dp"
+					android:layout_height="50dp"
+					android:text="@string/ok"
+					android:background="#CC00CC"
+					android:textColor="#ffffff"
+					android:layout_gravity="right"
+					android:layout_marginTop="10dp"
+					/>
 			</LinearLayout>
 		</LinearLayout>
 	</ScrollView>    

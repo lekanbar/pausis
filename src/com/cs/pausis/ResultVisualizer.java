@@ -11,7 +11,9 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -46,13 +48,13 @@ public class ResultVisualizer extends Activity  {
     }
     
     private void InitializeUI(){    	
-    	String val = "";
+    	String resultmessage = "", researchpaper = "", recommendation = "";
     	
     	LinearLayout layafc = (LinearLayout)findViewById(R.id.layafc);
     	LinearLayout laydefault = (LinearLayout)findViewById(R.id.laydefault);
     	
     	if(result.getType().equals(Result.Type.AFC.toString())){
-    		val = getString(R.string.afc);
+    		researchpaper = "http://www.sciencedirect.com/science/article/pii/S0015028210021953";
     		
     		GaugeViewForAFC mGaugeView3 = (GaugeViewForAFC) findViewById(R.id.gauge_view3);
     		GaugeViewForAFC mGaugeView4 = (GaugeViewForAFC) findViewById(R.id.gauge_view4);
@@ -61,48 +63,72 @@ public class ResultVisualizer extends Activity  {
     		mGaugeView3.setTargetValue(AFC_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
     		mGaugeView4.setTargetValue(sd);
     		
+    		resultmessage = getString(R.string.afcdescription) + sd + "th" + getString(R.string.percentile);
+    		
     		layafc.setVisibility(View.VISIBLE);
     		laydefault.setVisibility(View.GONE);
     	}
     	else{
-			if(result.getType().equals(Result.Type.AMH.toString()))
-				val = getString(R.string.amh);
-			else
-				val = getString(R.string.vol);
-			
 			GaugeView mGaugeView1 = (GaugeView) findViewById(R.id.gauge_view1);
 			GaugeView mGaugeView2 = (GaugeView) findViewById(R.id.gauge_view2);
 	    	
-			Integer sd = (int)Float.parseFloat(result.getValue());
+			double fl = Float.parseFloat(result.getValue()) < 0 ? Math.floor(Float.parseFloat(result.getValue())) : Math.ceil(Float.parseFloat(result.getValue()));
+			Integer sd = (int)fl;
 			mGaugeView1.setTargetValue(DEFAULT_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
     		mGaugeView2.setTargetValue(sd);
+    		
+    		if(result.getType().equals(Result.Type.AMH.toString())){
+				resultmessage = getString(R.string.amhdescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
+				researchpaper = "http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3137624&tool=pmcentrez&rendertype=abstract";
+			}
+			else{
+				resultmessage = getString(R.string.ovadescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
+				researchpaper = "http://www.ncbi.nlm.nih.gov/pubmed/20111701";
+			}
     		
     		layafc.setVisibility(View.GONE);
     		laydefault.setVisibility(View.VISIBLE);
 		}
-    	
-		TextView lblDesc = (TextView)findViewById(R.id.lbldescription);
-        lblDesc.setText(Html.fromHtml("<b>") + getString(R.string.descriptiontitle) + Html.fromHtml("</b>") + getString(R.string.description) + val);
         
         TextView lblStatus = (TextView)findViewById(R.id.lblstatus);
         if(result.getStatus().equals(Result.Status.GREEN.toString())){
-        	lblStatus.setText(Html.fromHtml("<b>") + getString(R.string.resultstatus) + Html.fromHtml("</b>") + getString(R.string.positive));
+        	lblStatus.setText(Html.fromHtml("<b>" + getString(R.string.resultstatus) + "</b>" + getString(R.string.positive)));
         	lblStatus.setTextColor(Color.GREEN);
+        	
+        	recommendation = getString(R.string.positiverecommendation);
         }
         else if(result.getStatus().equals(Result.Status.YELLOW.toString())){
-			lblStatus.setText(Html.fromHtml("<b>") + getString(R.string.resultstatus) + Html.fromHtml("</b>") + getString(R.string.neutral));
+			lblStatus.setText(Html.fromHtml("<b>" + getString(R.string.resultstatus) + "</b>" + getString(R.string.neutral)));
         	lblStatus.setTextColor(Color.parseColor("#E9F507"));
+        	
+        	recommendation = getString(R.string.neutralrecommendation);
 		}
 		else if(result.getStatus().equals(Result.Status.ORANGE.toString())){
-			lblStatus.setText(Html.fromHtml("<b>") + getString(R.string.resultstatus) + Html.fromHtml("</b>") + getString(R.string.neutral));
+			lblStatus.setText(Html.fromHtml("<b>" + getString(R.string.resultstatus) + "</b>" + getString(R.string.neutral)));
         	lblStatus.setTextColor(Color.parseColor("#F59207"));
+        	
+        	recommendation = getString(R.string.neutralrecommendation);
 		}
 		else{
-			lblStatus.setText(Html.fromHtml("<b>") + getString(R.string.resultstatus) + Html.fromHtml("</b>") + getString(R.string.negative));
+			lblStatus.setText(Html.fromHtml("<b>" + getString(R.string.resultstatus) + "</b>" + getString(R.string.negative)));
         	lblStatus.setTextColor(Color.RED);
+        	
+        	recommendation = getString(R.string.negativerecommendation);
 		}
         
-        TextView lblResearch = (TextView)findViewById(R.id.lblresearch);
+        TextView lblDesc = (TextView)findViewById(R.id.lbldescription);
+        lblDesc.setText(Html.fromHtml("<b>" + getString(R.string.descriptiontitle) + "</b>" + resultmessage + " " + recommendation));
         
+        TextView lblResearch = (TextView)findViewById(R.id.lblresearch);
+        lblResearch.setText(Html.fromHtml(getString(R.string.research) + "<a href=\"" + researchpaper + "\">" + getString(R.string.here) + "</a>"));
+        lblResearch.setMovementMethod(LinkMovementMethod.getInstance());
+        
+        Button cmdOk = (Button)findViewById(R.id.cmdOk);
+        cmdOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	finish();
+            }
+        });
     }
 }
