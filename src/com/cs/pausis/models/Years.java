@@ -6,6 +6,15 @@ import com.core.pausis.R;
 
 import android.content.Context;
 
+/**
+ * This class models the acceptable years of birth (from 1990-1959), which is used in the application for populating lists.
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk
+ * @version 1.0
+ * @since August, 2013
+ * 
+ */
 public class Years {
 	private String id,
 				   year;

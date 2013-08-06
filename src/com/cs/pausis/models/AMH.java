@@ -14,6 +14,19 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ * This model software representation was created based on the model developed by Kelsey et al
+ * 
+ * This class facilitates the calculation of the AMH results based on the statistical model by Kelsey et al 2011 
+ * 
+ * Article can be accessed at: http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3137624&tool=pmcentrez&rendertype=abstract
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk
+ * @version 1.0
+ * @since August, 2013
+ * 
+ */
 public class AMH {
 	
 	//Kelsey et al 2011
@@ -33,13 +46,21 @@ public class AMH {
 	private double age, observedAmhValue,
 	               zScore, lapa,
 	               pl1, pl2;
-	private double[] sdvalues;
+	//private double[] sdvalues;
 	Context context;
 	
+	/**
+	 * Default constructor
+	 */
 	public AMH(){
 		
 	}
 	
+	/**
+	 * Constructor
+	 * 
+	 * @param context
+	 */
 	public AMH(Context context){
 		this.context = context;
 		age = 0.0;
@@ -48,9 +69,14 @@ public class AMH {
 		lapa = 0.0;
 		pl1 = 0.0;
 		pl2 = 0.0;
-		sdvalues = new double[7];
+		//sdvalues = new double[7];
 	}
 	
+	/**
+	 * Method for processing the user inputs(i.e. age and observed AMh value) in order to perform the necessary lookup and calculations based on the model
+	 * 
+	 * @throws Exception
+	 */
 	public void calculateAMH() throws Exception{
 		//Re-check if the DB has been initialized with AMH values or not
 		if(!check())
@@ -79,7 +105,7 @@ public class AMH {
 				setZScore(calcValue);
 				
 				//Calculate SD values
-				int count = 3;
+				/*int count = 3;
 				for (int i = 0; i < sdvalues.length; i++) {
 					if(i < 3){
 						sdvalues[i] = Math.pow(10, (logAdjustedPredAMH - count * standardDeviation)) - 1;
@@ -93,7 +119,7 @@ public class AMH {
 						sdvalues[i] = Math.pow(10, (logAdjustedPredAMH + count * standardDeviation)) - 1;
 						count++;
 					}						
-				}
+				}*/
 			}
 			else{
 				throw new Exception("Age does not exist in table.");
@@ -104,6 +130,9 @@ public class AMH {
 		}
 	}
 	
+	/**
+	 * Method for initializing the AMH model by getting the values from json and inserting them into the SQL Lite database 
+	 */
 	public void initializeAMH(){
 	    // Create a new row of values to insert.
 	    // Insert the row.
@@ -147,6 +176,11 @@ public class AMH {
 		}
 	}
 	
+	/**
+	 * Method for checking if the setup values have been inserted into the DB from the packed json file
+	 * 
+	 * @return true if its already setup, and false otherwise
+	 */
 	public boolean check(){
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 	   
@@ -163,8 +197,12 @@ public class AMH {
 	   return false;
 	}
 	
+	/**
+	 * This method performs the look up for the specified age
+	 */
 	private void vLookUp() {	
 		SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
+		//Convert age to 2 decimal places
 		java.text.DecimalFormat df = new java.text.DecimalFormat("#.00");
     	String aged = df.format(this.getAge());
 		Cursor value = db.query(true, DB.TABLE_AMH_LOOKUP,  null, DB.KEY_AGE + " = ?", new String[]{aged}, null, null, null, null);
@@ -184,6 +222,10 @@ public class AMH {
 	    db.close();
     }
 	
+	/**
+	 * Method for checking the user inputs before commencing calculations
+	 * @return true for good values or false otherwise
+	 */
 	private boolean checkInputValues() {
 		if(this.getAge() <= 0.0)
 			return false;
@@ -193,6 +235,10 @@ public class AMH {
 		return true;
 	}
 	
+	/********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public void setAge(double value){
 		age = value;
 	}
@@ -235,7 +281,7 @@ public class AMH {
 		return pl2;
 	}
 
-	public double[] getSdvalues() {
-		return sdvalues;
-	}
+	//public double[] getSdvalues() {
+		//return sdvalues;
+	//}
 }

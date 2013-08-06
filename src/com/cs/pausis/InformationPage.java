@@ -2,7 +2,7 @@ package com.cs.pausis;
 
 import com.core.pausis.R;
 import com.cs.pausis.models.Result;
-import com.cs.pausis.models.UserPreference;
+import com.cs.pausis.models.Tracker;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -12,9 +12,18 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * This is an activity class that facilitates the display of information to the user
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
  public class InformationPage extends Activity {
 	 
-	 UserPreference pref;
+	 Tracker pref;
 	 Result result;
 	 int type;
 	 
@@ -46,12 +55,16 @@ import android.widget.TextView;
     	InitializeUI();
     }
     
+    /**
+     * This method initializes the User Interface controls
+     */
     private void InitializeUI(){
-    	int infotype = 0;
+    	int infotype = 0; //This variable helps to know which information is requested
     	
+    	//If the request is coming from the main page get the information request type directly from the intent
     	if(type == MAIN_PAGE_TYPE)
     		infotype = getIntent().getIntExtra("infotype", 0);
-    	else {
+    	else {//else get it from the result object sent into the intent, usually from the summary page
 			result = getIntent().getParcelableExtra("result");
 			
 			if(result.getType().equals(Result.Type.AFC.toString()))
@@ -68,7 +81,7 @@ import android.widget.TextView;
 				infotype = NGF_INFO;
 		}
     	
-    	
+    	//Switch between the different information types and display as appropriate
     	if (infotype == AMH_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.amhvalue));
@@ -126,6 +139,7 @@ import android.widget.TextView;
 			lblDetails.setText(getString(R.string.sampletext));
     	}
     	
+    	//Set the action listener for the button 
     	Button cmdSend_button = (Button)findViewById(R.id.cmdOk);
     	cmdSend_button.setOnClickListener(new OnClickListener(){
 
@@ -135,6 +149,9 @@ import android.widget.TextView;
     	});
     }
     
+    /**
+     * Handles the orientation change 
+     */
     public void onConfigurationChanged(Configuration _newConfig) {
     	super.onConfigurationChanged(_newConfig);
     	

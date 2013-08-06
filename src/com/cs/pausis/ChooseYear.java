@@ -22,6 +22,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
+/**
+ * This Activity class facilitates the birth year selection.
+ * <br/><br/>It returns the specific choice made by setting the result before finishing the activity session
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
 public class ChooseYear extends Activity {
 	ArrayList<Years> years;
 	ArrayAdapter<Years> adapter;
@@ -36,11 +46,15 @@ public class ChooseYear extends Activity {
         
         setContentView(R.layout.years);
         
+        //get the index of the previously chosen month, if it's available
         yearindex = getIntent().getExtras().getInt("yearindex", 0);
     	
     	InitializeUI();
     }
     
+    /**
+     * TextWatcher for filtering the adapter based on the user inputs.
+     */
     private TextWatcher filterTextWatcher = new TextWatcher() {
 
         public void afterTextChanged(Editable s) {
@@ -55,12 +69,15 @@ public class ChooseYear extends Activity {
         }
     };
     
+    /**
+     * This method initializes the User Interface controls
+     */
     public void InitializeUI(){
-    	setTitle(getString(R.string.choosebirthyear));
-    	
+    	//Setting up the Edittext with the text Watcher
     	yearSearch = (EditText) findViewById(R.id.countrysearch_box);
     	yearSearch.addTextChangedListener(filterTextWatcher);
         
+    	//Set up the contents for the years list
     	years = Years.getAll(ChooseYear.this);
     	lstYears = (ListView)findViewById(R.id.listBirth);
     	adapter = new ArrayAdapter<Years>(this, android.R.layout.simple_list_item_1, years){
@@ -81,14 +98,14 @@ public class ChooseYear extends Activity {
         lstYears.setOnItemClickListener(new OnItemClickListener(){
 			@Override
 			public void onItemClick(AdapterView<?> adapter, View v, int pos, long arg3) {
-				// TODO Auto-generated method stub
+				//get the chosen year, if it's a valid month set it as a result and finish activity
 				Years chosenyear = (Years)adapter.getItemAtPosition(pos);				
 				String year = chosenyear.getYear();
 				if(!year.toString().startsWith("Choose")){
 					Intent i = new Intent();
 		        	i.putExtra("yearindex", pos);
 		        	i.putExtra("birthyear", year);
-		        	setResult(RESULT_OK, i);
+		        	setResult(RESULT_OK, i);//set the result
 		        	finish();
 				}
 			}
@@ -98,6 +115,7 @@ public class ChooseYear extends Activity {
     public void onConfigurationChanged(Configuration _newConfig) {
     	super.onConfigurationChanged(_newConfig);
     	
+    	//Handle the orientation change
     	setContentView(R.layout.years);
 		InitializeUI();
     }

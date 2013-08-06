@@ -6,6 +6,15 @@ import com.core.pausis.R;
 
 import android.content.Context;
 
+/**
+ * This class models the calendar months of the year, which is used in the application for populating lists
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk
+ * @version 1.0
+ * @since August, 2013
+ * 
+ */
 public class Months {
 	private String id,
 				   month;
@@ -20,6 +29,10 @@ public class Months {
 	   this.month = month;
 	}
 
+	/********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public void setID(String value){
 		id = value;
 	}
@@ -34,6 +47,12 @@ public class Months {
 		return month;
 	}
 	
+	/**
+	 * Method for getting all the 12 Calendar months, this is mainly used for populating the months spinner
+	 * 
+	 * @param context
+	 * @return
+	 */
 	public static ArrayList<Months> getAll(Context context){
 		ArrayList<Months> months = new ArrayList<Months>();
 		

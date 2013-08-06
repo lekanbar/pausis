@@ -17,8 +17,18 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * This is the activity class that facilitates the visualization of the result on a gauge, and also displays the recommendations for the generated result. 
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
 public class ResultVisualizer extends Activity  {
     
+	//Reused variables declaration
     TextView content;
     Result result;
     GraphicalView view;
@@ -47,24 +57,32 @@ public class ResultVisualizer extends Activity  {
        InitializeUI();
     }
     
-    private void InitializeUI(){    	
+    /**
+     * This method initializes the User Interface controls
+     */
+    private void InitializeUI(){    
+    	//String variables for getting the message
     	String resultmessage = "", researchpaper = "", recommendation = "";
     	
     	LinearLayout layafc = (LinearLayout)findViewById(R.id.layafc);
     	LinearLayout laydefault = (LinearLayout)findViewById(R.id.laydefault);
     	
+    	//Setup the gauge based on the result type
     	if(result.getType().equals(Result.Type.AFC.toString())){
     		researchpaper = "http://www.sciencedirect.com/science/article/pii/S0015028210021953";
     		
+    		//Show the gauge views for AFC
     		GaugeViewForAFC mGaugeView3 = (GaugeViewForAFC) findViewById(R.id.gauge_view3);
     		GaugeViewForAFC mGaugeView4 = (GaugeViewForAFC) findViewById(R.id.gauge_view4);
         	
+    		//get the value from the array
     		Integer sd = Integer.valueOf(result.getValue());
     		mGaugeView3.setTargetValue(AFC_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
     		mGaugeView4.setTargetValue(sd);
     		
     		resultmessage = getString(R.string.afcdescription) + sd + "th" + getString(R.string.percentile);
     		
+    		//Display the AFC view and hide the other view
     		layafc.setVisibility(View.VISIBLE);
     		laydefault.setVisibility(View.GONE);
     	}
@@ -72,11 +90,13 @@ public class ResultVisualizer extends Activity  {
 			GaugeView mGaugeView1 = (GaugeView) findViewById(R.id.gauge_view1);
 			GaugeView mGaugeView2 = (GaugeView) findViewById(R.id.gauge_view2);
 	    	
+			//Get value to be set on the gauge
 			double fl = Float.parseFloat(result.getValue()) < 0 ? Math.floor(Float.parseFloat(result.getValue())) : Math.ceil(Float.parseFloat(result.getValue()));
 			Integer sd = (int)fl;
 			mGaugeView1.setTargetValue(DEFAULT_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
     		mGaugeView2.setTargetValue(sd);
     		
+    		//put together the message
     		if(result.getType().equals(Result.Type.AMH.toString())){
 				resultmessage = getString(R.string.amhdescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
 				researchpaper = "http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3137624&tool=pmcentrez&rendertype=abstract";
@@ -105,7 +125,11 @@ public class ResultVisualizer extends Activity  {
 		}
 		else if(result.getStatus().equals(Result.Status.ORANGE.toString())){
 			lblStatus.setText(Html.fromHtml("<b>" + getString(R.string.resultstatus) + "</b>" + getString(R.string.neutral)));
-        	lblStatus.setTextColor(Color.parseColor("#F59207"));
+			
+			if(result.getType().equals(Result.Type.AFC.toString()))
+				lblStatus.setTextColor(Color.parseColor("#F59207"));
+			else
+				lblStatus.setTextColor(Color.parseColor("#05FA6B"));
         	
         	recommendation = getString(R.string.neutralrecommendation);
 		}
@@ -116,6 +140,7 @@ public class ResultVisualizer extends Activity  {
         	recommendation = getString(R.string.negativerecommendation);
 		}
         
+        //Show the description of the message
         TextView lblDesc = (TextView)findViewById(R.id.lbldescription);
         lblDesc.setText(Html.fromHtml("<b>" + getString(R.string.descriptiontitle) + "</b>" + resultmessage + " " + recommendation));
         
@@ -123,6 +148,7 @@ public class ResultVisualizer extends Activity  {
         lblResearch.setText(Html.fromHtml(getString(R.string.research) + "<a href=\"" + researchpaper + "\">" + getString(R.string.here) + "</a>"));
         lblResearch.setMovementMethod(LinkMovementMethod.getInstance());
         
+        //close activity
         Button cmdOk = (Button)findViewById(R.id.cmdOk);
         cmdOk.setOnClickListener(new View.OnClickListener() {
             @Override

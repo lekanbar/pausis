@@ -34,22 +34,38 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+/**
+ * This is the Main Activity class that facilitates the receipt of all user inputs into the application.
+ * 
+ * It's associated view contains all the necessary controls that will help to get the inputs from the user.
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
 public class MainActivity extends Activity {
 
+	//Declaration of the necessary reusable variables
 	UserInputValues usage;
 	static boolean isfirsttime = true;
 	ProgressDialog dialog;
 	
 	String monthText = "", birthYear = "", birthMonth = "", observedAmh = "", observedOvarianVolume = "", observedAfc = "", observedFsh = "", motherMenopauseAge = "",
 		   regularPeriods = "", height = "", weight = "";
+	
 	UserInputValues userInputValues;
 	int chosenAmhUnit, chosenWeightUnit; 
-	double chosenHeight;//height in meters
+	public double chosenHeight;//height in meters
 	ScrollView sc;
 	
 	public static final int DO_CHOOSE_YEAR = 1;
 	public static final int DO_CHOOSE_MONTH = 2;
 	
+	/**
+	 * The activity's start point
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,14 +87,17 @@ public class MainActivity extends Activity {
 		InitializeUI();
 	}
 	
+	/**
+     * This method initializes the User Interface controls, for instance the lists are populated and so on.
+     */
 	public void InitializeUI(){
-		//Close sot keyboard by default
+		//Close soft keyboard by default
 		EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(txtWeight.getWindowToken(), 0);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		
-		//Weight units
+		// Setup the Weight units kg and lbs
         Spinner spinWeightUnits = (Spinner) findViewById(R.id.spinWeightUnit);
         ArrayAdapter<CharSequence> weightsAdapter = ArrayAdapter.createFromResource(this, R.array.array_weight_units, android.R.layout.simple_spinner_item);
         weightsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -94,7 +113,7 @@ public class MainActivity extends Activity {
             }
         });
         
-        //Heights
+        //Set up the different Heights from the array. The retrieved array of strings contains 95% of the common human heights
         Spinner spinHeight = (Spinner) findViewById(R.id.spinHeight);
         ArrayAdapter<CharSequence> heightsAdapter = ArrayAdapter.createFromResource(this, R.array.array_heights, android.R.layout.simple_spinner_item);
         heightsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -103,7 +122,8 @@ public class MainActivity extends Activity {
         spinHeight.setOnItemSelectedListener(new OnItemSelectedListener(){
         	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         		if(pos > 0)
-        			chosenHeight = Double.parseDouble(getResources().getStringArray(R.array.array_heights_in_cm)[pos]) * 0.01;//cONVERT HEIGHT to meters (1cm = 0.01m)
+        			//CONVERT HEIGHT to meters (1cm = 0.01m), this is needed for the BMI calculation
+        			chosenHeight = Double.parseDouble(getResources().getStringArray(R.array.array_heights_in_cm)[pos]) * 0.01;
         		else
         			chosenHeight = 0.0;
             }
@@ -130,6 +150,7 @@ public class MainActivity extends Activity {
         });
         
         //Set up information images
+        //Get AMh info
         ImageView imgAMH = (ImageView)findViewById(R.id.imgAMH);
         imgAMH.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +162,7 @@ public class MainActivity extends Activity {
             }
         });
         
+        //Get volume
         ImageView imgVolume = (ImageView)findViewById(R.id.imgVolume);
         imgVolume.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -400,6 +422,12 @@ public class MainActivity extends Activity {
     	});
 	}
 	
+	/**
+	 * Converts the AMH values entered by the user; The default is the ng/mL 
+	 * 
+	 * @param amhvalue
+	 * @return
+	 */
 	private String convertAMH(double amhvalue){
 		String convertedValue = "";
 		
@@ -413,7 +441,13 @@ public class MainActivity extends Activity {
 		return convertedValue;
 	}
 	
-	private String convertWeight(double weightvalue){
+	/**
+	 * Converts the weight entereed by the user; The default is in kilograms
+	 * 
+	 * @param weightvalue
+	 * @return
+	 */
+	public String convertWeight(double weightvalue){
 		String convertedValue = "";
 		
 		if(chosenWeightUnit == 0){
@@ -426,6 +460,11 @@ public class MainActivity extends Activity {
 		return convertedValue;
 	}
 	
+	/**
+	 * This method saves the usage history into the SQL Lite database 
+	 * 
+	 * @param results
+	 */
 	private void saveUsageHistory(ArrayList<Result> results) {
         //calculate indicator based on dominance
         int greencount = 0, redcount = 0;
@@ -448,6 +487,11 @@ public class MainActivity extends Activity {
         userInputValues.insertHistory(MainActivity.this);		
 	}
 	
+	/**
+	 * Method for getting the calculated results 
+	 * 
+	 * @param results
+	 */
 	public void done(ArrayList<Result> results){
 		dialog.setProgress(dialog.getProgress() + 10);
 		
@@ -477,6 +521,9 @@ public class MainActivity extends Activity {
 		dialog.dismiss();
 	}
 	
+	/**
+	 * Method for updating the progress of the dialog
+	 */
 	public void updateDialog(){
 		dialog.setProgress(dialog.getProgress() + 10);
 	}
@@ -557,6 +604,11 @@ public class MainActivity extends Activity {
 	    }
     }
     
+    /**
+     * Method for calculating the age of the user
+     * 
+     * @return age
+     */
     private int calculateAge(){
     	Calendar c = Calendar.getInstance();
 		int calcage = c.get(Calendar.YEAR) - Integer.parseInt(this.birthYear);

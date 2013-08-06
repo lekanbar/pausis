@@ -8,11 +8,22 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
  
+/**
+ * This class instantiates the main SQLlite database which is used for storing the user data and all the statistical model values. 
+ * 
+ * Also this class facilitates the connection to the database for reading and writing.
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
 public class DB { 
    public static final String DATABASE_NAME = "pausis.db";
    private static final int DATABASE_VERSION = 1;
    
-   public static final String TABLE_PREFERENCES = "preferences";
+   public static final String TABLE_TRACKER = "tracker";
    public static final String TABLE_USAGE = "usage_history";
    public static final String TABLE_AMH_LOOKUP = "amh_lookup";
    public static final String TABLE_AFC_LOOKUP = "afc_lookup";
@@ -80,11 +91,20 @@ public class DB {
    private SQLiteDatabase db;
    private OpenHelper dbHelper;
  
+   /*
+    * This is the main constructor
+    */
    public DB(Context context) {
       this.context = context;
       dbHelper = new OpenHelper(this.context);
    }
    
+   /**
+    * Method for opening the database for reading or writing
+    * 
+    * @return
+    * @throws SQLiteException
+    */
    public DB open() throws SQLiteException {	   
 	   try {
 		   db = dbHelper.getWritableDatabase();
@@ -94,18 +114,25 @@ public class DB {
 	   return this;
    }
    
+   /**
+    * Method for closing the database connection
+    */
    public void close() {
 	   db.close();
    }
    
-   // Insert a Preferences
-   public void insertUserPreference(UserPreference _pref) {
+   /**
+    * Method for inserting the user preferences
+    * 
+    * @param _pref
+    */
+   public void insertUserPreference(Tracker _pref) {
 	   // Create a new row of values to insert.
 	   // Insert the row.
 	   SQLiteDatabase db;
        db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
                 
-       String sql = "INSERT INTO " + DB.TABLE_PREFERENCES + " (" + DB.KEY_ISFIRSTTIME + ", " + DB.KEY_TERMS_AGREED + ", " + DB.KEY_EXTRA + ") VALUES('" 
+       String sql = "INSERT INTO " + DB.TABLE_TRACKER + " (" + DB.KEY_ISFIRSTTIME + ", " + DB.KEY_TERMS_AGREED + ", " + DB.KEY_EXTRA + ") VALUES('" 
                                                                                     + _pref.getIsFirstTime() + "','" 
                                                                                     + _pref.getTermsAgreed() + "','"
                                                                                     + _pref.getExtra() + "');";
@@ -113,13 +140,18 @@ public class DB {
        db.close();
    }
    
-   // Update Preferences
-   public void updatePreference(long _rowIndex, UserPreference pref) {	
+   /**
+    * Method for updating the user's preferences
+    * 
+    * @param _rowIndex
+    * @param pref
+    */
+   public void updatePreference(long _rowIndex, Tracker pref) {	
 	   // Update the row.
 	   SQLiteDatabase db;
        db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
                 
-       String sql = "Update " + DB.TABLE_PREFERENCES + " set " + DB.KEY_ISFIRSTTIME + " = '" + pref.getIsFirstTime()
+       String sql = "Update " + DB.TABLE_TRACKER + " set " + DB.KEY_ISFIRSTTIME + " = '" + pref.getIsFirstTime()
 	                        + "', " + DB.KEY_TERMS_AGREED + " = '" + pref.getTermsAgreed()
 	                        + "', " + DB.KEY_EXTRA + " = '" + pref.getExtra()
 	                        + "' where _id = " + _rowIndex;
@@ -127,15 +159,22 @@ public class DB {
        db.close();
    }
    
-   public UserPreference getPreference(long _rowIndex) throws SQLException {
-	   Cursor history = db.query(true, TABLE_PREFERENCES,  null, KEY_ID + "=" + _rowIndex, null, null, null, null, null);
+   /**
+    * Method for getting the user's preference 
+    * 
+    * @param _rowIndex
+    * @return
+    * @throws SQLException
+    */
+   public Tracker getPreference(long _rowIndex) throws SQLException {
+	   Cursor history = db.query(true, TABLE_TRACKER,  null, KEY_ID + "=" + _rowIndex, null, null, null, null, null);
 	   
 	   if ((history.getCount() == 0) || !history.moveToFirst()) {
 		   history.close();
 		   return null;
 	   }
 	   
-	   UserPreference newItem = new UserPreference();
+	   Tracker newItem = new Tracker();
 	   newItem.setID(history.getString(0));
 	   newItem.setIsFirstTime(history.getString(ISFIRSTTIME_COLUMN));
 	   newItem.setTermsAgreed(history.getString(TERMS_AGREED_COLUMN));
@@ -146,13 +185,20 @@ public class DB {
 	   return newItem;
    }
  
+   /**
+    * 
+    * This is a helper class that facilitates the creation/upgrade of the database tables.
+    * 
+    * It extends the SQLiteOpenHelper
+    *
+    */
    public static class OpenHelper extends SQLiteOpenHelper {
  
       OpenHelper(Context context) {
          super(context, DATABASE_NAME, null, DATABASE_VERSION);
       }
       
-      private static final String DATABASE_CREATE = "create table " + TABLE_PREFERENCES + " (" + KEY_ID + " integer primary key autoincrement, " + 
+      private static final String DATABASE_CREATE = "create table " + TABLE_TRACKER + " (" + KEY_ID + " integer primary key autoincrement, " + 
      		  KEY_ISFIRSTTIME + " text not null, " + KEY_TERMS_AGREED + " text not null, " + KEY_EXTRA + " text not null);";
       
       private static final String DATABASE_CREATE2 = "create table " + TABLE_USAGE + " (" + KEY_ID + " integer primary key autoincrement, " + 
@@ -181,7 +227,7 @@ public class DB {
       @Override
       public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
          db.execSQL("DROP TABLE IF EXISTS " + TABLE_USAGE);
-         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PREFERENCES);
+         db.execSQL("DROP TABLE IF EXISTS " + TABLE_TRACKER);
          db.execSQL("DROP TABLE IF EXISTS " + TABLE_AMH_LOOKUP);
          db.execSQL("DROP TABLE IF EXISTS " + TABLE_AFC_LOOKUP);
          onCreate(db);

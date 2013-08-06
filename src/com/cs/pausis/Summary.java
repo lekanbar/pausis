@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.core.pausis.R;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
-import com.cs.pausis.models.UserPreference;
+import com.cs.pausis.models.Tracker;
 import com.tjerkw.slideexpandable.library.ActionSlideExpandableListView;
 
 import android.app.Activity;
@@ -21,8 +21,17 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+/**
+ * This is the activity class that facilitates summary page for the generated results. 
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
  public class Summary extends Activity {	 
-	 UserPreference pref;
+	 Tracker pref;
 	 UserInputValues usage;
 	 static boolean isfirsttime = true;
 	 static boolean isviolated = false;
@@ -80,10 +89,16 @@ import android.widget.TextView;
 	    }
     }
     
+    /**
+     * This method initializes the User Interface controls
+     */
     private void InitializeUI(){
+    	//get the array of results
     	results = getIntent().getExtras().getParcelableArrayList("results");
     	
     	String fshresultString = "", mmaresultString = "", ngfresultString = "";
+    	
+    	//Check for the FSH, NGF and MMA results and remove them from the list 
     	for(int i = 0;i < results.size();i++){
     		if(results.get(i).getType().equals(Result.Type.FSH.toString())){
     			fshresultString = getString(R.string.fshresult) + results.get(i).getValue() + "%";
@@ -174,8 +189,8 @@ import android.widget.TextView;
 			layfsh.setVisibility(View.GONE);
 		}
     	
+    	//Set up the expandable list
     	adapter = new ResultAdapter(this, R.layout.expandable_list_item, results);
-    	
     	ActionSlideExpandableListView list = (ActionSlideExpandableListView)this.findViewById(R.id.list);
     	// fill the list with data
 		list.setAdapter(adapter);

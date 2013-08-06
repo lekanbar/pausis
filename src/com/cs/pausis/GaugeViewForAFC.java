@@ -4,7 +4,14 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
- *******************************************************************************/
+ ******************************************************************************
+ *
+ *This class was further modified to suit the needs of this application by re-calibrating the gauge values, 
+ *such the percentile which is from 5th to 95th can be shown and marked on the gauge. This was specifically designed for the AFC results
+ *
+ *This extension was done by Olalekan Baruwa the author of this application
+ *@since August, 2013 
+ */
 package com.cs.pausis;
 
 import com.core.pausis.R;
@@ -72,9 +79,10 @@ public class GaugeViewForAFC extends View {
 	public static final int[] OUTER_SHADOW_COLORS = { Color.argb(40, 255, 254, 187), Color.argb(20, 255, 247, 219), Color.argb(5, 255, 255, 255) };
 	public static final float[] OUTER_SHADOW_POS = { 0.90f, 0.95f, 0.99f };
 
+	//Default ranges pre-set for handling the percentiles needed on the 0 to 100 scale
 	public static final int[] RANGE_VALUES = { 5, 25, 50, 75, 100 };
 	public static final int[] RANGE_COLORS = { Color.rgb(231, 32, 43), Color.rgb(232, 111, 33), Color.rgb(232, 186, 33), Color.rgb(232, 231, 33),
-			                                   Color.rgb(21, 176, 26) };
+			                                   Color.rgb(21, 176, 26) };//pre-set colors
 
 	public static final int TEXT_SHADOW_COLOR = Color.argb(100, 0, 0, 0);
 	public static final int TEXT_VALUE_COLOR = Color.WHITE;
@@ -649,6 +657,11 @@ public class GaugeViewForAFC extends View {
 		canvas.drawOval(mFaceRect, mFaceShadowPaint);
 	}
 
+	/**
+	 * This method was modified so that the values are properly displayed as a percentile.
+	 *  
+	 * @param canvas
+	 */
 	private void drawText(final Canvas canvas) {
 		final String textValue = !TextUtils.isEmpty(mTextValue) ? mTextValue : valueString(mCurrentValue) + "th";
 		final float textValueWidth = mTextValuePaint.measureText(textValue);
@@ -664,6 +677,12 @@ public class GaugeViewForAFC extends View {
 		}
 	}
 
+	/**
+	 * This method was modified to draw the scale in such a  way that specific values are shown as one of the percentile values
+	 * e.g. the 20th mark is written as the 25th percentile
+	 * 
+	 * @param canvas
+	 */
 	private void drawScale(final Canvas canvas) {
 		canvas.save(Canvas.MATRIX_SAVE_FLAG);
 		// On canvas, North is 0 degrees, East is 90 degrees, South is 180 etc.
@@ -736,6 +755,7 @@ public class GaugeViewForAFC extends View {
 		for (int i = 0; i < length - 1; i++) {
 			if (value < mRangeValues[i]) return mRangePaints[i];
 		}
+		//Math.floor was used here to ensure it doesn't go out of range
 		if (Math.floor(value) <= mRangeValues[length - 1]) return mRangePaints[length - 1];
 		throw new IllegalArgumentException("Value " + value + " out of range!");
 	}

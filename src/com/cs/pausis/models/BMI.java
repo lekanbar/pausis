@@ -33,6 +33,10 @@ public class BMI {
 		setBmi(calvalue);
 	}
 	
+	/********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public double getAge() {
 		return age;
 	}

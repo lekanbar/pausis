@@ -4,7 +4,14 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
- *******************************************************************************/
+ ******************************************************************************
+ *
+ *This class was further modified to suit the needs of this application by re-calibrating the gauge values, 
+ *such the standard deviations which is from +3 to -3 can be shown and marked on the gauge.
+ *
+ *This extension was done by Olalekan Baruwa the author of this application
+ *@since August, 2013 
+ */
 package com.cs.pausis;
 
 import java.text.DecimalFormat;
@@ -74,9 +81,10 @@ public class GaugeView extends View {
 	public static final int[] OUTER_SHADOW_COLORS = { Color.argb(40, 255, 254, 187), Color.argb(20, 255, 247, 219), Color.argb(5, 255, 255, 255) };
 	public static final float[] OUTER_SHADOW_POS = { 0.90f, 0.95f, 0.99f };
 
+	//Default ranges pre-set for handling standard deviations on the 0 to 100 scale
 	public static final float[] RANGE_VALUES = { 14.3f, 28.6f, 42.9f, 57.2f, 71.5f, 100.1f };
 	public static final int[] RANGE_COLORS = { Color.rgb(231, 32, 43), Color.rgb(232, 111, 33), Color.rgb(232, 186, 33), Color.rgb(232, 231, 33),
-			                                   Color.rgb(5, 250, 107), Color.rgb(21, 176, 26) };
+			                                   Color.rgb(5, 250, 107), Color.rgb(21, 176, 26) };//Pre-set colors for the ranges
 
 	public static final int TEXT_SHADOW_COLOR = Color.argb(100, 0, 0, 0);
 	public static final int TEXT_VALUE_COLOR = Color.WHITE;
@@ -651,6 +659,11 @@ public class GaugeView extends View {
 		canvas.drawOval(mFaceRect, mFaceShadowPaint);
 	}
 
+	/**
+	 * This method was modified so that the sign of the values can be displayed in place of the text.
+	 *  
+	 * @param canvas
+	 */
 	private void drawText(final Canvas canvas) {
 		final String textValue = (!TextUtils.isEmpty(mTextValue) ? mTextValue : mCurrentValue <= 0 ? valueString(mCurrentValue) : "+" + valueString(mCurrentValue));
 		final float textValueWidth = mTextValuePaint.measureText(textValue);
@@ -666,6 +679,12 @@ public class GaugeView extends View {
 		}
 	}
 
+	/**
+	 * This method was modified to draw the scale in such a  way that specific values are shown as one of the standard deviation values
+	 * e.g. the 14.3 mark is written as the -2 mark
+	 * 
+	 * @param canvas
+	 */
 	private void drawScale(final Canvas canvas) {
 		canvas.save(Canvas.MATRIX_SAVE_FLAG);
 		// On canvas, North is 0 degrees, East is 90 degrees, South is 180 etc.
@@ -752,6 +771,7 @@ public class GaugeView extends View {
 		for (int i = 0; i < length - 1; i++) {
 			if (value < mRangeValues[i]) return mRangePaints[i];
 		}
+		//Math.floor was used here to ensure it doesn't go out of range
 		if (Math.floor(value) <= mRangeValues[length - 1]) return mRangePaints[length - 1];
 		throw new IllegalArgumentException("Value " + value + " out of range!");
 	}

@@ -6,7 +6,7 @@ import com.core.pausis.R;
 import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
 import com.cs.pausis.models.DB;
-import com.cs.pausis.models.UserPreference;
+import com.cs.pausis.models.Tracker;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -18,9 +18,18 @@ import android.text.method.LinkMovementMethod;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
+/**
+ * This is the activity class that facilitates the splash screen. 
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
  public class SplashScreen extends Activity {
 	 
-	 UserPreference pref;
+	 Tracker pref;
 	 ProgressDialog  dialog;
 	 
 	 public SplashScreen(){
@@ -64,6 +73,7 @@ import android.widget.TextView;
                 catch(InterruptedException ex){                    
                 }
                 
+                //Go to to the next line of action
                 GoToNext();
             }
         };
@@ -88,7 +98,11 @@ import android.widget.TextView;
 	    }
     };
     
-    //Go to next
+    /**
+     * Method for running the next line of action.
+     * 
+     * If the app is running for the first time the preset values are retrieved from the json files and inserted into the database    
+     */
     public void GoToNext(){
     	// Run next activity
     	DB db = new DB(this);
@@ -96,16 +110,19 @@ import android.widget.TextView;
     	pref = db.getPreference(1);
     	db.close();    	
     	
+    	//This signifies that the app is running for the first time
     	if(pref == null){
     		runOnUiThread(showDialog);
 	        
     		//Run all necessary bootstrap for app's first time use
+    		//Retrieve preset AMH values
     		AMH amh = new AMH(SplashScreen.this);
     		if(!amh.check()){
     	        //initialize amh preset values from json
     			amh.initializeAMH();
     		}
     		
+    		//Retrieve preset AFC values
     		AFC afc = new AFC(SplashScreen.this);
     		if(!afc.check()){    	        
     	        //initialize antral-follicle count preset values from json
@@ -113,11 +130,12 @@ import android.widget.TextView;
     		}
     		runOnUiThread(dismissDialog);
     		
+    		//Show the privacy page
     		Intent i = new Intent(getApplicationContext(), PrivacyInfo.class);
 			startActivity(i);
 			finish();
     	}
-    	else{
+    	else{//Go to the menu page
     		Intent i = new Intent(getApplicationContext(), MainMenu.class);
 			startActivity(i);
 			finish();
@@ -140,6 +158,9 @@ import android.widget.TextView;
         return true;
     }
     
+    /**
+     * Handle configuration change
+     */
     public void onConfigurationChanged(Configuration _newConfig) {
     	super.onConfigurationChanged(_newConfig);
     	

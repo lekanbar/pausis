@@ -9,6 +9,19 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * This is the main model class for all the usage history generated throughout the lifetime of the the application,
+ * it is a direct one-to-one mapping of the corresponding database table(TABLE_USAGE). Also this class is a blueprint that helps to collect the user's input values.
+ * 
+ * This class implements the Parcelable interface, which makes the class portable for transportation from one activity 
+ * to another through serialization and de-serialization.
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk
+ * @version 1.0
+ * @since August, 2013
+ * 
+ */
 public class UserInputValues implements Parcelable {
 	private String iD,
 				   age,
@@ -17,6 +30,9 @@ public class UserInputValues implements Parcelable {
 				   fsh, mothermenopauseage, regularperiods,
 				   height, weight, datetime, resultindicator;
 
+	/**
+	 * Default constructor instantiates all the attributes of the object
+	 */
 	public UserInputValues(){
 		iD = "";
 		age = "";
@@ -34,7 +50,11 @@ public class UserInputValues implements Parcelable {
 		resultindicator = "";
 	}
 
-   // Insert a new history
+   /**
+    * Method for inserting the values collected into the database
+    * 
+    * @param context - The context of the calling activity
+    */
    public void insertHistory(Context context) {
 	   // Create a new row of values to insert.
 	   // Insert the row.
@@ -62,6 +82,14 @@ public class UserInputValues implements Parcelable {
        db.close();
    }
    
+   /**
+    * Method for getting a single usage history from the database
+    * 
+    * @param _rowIndex - Index of the row to be retrieved
+    * @param context - The context of the calling activity class
+    * @return - A single object  representing the retrieved table row, null if the row doesn't exist
+    * @throws SQLException
+    */
    public UserInputValues getHistory(long _rowIndex, Context context) throws SQLException {
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 	   
@@ -95,7 +123,12 @@ public class UserInputValues implements Parcelable {
 	   return newItem;
 	}
    
-   //Get All stored History
+   /**
+    * Method for getting all the stored usage history
+    * 
+    * @param context
+    * @return - An ArrayList of UserInputValues class, an empty ArrayList is returned if there are no usage history.
+    */
    public ArrayList<UserInputValues> getAllHistory(Context context) {
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 	   
@@ -130,7 +163,12 @@ public class UserInputValues implements Parcelable {
 	   return result;
 	}
 	
-	// Remove history based on its index
+	/**
+	 * Method for removing a particular usage history from the database 
+	 * 
+	 * @param _rowIndex
+	 * @param context
+	 */
     public void removeHistory(long _rowIndex, Context context) {
 	   // Delete the row.
 	   SQLiteDatabase db;
@@ -141,7 +179,11 @@ public class UserInputValues implements Parcelable {
        db.close();
     }
    
-    // Remove all history
+    /**
+     * Method for removing/erasing all history from the database
+     * 
+     * @param context
+     */
     public void removeAllHistory(Context context) {
 	   // Delete all.
 	   SQLiteDatabase db;
@@ -152,6 +194,10 @@ public class UserInputValues implements Parcelable {
        db.close();
     }
 	
+    /********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public void setID(String value){
 		iD = value;
 	}
@@ -263,6 +309,9 @@ public class UserInputValues implements Parcelable {
 		this.resultindicator = resultindicator;
 	}
 
+	/**
+	 * Overidden method for serializing the class attributes
+	 */
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
 		// TODO Auto-generated method stub
@@ -281,6 +330,9 @@ public class UserInputValues implements Parcelable {
 		out.writeString(resultindicator);
 	}
 	
+	/**
+	 * This is a constructor for de-serializing the object
+	 */
 	private UserInputValues(Parcel in) {
 		this.setAge(in.readString());
 		this.setAmhvolume(in.readString());

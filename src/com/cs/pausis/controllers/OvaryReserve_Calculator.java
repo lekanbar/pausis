@@ -18,6 +18,18 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 
+/**
+ * This is the main controller class that collates results from all the various factor classes (AMH, Ovarian Volume, Antral Follicle Count etc.) by
+ * instantiating all the objects and calling the methods that do the execution.
+ * 
+ * This class operates on a separate thread from the main UI, so that the User interface remains responsive.
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
 public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable>
 {
 	private Drawable d;
@@ -38,6 +50,13 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 	
     ArrayList<Result> results = null;
     
+    /**
+     * This is the main constructor of the class which gets the input values to be processed 
+     * 
+     * @param userInputValues
+     * @param context
+     * @param pageType
+     */
 	public OvaryReserve_Calculator(UserInputValues userInputValues, Context context, int pageType){
 		this.birthYear = Integer.parseInt(userInputValues.getBirthYear());
 		this.birthMonth = Integer.parseInt(userInputValues.getBirthMonth());
@@ -56,6 +75,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     {
         try
         {
+        	//Execute the various classes based on the input values specified
         	if(birthMonth != 0 && birthYear != 0){
         		ngf = new NGF(this.context);
         		ngf.setAge(calculateAge());
@@ -138,6 +158,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     	try {
     		Result result2;
     		
+    		//Collate results from the different classes
     		if(birthMonth != 0 && birthYear != 0){
     			result2 = new Result();    			
     			result2.setValue(String.valueOf(ngf.getPercentage()));
@@ -145,7 +166,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			results.add(result2);
     		}    		
-    		if(this.observedAMH != null){
+    		if(this.observedAMH != null){//AMH result
     			result2 = new Result();
     			double zscore = amh.getZScore();
     			
@@ -158,11 +179,11 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.AMH.toString());
-    			result2.setSdvalues(amh.getSdvalues());
+    			//result2.setSdvalues(amh.getSdvalues());
     			
     			results.add(result2);
     		}
-    		if(this.observedOvarianVolume != null){
+    		if(this.observedOvarianVolume != null){//Ovarian Volume result
     			result2 = new Result();
     			double zscore = ova.getZScore();
     			
@@ -175,11 +196,11 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.OVA.toString());
-    			result2.setSdvalues(ova.getSdvalues());
+    			//result2.setSdvalues(ova.getSdvalues());
     			
     			results.add(result2);
     		}
-    		if(this.observedAFC != null){
+    		if(this.observedAFC != null){//AFC result
     			result2 = new Result();
     			int percentile = afc.getPercentile();
     			
@@ -194,11 +215,11 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(percentile));
     			result2.setType(Result.Type.AFC.toString());
-    			result2.setSdvalues(afc.getSdvalues());
+    			//result2.setSdvalues(afc.getSdvalues());
     			
     			results.add(result2);
     		}
-    		if(this.observedFSH != null){
+    		if(this.observedFSH != null){//FSH result
     			result2 = new Result();    			
     			result2.setValue(String.valueOf(fsh.getPercentage()));
     			result2.setType(Result.Type.FSH.toString());
@@ -229,6 +250,11 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
 		}
     }
     
+    /**
+     * Method for calculating the age of the user down to the specific month
+     * 
+     * @return age (double)
+     */
     private double calculateAgeWithMonth(){
     	Calendar c = Calendar.getInstance();
 		double calcage = (c.get(Calendar.YEAR) - this.birthYear), 
@@ -238,6 +264,11 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     	return calcage;
     }
     
+    /**
+     * Method for calculating the age, just the number of years
+     * 
+     * @return age (double)
+     */
     private int calculateAge(){
     	Calendar c = Calendar.getInstance();
 		int calcage = c.get(Calendar.YEAR) - this.birthYear;

@@ -4,7 +4,21 @@ import java.math.BigDecimal;
 
 import android.content.Context;
 
+/**
+ * This model software representation was created based on the model developed by Kelsey et al
+ * 
+ * This class facilitates the calculation of the Ovarian volume results based on the statistical model by Kelsey et al 2011 
+ * 
+ * Article can be accessed at: http://www.ncbi.nlm.nih.gov/pubmed/20111701
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk
+ * @version 1.0
+ * @since August, 2013
+ * 
+ */
 public class OvarianVolume {
+	//Inorder to have more precise values the big decimal class was used
 	private BigDecimal[] ovarianModelParameters = {new BigDecimal(0.0892384806470678), new BigDecimal(0.110468789001642), new BigDecimal(-0.0305057761704427), new BigDecimal(0.00509450267640864), 
 			new BigDecimal(-0.000434519218703733), new BigDecimal(0.0000248607385503967),
 			new BigDecimal(-1.22807319278934E-06), new BigDecimal(5.43498998950938E-08), new BigDecimal(-1.88565686349133E-09),
@@ -16,21 +30,30 @@ public class OvarianVolume {
 	private double Age,
 	               ObservedVolume,
 	               ZScore;
-	private double[] sdvalues;
+	//private double[] sdvalues;
 	Context context;
 	
 	public OvarianVolume(){
 		
 	}
 	
+	/**
+	 * Constructor that takes in the context of the caller
+	 * 
+	 * @param context
+	 */
 	public OvarianVolume(Context context){
 		this.context = context;
 		Age = 0.0;
 		ObservedVolume = 0.0;
 		ZScore = 0.0;
-		sdvalues = new double[7];
+		//sdvalues = new double[7];
 	}
 	
+	/**
+	 * Method for checking the user inputs before commencing calculations
+	 * @return true for good values or false otherwise
+	 */
 	private boolean checkInputValues() {
 		if(this.getAge() <= 0.0)
 			return false;
@@ -40,6 +63,11 @@ public class OvarianVolume {
 		return true;
 	}
 	
+	/**
+	 * Method for processing the user inputs(i.e. age and observed Ovarian volume value) in order to perform the necessary lookup and calculations based on the model
+	 * 
+	 * @throws Exception
+	 */
 	public void calculateOvarianVolume() throws Exception{
 		if(checkInputValues()){
 			//Log Adjusted Obs AMH
@@ -56,7 +84,7 @@ public class OvarianVolume {
 			setZScore(calcValue);
 			
 			//Calculate SD values
-			int count = 3;
+			/*int count = 3;
 			for (int i = 0; i < sdvalues.length; i++) {
 				if(i < 3) {
 					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume - count * SD)) - 1;
@@ -70,13 +98,17 @@ public class OvarianVolume {
 					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume + count * SD)) - 1;
 					count++;
 				}						
-			}
+			}*/
 		}
 		else{
 			throw new Exception("Age does not exist in table");
 		}
 	}
 
+	/********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public double getAge() {
 		return Age;
 	}
@@ -101,11 +133,11 @@ public class OvarianVolume {
 		ZScore = zScore;
 	}
 
-	public double[] getSdvalues() {
+	/*public double[] getSdvalues() {
 		return sdvalues;
 	}
 
 	public void setSdvalues(double[] sdvalues) {
 		this.sdvalues = sdvalues;
-	}
+	}*/
 }

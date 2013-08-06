@@ -16,11 +16,14 @@ import android.database.sqlite.SQLiteDatabase;
 /**
  * This model software representation was created based on the model developed by Marca A. et al, 2011
  * 
+ * This class facilitates the calculation of the AFC results based on the statistical model by Marca A. et al 2011 
+ * 
  * Article can be accessed at: http://www.sciencedirect.com/science/article/pii/S0015028210021953
  * 
  * @author Olalekan Baruwa
  * @email oab@st-andrews.ac.uk
  * @version 1.0
+ * @since August, 2013
  * 
  */
 public class AFC {
@@ -33,20 +36,25 @@ public class AFC {
 	               Fiftieth,
 	               SeventyFifth,
 	               NinetyFifth;
-	private double[] sdvalues = {5, 25, 50, 75, 95};
 	Context context;
 	
 	/**
-	 * This is the default constructor for the AFC model
+	 * This is the default constructor for the AFC class
 	 */
 	public AFC(){
 		
 	}
 	
+	/**
+	 * This is the constructor for the AFC class which gets the context of the application
+	 */
 	public AFC(Context context){
 		this.context = context;
 	}
 	
+	/**
+	 * Method for initializing the AFC model by getting the values from json and inserting them into the SQL Lite database 
+	 */
 	public void initializeAFC(){
 	    //Initialize json object
 		JSONObject json = null;
@@ -99,6 +107,11 @@ public class AFC {
 		}
 	}
 	
+	/**
+	 * Method for checking if the setup values have been inserted into the DB from the packed json file
+	 * 
+	 * @return true if its already setup, and false otherwise
+	 */
 	public boolean check(){
 	   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 	   
@@ -115,6 +128,9 @@ public class AFC {
 	   return false;
 	}
 	
+	/**
+	 * This method performs the look up for the specified age
+	 */
 	private void vLookUp() {	
 		SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
 		Cursor value = db.query(true, DB.TABLE_AFC_LOOKUP,  null, DB.KEY_AGE + " = ?", new String[]{String.valueOf(this.getAge())}, null, null, null, null);
@@ -125,6 +141,7 @@ public class AFC {
 		    loadedItem = null;
 	    }
 	   
+	    //Get the retrieved values and store them in the variables
 	    loadedItem = new AFC();
 	    loadedItem.setFifth(Double.parseDouble(value.getString(DB.KEY_5TH_PERCENTILE_COLUMN)));
 	    loadedItem.setTwentyFifth(Double.parseDouble(value.getString(DB.KEY_25TH_PERCENTILE_COLUMN)));
@@ -136,6 +153,7 @@ public class AFC {
 	    db.close();
     }
 	
+	//checking if valid inputs have sent to this class
 	private boolean checkInputValues() {
 		if(this.getAge() <= 0.0)
 			return false;
@@ -143,6 +161,11 @@ public class AFC {
 		return true;
 	}
 	
+	/**
+	 * Method for processing the inputs(i.e. age) in order to perform the necessary lookup
+	 * 
+	 * @throws Exception
+	 */
 	public void calculateAFC() throws Exception{
 		//Re-check if the DB has been initialized with AFC values or not
 		if(!check())
@@ -159,6 +182,7 @@ public class AFC {
 				
 				double afcInput = this.getObservedAfcValue();
 				
+				//Check for the position (percentile) of the user based on the input
 				if(afcInput < loadedItem.getTwentyFifth())
 					percentile = 5;
 				else if(afcInput >= loadedItem.getTwentyFifth() && afcInput < loadedItem.getFiftieth())
@@ -181,6 +205,10 @@ public class AFC {
 		}
 	}
 
+	/********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public int getAge() {
 		return Age;
 	}
@@ -243,13 +271,5 @@ public class AFC {
 
 	public void setNinetyFifth(double ninetyFifth) {
 		NinetyFifth = ninetyFifth;
-	}
-
-	public double[] getSdvalues() {
-		return sdvalues;
-	}
-
-	public void setSdvalues(double[] sdvalues) {
-		this.sdvalues = sdvalues;
 	}
 }

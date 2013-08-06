@@ -10,10 +10,25 @@ import com.cs.pausis.models.Result;
 import android.view.*;
 import android.widget.*;
 
+/**
+ * This is a customized array adapter class which helps to format each of the values to be displayed on the results summary page.
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ * @since August, 2013
+ *
+ */
 public class ResultAdapter extends ArrayAdapter<Result> {
 	int resource;
 	Context context;
 	
+	/**
+	 * Default constructor for the adapter 
+	 * @param _context
+	 * @param _resource
+	 * @param _items
+	 */
 	public ResultAdapter(Context _context, int _resource, List<Result> _items) {
 		super(_context, _resource, _items);
 		resource = _resource;
@@ -24,6 +39,8 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 	public View getView(int position, View convertView, ViewGroup parent)
 	{
 		LinearLayout resultView;
+		
+		//Get the current result item to be formatted
 		Result item = getItem(position);
 		
 		String statusString = item.getStatus(),

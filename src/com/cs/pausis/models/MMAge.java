@@ -23,16 +23,30 @@ public class MMAge {
 		
 	}
 	
+	/**
+	 * Constructor that take in the context of the caller
+	 * 
+	 * @param context
+	 */
 	public MMAge(Context context){
 		this.context = context;
 		result = "MMAge percentage goes  here";
 		percentage = 40.0;
 	}
 	
+	/**
+	 * Method for processing user inputs(i.e. age and observed Fsh value) in order to perform the necessary lookup and calculations based on the User's mother's age
+	 * 
+	 * @throws Exception
+	 */
 	public void calculateMMage() {
 		
 	}
 
+	/********************************************************************
+	 * Getters and Setters
+	 ************************************
+	 */
 	public double getChildage() {
 		return childage;
 	}

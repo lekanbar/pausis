@@ -1,7 +1,6 @@
 package com.cs.pausis;
 
 import com.core.pausis.R;
-import com.cs.pausis.models.UserPreference;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -13,11 +12,17 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * This Activity class shows the About Us page by 
+ * displaying the profile of the development team and setting the links to their full profiles. 
+ * 
+ * @author Olalekan Baruwa
+ * @email oab@st-andrews.ac.uk or baruwa.lekan@gmail.com
+ * @version v1.0
+ *
+ */
  public class AboutUs extends Activity {
 	 
-	 UserPreference pref;
-	 
-	 /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,13 +60,7 @@ import android.widget.TextView;
     public void onConfigurationChanged(Configuration _newConfig) {
     	super.onConfigurationChanged(_newConfig);
     	
-    	if (_newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-    		setContentView(R.layout.aboutus);
-    		InitializeUI();
-        }
-    	if (_newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-    		setContentView(R.layout.aboutus);
-    		InitializeUI();
-        }
+    	setContentView(R.layout.aboutus);
+    	InitializeUI();
     }
 }
