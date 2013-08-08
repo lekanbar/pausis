@@ -4,7 +4,6 @@
       android:layout_width="match_parent" 
       android:layout_height="wrap_content"
       android:orientation="vertical"
-	  android:background="@drawable/bg"
       android:padding="10dp">
       <LinearLayout
 		  android:id="@+id/widgetgyg"
@@ -25,7 +24,7 @@
 				android:id="@+id/widget43"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="@string/web"
+				android:text="@string/generaladvice"
 				android:textSize="16sp"
 				android:paddingLeft="2dp"
 				android:layout_gravity="left" 

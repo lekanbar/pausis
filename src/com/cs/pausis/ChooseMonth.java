@@ -72,7 +72,7 @@ public class ChooseMonth extends Activity {
     /**
      * This method initializes the User Interface controls
      */
-    public void InitializeUI(){
+    private void InitializeUI(){
     	//Setting up the Edittext with the text Watcher
         monthSearch = (EditText) findViewById(R.id.countrysearch_box);
         monthSearch.addTextChangedListener(filterTextWatcher);

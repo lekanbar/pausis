@@ -90,7 +90,7 @@ public class MainActivity extends Activity {
 	/**
      * This method initializes the User Interface controls, for instance the lists are populated and so on.
      */
-	public void InitializeUI(){
+	private void InitializeUI(){
 		//Close soft keyboard by default
 		EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -330,8 +330,8 @@ public class MainActivity extends Activity {
 				}
 				if(!txtVol.getText().toString().equals("") || !txtVolRight.getText().toString().equals("")){
 					if(!txtVol.getText().toString().equals("0") && !txtVolRight.getText().toString().equals("0")){
-						double left = Double.valueOf(txtVol.getText().toString()),
-							   right = Double.valueOf(txtVolRight.getText().toString());					
+						double left = txtVol.getText().toString().equals("") ? 0.0 : Double.valueOf(txtVol.getText().toString()),
+							   right = txtVolRight.getText().toString().equals("") ? 0.0 : Double.valueOf(txtVolRight.getText().toString());					
 						
 						if(left > right)
 							observedOvarianVolume =  String.valueOf(left);
@@ -344,10 +344,10 @@ public class MainActivity extends Activity {
 						max += 10;
 					}
 				}
-				if(!txtAfc.getText().toString().equals("")){
+				if(!txtAfc.getText().toString().equals("") || !txtAfcRight.getText().toString().equals("")){
 					if(!txtAfc.getText().toString().equals("0") && !txtAfcRight.getText().toString().equals("0")){
-						double left = Double.valueOf(txtAfc.getText().toString()),
-							   right = Double.valueOf(txtAfcRight.getText().toString());					
+						double left = txtAfc.getText().toString().equals("") ? 0.0 : Double.valueOf(txtAfc.getText().toString()),
+							   right = txtAfcRight.getText().toString().equals("") ? 0.0 : Double.valueOf(txtAfcRight.getText().toString());					
 						
 						if(left > right)
 							observedAfc =  String.valueOf(left);

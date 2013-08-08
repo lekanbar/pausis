@@ -1,7 +1,6 @@
 package com.cs.pausis;
 
 import com.core.pausis.R;
-import com.cs.pausis.models.DB;
 import com.cs.pausis.models.Tracker;
 
 import android.app.Activity;
@@ -53,18 +52,16 @@ import android.widget.TextView;
     	cmdProceed_button.setOnClickListener(new OnClickListener(){
 
 			public void onClick(View arg0) {
-				DB db = new DB(PrivacyInfo.this);
-		        db.open();
-		    	pref = db.getPreference(1);
+				Tracker track = new Tracker(PrivacyInfo.this);
+		    	pref = track.getTracker(1);
 		    	
 		    	if(pref == null){
 		    		//Store the first time use information page into the DB
-		    		pref = new Tracker();
+		    		pref = new Tracker(PrivacyInfo.this);
 			    	pref.setTermsAgreed("true");
 			    	pref.setIsFirstTime("false");
 			    	pref.setExtra("");
-			    	db.insertUserPreference(pref);
-			    	db.close();
+			    	pref.insertTracker();
 			    	
 			    	//Go to the main menu page
 			    	Intent i = new Intent(getApplicationContext(), MainMenu.class);
@@ -72,7 +69,6 @@ import android.widget.TextView;
 					finish();
 		    	}
 		    	else{
-		    		db.close();
 		    		finish();
 		    	}
 			}

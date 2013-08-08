@@ -72,7 +72,7 @@ public class ChooseYear extends Activity {
     /**
      * This method initializes the User Interface controls
      */
-    public void InitializeUI(){
+    private void InitializeUI(){
     	//Setting up the Edittext with the text Watcher
     	yearSearch = (EditText) findViewById(R.id.countrysearch_box);
     	yearSearch.addTextChangedListener(filterTextWatcher);

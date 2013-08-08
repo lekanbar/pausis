@@ -31,20 +31,22 @@ import android.widget.Button;
           	
     	setContentView(R.layout.overalladvice);
     	
-        Button cmdOk = (Button)findViewById(R.id.cmdOk);
+    	InitializeUI();
+    }
+    
+    /**
+     * Initialize the User Interface controls
+     */
+    private void InitializeUI(){
+    	results = getIntent().getExtras().getParcelableArrayList("results");
+    	
+    	Button cmdOk = (Button)findViewById(R.id.cmdOk);
         cmdOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	finish();
             }
         });
-    }
-    
-    /**
-     * Initialize the User Interface controls
-     */
-    public void InitializeUI(){
-    	results = getIntent().getExtras().getParcelableArrayList("results");
     }
     
     /**

@@ -134,11 +134,17 @@ public abstract class AbstractSlideExpandableListAdapter extends WrapperListAdap
 		return (lastOpenPosition != -1) ? true : false;
 	}
 
-	public void enableFor(View parent, int position) {
+	public void enableFor(final View parent, final int position) {
 		View more = getExpandToggleButton(parent);
-		View itemToolbar = getExpandableView(parent);
+		final View itemToolbar = getExpandableView(parent);
 		itemToolbar.measure(parent.getWidth(), parent.getHeight());
 
+		parent.setOnClickListener(new View.OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				enableFor(parent, itemToolbar, position);
+			}
+		});
 		enableFor(more, itemToolbar, position);
 	}
 

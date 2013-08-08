@@ -2,8 +2,6 @@ package com.cs.pausis.models;
 
 
 import android.content.Context;
-import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -119,70 +117,6 @@ public class DB {
     */
    public void close() {
 	   db.close();
-   }
-   
-   /**
-    * Method for inserting the user preferences
-    * 
-    * @param _pref
-    */
-   public void insertUserPreference(Tracker _pref) {
-	   // Create a new row of values to insert.
-	   // Insert the row.
-	   SQLiteDatabase db;
-       db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
-                
-       String sql = "INSERT INTO " + DB.TABLE_TRACKER + " (" + DB.KEY_ISFIRSTTIME + ", " + DB.KEY_TERMS_AGREED + ", " + DB.KEY_EXTRA + ") VALUES('" 
-                                                                                    + _pref.getIsFirstTime() + "','" 
-                                                                                    + _pref.getTermsAgreed() + "','"
-                                                                                    + _pref.getExtra() + "');";
-       db.execSQL(sql);
-       db.close();
-   }
-   
-   /**
-    * Method for updating the user's preferences
-    * 
-    * @param _rowIndex
-    * @param pref
-    */
-   public void updatePreference(long _rowIndex, Tracker pref) {	
-	   // Update the row.
-	   SQLiteDatabase db;
-       db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
-                
-       String sql = "Update " + DB.TABLE_TRACKER + " set " + DB.KEY_ISFIRSTTIME + " = '" + pref.getIsFirstTime()
-	                        + "', " + DB.KEY_TERMS_AGREED + " = '" + pref.getTermsAgreed()
-	                        + "', " + DB.KEY_EXTRA + " = '" + pref.getExtra()
-	                        + "' where _id = " + _rowIndex;
-       db.execSQL(sql);
-       db.close();
-   }
-   
-   /**
-    * Method for getting the user's preference 
-    * 
-    * @param _rowIndex
-    * @return
-    * @throws SQLException
-    */
-   public Tracker getPreference(long _rowIndex) throws SQLException {
-	   Cursor history = db.query(true, TABLE_TRACKER,  null, KEY_ID + "=" + _rowIndex, null, null, null, null, null);
-	   
-	   if ((history.getCount() == 0) || !history.moveToFirst()) {
-		   history.close();
-		   return null;
-	   }
-	   
-	   Tracker newItem = new Tracker();
-	   newItem.setID(history.getString(0));
-	   newItem.setIsFirstTime(history.getString(ISFIRSTTIME_COLUMN));
-	   newItem.setTermsAgreed(history.getString(TERMS_AGREED_COLUMN));
-	   newItem.setExtra(history.getString(EXTRA_COLUMN));
-	   
-	   history.close();
-	   
-	   return newItem;
    }
  
    /**

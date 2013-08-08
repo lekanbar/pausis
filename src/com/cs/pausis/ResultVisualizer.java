@@ -42,7 +42,8 @@ public class ResultVisualizer extends Activity  {
        
        result = getIntent().getParcelableExtra("result");
        
-       if(isfirsttime){
+       if(isfirsttime) {
+    	   //initialize the hashtable of gauge values
     	   DEFAULT_GAUGE_FULL_RANGE_VALUES = new Hashtable<Integer, Float>();
     	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-3, 0.0f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-2, 14.3f);
     	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-1, 28.6f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(Integer.valueOf(0), 42.9f);

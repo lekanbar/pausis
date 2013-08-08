@@ -5,7 +5,6 @@ import java.util.Calendar;
 import com.core.pausis.R;
 import com.cs.pausis.models.AFC;
 import com.cs.pausis.models.AMH;
-import com.cs.pausis.models.DB;
 import com.cs.pausis.models.Tracker;
 
 import android.app.Activity;
@@ -105,10 +104,8 @@ import android.widget.TextView;
      */
     public void GoToNext(){
     	// Run next activity
-    	DB db = new DB(this);
-        db.open();
-    	pref = db.getPreference(1);
-    	db.close();    	
+    	Tracker track = new Tracker(this);
+    	pref = track.getTracker(1); 	
     	
     	//This signifies that the app is running for the first time
     	if(pref == null){

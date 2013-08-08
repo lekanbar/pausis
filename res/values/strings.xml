@@ -27,9 +27,6 @@
     <string name="fromblood">Blood Test Results (if known)</string>
     <string name="fromultrasound">Ultrasound Results (if known)</string>
     <string name="genetics2">Genetics</string>
-    <string name="menopause">"Your Mother's Age at Menopause (if known)"</string>
-    <string name="menopause2">"Mother's Age at Menopause"</string>
-    <string name="mage">"Mother's age"</string>
     <string name="periods">Do you have regular periods?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -48,23 +45,46 @@
     <string name="goback">Go back</string>
     <string name="delItem">Are you sure you want to delete this item?</string>
     
+    <string name="menopause">"Your Mother's Age at Menopause (if known)"</string>
+    <string name="menopause2">"Mother's Age at Menopause"</string>
+    <string name="mage">"Mother's age"</string>
+    <string name="mmagevaluetext">"There is substantial evidence that genetic factors play a major role in determining a woman’s age at menopause. 
+        It is likely that this influence is exerted through an effect on ovarian reserve. 
+        One of the most frequently studied areas is the association between mothers’ and daughters’ ages at menopause. 
+        Since mothers and daughters share 50% of their genes, if age at menopause is affected by genetic factors, 
+        it is likely that a significant correlation would exist between mothers’ and daughters’ ages at menopause. Based on the research in this \u0020"</string>
+    <string name="mmagevaluetext2">the heritability of menopausal age was 44%, which is quite significant in knowing the ovarian reserve levels.</string>    
+    
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>
     <string name="amhhint">Your AMH value</string>
+    <string name="amhvaluetext">Anti-Mullerian Hormone value is derived from undergoing a blood test. AMH is a natural protein that plays a 
+        major role in the development of the primary ovarian follicles. Research has shown that there is a significant correlation between serum AMH and the number of follicles in the ovaries. Therefore, 
+        it is an important part of the predictive measures of the ovarian reserve levels in humans. It is important to note that the AMH value peaks at approximately the age of 25.</string>
     
     <string name="fsh">FSH value.</string>
     <string name="fshvalue">FSH Value (mLU/mL)</string>
     <string name="fshhint">Your FSH value</string>
+    <string name="fshvaluetext">Follicle-stimulating Hormone (FSH) is a hormone that stimulates the growth of egg follicles, therefore it plays a vital role in helping to determine the ovarian reserve.</string>
     
     <string name="vol">ovarian volume.</string>
     <string name="volvalue">Ovarian Volume (mL)</string>
     <string name="volhint">Enter volume</string>
+    <string name="volvaluetext">"Ovarian volume is a calculation/measurement of the length, width, and depth of each of the ovaries. Medical studies have correlated ovarian size with a woman's ability to respond adequately to fertility medications."</string>
     
     <string name="afc">antral-follicle count.</string>
     <string name="afcvalue">Antral-Follicle Count</string>
     <string name="afchint">Enter AFC value</string>
+    <string name="afcvaluetext">"Antral-Follicle count (AFC) is a value that can be determined from a trans-vaginal ultrasound scan, it is the number of antral follicles on both ovaries. In determining the ovarian reserve level, AFC is a major determinant because is gives a fairly accurate number of eggs (oocytes) remaining in the ovaries."</string>
     
     <string name="ngfvalue">NGF (Age-based)</string>
+    <string name="ngfvaluetext">"Acccording to our research it has been shown that Non-growing follicles (NGF) declines with age. 
+        This is the reason why the model has been added to the result generation in this software, in order to give additional accuracy to the result."</string>
+    
+    <string name="smokingtext">"Smoking is linked to an earlier menopause, because in late reproductive age women at a given time, smokers are more likely to be menopausal than non-smokers. 
+        Research has shown that women who smoke more often than not reach the menopausal age earlier that non-smokers."</string>
+    
+    <string name="bmivaluetext">There is currently no concrete evidence that a high BMI will result in an adverse effect on the ovarian reserve.</string>
     
     <string name="proceed">Proceed</string>
     <string name="info">Information</string>

@@ -37,7 +37,7 @@ public class MainMenu extends ListActivity {
 	/**
      * This method initializes the User Interface controls
      */
-	public void InitializeUI(){
+	private void InitializeUI(){
 		//Set up the menu items, which are differentiated by their IDs
 		ArrayList<MenuItem> values = new ArrayList<MenuItem>();
 		MenuItem value = new MenuItem();

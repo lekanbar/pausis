@@ -7,6 +7,8 @@ import com.cs.pausis.models.Tracker;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -87,42 +89,44 @@ import android.widget.TextView;
 			lblTitle.setText(getString(R.string.amhvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(getString(R.string.amhvaluetext));
 		}
     	else if (infotype == NGF_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.ngfvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(getString(R.string.ngfvaluetext));
 		}
 		else if (infotype == OVARIAN_VOL_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.volvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(getString(R.string.volvaluetext));
 		}
 		else if (infotype == AFC_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.afcvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(getString(R.string.afcvaluetext));
 		}
 		else if (infotype == FSH_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.fshvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(getString(R.string.fshvaluetext));
 		}
 		else if (infotype == MMAge_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);
 			lblTitle.setText(getString(R.string.menopause2));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(Html.fromHtml(getString(R.string.mmagevaluetext) + " <a href=\"http://www.ncbi.nlm.nih.gov/pubmed/15533358\">" + getString(R.string.paper) + "</a> " 
+			                                 + getString(R.string.mmagevaluetext2)));
+			lblDetails.setMovementMethod(LinkMovementMethod.getInstance());
 		}
 		else if (infotype == PERIOD_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);

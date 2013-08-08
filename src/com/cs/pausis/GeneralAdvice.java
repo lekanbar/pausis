@@ -5,8 +5,7 @@ import com.core.pausis.R;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.webkit.WebView;
 
 /**
  * This Activity class facilitates the show-casing of the general medical advice for specific topics.
@@ -24,15 +23,18 @@ import android.widget.Button;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
           	
-    	setContentView(R.layout.generaladvice);
+    	setContentView(R.layout.webpage);
     	
-        Button cmdOk = (Button)findViewById(R.id.cmdOk);
+    	WebView mWebView2 = (WebView) findViewById(R.id.webview1);		 		           
+    	mWebView2.loadUrl("file:///android_asset/advice.html");
+    	
+        /*Button cmdOk = (Button)findViewById(R.id.cmdOk);
         cmdOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             	finish();
             }
-        });
+        });*/
     }
     
     public void onConfigurationChanged(Configuration _newConfig) {
