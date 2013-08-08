@@ -618,7 +618,7 @@
 							    android:layout_weight="0.5"
 							    android:background="@drawable/bgeditshape"
 							    android:hint="@string/leftov"
-							    android:inputType="number"
+							    android:inputType="numberDecimal"
 							    android:maxLength="4"
 							    android:singleLine="true"
 							    android:textSize="18sp" />
@@ -631,7 +631,7 @@
 							    android:layout_weight="0.5"
 							    android:background="@drawable/bgeditshape"
 							    android:hint="@string/rightov"
-							    android:inputType="number"
+							    android:inputType="numberDecimal"
 							    android:maxLength="4"
 							    android:singleLine="true"
 							    android:textSize="18sp" />
