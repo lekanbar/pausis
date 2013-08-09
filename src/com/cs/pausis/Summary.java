@@ -6,7 +6,6 @@ import com.core.pausis.R;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
 import com.cs.pausis.models.Tracker;
-import com.tjerkw.slideexpandable.library.ActionSlideExpandableListView;
 
 import android.app.Activity;
 import android.content.Intent;

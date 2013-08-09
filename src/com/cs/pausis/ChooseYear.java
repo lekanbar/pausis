@@ -100,11 +100,11 @@ public class ChooseYear extends Activity {
 			public void onItemClick(AdapterView<?> adapter, View v, int pos, long arg3) {
 				//get the chosen year, if it's a valid month set it as a result and finish activity
 				Years chosenyear = (Years)adapter.getItemAtPosition(pos);				
-				String year = chosenyear.getYear();
-				if(!year.toString().startsWith("Choose")){
+				String yearID = chosenyear.getID();
+				if(!yearID.toString().equals("-1")){
 					Intent i = new Intent();
 		        	i.putExtra("yearindex", pos);
-		        	i.putExtra("birthyear", year);
+		        	i.putExtra("birthyear", chosenyear.getYear());
 		        	setResult(RESULT_OK, i);//set the result
 		        	finish();
 				}

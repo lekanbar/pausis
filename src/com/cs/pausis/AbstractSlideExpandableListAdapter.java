@@ -1,4 +1,4 @@
-package com.tjerkw.slideexpandable.library;
+package com.cs.pausis;
 
 import android.os.Parcel;
 import android.os.Parcelable;

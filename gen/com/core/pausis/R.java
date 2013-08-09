@@ -286,19 +286,18 @@ containing a value of this type.
         public static final int i_letter_selector=0x7f020019;
         public static final int i_letter_small=0x7f02001a;
         public static final int i_letter_small_pressed=0x7f02001b;
-        public static final int ic_launcher=0x7f02001c;
-        public static final int imenu=0x7f02001d;
-        public static final int light_alu=0x7f02001e;
-        public static final int logo=0x7f02001f;
-        public static final int main_top=0x7f020020;
-        public static final int mesh_bg=0x7f020021;
-        public static final int privacypolicy=0x7f020022;
-        public static final int res_green=0x7f020023;
-        public static final int res_orange=0x7f020024;
-        public static final int res_red=0x7f020025;
-        public static final int splash_icon=0x7f020026;
-        public static final int toggle_down=0x7f020027;
-        public static final int toggle_up=0x7f020028;
+        public static final int imenu=0x7f02001c;
+        public static final int light_alu=0x7f02001d;
+        public static final int logo=0x7f02001e;
+        public static final int main_top=0x7f02001f;
+        public static final int mesh_bg=0x7f020020;
+        public static final int privacypolicy=0x7f020021;
+        public static final int res_green=0x7f020022;
+        public static final int res_orange=0x7f020023;
+        public static final int res_red=0x7f020024;
+        public static final int splash_icon=0x7f020025;
+        public static final int toggle_down=0x7f020026;
+        public static final int toggle_up=0x7f020027;
     }
     public static final class id {
         public static final int action_settings=0x7f090061;

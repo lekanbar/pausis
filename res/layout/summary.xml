@@ -155,7 +155,7 @@
 
 	</RelativeLayout>
 	
-    <com.tjerkw.slideexpandable.library.ActionSlideExpandableListView
+    <com.cs.pausis.ActionSlideExpandableListView
 		android:id="@+id/list"
 		android:layout_height="fill_parent"
 		android:layout_width="fill_parent"

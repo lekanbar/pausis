@@ -1,4 +1,4 @@
-package com.tjerkw.slideexpandable.library;
+package com.cs.pausis;
 
 import com.core.pausis.R;
 

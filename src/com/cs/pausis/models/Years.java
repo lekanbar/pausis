@@ -47,7 +47,7 @@ public class Years {
 		ArrayList<Years> years = new ArrayList<Years>();
 		
 		Years years2 = new Years();
-		years2.setID("");
+		years2.setID("-1");
 		years2.setYear(context.getString(R.string.choosebirthyear));
 		years.add(years2);
 		
