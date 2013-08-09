@@ -36,6 +36,7 @@ public class AFC {
 	               Fiftieth,
 	               SeventyFifth,
 	               NinetyFifth;
+	private boolean resultAvailable;
 	Context context;
 	
 	/**
@@ -139,6 +140,7 @@ public class AFC {
 	    	value.close();
 		    db.close();
 		    loadedItem = null;
+		    return;
 	    }
 	   
 	    //Get the retrieved values and store them in the variables
@@ -195,12 +197,15 @@ public class AFC {
 					percentile = 95;
 				
 				setPercentile(percentile);
+				setResultAvailable(true);
 			}
 			else{
+				setResultAvailable(false);
 				throw new Exception("Age does not exist in table.");
 			}
 		}
 		else {
+			setResultAvailable(false);
 			throw new Exception("Invalid inputs entered.");
 		}
 	}
@@ -271,5 +276,13 @@ public class AFC {
 
 	public void setNinetyFifth(double ninetyFifth) {
 		NinetyFifth = ninetyFifth;
+	}
+
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
 	}
 }

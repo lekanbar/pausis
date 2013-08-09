@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mis ovarios</string>
+    <string name="action_settings">Configuración</string>
+    <string name="ovaryres">Mis ovarios</string>
+    <string name="empty"></string>
+    <string name="age">Datos Personales</string>
+    <string name="medic">Médicos detalles</string>
+    <string name="howold">edad</string>
+    <string name="required">(requerido)</string>
+    <string name="iam">estoy\u0020</string>
+    <string name="and">\u0020y\u0020</string>
+    <string name="years">años,</string>
+    <string name="months">meses.</string>
+    <string name="leftov">Ovario izquierdo</string>
+    <string name="rightov">ovario derecho</string>
+    <string name="firstuse">Configuración de aplicaciones para el primer uso. Por favor espere....</string>
+    <string name="firstusetitle">Configuración de la aplicación</string>
+    <string name="copyright">derechos de autor ©\u0020</string>
+    <string name="name">Olalekan Baruwa.\u0020</string>
+    <string name="allrights">Reservados todos los derechos.</string>
+    <string name="weight">peso:\u0020</string>
+    <string name="weighthint">Su Peso</string>
+    <string name="height">altura:\u0020</string>
+    <string name="chooseheight">su altura</string>
+    <string name="body">cuerpo</string>
+    <string name="fromblood">Resultados de la prueba de sangre (si se conoce)</string>
+    <string name="fromultrasound">Ultrasonido resultados (si se conoce)</string>
+    <string name="genetics2">genética</string>
+    <string name="periods">¿Tiene períodos regulares?</string>
+    <string name="yes">sí</string>
+    <string name="no">no</string>
+    <string name="overall">Asesoramiento general</string>
+    <string name="history">Historial de uso</string>
+    <string name="menu">menú</string>
+    <string name="pcalc">Calculadora personalizada</string>
+    <string name="nousage">No hay historial de uso disponibles.</string>
+    <string name="web">web</string>
+    <string name="ageerrortitle">error</string>
+    <string name="ageerror">Se requiere su edad antes de poder continuar. (Elija el año de nacimiento y mes)</string>
+    <string name="todo">¿Qué te gustaría hacer?</string>
+    <string name="view">ver</string>
+    <string name="delete">borrar</string>
+    <string name="cancel">cancelar</string>
+    <string name="goback">volver</string>
+    <string name="delItem">¿Está seguro que desea eliminar este artículo?</string>
+    <string name="resnotavail">N/A</string>
+    <string name="resnotavailfull">Resultados no disponibles para determinada edad.</string>
+    
+    <string name="menopause">"La edad de su madre en la menopausia (si se conoce)"</string>
+    <string name="menopause2">"Edad de la madre en la menopausia"</string>
+    <string name="mage">"Edad de la madre"</string>
+    <string name="mmagevaluetext">"Hay pruebas sustanciales de que los factores genéticos juegan un papel importante en la determinación de la edad de una mujer en la menopausia.
+         Es probable que esta influencia se ejerce a través de un efecto sobre la reserva ovárica.
+         Una de las áreas más estudiadas es la relación entre madres e hijas edades en la menopausia.
+         Dado que las madres e hijas comparten el 50% de sus genes, si la edad de la menopausia se ve afectada por factores genéticos,
+         es probable que una correlación significativa existiría entre las madres y las hijas las edades en la menopausia. En base a la investigación en este\u0020"</string>
+    <string name="mmagevaluetext2">la heredabilidad de la edad de la menopausia fue de 44%, lo cual es bastante significativo en conocer los niveles de reserva ovárica.</string>    
+    
+    <string name="amh">Valor AMH.</string>
+    <string name="amhvalue">AMH Valor (ng / L o pm / L)</string>
+    <string name="amhhint">Su valor AMH</string>
+    <string name="amhvaluetext">Valor Hormona Anti-Mülleriana se deriva de someterse a una prueba de sangre. AMH es una proteína natural que juega un
+         papel importante en el desarrollo de los folículos ováricos primarios. La investigación ha demostrado que existe una correlación significativa entre la AMH sérica y el número de folículos en los ovarios. Por lo tanto,
+         es una parte importante de las medidas de predicción de los niveles de reserva de ovario en seres humanos. Es importante señalar que los picos de valor de AMH en aproximadamente la edad de 25.</string>
+    
+    <string name="fsh">Valor de FSH.</string>
+    <string name="fshvalue">Valor FSH (mLU/mL)</string>
+    <string name="fshhint">Su valor de FSH</string>
+    <string name="fshvaluetext">La hormona folículo-estimulante (FSH) es una hormona que estimula el crecimiento de los folículos de huevo, por lo tanto, juega un papel vital en ayudar a determinar la reserva ovárica.</string>
+    
+    <string name="vol">volumen de ovario.</string>
+    <string name="volvalue">Volumen de ovario (mL)</string>
+    <string name="volhint">Ingrese el volumen</string>
+    <string name="volvaluetext">"Volumen de ovario es un cálculo / medición de la longitud, la anchura, y la profundidad de cada uno de los ovarios. Los estudios médicos han correlacionado tamaño de los ovarios con la capacidad de una mujer para responder adecuadamente a los medicamentos de fertilidad."</string>
+    
+    <string name="afc">conteo antral-folículo.</string>
+    <string name="afcvalue">Conde folículo antral-</string>
+    <string name="afchint">Introducir el valor de AFC</string>
+    <string name="afcvaluetext">"Recuento de folículo antral-(AFC) es un valor que puede determinarse a partir de una ecografía transvaginal, que es el número de folículos antrales en ambos ovarios. Para determinar el nivel de la reserva ovárica, AFC es un determinante importante porque se da un número bastante exacta de los huevos (ovocitos) que quedan en los ovarios."</string>
+    
+    <string name="ngfvalue">NGF (basada en la edad)</string>
+    <string name="ngfvaluetext">"Acccording a nuestra investigación se ha demostrado que los folículos no-crecimiento (NGF) disminuye con la edad.
+         Esta es la razón por la cual el modelo ha sido añadido a la generación de resultados en este software, con el fin de conseguir una precisión adicional en el resultado."</string>
+    
+    <string name="smokingtext">"Fumar está relacionado con la menopausia más temprano, ya que en las mujeres en edad reproductiva finales en un momento dado, los fumadores tienen más probabilidades de ser la menopausia que las no fumadoras.
+         La investigación ha demostrado que las mujeres que fuman más de las veces no llegan a la edad de la menopausia antes que las no fumadoras."</string>
+    
+    <string name="bmivaluetext">Actualmente no existe evidencia concreta de que un IMC alto se traducirá en un efecto adverso sobre la reserva ovárica.</string>
+    
+    <string name="proceed">seguir</string>
+    <string name="info">información</string>
+    <string name="birthyear">Año de nacimiento:\u0020</string>
+    <string name="birthmonth">Mes de nacimiento:\u0020</string>
+    <string name="choosebirthyear">Seleccione el año</string>
+    <string name="choosebirthmonth">Seleccione Mes</string>
+    
+    <string name="typecountry">Escriba para buscar</string>
+    <string name="calcing">tratamiento</string>
+    <string name="calcvalue">valor calculado:\u0020</string>
+    <string name="afcresult">El resultado, en número, antro-folículo es:\u0020</string>
+    <string name="amhresult">Resultado por volumen AMH es:\u0020</string>
+    <string name="ovaresult">Resultado por volumen de ovario es:\u0020</string>
+    <string name="fshresult">Posibilidad de Nacido Vivo por la FSH es:\u0020</string>
+    <string name="mmaresult">"Posibilidad de Nacido Vivo por la Madre Menopausia La edad es:\u0020"</string>
+    <string name="ngfresult">"Posibilidad de Nacido Vivo por NGF es:\u0020"</string>
+    
+    <string name="positive">positivo</string>
+    <string name="negative">negativo</string>
+    <string name="neutral">neutral</string>
+    
+    <string name="resvisual">Visualización Resultado</string>
+    <string name="plswait">Por favor espere....</string>
+    <string name="resulttitle">Resultados</string>
+    <string name="result">Ver Resultados</string>
+    <string name="resultstatus">estado:\u0020</string>
+    <string name="resultmessage">Ningún resultado se ha generado para los valores introducidos. Por favor, asegúrese de haber introducido los valores válidos y vuelva a intentarlo.</string>
+    <string name="visualizer">visualizador</string>
+    <string name="visualize">visualizar</string>
+    <string name="descriptiontitle">interpretación:\u0020</string>
+    
+    <string name="afcdescription">Sobre la base del número de resultado antro-folículo (AFC), su estado se determina que es en el\u0020</string>
+    <string name="percentile">\u0020porcentual por encima de la media general pouplation, como se indica en el indicador anterior.</string>
+    <string name="amhdescription">Basándose en el resultado Hormona Anti-Mülleriana (AMH), su estado es determind estar en\u0020</string>
+    <string name="ovadescription">Basándose en el resultado volumen ovárico, su estado se determina que es en\u0020</string>
+    <string name="abovemean">\u0020desviaciones estándar por encima de la media de la población en general, como se indica en el manómetro anteriormente.</string>
+    <string name="belowmean">\u0020desviaciones estándar por debajo de la población en general significan, como se indica en el indicador anterior.</string>
+    
+    <string name="research">Usted puede ver el trabajo de investigación en el que este cálculo se basa en\u0020</string>
+    <string name="here">aquí.</string>
+    
+    <string name="positiverecommendation">\u0020Por lo tanto, basándose en este resultado los ovarios están muy bien, sin embargo, se recomienda que consulte a su médico para obtener más consultas sobre este resultado.</string>
+    <string name="neutralrecommendation">\u0020Por lo tanto, basándose en este resultado los ovarios son neutrales, sin embargo, se recomienda que consulte a su médico para obtener más consultas sobre este resultado.</string>
+    <string name="negativerecommendation">\u0020Por lo tanto, basándose en este resultado los ovarios no están bien, sin embargo, se recomienda que consulte a su médico para obtener más consultas sobre este resultado.</string>
+    
+    <string name="privacy">Esta aplicación no envía información acerca de sus respuestas a cualquier servidor. Los resultados se calculan directamente en el dispositivo. La predicción individualizado generado por IVFpredict se basa en el trabajo publicado en la\u0020</string>
+	<string name="privacy2">\u0020por Nelson y Lawlor en PLOS Medicine. Ellos no son responsables de las decisiones individuales con respecto al tratamiento que usted hace basado en los cálculos utilizando IVFpredict. Los pacientes siempre deben discutir sus opciones de tratamiento con médicos capacitados</string>
+	<string name="privacytitle">Política de privacidad</string>
+	<string name="paper">documento</string>
+	<string name="generaladvice">Consejo general</string>
+	<string name="general">general</string>
+	<string name="average">¿Cuál es la media?</string>
+	<string name="smoking">el fumar</string>
+	<string name="bmi">Índice de masa corporal (peso y estatura)</string>
+	<string name="genetics">genética</string>
+	<string name="race">raza</string>
+	<string name="parity">paridad</string>
+	<string name="sampletext">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</string>
+	
+	<string name="aboutus">Quiénes somos</string>
+	<string name="aboutus1">Profesor Hamish Wallace MD es el Muirhead Profesor de Obstetricia y Ginecología de la Universidad de Edimburgo y un experto internacional en el FIV.</string>
+	<string name="aboutus2">"Su investigación tiene como objetivo comprender y mejorar la salud de las mujeres y sus hijos durante toda su vida reproductiva. Él está directamente involucrado en el cuidado de los pacientes en dos unidades de FIV más grandes y exitosas del Scotlan."</string>
+	<string name="aboutus3">El Dr. Tom Kelsey es profesor titular en la Universidad de Saint Andrews, y un experto internacional en modelos matemáticos para la biomedicina.</string>
+	<string name="aboutus4">Tom, junto con su estudiante, jugaron un papel decisivo en el desarrollo de aplicaciones para teléfonos inteligentes.</string>
+	<string name="aboutus5">Sr. Olalekan Baruwa es un estudiante de maestría en la Universidad de Saint Andrews, y un desarrollador de software con experiencia industrial sólida en el desarrollo de aplicaciones web y móviles.</string>
+	<string name="aboutus6">Olalekan, trabajó en este proyecto bajo la supervisión directa del Dr. Tom Kelsey.</string>
+	<string name="readmore">leer más</string>
+	
+	<string name="summary">resumen</string>
+	
+	<string name="ok">aprobar</string>
+
+</resources>

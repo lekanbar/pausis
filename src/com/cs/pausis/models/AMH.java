@@ -47,6 +47,7 @@ public class AMH {
 	               zScore, lapa,
 	               pl1, pl2;
 	//private double[] sdvalues;
+	private boolean resultAvailable;
 	Context context;
 	
 	/**
@@ -104,6 +105,8 @@ public class AMH {
 				double calcValue = (logAdjustedObsAMH - logAdjustedPredAMH) / standardDeviation; 
 				setZScore(calcValue);
 				
+				setResultAvailable(true);
+				
 				//Calculate SD values
 				/*int count = 3;
 				for (int i = 0; i < sdvalues.length; i++) {
@@ -122,10 +125,14 @@ public class AMH {
 				}*/
 			}
 			else{
+				setZScore(-3);//set to lowest value
+				setResultAvailable(false);
 				throw new Exception("Age does not exist in table.");
 			}
 		}
 		else {
+			setZScore(-3);//set to lowest value
+			setResultAvailable(false);
 			throw new Exception("Invalid inputs entered.");
 		}
 	}
@@ -211,6 +218,7 @@ public class AMH {
 	    	value.close();
 		    db.close();
 		    loadedItem = null;
+		    return;
 	    }
 	   
 	    loadedItem = new AMH();
@@ -229,7 +237,7 @@ public class AMH {
 	private boolean checkInputValues() {
 		if(this.getAge() <= 0.0)
 			return false;
-		if(this.getObservedAmhValue() <= 0.0)
+		if(this.getObservedAmhValue() < 0.0)
 			return false;
 		
 		return true;
@@ -279,6 +287,14 @@ public class AMH {
 	}
 	public double getPl2(){
 		return pl2;
+	}
+	
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
 	}
 
 	//public double[] getSdvalues() {

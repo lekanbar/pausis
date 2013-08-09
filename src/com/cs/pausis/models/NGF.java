@@ -15,7 +15,10 @@ public class NGF {
 	
 	private double Age,
 	               Percentage;
+	
 	Context context;
+
+	private boolean resultAvailable;
 	
 	/**
 	 * The default constructor
@@ -33,6 +36,7 @@ public class NGF {
 		this.context = context;
 		Age = 0.0;
 		Percentage = 40.0;
+		resultAvailable = true;
 	}
 	
 	/**
@@ -78,5 +82,13 @@ public class NGF {
 
 	public void setPercentage(double percentage) {
 		Percentage = percentage;
+	}
+	
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
 	}
 }

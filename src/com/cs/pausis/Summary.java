@@ -8,6 +8,8 @@ import com.cs.pausis.models.UserInputValues;
 import com.cs.pausis.models.Tracker;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -200,14 +202,42 @@ import android.widget.TextView;
 				Result result = results.get(position);
 				
 				if(buttonview.getId() == R.id.buttonA) {
-					Intent intent = new Intent(Summary.this, ResultVisualizer.class);
-			        intent.putExtra("result", result);
-		      	    startActivity(intent);
+					if(result.isResultAvailable()){
+						Intent intent = new Intent(Summary.this, ResultVisualizer.class);
+				        intent.putExtra("result", result);
+			      	    startActivity(intent);
+					}
+					else {
+						AlertDialog.Builder alert = new AlertDialog.Builder(Summary.this);
+						alert.setTitle(R.string.info);
+						alert.setMessage(R.string.resnotavailfull);
+						alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
+
+							public void onClick(DialogInterface arg0, int arg1) {
+								
+							}
+						});
+						alert.show();
+					}
 				} else {
-					Intent i = new Intent(getApplicationContext(), InformationPage.class);
-					i.putExtra("type", InformationPage.SUMMARY_TYPE);
-					i.putExtra("result", result);
-					startActivity(i);
+					if(result.isResultAvailable()){
+						Intent i = new Intent(getApplicationContext(), InformationPage.class);
+						i.putExtra("type", InformationPage.SUMMARY_TYPE);
+						i.putExtra("result", result);
+						startActivity(i);
+					}
+					else {
+						AlertDialog.Builder alert = new AlertDialog.Builder(Summary.this);
+						alert.setTitle(R.string.info);
+						alert.setMessage(R.string.resnotavailfull);
+						alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
+
+							public void onClick(DialogInterface arg0, int arg1) {
+								
+							}
+						});
+						alert.show();
+					}
 				}
 			}
 		}, R.id.buttonA, R.id.buttonB);

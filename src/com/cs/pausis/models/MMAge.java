@@ -15,6 +15,7 @@ public class MMAge {
 	private String result;
 	
 	Context context;
+	private boolean resultAvailable;
 	
 	/**
 	 * This is the default constructor for the BMI model
@@ -32,10 +33,11 @@ public class MMAge {
 		this.context = context;
 		result = "MMAge percentage goes  here";
 		percentage = 40.0;
+		resultAvailable = true;
 	}
 	
 	/**
-	 * Method for processing user inputs(i.e. age and observed Fsh value) in order to perform the necessary lookup and calculations based on the User's mother's age
+	 * Method for processing Mother's Menopause age
 	 * 
 	 * @throws Exception
 	 */
@@ -77,5 +79,13 @@ public class MMAge {
 
 	public void setResult(String result) {
 		this.result = result;
+	}
+	
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
 	}
 }

@@ -73,80 +73,102 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     @Override
     protected Drawable doInBackground(String... args)
     {
-        try
-        {
-        	//Execute the various classes based on the input values specified
-        	if(birthMonth != 0 && birthYear != 0){
+    	//Execute the various classes based on the input values specified
+    	if(birthMonth != 0 && birthYear != 0){
+    		try{
         		ngf = new NGF(this.context);
         		ngf.setAge(calculateAge());
         		ngf.calculateNgf();
-        		
-        		if(pageType == MAIN_TYPE)
-					((MainActivity)this.context).updateDialog();
-				else
-					((History)this.context).updateDialog();
-        	}        	
-            if (this.observedAMH != null) {
+        	}
+			catch (Exception e)
+	        {
+				
+	        }
+    		
+    		if(pageType == MAIN_TYPE)
+				((MainActivity)this.context).updateDialog();
+			else
+				((History)this.context).updateDialog();
+    	}        	
+        if (this.observedAMH != null) {
+        	try{
 				amh = new AMH(this.context);
 				amh.setAge(calculateAgeWithMonth());
 				amh.setObservedAmhValue(this.observedAMH.doubleValue());
 				amh.calculateAMH();
+            }
+			catch (Exception e)
+	        {
 				
-				if(pageType == MAIN_TYPE)
-					((MainActivity)this.context).updateDialog();
-				else
-					((History)this.context).updateDialog();
-			}
-            if (this.observedOvarianVolume != null) {
+	        }
+			
+			if(pageType == MAIN_TYPE)
+				((MainActivity)this.context).updateDialog();
+			else
+				((History)this.context).updateDialog();
+		}
+        if (this.observedOvarianVolume != null) {
+        	try{
             	ova = new OvarianVolume(this.context);
 				ova.setAge(calculateAgeWithMonth());
 				ova.setObservedVolume(this.observedAMH.doubleValue());
 				ova.calculateOvarianVolume();
+            }
+			catch (Exception e)
+	        {
 				
-				if(pageType == MAIN_TYPE)
-					((MainActivity)this.context).updateDialog();
-				else
-					((History)this.context).updateDialog();
-			}
-            if (this.observedAFC != null) {
+	        }
+			
+			if(pageType == MAIN_TYPE)
+				((MainActivity)this.context).updateDialog();
+			else
+				((History)this.context).updateDialog();
+		}
+        if (this.observedAFC != null) {
+        	try {
             	afc = new AFC(this.context);
 				afc.setAge(calculateAge());
 				afc.setObservedAfcValue(this.observedAFC.doubleValue());
 				afc.calculateAFC();
-            	
-				if(pageType == MAIN_TYPE)
-					((MainActivity)this.context).updateDialog();
-				else
-					((History)this.context).updateDialog();
-			}
-            if (this.observedFSH != null) {
+            }
+			catch (Exception e)
+	        {
+				
+	        }
+        	
+			if(pageType == MAIN_TYPE)
+				((MainActivity)this.context).updateDialog();
+			else
+				((History)this.context).updateDialog();
+		}
+        if (this.observedFSH != null) {
+        	try{
             	fsh = new FSH(this.context);
 				fsh.setAge(calculateAge());
 				fsh.setObservedFsh(this.observedFSH.doubleValue());
 				fsh.calculateFsh();
-            	
-				if(pageType == MAIN_TYPE)
-					((MainActivity)this.context).updateDialog();
-				else
-					((History)this.context).updateDialog();
-			}
-            if (this.mothersMenopauseAge != null) {
-            	mmAge = new MMAge(this.context);
-				mmAge.setChildage(calculateAge());
-				mmAge.setMotherage(this.mothersMenopauseAge.doubleValue());
-			    mmAge.calculateMMage();
-            	
-			    if(pageType == MAIN_TYPE)
-					((MainActivity)this.context).updateDialog();
-				else
-					((History)this.context).updateDialog();
-			}
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            return null;
-        }// end of catch
+        	}
+			catch (Exception e)
+	        {
+				
+	        }
+        	
+			if(pageType == MAIN_TYPE)
+				((MainActivity)this.context).updateDialog();
+			else
+				((History)this.context).updateDialog();
+		}
+        if (this.mothersMenopauseAge != null) {
+        	mmAge = new MMAge(this.context);
+			mmAge.setChildage(calculateAge());
+			mmAge.setMotherage(this.mothersMenopauseAge.doubleValue());
+		    mmAge.calculateMMage();
+        	
+		    if(pageType == MAIN_TYPE)
+				((MainActivity)this.context).updateDialog();
+			else
+				((History)this.context).updateDialog();
+		}
         
         d = null;
         return d;
@@ -163,6 +185,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2 = new Result();    			
     			result2.setValue(String.valueOf(ngf.getPercentage()));
     			result2.setType(Result.Type.NGF.toString());
+    			result2.setResultAvailable(ngf.isResultAvailable());
     			
     			results.add(result2);
     		}    		
@@ -179,6 +202,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.AMH.toString());
+    			result2.setResultAvailable(amh.isResultAvailable());
     			//result2.setSdvalues(amh.getSdvalues());
     			
     			results.add(result2);
@@ -196,6 +220,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.OVA.toString());
+    			result2.setResultAvailable(ova.isResultAvailable());
     			//result2.setSdvalues(ova.getSdvalues());
     			
     			results.add(result2);
@@ -204,7 +229,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2 = new Result();
     			int percentile = afc.getPercentile();
     			
-    			if(percentile == 5)
+    			if(percentile <= 5)
     				result2.setStatus(Result.Status.RED.toString());
     			else if(percentile == 25)
     				result2.setStatus(Result.Status.ORANGE.toString());
@@ -215,6 +240,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			
     			result2.setValue(String.valueOf(percentile));
     			result2.setType(Result.Type.AFC.toString());
+    			result2.setResultAvailable(afc.isResultAvailable());
     			//result2.setSdvalues(afc.getSdvalues());
     			
     			results.add(result2);
@@ -223,6 +249,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2 = new Result();    			
     			result2.setValue(String.valueOf(fsh.getPercentage()));
     			result2.setType(Result.Type.FSH.toString());
+    			result2.setResultAvailable(fsh.isResultAvailable());
     			//result2.setSdvalues(afc.getSdvalues());
     			
     			results.add(result2);
@@ -231,6 +258,7 @@ public class OvaryReserve_Calculator extends AsyncTask<String, Integer, Drawable
     			result2 = new Result();    			
     			result2.setValue(String.valueOf(mmAge.getPercentage()));
     			result2.setType(Result.Type.MMA.toString());
+    			result2.setResultAvailable(mmAge.isResultAvailable());
     			//result2.setSdvalues(afc.getSdvalues());
     			
     			results.add(result2);

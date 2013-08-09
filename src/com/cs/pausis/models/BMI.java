@@ -14,6 +14,7 @@ public class BMI {
 	private double age, weight, height, bmi;
 	
 	private String result;
+	private boolean resultAvailable;
 	Context context;
 	
 	/**
@@ -67,6 +68,14 @@ public class BMI {
 
 	public void setBmi(double bmi) {
 		this.bmi = bmi;
+	}
+	
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
 	}
 
 	public String getResult() {

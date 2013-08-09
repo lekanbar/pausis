@@ -32,6 +32,8 @@ public class OvarianVolume {
 	               ZScore;
 	//private double[] sdvalues;
 	Context context;
+
+	private boolean resultAvailable;
 	
 	public OvarianVolume(){
 		
@@ -57,7 +59,7 @@ public class OvarianVolume {
 	private boolean checkInputValues() {
 		if(this.getAge() <= 0.0)
 			return false;
-		if(this.getObservedVolume() <= 0.0)
+		if(this.getObservedVolume() < 0.0)
 			return false;
 		
 		return true;
@@ -82,25 +84,11 @@ public class OvarianVolume {
 			//Calculate zScore
 			double calcValue = (logAdjustedObsVolume - logAdjustedPredVolume) / SD;
 			setZScore(calcValue);
-			
-			//Calculate SD values
-			/*int count = 3;
-			for (int i = 0; i < sdvalues.length; i++) {
-				if(i < 3) {
-					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume - count * SD)) - 1;
-					count--;
-				}
-				else if(i == 3) {
-					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume)) - 1;
-					count++;
-				}
-				else {
-					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume + count * SD)) - 1;
-					count++;
-				}						
-			}*/
+			setResultAvailable(true);
 		}
 		else{
+			setZScore(-3);//set to lowest value
+			setResultAvailable(false);
 			throw new Exception("Age does not exist in table");
 		}
 	}
@@ -132,12 +120,12 @@ public class OvarianVolume {
 	public void setZScore(double zScore) {
 		ZScore = zScore;
 	}
-
-	/*public double[] getSdvalues() {
-		return sdvalues;
+	
+	public boolean isResultAvailable() {
+		return resultAvailable;
 	}
 
-	public void setSdvalues(double[] sdvalues) {
-		this.sdvalues = sdvalues;
-	}*/
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
+	}
 }

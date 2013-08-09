@@ -22,6 +22,7 @@ public class Result implements Parcelable {
 				   value,
 				   description,
 				   type;
+	private boolean resultAvailable;
 	//private double[] sdvalues;
 	
 	/**
@@ -105,6 +106,14 @@ public class Result implements Parcelable {
 		this.sdvalues = sdvalues;
 	}*/
 
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
+	}
+
 	/**
 	 * Overidden method for serializing the class attributes
 	 */
@@ -115,6 +124,7 @@ public class Result implements Parcelable {
 		out.writeString(status);
 		out.writeString(value);
 		out.writeString(type);
+		out.writeByte((byte) (resultAvailable ? 1 : 0));
 		
 		/*if (this.getType().equals(Result.Type.AFC.toString()) || this.getType().equals(Result.Type.AMH.toString()) 
 				|| this.getType().equals(Result.Type.OVA.toString()))
@@ -129,6 +139,7 @@ public class Result implements Parcelable {
 		this.setStatus(in.readString());
 		this.setValue(in.readString());
 		this.setType(in.readString());
+		this.setResultAvailable(in.readByte() == 1);
 		
 		/*if (this.getType().equals(Result.Type.AFC.toString()) || this.getType().equals(Result.Type.AMH.toString()) 
 				|| this.getType().equals(Result.Type.OVA.toString())){

@@ -44,6 +44,8 @@
     <string name="cancel">Cancel</string>
     <string name="goback">Go back</string>
     <string name="delItem">Are you sure you want to delete this item?</string>
+    <string name="resnotavail">N/A</string>
+    <string name="resnotavailfull">Results not available for specified age.</string>
     
     <string name="menopause">"Your Mother's Age at Menopause (if known)"</string>
     <string name="menopause2">"Mother's Age at Menopause"</string>
@@ -119,8 +121,8 @@
     
     <string name="afcdescription">Based on the Antral-Follicle count (AFC) result, your status is determined to be at the\u0020</string>
     <string name="percentile">\u0020percentile above the general pouplation mean, as indicated on the gauge above.</string>
-    <string name="amhdescription">Based on the Anti-Mullerian Hormone (AMH) result, your status is determind to be at\u0020</string>
-    <string name="ovadescription">Based on the Ovarian Volume result, your status is determind to be at\u0020</string>
+    <string name="amhdescription">Based on the Anti-Mullerian Hormone (AMH) result, your status is determined to be at\u0020</string>
+    <string name="ovadescription">Based on the Ovarian Volume result, your status is determined to be at\u0020</string>
     <string name="abovemean">\u0020standard deviations above the general population mean, as indicated on the gauge above.</string>
     <string name="belowmean">\u0020standard deviations below the general population mean, as indicated on the gauge above.</string>
     

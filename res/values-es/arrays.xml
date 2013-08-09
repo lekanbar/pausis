@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>	
+	<string-array name="array_years">
+		<item>@string/choosebirthyear</item>
+		<item>1990</item>
+		<item>1989</item>
+		<item>1988</item>
+		<item>1987</item>
+		<item>1986</item>
+		<item>1985</item>
+		<item>1984</item>
+		<item>1983</item>
+		<item>1982</item>
+		<item>1981</item>
+		<item>1980</item>
+		<item>1979</item>
+		<item>1978</item>
+		<item>1977</item>
+		<item>1976</item>
+		<item>1975</item>
+		<item>1974</item>
+		<item>1973</item>
+		<item>1972</item>
+		<item>1971</item>
+		<item>1970</item>
+		<item>1969</item>
+		<item>1968</item>
+		<item>1967</item>
+		<item>1966</item>
+		<item>1965</item>
+		<item>1964</item>
+		<item>1963</item>
+		<item>1962</item>
+		<item>1961</item>
+		<item>1960</item>
+		<item>1959</item>
+	</string-array>
+	
+	<string-array name="array_months">
+		<item>@string/choosebirthmonth</item>
+		<item>enero</item>
+		<item>febrero</item>
+		<item>marzo</item>
+		<item>abril</item>
+		<item>mayo</item>
+		<item>junio</item>
+		<item>julio</item>
+		<item>agosto</item>
+		<item>septiembre</item>
+		<item>octubre</item>
+		<item>noviembre</item>
+		<item>diciembre</item>
+	</string-array>
+    
+    <string-array name="array_weight_units">
+        <item>kg</item>
+        <item>lbs</item>
+    </string-array>
+    
+    <string-array name="array_amh_units">
+        <item>ng/mL</item>
+        <item>pm/L</item>
+    </string-array>
+    
+    <string-array name="array_heights">
+        <item>@string/chooseheight</item>
+        <item>"5'0\" (152.40cm)"</item>
+        <item>"5'1\" (154.94cm)"</item>
+        <item>"5'2\" (157.48cm)"</item>
+        <item>"5'3\" (160.02cm)"</item>
+        <item>"5'4\" (162.56cm)"</item>
+        <item>"5'5\" (165.10cm)"</item>
+        <item>"5'6\" (167.74cm)"</item>
+        <item>"5'7\" (170.18cm)"</item>
+        <item>"5'8\" (172.72cm)"</item>
+        <item>"5'9\" (175.26cm)"</item>
+        <item>"5'10\" (177.80cm)"</item>
+        <item>"5'11\" (180.34cm)"</item>
+        <item>"6'0\" (182.88cm)"</item>
+        <item>"6'1\" (185.45cm)"</item>
+        <item>"6'2\" (187.96cm)"</item>
+        <item>"6'3\" (190.50cm)"</item>
+        <item>"6'4\" (193.04cm)"</item>
+        <item>"6'5\" (195.58cm)"</item>
+        <item>"6'6\" (198.12cm)"</item>
+        <item>"6'7\" (200.66cm)"</item>
+        <item>"6'8\" (203.20cm)"</item>
+        <item>"6'9\" (205.74cm)"</item>
+        <item>"6'10\" (208.28cm)"</item>
+        <item>"6'11\" (210.82cm)"</item>
+        <item>"7'0\" (213.36cm)"</item>
+        <item>"7'1\" (215.90cm)"</item>
+        <item>"7'2\" (218.44cm)"</item>
+    </string-array>
+    
+    <string-array name="array_heights_in_cm">
+        <item>@string/empty</item>
+        <item>"152.40"</item>
+        <item>"154.94"</item>
+        <item>"157.48"</item>
+        <item>"160.02"</item>
+        <item>"162.56"</item>
+        <item>"165.10"</item>
+        <item>"167.74"</item>
+        <item>"170.18"</item>
+        <item>"172.72"</item>
+        <item>"175.26"</item>
+        <item>"177.80"</item>
+        <item>"180.34"</item>
+        <item>"182.88"</item>
+        <item>"185.45"</item>
+        <item>"187.96"</item>
+        <item>"190.50"</item>
+        <item>"193.04"</item>
+        <item>"195.58"</item>
+        <item>"198.12"</item>
+        <item>"200.66"</item>
+        <item>"203.20"</item>
+        <item>"205.74"</item>
+        <item>"208.28"</item>
+        <item>"210.82"</item>
+        <item>"213.36"</item>
+        <item>"215.90"</item>
+        <item>"218.44"</item>
+    </string-array>
+</resources>

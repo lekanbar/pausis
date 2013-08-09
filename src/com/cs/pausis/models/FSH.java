@@ -19,6 +19,7 @@ public class FSH {
 	               Percentage;
 	private double[] sdvalues;
 	Context context;
+	private boolean resultAvailable;
 	
 	/**
 	 * Default constructor
@@ -38,6 +39,7 @@ public class FSH {
 		ObservedFsh = 0.0;
 		Percentage = 40.0;
 		sdvalues = new double[7];
+		resultAvailable = true;
 	}
 	
 	/**
@@ -130,5 +132,13 @@ public class FSH {
 
 	public void setSdvalues(double[] sdvalues) {
 		this.sdvalues = sdvalues;
+	}
+	
+	public boolean isResultAvailable() {
+		return resultAvailable;
+	}
+
+	public void setResultAvailable(boolean resultAvailable) {
+		this.resultAvailable = resultAvailable;
 	}
 }

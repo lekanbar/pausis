@@ -1,5 +1,7 @@
 package com.cs.pausis.models;
 
+import java.io.File;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -89,11 +91,26 @@ public class Tracker {
 	    * @throws SQLException
 	    */
 	   public Tracker getTracker(long _rowIndex) throws SQLException {
-		   SQLiteDatabase db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
+		   
+		   File dbfile = new File(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath());
+		   if(!dbfile.exists()){
+			   DB db2 = new DB(context);
+			   db2.open();
+			   db2.close();
+		   }
+		   
+		   SQLiteDatabase db = null;
+		   try {
+			   db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
+		   } catch (Exception e) {
+			   db = SQLiteDatabase.openDatabase(context.getDatabasePath(DB.DATABASE_NAME).getAbsolutePath(), null, SQLiteDatabase.CREATE_IF_NECESSARY);
+		   }
+		   
 		   Cursor history = db.query(true, DB.TABLE_TRACKER,  null, DB.KEY_ID + "=" + _rowIndex, null, null, null, null, null);
 		   
 		   if ((history.getCount() == 0) || !history.moveToFirst()) {
 			   history.close();
+			   db.close();
 			   return null;
 		   }
 		   

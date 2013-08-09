@@ -47,6 +47,7 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 			   //valueString = item.getValue(),
 		       //descriptionString = item.getDescription(),
 		       typeString = item.getType();
+		boolean isAgeAvailable = item.isResultAvailable();
 		
 		if(convertView == null){
 			resultView = new LinearLayout(getContext());
@@ -64,28 +65,39 @@ public class ResultAdapter extends ArrayAdapter<Result> {
 		
 		//Get status based on color
 		String status = "";
-		if(statusString.equals(Result.Status.GREEN.toString()))
+		if(statusString.equals(Result.Status.GREEN.toString())){
 			status = context.getString(R.string.positive);
-		else if(statusString.equals(Result.Status.ORANGE.toString()))
-			status = context.getString(R.string.neutral);
-		else
-			status = context.getString(R.string.negative);
-		
-		//Set result status image
-		if(statusString.equals(Result.Status.GREEN.toString()))
 			indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.res_green));
-		else if(statusString.equals(Result.Status.ORANGE.toString()))
+		}
+		else if(statusString.equals(Result.Status.ORANGE.toString())){
+			status = context.getString(R.string.neutral);
 			indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.res_orange));
-		else
+		}
+		else{
+			status = context.getString(R.string.negative);
 			indicatorView.setImageDrawable(resultView.getResources().getDrawable(R.drawable.res_red));
+		}
+			
 		
 		//Set the result description
-		if(typeString.equals(Result.Type.AFC.toString()))
-			textView.setText(context.getString(R.string.afcresult) + status);
-		else if(typeString.equals(Result.Type.AMH.toString()))
-			textView.setText(context.getString(R.string.amhresult) + status);
-		else
-			textView.setText(context.getString(R.string.ovaresult) + status);
+		if(typeString.equals(Result.Type.AFC.toString())){
+			if(isAgeAvailable)
+				textView.setText(context.getString(R.string.afcresult) + status);
+			else
+				textView.setText(context.getString(R.string.afcresult) + context.getString(R.string.resnotavail));
+		}
+		else if(typeString.equals(Result.Type.AMH.toString())){
+			if(isAgeAvailable)
+				textView.setText(context.getString(R.string.amhresult) + status);
+			else
+				textView.setText(context.getString(R.string.amhresult) + context.getString(R.string.resnotavail));
+		}
+		else{
+			if(isAgeAvailable)
+				textView.setText(context.getString(R.string.ovaresult) + status);
+			else
+				textView.setText(context.getString(R.string.ovaresult) + context.getString(R.string.resnotavail));
+		}
 		
 		//Set result view
 		//calcView.setText(context.getString(R.string.calcvalue) + valueString);		
