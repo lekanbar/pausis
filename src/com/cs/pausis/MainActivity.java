@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.core.pausis.R;
-import com.cs.pausis.controllers.OvaryReserve_Calculator;
+import com.cs.pausis.controllers.Central_Calculator;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
 
@@ -416,7 +416,7 @@ public class MainActivity extends Activity {
 						                         minute + (c.get(Calendar.AM_PM) == 0 ? " AM" : " PM"));
 		        userInputValues.setDateTime(datetime);
 		        
-		        OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, MainActivity.this, OvaryReserve_Calculator.MAIN_TYPE);
+		        Central_Calculator ovcalc = new Central_Calculator(userInputValues, MainActivity.this, Central_Calculator.MAIN_TYPE);
 		        ovcalc.execute("");
 			}
     	});

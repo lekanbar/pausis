@@ -77,7 +77,7 @@ public class HistoryAdapter extends ArrayAdapter<UserInputValues> {
 		if(!item.getAmhvolume().equals(""))
 			base += "AMH|";
 		if(!item.getOvarianvolume().equals(""))
-			base += "OVA|";
+			base += "OV|";
 		if(!item.getFsh().equals(""))
 			base += "FSH|";
 		textMonthView.setText(base);

@@ -43,8 +43,11 @@ import android.widget.TextView;
     private void InitializeUI(){
     	//Set up the privacy information
     	TextView lblPrivacy = (TextView)findViewById(R.id.lblPrivacy);
-    	lblPrivacy.setText(Html.fromHtml(getString(R.string.privacy) + "<a href=\"http://www.plosmedicine.org/article/info%3Adoi%2F10.1371%2Fjournal.pmed.1000386\">"
-        + getString(R.string.paper) + "</a>" + getString(R.string.privacy2)));
+    	lblPrivacy.setText(Html.fromHtml(getString(R.string.privacy) + getString(R.string.privacy2)));
+    	/*
+    	 * + "<a href=\"http://www.plosmedicine.org/article/info%3Adoi%2F10.1371%2Fjournal.pmed.1000386\">"
+        + getString(R.string.paper) + "</a>" 
+    	 */
     	lblPrivacy.setMovementMethod(LinkMovementMethod.getInstance());//Ensure the web browser is opened when the lick is clicked
     	
     	//Set the listener for the proceed button
@@ -71,6 +74,18 @@ import android.widget.TextView;
 		    	else{
 		    		finish();
 		    	}
+			}
+    	});
+    	
+    	//Set the listener for the proceed button
+    	Button cmdExit_button = (Button)findViewById(R.id.cmdExit);
+    	cmdExit_button.setOnClickListener(new OnClickListener(){
+
+			public void onClick(View arg0) {
+				Intent intent = new Intent(Intent.ACTION_MAIN);
+				intent.addCategory(Intent.CATEGORY_HOME);
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(intent);
 			}
     	});
     }

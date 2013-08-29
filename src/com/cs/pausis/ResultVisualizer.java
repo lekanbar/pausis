@@ -73,8 +73,8 @@ public class ResultVisualizer extends Activity  {
     		researchpaper = "http://www.sciencedirect.com/science/article/pii/S0015028210021953";
     		
     		//Show the gauge views for AFC
-    		GaugeViewForAFC mGaugeView3 = (GaugeViewForAFC) findViewById(R.id.gauge_view3);
-    		GaugeViewForAFC mGaugeView4 = (GaugeViewForAFC) findViewById(R.id.gauge_view4);
+    		GaugeViewPercentiles mGaugeView3 = (GaugeViewPercentiles) findViewById(R.id.gauge_view3);
+    		GaugeViewPercentiles mGaugeView4 = (GaugeViewPercentiles) findViewById(R.id.gauge_view4);
         	
     		//get the value from the array
     		Integer sd = Integer.valueOf(result.getValue());
@@ -88,8 +88,8 @@ public class ResultVisualizer extends Activity  {
     		laydefault.setVisibility(View.GONE);
     	}
     	else{
-			GaugeView mGaugeView1 = (GaugeView) findViewById(R.id.gauge_view1);
-			GaugeView mGaugeView2 = (GaugeView) findViewById(R.id.gauge_view2);
+			GaugeViewStandardDeviations mGaugeView1 = (GaugeViewStandardDeviations) findViewById(R.id.gauge_view1);
+			GaugeViewStandardDeviations mGaugeView2 = (GaugeViewStandardDeviations) findViewById(R.id.gauge_view2);
 	    	
 			//Get value to be set on the gauge
 			double fl = Float.parseFloat(result.getValue()) < 0 ? Math.floor(Float.parseFloat(result.getValue())) : Math.ceil(Float.parseFloat(result.getValue()));

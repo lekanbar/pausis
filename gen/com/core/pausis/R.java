@@ -300,7 +300,7 @@ containing a value of this type.
         public static final int toggle_up=0x7f020027;
     }
     public static final class id {
-        public static final int action_settings=0x7f090061;
+        public static final int action_settings=0x7f090062;
         public static final int birthmonth=0x7f090038;
         public static final int birthyear=0x7f090037;
         public static final int buttonA=0x7f090035;
@@ -308,36 +308,37 @@ containing a value of this type.
         public static final int calcvalue=0x7f090033;
         public static final int calside=0x7f090044;
         public static final int chart=0x7f09002b;
+        public static final int cmdExit=0x7f09004e;
         public static final int cmdOk=0x7f09000d;
-        public static final int cmdOverall=0x7f09004e;
+        public static final int cmdOverall=0x7f09004f;
         public static final int cmdProceed=0x7f090029;
         public static final int countrysearch_box=0x7f09004b;
         public static final int expandable=0x7f090034;
         public static final int expandable_toggle_button=0x7f090031;
-        public static final int gauge_view1=0x7f090058;
-        public static final int gauge_view2=0x7f090059;
-        public static final int gauge_view3=0x7f09005b;
-        public static final int gauge_view4=0x7f09005c;
+        public static final int gauge_view1=0x7f090059;
+        public static final int gauge_view2=0x7f09005a;
+        public static final int gauge_view3=0x7f09005c;
+        public static final int gauge_view4=0x7f09005d;
         public static final int imgAMH=0x7f090020;
         public static final int imgAfc=0x7f090026;
         public static final int imgExplanantion=0x7f090041;
         public static final int imgFSH=0x7f09001f;
         public static final int imgIndicator=0x7f090030;
-        public static final int imgMMA=0x7f090056;
+        public static final int imgMMA=0x7f090057;
         public static final int imgMMage=0x7f090019;
         public static final int imgMenu=0x7f09003c;
-        public static final int imgNGF=0x7f090051;
+        public static final int imgNGF=0x7f090052;
         public static final int imgPeriod=0x7f09001d;
         public static final int imgVolume=0x7f090023;
         public static final int imgchart=0x7f09002c;
         public static final int item=0x7f09002f;
         public static final int layCopyright=0x7f090048;
-        public static final int layafc=0x7f09005a;
-        public static final int laydefault=0x7f090057;
-        public static final int layfsh=0x7f090052;
+        public static final int layafc=0x7f09005b;
+        public static final int laydefault=0x7f090058;
+        public static final int layfsh=0x7f090053;
         public static final int layimgexplanation=0x7f090040;
-        public static final int laymma=0x7f090054;
-        public static final int layngf=0x7f09004f;
+        public static final int laymma=0x7f090055;
+        public static final int layngf=0x7f090050;
         public static final int laytop=0x7f09003e;
         public static final int lblCopyright=0x7f090049;
         public static final int lblDetails=0x7f090043;
@@ -348,8 +349,8 @@ containing a value of this type.
         public static final int lblbirthmon=0x7f090011;
         public static final int lbldescription=0x7f09002e;
         public static final int lblheight=0x7f090013;
-        public static final int lblrecommendation=0x7f09005d;
-        public static final int lblresearch=0x7f09005e;
+        public static final int lblrecommendation=0x7f09005e;
+        public static final int lblresearch=0x7f09005f;
         public static final int lblstatus=0x7f09002d;
         public static final int lblweight=0x7f090016;
         public static final int list=0x7f09003f;
@@ -378,21 +379,21 @@ containing a value of this type.
         public static final int txtAfc=0x7f090027;
         public static final int txtAfcRight=0x7f090028;
         public static final int txtFSH=0x7f09001e;
-        public static final int txtFshResult=0x7f090053;
-        public static final int txtMMAResult=0x7f090055;
+        public static final int txtFshResult=0x7f090054;
+        public static final int txtMMAResult=0x7f090056;
         public static final int txtMMenopauseAge=0x7f090018;
-        public static final int txtNGFResult=0x7f090050;
+        public static final int txtNGFResult=0x7f090051;
         public static final int txtVolume=0x7f090024;
         public static final int txtVolumeRight=0x7f090025;
         public static final int txtWeight=0x7f090017;
         public static final int txttop=0x7f09000e;
-        public static final int webview1=0x7f090060;
+        public static final int webview1=0x7f090061;
         public static final int wid112345=0x7f090005;
         public static final int wid321t3345=0x7f090007;
         public static final int wid3cxz3345=0x7f09000a;
         public static final int widg908345=0x7f090008;
         public static final int widget41=0x7f09003d;
-        public static final int widget42=0x7f09005f;
+        public static final int widget42=0x7f090060;
         public static final int widget4212=0x7f090003;
         public static final int widget43=0x7f090002;
         public static final int widget43345=0x7f090004;
@@ -425,133 +426,134 @@ containing a value of this type.
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int aboutus=0x7f06007a;
-        public static final int aboutus1=0x7f06007b;
-        public static final int aboutus2=0x7f06007c;
-        public static final int aboutus3=0x7f06007d;
-        public static final int aboutus4=0x7f06007e;
-        public static final int aboutus5=0x7f06007f;
-        public static final int aboutus6=0x7f060080;
-        public static final int abovemean=0x7f060066;
+        public static final int aboutus=0x7f06007b;
+        public static final int aboutus1=0x7f06007c;
+        public static final int aboutus2=0x7f06007d;
+        public static final int aboutus3=0x7f06007e;
+        public static final int aboutus4=0x7f06007f;
+        public static final int aboutus5=0x7f060080;
+        public static final int aboutus6=0x7f060081;
+        public static final int abovemean=0x7f060067;
         public static final int action_settings=0x7f060001;
-        public static final int afc=0x7f06003f;
-        public static final int afcdescription=0x7f060062;
-        public static final int afchint=0x7f060041;
-        public static final int afcresult=0x7f060050;
-        public static final int afcvalue=0x7f060040;
-        public static final int afcvaluetext=0x7f060042;
+        public static final int afc=0x7f060040;
+        public static final int afcdescription=0x7f060063;
+        public static final int afchint=0x7f060042;
+        public static final int afcresult=0x7f060051;
+        public static final int afcvalue=0x7f060041;
+        public static final int afcvaluetext=0x7f060043;
         public static final int age=0x7f060004;
         public static final int ageerror=0x7f060025;
         public static final int ageerrortitle=0x7f060024;
         public static final int allrights=0x7f060012;
-        public static final int amh=0x7f060033;
-        public static final int amhdescription=0x7f060064;
-        public static final int amhhint=0x7f060035;
-        public static final int amhresult=0x7f060051;
-        public static final int amhvalue=0x7f060034;
-        public static final int amhvaluetext=0x7f060036;
+        public static final int amh=0x7f060034;
+        public static final int amhdescription=0x7f060065;
+        public static final int amhhint=0x7f060036;
+        public static final int amhresult=0x7f060052;
+        public static final int amhvalue=0x7f060035;
+        public static final int amhvaluetext=0x7f060037;
         public static final int and=0x7f060009;
         public static final int app_name=0x7f060000;
-        public static final int average=0x7f060073;
-        public static final int belowmean=0x7f060067;
-        public static final int birthmonth=0x7f06004a;
-        public static final int birthyear=0x7f060049;
-        public static final int bmi=0x7f060075;
-        public static final int bmivaluetext=0x7f060046;
+        public static final int average=0x7f060074;
+        public static final int belowmean=0x7f060068;
+        public static final int birthmonth=0x7f06004b;
+        public static final int birthyear=0x7f06004a;
+        public static final int bmi=0x7f060076;
+        public static final int bmivaluetext=0x7f060047;
         public static final int body=0x7f060017;
-        public static final int calcing=0x7f06004e;
-        public static final int calcvalue=0x7f06004f;
+        public static final int calcing=0x7f06004f;
+        public static final int calcvalue=0x7f060050;
         public static final int cancel=0x7f060029;
-        public static final int choosebirthmonth=0x7f06004c;
-        public static final int choosebirthyear=0x7f06004b;
+        public static final int choosebirthmonth=0x7f06004d;
+        public static final int choosebirthyear=0x7f06004c;
         public static final int chooseheight=0x7f060016;
         public static final int copyright=0x7f060010;
         public static final int delItem=0x7f06002b;
         public static final int delete=0x7f060028;
-        public static final int descriptiontitle=0x7f060061;
+        public static final int descriptiontitle=0x7f060062;
         public static final int empty=0x7f060003;
+        public static final int exit=0x7f06002e;
         public static final int firstuse=0x7f06000e;
         public static final int firstusetitle=0x7f06000f;
         public static final int fromblood=0x7f060018;
         public static final int fromultrasound=0x7f060019;
-        public static final int fsh=0x7f060037;
-        public static final int fshhint=0x7f060039;
-        public static final int fshresult=0x7f060053;
-        public static final int fshvalue=0x7f060038;
-        public static final int fshvaluetext=0x7f06003a;
-        public static final int general=0x7f060072;
-        public static final int generaladvice=0x7f060071;
-        public static final int genetics=0x7f060076;
+        public static final int fsh=0x7f060038;
+        public static final int fshhint=0x7f06003a;
+        public static final int fshresult=0x7f060054;
+        public static final int fshvalue=0x7f060039;
+        public static final int fshvaluetext=0x7f06003b;
+        public static final int general=0x7f060073;
+        public static final int generaladvice=0x7f060072;
+        public static final int genetics=0x7f060077;
         public static final int genetics2=0x7f06001a;
         public static final int goback=0x7f06002a;
         public static final int height=0x7f060015;
-        public static final int here=0x7f060069;
+        public static final int here=0x7f06006a;
         public static final int history=0x7f06001f;
         public static final int howold=0x7f060006;
         public static final int iam=0x7f060008;
-        public static final int info=0x7f060048;
+        public static final int info=0x7f060049;
         public static final int leftov=0x7f06000c;
-        public static final int mage=0x7f060030;
+        public static final int mage=0x7f060031;
         public static final int medic=0x7f060005;
-        public static final int menopause=0x7f06002e;
-        public static final int menopause2=0x7f06002f;
+        public static final int menopause=0x7f06002f;
+        public static final int menopause2=0x7f060030;
         public static final int menu=0x7f060020;
-        public static final int mmagevaluetext=0x7f060031;
-        public static final int mmagevaluetext2=0x7f060032;
-        public static final int mmaresult=0x7f060054;
+        public static final int mmagevaluetext=0x7f060032;
+        public static final int mmagevaluetext2=0x7f060033;
+        public static final int mmaresult=0x7f060055;
         public static final int months=0x7f06000b;
         public static final int name=0x7f060011;
-        public static final int negative=0x7f060057;
-        public static final int negativerecommendation=0x7f06006c;
-        public static final int neutral=0x7f060058;
-        public static final int neutralrecommendation=0x7f06006b;
-        public static final int ngfresult=0x7f060055;
-        public static final int ngfvalue=0x7f060043;
-        public static final int ngfvaluetext=0x7f060044;
+        public static final int negative=0x7f060058;
+        public static final int negativerecommendation=0x7f06006d;
+        public static final int neutral=0x7f060059;
+        public static final int neutralrecommendation=0x7f06006c;
+        public static final int ngfresult=0x7f060056;
+        public static final int ngfvalue=0x7f060044;
+        public static final int ngfvaluetext=0x7f060045;
         public static final int no=0x7f06001d;
         public static final int nousage=0x7f060022;
-        public static final int ok=0x7f060083;
-        public static final int ovadescription=0x7f060065;
-        public static final int ovaresult=0x7f060052;
+        public static final int ok=0x7f060084;
+        public static final int ovadescription=0x7f060066;
+        public static final int ovaresult=0x7f060053;
         public static final int ovaryres=0x7f060002;
         public static final int overall=0x7f06001e;
-        public static final int paper=0x7f060070;
-        public static final int parity=0x7f060078;
+        public static final int paper=0x7f060071;
+        public static final int parity=0x7f060079;
         public static final int pcalc=0x7f060021;
-        public static final int percentile=0x7f060063;
+        public static final int percentile=0x7f060064;
         public static final int periods=0x7f06001b;
-        public static final int plswait=0x7f06005a;
-        public static final int positive=0x7f060056;
-        public static final int positiverecommendation=0x7f06006a;
-        public static final int privacy=0x7f06006d;
-        public static final int privacy2=0x7f06006e;
-        public static final int privacytitle=0x7f06006f;
-        public static final int proceed=0x7f060047;
-        public static final int race=0x7f060077;
-        public static final int readmore=0x7f060081;
+        public static final int plswait=0x7f06005b;
+        public static final int positive=0x7f060057;
+        public static final int positiverecommendation=0x7f06006b;
+        public static final int privacy=0x7f06006e;
+        public static final int privacy2=0x7f06006f;
+        public static final int privacytitle=0x7f060070;
+        public static final int proceed=0x7f060048;
+        public static final int race=0x7f060078;
+        public static final int readmore=0x7f060082;
         public static final int required=0x7f060007;
-        public static final int research=0x7f060068;
+        public static final int research=0x7f060069;
         public static final int resnotavail=0x7f06002c;
         public static final int resnotavailfull=0x7f06002d;
-        public static final int result=0x7f06005c;
-        public static final int resultmessage=0x7f06005e;
-        public static final int resultstatus=0x7f06005d;
-        public static final int resulttitle=0x7f06005b;
-        public static final int resvisual=0x7f060059;
+        public static final int result=0x7f06005d;
+        public static final int resultmessage=0x7f06005f;
+        public static final int resultstatus=0x7f06005e;
+        public static final int resulttitle=0x7f06005c;
+        public static final int resvisual=0x7f06005a;
         public static final int rightov=0x7f06000d;
-        public static final int sampletext=0x7f060079;
-        public static final int smoking=0x7f060074;
-        public static final int smokingtext=0x7f060045;
-        public static final int summary=0x7f060082;
+        public static final int sampletext=0x7f06007a;
+        public static final int smoking=0x7f060075;
+        public static final int smokingtext=0x7f060046;
+        public static final int summary=0x7f060083;
         public static final int todo=0x7f060026;
-        public static final int typecountry=0x7f06004d;
+        public static final int typecountry=0x7f06004e;
         public static final int view=0x7f060027;
-        public static final int visualize=0x7f060060;
-        public static final int visualizer=0x7f06005f;
-        public static final int vol=0x7f06003b;
-        public static final int volhint=0x7f06003d;
-        public static final int volvalue=0x7f06003c;
-        public static final int volvaluetext=0x7f06003e;
+        public static final int visualize=0x7f060061;
+        public static final int visualizer=0x7f060060;
+        public static final int vol=0x7f06003c;
+        public static final int volhint=0x7f06003e;
+        public static final int volvalue=0x7f06003d;
+        public static final int volvaluetext=0x7f06003f;
         public static final int web=0x7f060023;
         public static final int weight=0x7f060013;
         public static final int weighthint=0x7f060014;
@@ -587,75 +589,75 @@ containing a value of this type.
         public static final int AppTheme=0x7f070001;
     }
     public static final class styleable {
-        /** Attributes that can be used with a GaugeView.
+        /** Attributes that can be used with a GaugeViewStandardDeviations.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #GaugeView_divisions com.core.pausis:divisions}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_innerRimBorderWidth com.core.pausis:innerRimBorderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_innerRimWidth com.core.pausis:innerRimWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_needleHeight com.core.pausis:needleHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_needleWidth com.core.pausis:needleWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_outerBorderWidth com.core.pausis:outerBorderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_outerRimWidth com.core.pausis:outerRimWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_outerShadowWidth com.core.pausis:outerShadowWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_rangeColors com.core.pausis:rangeColors}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_rangeValues com.core.pausis:rangeValues}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_scaleEndValue com.core.pausis:scaleEndValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_scalePosition com.core.pausis:scalePosition}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_scaleStartAngle com.core.pausis:scaleStartAngle}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_scaleStartValue com.core.pausis:scaleStartValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showInnerRim com.core.pausis:showInnerRim}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showNeedle com.core.pausis:showNeedle}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showOuterBorder com.core.pausis:showOuterBorder}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showOuterRim com.core.pausis:showOuterRim}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showOuterShadow com.core.pausis:showOuterShadow}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showRanges com.core.pausis:showRanges}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showScale com.core.pausis:showScale}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_showText com.core.pausis:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_subdivisions com.core.pausis:subdivisions}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textShadowColor com.core.pausis:textShadowColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textUnit com.core.pausis:textUnit}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textUnitColor com.core.pausis:textUnitColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textUnitSize com.core.pausis:textUnitSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textValue com.core.pausis:textValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textValueColor com.core.pausis:textValueColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #GaugeView_textValueSize com.core.pausis:textValueSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_divisions com.core.pausis:divisions}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_innerRimBorderWidth com.core.pausis:innerRimBorderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_innerRimWidth com.core.pausis:innerRimWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_needleHeight com.core.pausis:needleHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_needleWidth com.core.pausis:needleWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_outerBorderWidth com.core.pausis:outerBorderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_outerRimWidth com.core.pausis:outerRimWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_outerShadowWidth com.core.pausis:outerShadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_rangeColors com.core.pausis:rangeColors}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_rangeValues com.core.pausis:rangeValues}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_scaleEndValue com.core.pausis:scaleEndValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_scalePosition com.core.pausis:scalePosition}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_scaleStartAngle com.core.pausis:scaleStartAngle}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_scaleStartValue com.core.pausis:scaleStartValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showInnerRim com.core.pausis:showInnerRim}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showNeedle com.core.pausis:showNeedle}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showOuterBorder com.core.pausis:showOuterBorder}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showOuterRim com.core.pausis:showOuterRim}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showOuterShadow com.core.pausis:showOuterShadow}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showRanges com.core.pausis:showRanges}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showScale com.core.pausis:showScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_showText com.core.pausis:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_subdivisions com.core.pausis:subdivisions}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textShadowColor com.core.pausis:textShadowColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textUnit com.core.pausis:textUnit}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textUnitColor com.core.pausis:textUnitColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textUnitSize com.core.pausis:textUnitSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textValue com.core.pausis:textValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textValueColor com.core.pausis:textValueColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #GaugeViewStandardDeviations_textValueSize com.core.pausis:textValueSize}</code></td><td></td></tr>
            </table>
-           @see #GaugeView_divisions
-           @see #GaugeView_innerRimBorderWidth
-           @see #GaugeView_innerRimWidth
-           @see #GaugeView_needleHeight
-           @see #GaugeView_needleWidth
-           @see #GaugeView_outerBorderWidth
-           @see #GaugeView_outerRimWidth
-           @see #GaugeView_outerShadowWidth
-           @see #GaugeView_rangeColors
-           @see #GaugeView_rangeValues
-           @see #GaugeView_scaleEndValue
-           @see #GaugeView_scalePosition
-           @see #GaugeView_scaleStartAngle
-           @see #GaugeView_scaleStartValue
-           @see #GaugeView_showInnerRim
-           @see #GaugeView_showNeedle
-           @see #GaugeView_showOuterBorder
-           @see #GaugeView_showOuterRim
-           @see #GaugeView_showOuterShadow
-           @see #GaugeView_showRanges
-           @see #GaugeView_showScale
-           @see #GaugeView_showText
-           @see #GaugeView_subdivisions
-           @see #GaugeView_textShadowColor
-           @see #GaugeView_textUnit
-           @see #GaugeView_textUnitColor
-           @see #GaugeView_textUnitSize
-           @see #GaugeView_textValue
-           @see #GaugeView_textValueColor
-           @see #GaugeView_textValueSize
+           @see #GaugeViewStandardDeviations_divisions
+           @see #GaugeViewStandardDeviations_innerRimBorderWidth
+           @see #GaugeViewStandardDeviations_innerRimWidth
+           @see #GaugeViewStandardDeviations_needleHeight
+           @see #GaugeViewStandardDeviations_needleWidth
+           @see #GaugeViewStandardDeviations_outerBorderWidth
+           @see #GaugeViewStandardDeviations_outerRimWidth
+           @see #GaugeViewStandardDeviations_outerShadowWidth
+           @see #GaugeViewStandardDeviations_rangeColors
+           @see #GaugeViewStandardDeviations_rangeValues
+           @see #GaugeViewStandardDeviations_scaleEndValue
+           @see #GaugeViewStandardDeviations_scalePosition
+           @see #GaugeViewStandardDeviations_scaleStartAngle
+           @see #GaugeViewStandardDeviations_scaleStartValue
+           @see #GaugeViewStandardDeviations_showInnerRim
+           @see #GaugeViewStandardDeviations_showNeedle
+           @see #GaugeViewStandardDeviations_showOuterBorder
+           @see #GaugeViewStandardDeviations_showOuterRim
+           @see #GaugeViewStandardDeviations_showOuterShadow
+           @see #GaugeViewStandardDeviations_showRanges
+           @see #GaugeViewStandardDeviations_showScale
+           @see #GaugeViewStandardDeviations_showText
+           @see #GaugeViewStandardDeviations_subdivisions
+           @see #GaugeViewStandardDeviations_textShadowColor
+           @see #GaugeViewStandardDeviations_textUnit
+           @see #GaugeViewStandardDeviations_textUnitColor
+           @see #GaugeViewStandardDeviations_textUnitSize
+           @see #GaugeViewStandardDeviations_textValue
+           @see #GaugeViewStandardDeviations_textValueColor
+           @see #GaugeViewStandardDeviations_textValueSize
          */
-        public static final int[] GaugeView = {
+        public static final int[] GaugeViewStandardDeviations = {
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
             0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
             0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
@@ -667,7 +669,7 @@ containing a value of this type.
         };
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#divisions}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
@@ -678,10 +680,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:divisions
         */
-        public static final int GaugeView_divisions = 19;
+        public static final int GaugeViewStandardDeviations_divisions = 19;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#innerRimBorderWidth}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -692,10 +694,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:innerRimBorderWidth
         */
-        public static final int GaugeView_innerRimBorderWidth = 12;
+        public static final int GaugeViewStandardDeviations_innerRimBorderWidth = 12;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#innerRimWidth}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -706,10 +708,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:innerRimWidth
         */
-        public static final int GaugeView_innerRimWidth = 11;
+        public static final int GaugeViewStandardDeviations_innerRimWidth = 11;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#needleHeight}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -720,10 +722,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:needleHeight
         */
-        public static final int GaugeView_needleHeight = 14;
+        public static final int GaugeViewStandardDeviations_needleHeight = 14;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#needleWidth}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -734,10 +736,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:needleWidth
         */
-        public static final int GaugeView_needleWidth = 13;
+        public static final int GaugeViewStandardDeviations_needleWidth = 13;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#outerBorderWidth}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -748,10 +750,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:outerBorderWidth
         */
-        public static final int GaugeView_outerBorderWidth = 9;
+        public static final int GaugeViewStandardDeviations_outerBorderWidth = 9;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#outerRimWidth}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -762,10 +764,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:outerRimWidth
         */
-        public static final int GaugeView_outerRimWidth = 10;
+        public static final int GaugeViewStandardDeviations_outerRimWidth = 10;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#outerShadowWidth}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -776,30 +778,30 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:outerShadowWidth
         */
-        public static final int GaugeView_outerShadowWidth = 8;
+        public static final int GaugeViewStandardDeviations_outerShadowWidth = 8;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#rangeColors}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name android:rangeColors
         */
-        public static final int GaugeView_rangeColors = 22;
+        public static final int GaugeViewStandardDeviations_rangeColors = 22;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#rangeValues}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name android:rangeValues
         */
-        public static final int GaugeView_rangeValues = 21;
+        public static final int GaugeViewStandardDeviations_rangeValues = 21;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scaleEndValue}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -810,10 +812,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:scaleEndValue
         */
-        public static final int GaugeView_scaleEndValue = 17;
+        public static final int GaugeViewStandardDeviations_scaleEndValue = 17;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scalePosition}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -824,10 +826,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:scalePosition
         */
-        public static final int GaugeView_scalePosition = 15;
+        public static final int GaugeViewStandardDeviations_scalePosition = 15;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scaleStartAngle}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -838,10 +840,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:scaleStartAngle
         */
-        public static final int GaugeView_scaleStartAngle = 18;
+        public static final int GaugeViewStandardDeviations_scaleStartAngle = 18;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#scaleStartValue}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -852,10 +854,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:scaleStartValue
         */
-        public static final int GaugeView_scaleStartValue = 16;
+        public static final int GaugeViewStandardDeviations_scaleStartValue = 16;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showInnerRim}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -866,10 +868,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showInnerRim
         */
-        public static final int GaugeView_showInnerRim = 3;
+        public static final int GaugeViewStandardDeviations_showInnerRim = 3;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showNeedle}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -880,10 +882,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showNeedle
         */
-        public static final int GaugeView_showNeedle = 4;
+        public static final int GaugeViewStandardDeviations_showNeedle = 4;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showOuterBorder}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -894,10 +896,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showOuterBorder
         */
-        public static final int GaugeView_showOuterBorder = 1;
+        public static final int GaugeViewStandardDeviations_showOuterBorder = 1;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showOuterRim}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -908,10 +910,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showOuterRim
         */
-        public static final int GaugeView_showOuterRim = 2;
+        public static final int GaugeViewStandardDeviations_showOuterRim = 2;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showOuterShadow}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -922,10 +924,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showOuterShadow
         */
-        public static final int GaugeView_showOuterShadow = 0;
+        public static final int GaugeViewStandardDeviations_showOuterShadow = 0;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showRanges}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -936,10 +938,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showRanges
         */
-        public static final int GaugeView_showRanges = 6;
+        public static final int GaugeViewStandardDeviations_showRanges = 6;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showScale}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -950,10 +952,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showScale
         */
-        public static final int GaugeView_showScale = 5;
+        public static final int GaugeViewStandardDeviations_showScale = 5;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#showText}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -964,10 +966,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:showText
         */
-        public static final int GaugeView_showText = 7;
+        public static final int GaugeViewStandardDeviations_showText = 7;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#subdivisions}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
@@ -978,10 +980,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:subdivisions
         */
-        public static final int GaugeView_subdivisions = 20;
+        public static final int GaugeViewStandardDeviations_subdivisions = 20;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textShadowColor}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -993,10 +995,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:textShadowColor
         */
-        public static final int GaugeView_textShadowColor = 29;
+        public static final int GaugeViewStandardDeviations_textShadowColor = 29;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textUnit}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1004,10 +1006,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
           @attr name android:textUnit
         */
-        public static final int GaugeView_textUnit = 26;
+        public static final int GaugeViewStandardDeviations_textUnit = 26;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textUnitColor}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -1019,10 +1021,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:textUnitColor
         */
-        public static final int GaugeView_textUnitColor = 27;
+        public static final int GaugeViewStandardDeviations_textUnitColor = 27;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textUnitSize}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -1033,10 +1035,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:textUnitSize
         */
-        public static final int GaugeView_textUnitSize = 28;
+        public static final int GaugeViewStandardDeviations_textUnitSize = 28;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textValue}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1044,10 +1046,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
           @attr name android:textValue
         */
-        public static final int GaugeView_textValue = 23;
+        public static final int GaugeViewStandardDeviations_textValue = 23;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textValueColor}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -1059,10 +1061,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:textValueColor
         */
-        public static final int GaugeView_textValueColor = 24;
+        public static final int GaugeViewStandardDeviations_textValueColor = 24;
         /**
           <p>This symbol is the offset where the {@link com.core.pausis.R.attr#textValueSize}
-          attribute's value can be found in the {@link #GaugeView} array.
+          attribute's value can be found in the {@link #GaugeViewStandardDeviations} array.
 
 
           <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -1073,6 +1075,6 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:textValueSize
         */
-        public static final int GaugeView_textValueSize = 25;
+        public static final int GaugeViewStandardDeviations_textValueSize = 25;
     };
 }

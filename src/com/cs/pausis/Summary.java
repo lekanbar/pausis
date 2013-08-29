@@ -38,7 +38,7 @@ import android.widget.TextView;
 	 static boolean isviolated = false;
 	 double result;
 	 ArrayList<Result> results;
-	 ResultAdapter adapter;
+	 ResultListAdapter adapter;
 	 
 	 Result fshResult, mmaResult, ngfResult;
 	 
@@ -191,7 +191,7 @@ import android.widget.TextView;
 		}
     	
     	//Set up the expandable list
-    	adapter = new ResultAdapter(this, R.layout.expandable_list_item, results);
+    	adapter = new ResultListAdapter(this, R.layout.expandable_list_item, results);
     	ActionSlideExpandableListView list = (ActionSlideExpandableListView)this.findViewById(R.id.list);
     	// fill the list with data
 		list.setAdapter(adapter);

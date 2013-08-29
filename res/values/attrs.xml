@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="GaugeView">
+    <declare-styleable name="GaugeViewStandardDeviations">
         <attr name="showOuterShadow" format="boolean" />
         <attr name="showOuterBorder" format="boolean" />
         <attr name="showOuterRim" format="boolean" />

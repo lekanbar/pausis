@@ -3,7 +3,7 @@ package com.cs.pausis;
 import java.util.ArrayList;
 
 import com.core.pausis.R;
-import com.cs.pausis.controllers.OvaryReserve_Calculator;
+import com.cs.pausis.controllers.Central_Calculator;
 import com.cs.pausis.models.Result;
 import com.cs.pausis.models.UserInputValues;
 
@@ -84,7 +84,7 @@ public class History extends Activity {
 	    			        dialog.setMax(60);
 	    			        dialog.show();
 	    			        
-	    	            	OvaryReserve_Calculator ovcalc = new OvaryReserve_Calculator(userInputValues, History.this, OvaryReserve_Calculator.SUMMARY_TYPE);
+	    	            	Central_Calculator ovcalc = new Central_Calculator(userInputValues, History.this, Central_Calculator.SUMMARY_TYPE);
 	    			        ovcalc.execute("");
 	    				}
 	    			});

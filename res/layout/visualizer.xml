@@ -47,14 +47,14 @@
 				android:layout_height="wrap_content"
 				android:orientation="vertical"
 				>
-				<com.cs.pausis.GaugeView
+				<com.cs.pausis.GaugeViewStandardDeviations
 			        android:id="@+id/gauge_view1"
 			        android:layout_width="match_parent"
 			        android:layout_height="0dp"
 			        android:layout_gravity="center"
 			        android:layout_weight="1" />
 	
-		    	<com.cs.pausis.GaugeView
+		    	<com.cs.pausis.GaugeViewStandardDeviations
 			        android:id="@+id/gauge_view2"
 			        android:layout_width="150dp"
 			        android:layout_height="150dp"
@@ -74,14 +74,14 @@
 				android:orientation="vertical"
 				android:visibility="gone"
 				>
-				<com.cs.pausis.GaugeViewForAFC
+				<com.cs.pausis.GaugeViewPercentiles
 			        android:id="@+id/gauge_view3"
 			        android:layout_width="match_parent"
 			        android:layout_height="0dp"
 			        android:layout_gravity="center"
 			        android:layout_weight="1" />
 	
-		    	<com.cs.pausis.GaugeViewForAFC
+		    	<com.cs.pausis.GaugeViewPercentiles
 			        android:id="@+id/gauge_view4"
 			        android:layout_width="150dp"
 			        android:layout_height="150dp"
