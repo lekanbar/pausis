@@ -260,7 +260,8 @@
 				android:layout_height="wrap_content"
 				android:orientation="vertical"
 				android:layout_gravity="center"
-				android:background="@drawable/bgshape2"
+				android:paddingBottom="10dp"
+				android:background="@drawable/bgshape3"
 				>
 				<!--<LinearLayout
 					android:layout_width="match_parent"
