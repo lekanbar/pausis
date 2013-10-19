@@ -42,7 +42,7 @@ import android.widget.TextView;
     	});
     	
     	TextView lblLearnMore1 = (TextView)findViewById(R.id.readmore1);
-    	lblLearnMore1.setText(Html.fromHtml("<a href=\"http://www.gla.ac.uk/schools/medicine/staff/scottnelson/\">"
+    	lblLearnMore1.setText(Html.fromHtml("<a href=\"http://www.mendeley.com/profiles/hamish-wallace/\">"
                               + getString(R.string.readmore) + "</a>"));
     	lblLearnMore1.setMovementMethod(LinkMovementMethod.getInstance());
     	
