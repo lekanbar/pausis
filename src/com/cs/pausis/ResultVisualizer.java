@@ -146,7 +146,10 @@ public class ResultVisualizer extends Activity  {
         
         //Show the description of the message
         TextView lblDesc = (TextView)findViewById(R.id.lbldescription);
-        lblDesc.setText(Html.fromHtml("<b>" + getString(R.string.descriptiontitle) + "</b>" + resultmessage + " " + recommendation));
+        lblDesc.setText(Html.fromHtml("<b>" + getString(R.string.descriptiontitle) + "</b>" + resultmessage));
+        
+        TextView lblRecomm = (TextView)findViewById(R.id.lblrecommendation);
+        lblRecomm.setText(recommendation);
         
         TextView lblResearch = (TextView)findViewById(R.id.lblresearch);
         lblResearch.setText(Html.fromHtml(getString(R.string.research) + "<a href=\"" + researchpaper + "\">" + getString(R.string.here) + "</a>"));

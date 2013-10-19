@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.KeyEvent;
@@ -22,8 +21,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -92,7 +89,7 @@ public class MainActivity extends Activity {
      */
 	private void InitializeUI(){
 		//Close soft keyboard by default
-		EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
+		/*EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(txtWeight.getWindowToken(), 0);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -131,7 +128,7 @@ public class MainActivity extends Activity {
             public void onNothingSelected(AdapterView<?> parent) {
               // Do nothing.
             }
-        });
+        });*/
         
         //Set AMH unit list
         Spinner spinAmhUnit = (Spinner) findViewById(R.id.spinAmhUnit);
@@ -315,7 +312,7 @@ public class MainActivity extends Activity {
 				EditText txtAfcRight = (EditText)findViewById(R.id.txtAfcRight);
 				EditText txtFsh = (EditText)findViewById(R.id.txtFSH);
 				EditText txtMMenopauseAge = (EditText)findViewById(R.id.txtMMenopauseAge);
-				EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
+				//EditText txtWeight = (EditText)findViewById(R.id.txtWeight);
 				
 				RadioButton radioYes = (RadioButton)findViewById(R.id.radioYes);
 				RadioButton radioNo = (RadioButton)findViewById(R.id.radioNo);
@@ -377,14 +374,14 @@ public class MainActivity extends Activity {
 					regularPeriods = (radioYes.isChecked() ? "yes" : "no");
 					max += 10;
 				}
-				if(chosenHeight > 0.0 && !txtWeight.getText().toString().equals("")){
+				/*if(chosenHeight > 0.0 && !txtWeight.getText().toString().equals("")){
 					if(!txtWeight.getText().toString().equals("0")){
 						//for dialog max value
 						weight = convertWeight(Double.valueOf(txtWeight.getText().toString()));
 						height = String.valueOf(chosenHeight);
 						max += 10;
 					}
-				}
+				}*/
 				
 				//Show dialog to indicate progress
 				dialog = new ProgressDialog(MainActivity.this);

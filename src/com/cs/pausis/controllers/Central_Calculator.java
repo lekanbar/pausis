@@ -267,7 +267,15 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     			results.add(result2);
     		}
     		if(this.mothersMenopauseAge != null){
-    			result2 = new Result();    			
+    			result2 = new Result();  
+    			
+    			if(mothersMenopauseAge.doubleValue() < 40)
+    				result2.setStatus(Result.Status.RED.toString());
+    			else if(mothersMenopauseAge.doubleValue() < 45)
+    				result2.setStatus(Result.Status.ORANGE.toString());
+    			else
+    				result2.setStatus(Result.Status.GREEN.toString());
+    			
     			result2.setValue(String.valueOf(mmAge.getPercentage()));
     			result2.setType(Result.Type.MMA.toString());
     			result2.setResultAvailable(mmAge.isResultAvailable());

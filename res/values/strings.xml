@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Ovaries</string>
+    <string name="app_name">My Eggs</string>
     <string name="action_settings">Settings</string>
-    <string name="ovaryres">My Ovaries</string>
+    <string name="ovaryres">My Eggs</string>
     <string name="empty"></string>
     <string name="age">Personal Details</string>
     <string name="medic">Medical Details</string>
@@ -51,7 +51,9 @@
     <string name="menopause">"Your Mother's Age at Menopause (if known)"</string>
     <string name="menopause2">"Mother's Age at Menopause"</string>
     <string name="mage">"Mother's age"</string>
-    <string name="mmagevaluetext">"There is substantial evidence that genetic factors play a major role in determining a woman’s age at menopause. 
+    <string name="mmagevaluetext">"Menopause typically occurs at age 50-51 years, but there is a large range. Menopause before age 45 is early menopause, and menopause before age 40 is known as Premature Ovarian Insufficiency (POI).
+        \n\n
+        There is substantial evidence that genetic factors play a major role in determining a woman’s age at menopause. 
         It is likely that this influence is exerted through an effect on ovarian reserve. 
         One of the most frequently studied areas is the association between mothers’ and daughters’ ages at menopause. 
         Since mothers and daughters share 50% of their genes, if age at menopause is affected by genetic factors, 
@@ -61,9 +63,9 @@
     <string name="amh">AMH value.</string>
     <string name="amhvalue">AMH Value (ng/L or pm/L)</string>
     <string name="amhhint">Your AMH value</string>
-    <string name="amhvaluetext">Anti-Mullerian Hormone value is derived from undergoing a blood test. AMH is a natural protein that plays a 
-        major role in the development of the primary ovarian follicles. Research has shown that there is a significant correlation between serum AMH and the number of follicles in the ovaries. Therefore, 
-        it is an important part of the predictive measures of the ovarian reserve levels in humans. It is important to note that the AMH value peaks at approximately the age of 25.</string>
+    <string name="amhvaluetext">"
+        Your Anti-Mullerian Hormone (AMH) value is derived from a blood test. It has recently been shown that AMH provides an indirect measure of certain aspects of ovarian function, useful in predicting outcomes for asssisted conception attempts, and in assessing conditions such as polycystic ovary syndrome and premature ovarian insufficiency."
+        </string>
     
     <string name="fsh">FSH value.</string>
     <string name="fshvalue">FSH Value (IU/L)</string>
@@ -122,7 +124,11 @@
     <string name="fshYresult">Your FSH level may be abnormally high.</string>
     <string name="fshRresult">Your FSH level is abnormally high.</string>
     
-    <string name="mmaresult">"Chance of Live Birth by Mother's Menopause Age is:\u0020"</string>
+    <string name="mmaGresult">"Your Mother's age at menopause was within normal ranges."</string>
+    <string name="mmaYresult">"Your Mother's age at menopause was significantly lower than average."</string>
+    <string name="mmaRresult">"Your Mother had Premature Ovarian Insufficiency - this may be cause for concern."</string>
+    
+    
     <string name="ngfresult1">"You have about\u0020"</string>
     <string name="ngfresult2">"\u0020of the eggs you were born with. In 3 years time this percentage is estimated to be:\u0020"</string>
     
@@ -142,7 +148,7 @@
     
     <string name="afcdescription">Based on the Antral-Follicle count (AFC) result, your status is determined to be at the\u0020</string>
     <string name="percentile">\u0020percentile above the general pouplation mean, as indicated on the gauge above.</string>
-    <string name="amhdescription">Based on the level of Anti-Mullerian Hormone (AMH) in your blood, your status is determined to be at\u0020</string>
+    <string name="amhdescription">From the level of Anti-Mullerian Hormone (AMH) in your blood, your status is determined to be at\u0020</string>
     <string name="ovadescription">Based on the Ovarian Volume result, your status is determined to be at\u0020</string>
     <string name="abovemean">\u0020standard deviations above the general population mean, as indicated on the gauge above.</string>
     <string name="belowmean">\u0020standard deviations below the general population mean, as indicated on the gauge above.</string>
@@ -150,9 +156,9 @@
     <string name="research">You can view the research work in which this calculation is based on\u0020</string>
     <string name="here">here.</string>
     
-    <string name="positiverecommendation">\u0020Based on this result your fertility status is perfectly normal for a woman of your age. However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment.</string>
-    <string name="neutralrecommendation">\u0020Based on this result, your fertility status is below average for a woman of your age, causing some concern. However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment. </string>
-    <string name="negativerecommendation">\u0020Based on this result your fertility status is well below average for a woman of your age, causing concern.  However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment.</string>
+    <string name="positiverecommendation">Based on this result your fertility status is perfectly normal for a woman of your age. However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment.</string>
+    <string name="neutralrecommendation">Based on this result, your fertility status is below average for a woman of your age, causing some concern. However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment. </string>
+    <string name="negativerecommendation">Based on this result your fertility status is well below average for a woman of your age, causing concern.  However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment.</string>
     
     <string name="privacy">This application sends no information about your answers to any server. Your results are calculated directly on your device. The individualised results generated by MyOvaries is based on works published by renowned Medical practitioners and accredited academic laureates.\u0020</string>
 	<string name="privacy2">However, they are not responsible for the individual choices regarding treatment that you make based on the results using MyOvaries. Patients should always discuss their options for treatment with trained clinicians.</string>

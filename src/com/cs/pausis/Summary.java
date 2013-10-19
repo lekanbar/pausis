@@ -112,7 +112,13 @@ import android.widget.TextView;
     			fshResult = results.get(i);
     		}
     		else if(results.get(i).getType().equals(Result.Type.MMA.toString())) {
-    			mmaresultString = getString(R.string.mmaresult) + results.get(i).getValue() + "%";
+    			if(results.get(i).getStatus().equals(Result.Status.GREEN.toString()))
+    				mmaresultString = getString(R.string.mmaGresult);
+    			else if(results.get(i).getStatus().equals(Result.Status.ORANGE.toString()) || results.get(i).getStatus().equals(Result.Status.YELLOW.toString()))
+    				mmaresultString = getString(R.string.mmaYresult);
+    			else
+    				mmaresultString = getString(R.string.mmaRresult);
+    			
     			mmaResult = results.get(i);
 			}
     		else if(results.get(i).getType().equals(Result.Type.NGF.toString())) {
