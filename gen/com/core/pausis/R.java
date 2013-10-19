@@ -682,7 +682,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:divisions
+          @attr name android:divisions
         */
         public static final int GaugeViewStandardDeviations_divisions = 19;
         /**
@@ -696,7 +696,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:innerRimBorderWidth
+          @attr name android:innerRimBorderWidth
         */
         public static final int GaugeViewStandardDeviations_innerRimBorderWidth = 12;
         /**
@@ -710,7 +710,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:innerRimWidth
+          @attr name android:innerRimWidth
         */
         public static final int GaugeViewStandardDeviations_innerRimWidth = 11;
         /**
@@ -724,7 +724,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:needleHeight
+          @attr name android:needleHeight
         */
         public static final int GaugeViewStandardDeviations_needleHeight = 14;
         /**
@@ -738,7 +738,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:needleWidth
+          @attr name android:needleWidth
         */
         public static final int GaugeViewStandardDeviations_needleWidth = 13;
         /**
@@ -752,7 +752,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:outerBorderWidth
+          @attr name android:outerBorderWidth
         */
         public static final int GaugeViewStandardDeviations_outerBorderWidth = 9;
         /**
@@ -766,7 +766,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:outerRimWidth
+          @attr name android:outerRimWidth
         */
         public static final int GaugeViewStandardDeviations_outerRimWidth = 10;
         /**
@@ -780,7 +780,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:outerShadowWidth
+          @attr name android:outerShadowWidth
         */
         public static final int GaugeViewStandardDeviations_outerShadowWidth = 8;
         /**
@@ -790,7 +790,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.core.pausis:rangeColors
+          @attr name android:rangeColors
         */
         public static final int GaugeViewStandardDeviations_rangeColors = 22;
         /**
@@ -800,7 +800,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.core.pausis:rangeValues
+          @attr name android:rangeValues
         */
         public static final int GaugeViewStandardDeviations_rangeValues = 21;
         /**
@@ -814,7 +814,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:scaleEndValue
+          @attr name android:scaleEndValue
         */
         public static final int GaugeViewStandardDeviations_scaleEndValue = 17;
         /**
@@ -828,7 +828,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:scalePosition
+          @attr name android:scalePosition
         */
         public static final int GaugeViewStandardDeviations_scalePosition = 15;
         /**
@@ -842,7 +842,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:scaleStartAngle
+          @attr name android:scaleStartAngle
         */
         public static final int GaugeViewStandardDeviations_scaleStartAngle = 18;
         /**
@@ -856,7 +856,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:scaleStartValue
+          @attr name android:scaleStartValue
         */
         public static final int GaugeViewStandardDeviations_scaleStartValue = 16;
         /**
@@ -870,7 +870,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showInnerRim
+          @attr name android:showInnerRim
         */
         public static final int GaugeViewStandardDeviations_showInnerRim = 3;
         /**
@@ -884,7 +884,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showNeedle
+          @attr name android:showNeedle
         */
         public static final int GaugeViewStandardDeviations_showNeedle = 4;
         /**
@@ -898,7 +898,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showOuterBorder
+          @attr name android:showOuterBorder
         */
         public static final int GaugeViewStandardDeviations_showOuterBorder = 1;
         /**
@@ -912,7 +912,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showOuterRim
+          @attr name android:showOuterRim
         */
         public static final int GaugeViewStandardDeviations_showOuterRim = 2;
         /**
@@ -926,7 +926,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showOuterShadow
+          @attr name android:showOuterShadow
         */
         public static final int GaugeViewStandardDeviations_showOuterShadow = 0;
         /**
@@ -940,7 +940,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showRanges
+          @attr name android:showRanges
         */
         public static final int GaugeViewStandardDeviations_showRanges = 6;
         /**
@@ -954,7 +954,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showScale
+          @attr name android:showScale
         */
         public static final int GaugeViewStandardDeviations_showScale = 5;
         /**
@@ -968,7 +968,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:showText
+          @attr name android:showText
         */
         public static final int GaugeViewStandardDeviations_showText = 7;
         /**
@@ -982,7 +982,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:subdivisions
+          @attr name android:subdivisions
         */
         public static final int GaugeViewStandardDeviations_subdivisions = 20;
         /**
@@ -997,7 +997,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:textShadowColor
+          @attr name android:textShadowColor
         */
         public static final int GaugeViewStandardDeviations_textShadowColor = 29;
         /**
@@ -1008,7 +1008,7 @@ containing a value of this type.
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name com.core.pausis:textUnit
+          @attr name android:textUnit
         */
         public static final int GaugeViewStandardDeviations_textUnit = 26;
         /**
@@ -1023,7 +1023,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:textUnitColor
+          @attr name android:textUnitColor
         */
         public static final int GaugeViewStandardDeviations_textUnitColor = 27;
         /**
@@ -1037,7 +1037,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:textUnitSize
+          @attr name android:textUnitSize
         */
         public static final int GaugeViewStandardDeviations_textUnitSize = 28;
         /**
@@ -1048,7 +1048,7 @@ containing a value of this type.
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name com.core.pausis:textValue
+          @attr name android:textValue
         */
         public static final int GaugeViewStandardDeviations_textValue = 23;
         /**
@@ -1063,7 +1063,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:textValueColor
+          @attr name android:textValueColor
         */
         public static final int GaugeViewStandardDeviations_textValueColor = 24;
         /**
@@ -1077,7 +1077,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.core.pausis:textValueSize
+          @attr name android:textValueSize
         */
         public static final int GaugeViewStandardDeviations_textValueSize = 25;
     };
