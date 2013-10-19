@@ -421,13 +421,13 @@ containing a value of this type.
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int aboutus=0x7f060080;
-        public static final int aboutus1=0x7f060081;
-        public static final int aboutus2=0x7f060082;
-        public static final int aboutus3=0x7f060083;
-        public static final int aboutus4=0x7f060084;
-        public static final int aboutus5=0x7f060085;
-        public static final int aboutus6=0x7f060086;
+        public static final int aboutus=0x7f060081;
+        public static final int aboutus1=0x7f060082;
+        public static final int aboutus2=0x7f060083;
+        public static final int aboutus3=0x7f060084;
+        public static final int aboutus4=0x7f060085;
+        public static final int aboutus5=0x7f060086;
+        public static final int aboutus6=0x7f060087;
         public static final int abovemean=0x7f06006c;
         public static final int action_settings=0x7f060001;
         public static final int afc=0x7f060040;
@@ -476,7 +476,7 @@ containing a value of this type.
         public static final int fshRresult=0x7f060056;
         public static final int fshYresult=0x7f060055;
         public static final int fshhint=0x7f06003a;
-        public static final int fshresult=0x7f06008a;
+        public static final int fshresult=0x7f06008b;
         public static final int fshvalue=0x7f060039;
         public static final int fshvaluetext=0x7f06003b;
         public static final int general=0x7f060078;
@@ -501,21 +501,21 @@ containing a value of this type.
         public static final int mmaYresult=0x7f060058;
         public static final int mmagevaluetext=0x7f060032;
         public static final int mmagevaluetext2=0x7f060033;
-        public static final int mmaresult=0x7f06008b;
+        public static final int mmaresult=0x7f06008c;
         public static final int months=0x7f06000b;
         public static final int name=0x7f060011;
         public static final int negative=0x7f06005d;
         public static final int negativerecommendation=0x7f060072;
         public static final int neutral=0x7f06005e;
         public static final int neutralrecommendation=0x7f060071;
-        public static final int ngfresult=0x7f06008c;
+        public static final int ngfresult=0x7f06008d;
         public static final int ngfresult1=0x7f06005a;
         public static final int ngfresult2=0x7f06005b;
         public static final int ngfvalue=0x7f060044;
         public static final int ngfvaluetext=0x7f060045;
         public static final int no=0x7f06001d;
         public static final int nousage=0x7f060022;
-        public static final int ok=0x7f060089;
+        public static final int ok=0x7f06008a;
         public static final int ovadescription=0x7f06006b;
         public static final int ovaresult=0x7f060053;
         public static final int ovaryres=0x7f060002;
@@ -524,6 +524,7 @@ containing a value of this type.
         public static final int parity=0x7f06007e;
         public static final int pcalc=0x7f060021;
         public static final int percentile=0x7f060069;
+        public static final int periodinfo=0x7f06007f;
         public static final int periods=0x7f06001b;
         public static final int plswait=0x7f060060;
         public static final int positive=0x7f06005c;
@@ -533,7 +534,7 @@ containing a value of this type.
         public static final int privacytitle=0x7f060075;
         public static final int proceed=0x7f060048;
         public static final int race=0x7f06007d;
-        public static final int readmore=0x7f060087;
+        public static final int readmore=0x7f060088;
         public static final int required=0x7f060007;
         public static final int research=0x7f06006e;
         public static final int resnotavail=0x7f06002c;
@@ -544,10 +545,10 @@ containing a value of this type.
         public static final int resulttitle=0x7f060061;
         public static final int resvisual=0x7f06005f;
         public static final int rightov=0x7f06000d;
-        public static final int sampletext=0x7f06007f;
+        public static final int sampletext=0x7f060080;
         public static final int smoking=0x7f06007a;
         public static final int smokingtext=0x7f060046;
-        public static final int summary=0x7f060088;
+        public static final int summary=0x7f060089;
         public static final int todo=0x7f060026;
         public static final int typecountry=0x7f06004e;
         public static final int view=0x7f060027;

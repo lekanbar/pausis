@@ -135,7 +135,7 @@ import android.widget.TextView;
 			lblTitle.setText(getString(R.string.periods));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.sampletext));
+			lblDetails.setText(getString(R.string.periodinfo));
 		}
     	else if(infotype == BMI_INFO){
     		TextView lblTitle = (TextView)findViewById(R.id.lblTitle);

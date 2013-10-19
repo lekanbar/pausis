@@ -71,7 +71,7 @@ public class ResultVisualizer extends Activity  {
     	
     	//Setup the gauge based on the result type
     	if(result.getType().equals(Result.Type.AFC.toString())){
-    		researchpaper = "http://www.sciencedirect.com/science/article/pii/S0015028210021953";
+    		researchpaper = "http://www.ncbi.nlm.nih.gov/pubmed/20797717";
     		
     		//Show the gauge views for AFC
     		GaugeViewPercentiles mGaugeView3 = (GaugeViewPercentiles) findViewById(R.id.gauge_view3);
@@ -95,8 +95,8 @@ public class ResultVisualizer extends Activity  {
 			//Get value to be set on the gauge
 			float fl = calculateGValue(Float.parseFloat(result.getValue()));//Float.parseFloat(result.getValue()) < 0 ? Math.floor(Float.parseFloat(result.getValue())) : Math.ceil(Float.parseFloat(result.getValue()));
 			
-			DecimalFormat dFormat = new DecimalFormat("###.#");
-			float sd = Float.parseFloat(dFormat.format(Double.parseDouble(result.getValue())));
+			DecimalFormat dFormat = new DecimalFormat("###.##");
+			float sd = Float.parseFloat(dFormat.format(Float.parseFloat(result.getValue())));
 			mGaugeView1.setTargetValue(fl);//DEFAULT_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
     		mGaugeView2.setTargetValue(sd);
     		
@@ -133,7 +133,7 @@ public class ResultVisualizer extends Activity  {
 			if(result.getType().equals(Result.Type.AFC.toString()))
 				lblStatus.setTextColor(Color.parseColor("#F59207"));
 			else
-				lblStatus.setTextColor(Color.parseColor("#05FA6B"));
+				lblStatus.setTextColor(Color.parseColor("#E9F507"));
         	
         	recommendation = getString(R.string.neutralrecommendation);
 		}

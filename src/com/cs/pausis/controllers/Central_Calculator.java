@@ -185,12 +185,12 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     			result2 = new Result();
     			int percentile = afc.getPercentile();
     			
-    			if(percentile <= 5)
+    			if(percentile == 5)
     				result2.setStatus(Result.Status.RED.toString());
     			else if(percentile == 25)
     				result2.setStatus(Result.Status.ORANGE.toString());
-    			else if(percentile == 50 || percentile == 75)
-    				result2.setStatus(Result.Status.YELLOW.toString());
+    			/*else if(percentile == 50)
+    				result2.setStatus(Result.Status.YELLOW.toString());*/
     			else
     				result2.setStatus(Result.Status.GREEN.toString());
     			
@@ -205,14 +205,12 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     			result2 = new Result();
     			double zscore = amh.getZScore();
     			
-    			if(zscore >= 0)
+    			if(this.observedAMH.doubleValue() < 0.4 || zscore < -2)
+    				result2.setStatus(Result.Status.RED.toString());
+    			else if(zscore >= -1)
+    				result2.setStatus(Result.Status.YELLOW.toString());
+    			else 
     				result2.setStatus(Result.Status.GREEN.toString());
-    			else{    				
-    				if(calculateAgeWithMonth() >= 43 || zscore < -1)
-    					result2.setStatus(Result.Status.RED.toString());
-    				else
-    					result2.setStatus(Result.Status.YELLOW.toString());
-    			}
     			
     			result2.setValue(String.valueOf(zscore));
     			result2.setType(Result.Type.AMH.toString());
@@ -225,9 +223,9 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     			result2 = new Result();
     			double zscore = ova.getZScore();
     			
-    			if(zscore < 0)
+    			if(zscore <= -2)
     				result2.setStatus(Result.Status.RED.toString());
-    			else if(zscore >= 0  && zscore < 2)
+    			else if(zscore <= -1)
     				result2.setStatus(Result.Status.ORANGE.toString());
     			else
     				result2.setStatus(Result.Status.GREEN.toString());

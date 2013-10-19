@@ -185,11 +185,11 @@ public class AFC {
 				double afcInput = this.getObservedAfcValue();
 				
 				//Check for the position (percentile) of the user based on the input
-				if(afcInput < loadedItem.getTwentyFifth())
+				if(afcInput <= loadedItem.getFifth())
 					percentile = 5;
-				else if(afcInput >= loadedItem.getTwentyFifth() && afcInput < loadedItem.getFiftieth())
+				else if(afcInput > loadedItem.getFifth() && afcInput <= loadedItem.getTwentyFifth())
 					percentile = 25;
-				else if(afcInput >= loadedItem.getFiftieth() && afcInput < loadedItem.getSeventyFifth())
+				else if(afcInput > loadedItem.getTwentyFifth() && afcInput < loadedItem.getSeventyFifth())
 					percentile = 50;
 				else if(afcInput >= loadedItem.getSeventyFifth() && afcInput < loadedItem.getNinetyFifth())
 					percentile = 75;

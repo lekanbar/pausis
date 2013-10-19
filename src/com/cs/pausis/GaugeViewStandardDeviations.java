@@ -759,7 +759,8 @@ public class GaugeViewStandardDeviations extends View {
 	}
 
 	private String valueString(final float value) {
-		return String.format("%d", (int) value);
+		//return String.format("%d", (int) value);
+		return String.valueOf(value);
 	}
 
 	private float getValueForTick(final int tick) {
