@@ -1,5 +1,6 @@
 package com.cs.pausis;
 
+import java.text.DecimalFormat;
 import java.util.Hashtable;
 
 import org.achartengine.GraphicalView;
@@ -45,10 +46,10 @@ public class ResultVisualizer extends Activity  {
        if(isfirsttime) {
     	   //initialize the hashtable of gauge values
     	   DEFAULT_GAUGE_FULL_RANGE_VALUES = new Hashtable<Integer, Float>();
-    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-3, 0.0f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-2, 14.3f);
-    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-1, 28.6f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(Integer.valueOf(0), 42.9f);
-    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(1, 57.2f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(2, 71.5f);
-    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(3, 85.8f);
+    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-3, 0.0f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-2, 16.667f);
+    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(-1, 33.333f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(Integer.valueOf(0), 50.0f);
+    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(1, 66.667f); DEFAULT_GAUGE_FULL_RANGE_VALUES.put(2, 83.333f);
+    	   DEFAULT_GAUGE_FULL_RANGE_VALUES.put(3, 100.0f);
     	   
     	   AFC_GAUGE_FULL_RANGE_VALUES = new Hashtable<Integer, Float>();
     	   AFC_GAUGE_FULL_RANGE_VALUES.put(5, 0.0f); AFC_GAUGE_FULL_RANGE_VALUES.put(25, 20.0f);
@@ -92,19 +93,21 @@ public class ResultVisualizer extends Activity  {
 			GaugeViewStandardDeviations mGaugeView2 = (GaugeViewStandardDeviations) findViewById(R.id.gauge_view2);
 	    	
 			//Get value to be set on the gauge
-			double fl = Float.parseFloat(result.getValue()) < 0 ? Math.floor(Float.parseFloat(result.getValue())) : Math.ceil(Float.parseFloat(result.getValue()));
-			Integer sd = (int)fl;
-			mGaugeView1.setTargetValue(DEFAULT_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
+			float fl = calculateGValue(Float.parseFloat(result.getValue()));//Float.parseFloat(result.getValue()) < 0 ? Math.floor(Float.parseFloat(result.getValue())) : Math.ceil(Float.parseFloat(result.getValue()));
+			
+			DecimalFormat dFormat = new DecimalFormat("###.#");
+			float sd = Float.parseFloat(dFormat.format(Double.parseDouble(result.getValue())));
+			mGaugeView1.setTargetValue(fl);//DEFAULT_GAUGE_FULL_RANGE_VALUES.get(sd).floatValue());
     		mGaugeView2.setTargetValue(sd);
     		
     		//put together the message
     		if(result.getType().equals(Result.Type.AMH.toString())){
 				resultmessage = getString(R.string.amhdescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
-				researchpaper = "http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3137624&tool=pmcentrez&rendertype=abstract";
+				researchpaper = "http://www.pubmedcentral.nih.gov/pubmed/21789206";
 			}
 			else{
 				resultmessage = getString(R.string.ovadescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
-				researchpaper = "http://www.ncbi.nlm.nih.gov/pubmed/20111701";
+				researchpaper = "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3760857";
 			}
     		
     		layafc.setVisibility(View.GONE);
@@ -157,5 +160,10 @@ public class ResultVisualizer extends Activity  {
             	finish();
             }
         });
+    }
+    
+    private float calculateGValue(float zvalue){
+    	float g = (-1*(-3 - zvalue)*100)/6;
+    	return g;
     }
 }

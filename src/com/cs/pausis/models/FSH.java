@@ -63,35 +63,8 @@ public class FSH {
 	 */
 	public void calculateFsh() throws Exception{
 		if(checkInputValues()){
-			//Log Adjusted Obs AMH
-			/*double logAdjustedObsVolume = Math.log10(this.getObservedFsh() + 1);
-			
-			//Log Adjusted Pred AMH
-			double logAdjustedPredVolume = 0.0;
-			for(int i = 0; i < ovarianModelParameters.length; i++) {
-				logAdjustedPredVolume += (ovarianModelParameters[i].doubleValue() * Math.pow(this.getAge(), i));
-			}
-			
-			//Calculate zScore
-			double calcValue = (logAdjustedObsVolume - logAdjustedPredVolume) / SD;
-			setPercentage(calcValue);
-			
-			//Calculate SD values
-			int count = 3;
-			for (int i = 0; i < sdvalues.length; i++) {
-				if(i < 3) {
-					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume - count * SD)) - 1;
-					count--;
-				}
-				else if(i == 3) {
-					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume)) - 1;
-					count++;
-				}
-				else {
-					sdvalues[i] = Math.pow(10, (logAdjustedPredVolume + count * SD)) - 1;
-					count++;
-				}						
-			}*/
+			//if(this.getAge() > 30.0 && this.getObservedFsh() > 15)
+				
 		}
 		else{
 			throw new Exception("Required values were not specified.");

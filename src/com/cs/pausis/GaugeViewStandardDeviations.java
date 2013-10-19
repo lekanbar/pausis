@@ -73,16 +73,16 @@ public class GaugeViewStandardDeviations extends View {
 
 	public static final float SCALE_POSITION = 0.025f;
 	public static final float SCALE_START_VALUE = 0.0f;
-	public static final float SCALE_END_VALUE = 100.1f;
+	public static final float SCALE_END_VALUE = 100.0f;
 	public static final float SCALE_START_ANGLE = 30.0f;
-	public static final int SCALE_DIVISIONS = 7;
+	public static final int SCALE_DIVISIONS = 6;
 	public static final int SCALE_SUBDIVISIONS = 5;
 
 	public static final int[] OUTER_SHADOW_COLORS = { Color.argb(40, 255, 254, 187), Color.argb(20, 255, 247, 219), Color.argb(5, 255, 255, 255) };
 	public static final float[] OUTER_SHADOW_POS = { 0.90f, 0.95f, 0.99f };
 
 	//Default ranges pre-set for handling standard deviations on the 0 to 100 scale
-	public static final float[] RANGE_VALUES = { 14.3f, 28.6f, 42.9f, 57.2f, 71.5f, 100.1f };
+	public static final float[] RANGE_VALUES = { 16.667f, 33.333f, 50.0f, 66.667f, 83.333f, 100.0f };
 	public static final int[] RANGE_COLORS = { Color.rgb(231, 32, 43), Color.rgb(232, 111, 33), Color.rgb(232, 186, 33), Color.rgb(232, 231, 33),
 			                                   Color.rgb(5, 250, 107), Color.rgb(21, 176, 26) };//Pre-set colors for the ranges
 
@@ -698,55 +698,55 @@ public class GaugeViewStandardDeviations extends View {
 			final float y3 = y1 + 0.045f; // height of subdivision
 
 			final float value = getValueForTick(i);
-			DecimalFormat dFormat = new DecimalFormat("##.#");
+			DecimalFormat dFormat = new DecimalFormat("###.###");
 			String formattedvalue = dFormat.format(value);
 			
 			//Since the scale is meant to be 7 values only i.e from -3 to +3, 
 			//therefore the 100 was divided into 7 places which resulted in the ticked values below
 			final Paint paint = getRangePaint(value);
-			if (value == 0.0f) {//-3
+			if (value == 0.000f) {//-3
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("-3", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (formattedvalue.equals("14.3")) {//-2
+			else if (formattedvalue.equals("16.667")) {//-2
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("-2", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (formattedvalue.equals("28.6")) {//-1
+			else if (formattedvalue.equals("33.333")) {//-1
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("-1", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (formattedvalue.equals("42.9")) {//0
+			else if (formattedvalue.equals("50")) {//0
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("0", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (formattedvalue.equals("57.2")) {//+1
+			else if (formattedvalue.equals("66.667")) {//+1
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("+1", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (formattedvalue.equals("71.5")) {//+2
+			else if (formattedvalue.equals("83.333")) {//+2
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("+2", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (formattedvalue.equals("85.8")) {//+3
+			else if (formattedvalue.equals("100")) {//+3
 				// Draw a division tick
 				canvas.drawLine(0.5f, y1, 0.5f, y3, paint);
 				// Draw the text 0.15 away from the division tick
 				canvas.drawText("+3", 0.5f, y3 + 0.045f, paint);
 			}
-			else if (value > 85.8f) {//if value is greater than 85.8 stop ticking the canvas
+			else if (value > 100.0f) {//if value is greater than 85.8 stop ticking the canvas
 				//break;
 			}
 			else {
