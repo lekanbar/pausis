@@ -130,6 +130,7 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
         		ngf = new NGF(this.context);
         		ngf.setAge(calculateAge());
         		ngf.calculateNgf();
+        		ngf.calculateFutureNgf();
         	}
 			catch (Exception e)
 	        {
@@ -242,6 +243,7 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     		if(birthMonth != 0 && birthYear != 0){
     			result2 = new Result();    			
     			result2.setValue(String.valueOf(ngf.getPercentage()));
+    			result2.setValue2(String.valueOf(ngf.getPercentage2()));
     			result2.setType(Result.Type.NGF.toString());
     			result2.setResultAvailable(ngf.isResultAvailable());
     			

@@ -110,7 +110,7 @@ import android.widget.TextView;
     			mmaResult = results.get(i);
 			}
     		else if(results.get(i).getType().equals(Result.Type.NGF.toString())) {
-    			ngfresultString = getString(R.string.ngfresult) + results.get(i).getValue() + "%";
+    			ngfresultString = getString(R.string.ngfresult1) + results.get(i).getValue() + "%" +getString(R.string.ngfresult2) + results.get(i).getValue2() + "%";
     			ngfResult = results.get(i);
 			}
     	}

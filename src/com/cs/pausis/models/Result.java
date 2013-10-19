@@ -20,6 +20,7 @@ public class Result implements Parcelable {
 	private String iD,
 				   status,
 				   value,
+				   value2,
 				   description,
 				   type;
 	private boolean resultAvailable;
@@ -50,6 +51,7 @@ public class Result implements Parcelable {
 		iD = "";
 		status = "0";
 		value = "0";
+		value2 = "0";
 		description = "";
 		type = "";
 	}
@@ -80,6 +82,14 @@ public class Result implements Parcelable {
 
 	public void setValue(String value) {
 		this.value = value;
+	}
+	
+	public String getValue2() {
+		return value2;
+	}
+
+	public void setValue2(String value) {
+		this.value2 = value;
 	}
 
 	public String getDescription() {
@@ -123,6 +133,7 @@ public class Result implements Parcelable {
 		out.writeString(iD);
 		out.writeString(status);
 		out.writeString(value);
+		out.writeString(value2);
 		out.writeString(type);
 		out.writeByte((byte) (resultAvailable ? 1 : 0));
 		
@@ -138,6 +149,7 @@ public class Result implements Parcelable {
 		this.setiD(in.readString());
 		this.setStatus(in.readString());
 		this.setValue(in.readString());
+		this.setValue2(in.readString());
 		this.setType(in.readString());
 		this.setResultAvailable(in.readByte() == 1);
 		

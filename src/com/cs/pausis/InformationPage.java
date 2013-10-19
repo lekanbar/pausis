@@ -96,7 +96,8 @@ import android.widget.TextView;
 			lblTitle.setText(getString(R.string.ngfvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.ngfvaluetext));
+			lblDetails.setText(Html.fromHtml(getString(R.string.ngfvaluetext) + "<a href=\"http://www.ncbi.nlm.nih.gov/pubmed/20111701\">http://www.ncbi.nlm.nih.gov/pubmed/20111701</a>"));
+			lblDetails.setMovementMethod(LinkMovementMethod.getInstance());
 		}
 		else if (infotype == OVARIAN_VOL_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);

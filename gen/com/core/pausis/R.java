@@ -426,17 +426,17 @@ containing a value of this type.
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int aboutus=0x7f06007b;
-        public static final int aboutus1=0x7f06007c;
-        public static final int aboutus2=0x7f06007d;
-        public static final int aboutus3=0x7f06007e;
-        public static final int aboutus4=0x7f06007f;
-        public static final int aboutus5=0x7f060080;
-        public static final int aboutus6=0x7f060081;
-        public static final int abovemean=0x7f060067;
+        public static final int aboutus=0x7f06007c;
+        public static final int aboutus1=0x7f06007d;
+        public static final int aboutus2=0x7f06007e;
+        public static final int aboutus3=0x7f06007f;
+        public static final int aboutus4=0x7f060080;
+        public static final int aboutus5=0x7f060081;
+        public static final int aboutus6=0x7f060082;
+        public static final int abovemean=0x7f060068;
         public static final int action_settings=0x7f060001;
         public static final int afc=0x7f060040;
-        public static final int afcdescription=0x7f060063;
+        public static final int afcdescription=0x7f060064;
         public static final int afchint=0x7f060042;
         public static final int afcresult=0x7f060051;
         public static final int afcvalue=0x7f060041;
@@ -446,18 +446,18 @@ containing a value of this type.
         public static final int ageerrortitle=0x7f060024;
         public static final int allrights=0x7f060012;
         public static final int amh=0x7f060034;
-        public static final int amhdescription=0x7f060065;
+        public static final int amhdescription=0x7f060066;
         public static final int amhhint=0x7f060036;
         public static final int amhresult=0x7f060052;
         public static final int amhvalue=0x7f060035;
         public static final int amhvaluetext=0x7f060037;
         public static final int and=0x7f060009;
         public static final int app_name=0x7f060000;
-        public static final int average=0x7f060074;
-        public static final int belowmean=0x7f060068;
+        public static final int average=0x7f060075;
+        public static final int belowmean=0x7f060069;
         public static final int birthmonth=0x7f06004b;
         public static final int birthyear=0x7f06004a;
-        public static final int bmi=0x7f060076;
+        public static final int bmi=0x7f060077;
         public static final int bmivaluetext=0x7f060047;
         public static final int body=0x7f060017;
         public static final int calcing=0x7f06004f;
@@ -469,7 +469,7 @@ containing a value of this type.
         public static final int copyright=0x7f060010;
         public static final int delItem=0x7f06002b;
         public static final int delete=0x7f060028;
-        public static final int descriptiontitle=0x7f060062;
+        public static final int descriptiontitle=0x7f060063;
         public static final int empty=0x7f060003;
         public static final int exit=0x7f06002e;
         public static final int firstuse=0x7f06000e;
@@ -481,13 +481,13 @@ containing a value of this type.
         public static final int fshresult=0x7f060054;
         public static final int fshvalue=0x7f060039;
         public static final int fshvaluetext=0x7f06003b;
-        public static final int general=0x7f060073;
-        public static final int generaladvice=0x7f060072;
-        public static final int genetics=0x7f060077;
+        public static final int general=0x7f060074;
+        public static final int generaladvice=0x7f060073;
+        public static final int genetics=0x7f060078;
         public static final int genetics2=0x7f06001a;
         public static final int goback=0x7f06002a;
         public static final int height=0x7f060015;
-        public static final int here=0x7f06006a;
+        public static final int here=0x7f06006b;
         public static final int history=0x7f06001f;
         public static final int howold=0x7f060006;
         public static final int iam=0x7f060008;
@@ -503,53 +503,55 @@ containing a value of this type.
         public static final int mmaresult=0x7f060055;
         public static final int months=0x7f06000b;
         public static final int name=0x7f060011;
-        public static final int negative=0x7f060058;
-        public static final int negativerecommendation=0x7f06006d;
-        public static final int neutral=0x7f060059;
-        public static final int neutralrecommendation=0x7f06006c;
-        public static final int ngfresult=0x7f060056;
+        public static final int negative=0x7f060059;
+        public static final int negativerecommendation=0x7f06006e;
+        public static final int neutral=0x7f06005a;
+        public static final int neutralrecommendation=0x7f06006d;
+        public static final int ngfresult=0x7f060086;
+        public static final int ngfresult1=0x7f060056;
+        public static final int ngfresult2=0x7f060057;
         public static final int ngfvalue=0x7f060044;
         public static final int ngfvaluetext=0x7f060045;
         public static final int no=0x7f06001d;
         public static final int nousage=0x7f060022;
-        public static final int ok=0x7f060084;
-        public static final int ovadescription=0x7f060066;
+        public static final int ok=0x7f060085;
+        public static final int ovadescription=0x7f060067;
         public static final int ovaresult=0x7f060053;
         public static final int ovaryres=0x7f060002;
         public static final int overall=0x7f06001e;
-        public static final int paper=0x7f060071;
-        public static final int parity=0x7f060079;
+        public static final int paper=0x7f060072;
+        public static final int parity=0x7f06007a;
         public static final int pcalc=0x7f060021;
-        public static final int percentile=0x7f060064;
+        public static final int percentile=0x7f060065;
         public static final int periods=0x7f06001b;
-        public static final int plswait=0x7f06005b;
-        public static final int positive=0x7f060057;
-        public static final int positiverecommendation=0x7f06006b;
-        public static final int privacy=0x7f06006e;
-        public static final int privacy2=0x7f06006f;
-        public static final int privacytitle=0x7f060070;
+        public static final int plswait=0x7f06005c;
+        public static final int positive=0x7f060058;
+        public static final int positiverecommendation=0x7f06006c;
+        public static final int privacy=0x7f06006f;
+        public static final int privacy2=0x7f060070;
+        public static final int privacytitle=0x7f060071;
         public static final int proceed=0x7f060048;
-        public static final int race=0x7f060078;
-        public static final int readmore=0x7f060082;
+        public static final int race=0x7f060079;
+        public static final int readmore=0x7f060083;
         public static final int required=0x7f060007;
-        public static final int research=0x7f060069;
+        public static final int research=0x7f06006a;
         public static final int resnotavail=0x7f06002c;
         public static final int resnotavailfull=0x7f06002d;
-        public static final int result=0x7f06005d;
-        public static final int resultmessage=0x7f06005f;
-        public static final int resultstatus=0x7f06005e;
-        public static final int resulttitle=0x7f06005c;
-        public static final int resvisual=0x7f06005a;
+        public static final int result=0x7f06005e;
+        public static final int resultmessage=0x7f060060;
+        public static final int resultstatus=0x7f06005f;
+        public static final int resulttitle=0x7f06005d;
+        public static final int resvisual=0x7f06005b;
         public static final int rightov=0x7f06000d;
-        public static final int sampletext=0x7f06007a;
-        public static final int smoking=0x7f060075;
+        public static final int sampletext=0x7f06007b;
+        public static final int smoking=0x7f060076;
         public static final int smokingtext=0x7f060046;
-        public static final int summary=0x7f060083;
+        public static final int summary=0x7f060084;
         public static final int todo=0x7f060026;
         public static final int typecountry=0x7f06004e;
         public static final int view=0x7f060027;
-        public static final int visualize=0x7f060061;
-        public static final int visualizer=0x7f060060;
+        public static final int visualize=0x7f060062;
+        public static final int visualizer=0x7f060061;
         public static final int vol=0x7f06003c;
         public static final int volhint=0x7f06003e;
         public static final int volvalue=0x7f06003d;
@@ -678,7 +680,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:divisions
+          @attr name com.core.pausis:divisions
         */
         public static final int GaugeViewStandardDeviations_divisions = 19;
         /**
@@ -692,7 +694,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:innerRimBorderWidth
+          @attr name com.core.pausis:innerRimBorderWidth
         */
         public static final int GaugeViewStandardDeviations_innerRimBorderWidth = 12;
         /**
@@ -706,7 +708,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:innerRimWidth
+          @attr name com.core.pausis:innerRimWidth
         */
         public static final int GaugeViewStandardDeviations_innerRimWidth = 11;
         /**
@@ -720,7 +722,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:needleHeight
+          @attr name com.core.pausis:needleHeight
         */
         public static final int GaugeViewStandardDeviations_needleHeight = 14;
         /**
@@ -734,7 +736,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:needleWidth
+          @attr name com.core.pausis:needleWidth
         */
         public static final int GaugeViewStandardDeviations_needleWidth = 13;
         /**
@@ -748,7 +750,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:outerBorderWidth
+          @attr name com.core.pausis:outerBorderWidth
         */
         public static final int GaugeViewStandardDeviations_outerBorderWidth = 9;
         /**
@@ -762,7 +764,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:outerRimWidth
+          @attr name com.core.pausis:outerRimWidth
         */
         public static final int GaugeViewStandardDeviations_outerRimWidth = 10;
         /**
@@ -776,7 +778,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:outerShadowWidth
+          @attr name com.core.pausis:outerShadowWidth
         */
         public static final int GaugeViewStandardDeviations_outerShadowWidth = 8;
         /**
@@ -786,7 +788,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:rangeColors
+          @attr name com.core.pausis:rangeColors
         */
         public static final int GaugeViewStandardDeviations_rangeColors = 22;
         /**
@@ -796,7 +798,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:rangeValues
+          @attr name com.core.pausis:rangeValues
         */
         public static final int GaugeViewStandardDeviations_rangeValues = 21;
         /**
@@ -810,7 +812,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:scaleEndValue
+          @attr name com.core.pausis:scaleEndValue
         */
         public static final int GaugeViewStandardDeviations_scaleEndValue = 17;
         /**
@@ -824,7 +826,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:scalePosition
+          @attr name com.core.pausis:scalePosition
         */
         public static final int GaugeViewStandardDeviations_scalePosition = 15;
         /**
@@ -838,7 +840,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:scaleStartAngle
+          @attr name com.core.pausis:scaleStartAngle
         */
         public static final int GaugeViewStandardDeviations_scaleStartAngle = 18;
         /**
@@ -852,7 +854,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:scaleStartValue
+          @attr name com.core.pausis:scaleStartValue
         */
         public static final int GaugeViewStandardDeviations_scaleStartValue = 16;
         /**
@@ -866,7 +868,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showInnerRim
+          @attr name com.core.pausis:showInnerRim
         */
         public static final int GaugeViewStandardDeviations_showInnerRim = 3;
         /**
@@ -880,7 +882,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showNeedle
+          @attr name com.core.pausis:showNeedle
         */
         public static final int GaugeViewStandardDeviations_showNeedle = 4;
         /**
@@ -894,7 +896,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showOuterBorder
+          @attr name com.core.pausis:showOuterBorder
         */
         public static final int GaugeViewStandardDeviations_showOuterBorder = 1;
         /**
@@ -908,7 +910,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showOuterRim
+          @attr name com.core.pausis:showOuterRim
         */
         public static final int GaugeViewStandardDeviations_showOuterRim = 2;
         /**
@@ -922,7 +924,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showOuterShadow
+          @attr name com.core.pausis:showOuterShadow
         */
         public static final int GaugeViewStandardDeviations_showOuterShadow = 0;
         /**
@@ -936,7 +938,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showRanges
+          @attr name com.core.pausis:showRanges
         */
         public static final int GaugeViewStandardDeviations_showRanges = 6;
         /**
@@ -950,7 +952,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showScale
+          @attr name com.core.pausis:showScale
         */
         public static final int GaugeViewStandardDeviations_showScale = 5;
         /**
@@ -964,7 +966,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:showText
+          @attr name com.core.pausis:showText
         */
         public static final int GaugeViewStandardDeviations_showText = 7;
         /**
@@ -978,7 +980,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:subdivisions
+          @attr name com.core.pausis:subdivisions
         */
         public static final int GaugeViewStandardDeviations_subdivisions = 20;
         /**
@@ -993,7 +995,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textShadowColor
+          @attr name com.core.pausis:textShadowColor
         */
         public static final int GaugeViewStandardDeviations_textShadowColor = 29;
         /**
@@ -1004,7 +1006,7 @@ containing a value of this type.
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name android:textUnit
+          @attr name com.core.pausis:textUnit
         */
         public static final int GaugeViewStandardDeviations_textUnit = 26;
         /**
@@ -1019,7 +1021,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textUnitColor
+          @attr name com.core.pausis:textUnitColor
         */
         public static final int GaugeViewStandardDeviations_textUnitColor = 27;
         /**
@@ -1033,7 +1035,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textUnitSize
+          @attr name com.core.pausis:textUnitSize
         */
         public static final int GaugeViewStandardDeviations_textUnitSize = 28;
         /**
@@ -1044,7 +1046,7 @@ containing a value of this type.
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name android:textValue
+          @attr name com.core.pausis:textValue
         */
         public static final int GaugeViewStandardDeviations_textValue = 23;
         /**
@@ -1059,7 +1061,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textValueColor
+          @attr name com.core.pausis:textValueColor
         */
         public static final int GaugeViewStandardDeviations_textValueColor = 24;
         /**
@@ -1073,7 +1075,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textValueSize
+          @attr name com.core.pausis:textValueSize
         */
         public static final int GaugeViewStandardDeviations_textValueSize = 25;
     };

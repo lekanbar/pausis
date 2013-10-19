@@ -80,9 +80,14 @@
     <string name="afchint">Enter AFC value</string>
     <string name="afcvaluetext">"Antral-Follicle count (AFC) is a value that can be determined from a trans-vaginal ultrasound scan, it is the number of antral follicles on both ovaries. In determining the ovarian reserve level, AFC is a major determinant because is gives a fairly accurate number of eggs (oocytes) remaining in the ovaries."</string>
     
-    <string name="ngfvalue">NGF (Age-based)</string>
-    <string name="ngfvaluetext">"Acccording to our research it has been shown that Non-growing follicles (NGF) declines with age. 
-        This is the reason why the model has been added to the result generation in this software, in order to give additional accuracy to the result."</string>
+    <string name="ngfvalue">Your remaining Ovarian Reserve</string>
+    <string name="ngfvaluetext">"The cells that can become eggs are called non-growing follicles (<b>NGFs</b> for short). You were born with a fixed number of NGFs in your ovaries, this is your <b>Ovarian Reserve</b>. Typically there are about 400,000 in each ovary, but there is a large amount of variation so you could have been born with between 70,000 and 3 million NGFs.
+        <br />
+        There is a cycle that recruits some NGFs which grow into bigger and bigger follicles, but most of them die during the cycle. Only very few (about 400 for your whole reproductive lifespan) turn into eggs that can be fertilized.
+        <br />
+        It is believed that women who start with a high Ovarian Reserve lose NGFs quickly and women who have a low Ovarian Reserve lose NGFs slowly. This is because menopause happens for all women when there are about 1,000 NGFs left at an average age of 51 years.
+        <br />
+        This enables us to estimate the percentage of NGFs remaining for a woman of any age. The estimates are based on the Wallace-Kelsey model of NGF populations throughout life. Click on the link below to read the <b>Science behind your results</b>:\u0020"</string>
     
     <string name="smokingtext">"Smoking is linked to an earlier menopause, because in late reproductive age women at a given time, smokers are more likely to be menopausal than non-smokers. 
         Research has shown that women who smoke more often than not reach the menopausal age earlier that non-smokers."</string>
@@ -104,7 +109,8 @@
     <string name="ovaresult">Result by Ovarian Volume is:\u0020</string>
     <string name="fshresult">Chance of Live Birth by FSH is:\u0020</string>
     <string name="mmaresult">"Chance of Live Birth by Mother's Menopause Age is:\u0020"</string>
-    <string name="ngfresult">"Chance of Live Birth by NGF is:\u0020"</string>
+    <string name="ngfresult1">"You have about\u0020"</string>
+    <string name="ngfresult2">"\u0020of the eggs you were born with. In 3 years time this percentage is estimated to be:\u0020"</string>
     
     <string name="positive">Positive</string>
     <string name="negative">Negative</string>
