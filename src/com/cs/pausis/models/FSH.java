@@ -37,7 +37,7 @@ public class FSH {
 		this.context = context;
 		Age = 0.0;
 		ObservedFsh = 0.0;
-		Percentage = 40.0;
+		Percentage = 0.0;
 		sdvalues = new double[7];
 		resultAvailable = true;
 	}
@@ -63,7 +63,7 @@ public class FSH {
 	 */
 	public void calculateFsh() throws Exception{
 		if(checkInputValues()){
-			//if(this.getAge() > 30.0 && this.getObservedFsh() > 15)
+			//if(this.getObservedFsh() > 20.0)
 				
 		}
 		else{

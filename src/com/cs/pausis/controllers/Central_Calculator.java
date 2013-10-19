@@ -250,7 +250,15 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     			results.add(result2);
     		} 
     		if(this.observedFSH != null){//FSH result
-    			result2 = new Result();    			
+    			result2 = new Result();  
+    			
+    			if(observedFSH.doubleValue() > 25)
+    				result2.setStatus(Result.Status.RED.toString());
+    			else if(observedFSH.doubleValue() > 10)
+    				result2.setStatus(Result.Status.ORANGE.toString());
+    			else
+    				result2.setStatus(Result.Status.GREEN.toString());
+    				
     			result2.setValue(String.valueOf(fsh.getPercentage()));
     			result2.setType(Result.Type.FSH.toString());
     			result2.setResultAvailable(fsh.isResultAvailable());

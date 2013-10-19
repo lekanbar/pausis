@@ -66,9 +66,20 @@
         it is an important part of the predictive measures of the ovarian reserve levels in humans. It is important to note that the AMH value peaks at approximately the age of 25.</string>
     
     <string name="fsh">FSH value.</string>
-    <string name="fshvalue">FSH Value (mLU/mL)</string>
+    <string name="fshvalue">FSH Value (IU/L)</string>
     <string name="fshhint">Your FSH value</string>
-    <string name="fshvaluetext">Follicle-stimulating Hormone (FSH) is a hormone that stimulates the growth of egg follicles, therefore it plays a vital role in helping to determine the ovarian reserve.</string>
+    <string name="fshvaluetext">"Follicle-stimulating Hormone (FSH) is a hormone that stimulates the growth of egg follicles, therefore it plays a vital role in helping to determine your fertility.
+     \n
+     Any FSH value below 10 International Units per Litre (IU/L) is within normal ranges. 
+     
+     Elevated FSH indicates that your are either menopausal or approaching the menopause. What elevated means depends on where in the cycle the FSH measurement was taken.     
+     
+     \n If the measurement was taken in the <b>Early Follicular Phase</b> (typically day three to five, counted from last menstruation), then any value over 10 IU/L is elevated, indicating approach of the menopause.
+     \n
+     If the measurement is taken at any other time during the cycle, then a value over 25 IU/L is elevated.
+     \n
+     Click on the following link to read more about the <b>Science behind your FSH levels</b>:\u0020
+     "</string>
     
     <string name="vol">ovarian volume.</string>
     <string name="volvalue">Ovarian Volume (mL)</string>
@@ -105,16 +116,19 @@
     <string name="calcing">Processing</string>
     <string name="calcvalue">Calculated value:\u0020</string>
     <string name="afcresult">Result by Antral-follicle count is:\u0020</string>
-    <string name="amhresult">Result by AMH volume is:\u0020</string>
+    <string name="amhresult">Your AMH status is:\u0020</string>
     <string name="ovaresult">Result by Ovarian Volume is:\u0020</string>
-    <string name="fshresult">Chance of Live Birth by FSH is:\u0020</string>
+    <string name="fshGresult">Your FSH level is within normal ranges.</string>
+    <string name="fshYresult">Your FSH level may be abnormally high.</string>
+    <string name="fshRresult">Your FSH level is abnormally high.</string>
+    
     <string name="mmaresult">"Chance of Live Birth by Mother's Menopause Age is:\u0020"</string>
     <string name="ngfresult1">"You have about\u0020"</string>
     <string name="ngfresult2">"\u0020of the eggs you were born with. In 3 years time this percentage is estimated to be:\u0020"</string>
     
-    <string name="positive">Positive</string>
-    <string name="negative">Negative</string>
-    <string name="neutral">Neutral</string>
+    <string name="positive">Green</string>
+    <string name="negative">Red</string>
+    <string name="neutral">Amber</string>
     
     <string name="resvisual">Result Visualization</string>
     <string name="plswait">Please wait....</string>
@@ -128,7 +142,7 @@
     
     <string name="afcdescription">Based on the Antral-Follicle count (AFC) result, your status is determined to be at the\u0020</string>
     <string name="percentile">\u0020percentile above the general pouplation mean, as indicated on the gauge above.</string>
-    <string name="amhdescription">Based on the Anti-Mullerian Hormone (AMH) result, your status is determined to be at\u0020</string>
+    <string name="amhdescription">Based on the level of Anti-Mullerian Hormone (AMH) in your blood, your status is determined to be at\u0020</string>
     <string name="ovadescription">Based on the Ovarian Volume result, your status is determined to be at\u0020</string>
     <string name="abovemean">\u0020standard deviations above the general population mean, as indicated on the gauge above.</string>
     <string name="belowmean">\u0020standard deviations below the general population mean, as indicated on the gauge above.</string>
@@ -136,9 +150,9 @@
     <string name="research">You can view the research work in which this calculation is based on\u0020</string>
     <string name="here">here.</string>
     
-    <string name="positiverecommendation">\u0020Therefore, based on this result your ovaries are fine, however, it is recommended that you see your doctor for further enquiries about this result.</string>
-    <string name="neutralrecommendation">\u0020Therefore, based on this result your ovaries are neutral, however, it is recommended that you see your doctor for further enquiries about this result.</string>
-    <string name="negativerecommendation">\u0020Therefore, based on this result your ovaries are not fine, however, it is recommended that you see your doctor for further enquiries about this result.</string>
+    <string name="positiverecommendation">\u0020Based on this result your fertility status is perfectly normal for a woman of your age. However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment.</string>
+    <string name="neutralrecommendation">\u0020Based on this result, your fertility status is below average for a woman of your age, causing some concern. However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment. </string>
+    <string name="negativerecommendation">\u0020Based on this result your fertility status is well below average for a woman of your age, causing concern.  However, other indicators may affect your fertility, and you should consult a qualified physician for a complete assessment.</string>
     
     <string name="privacy">This application sends no information about your answers to any server. Your results are calculated directly on your device. The individualised results generated by MyOvaries is based on works published by renowned Medical practitioners and accredited academic laureates.\u0020</string>
 	<string name="privacy2">However, they are not responsible for the individual choices regarding treatment that you make based on the results using MyOvaries. Patients should always discuss their options for treatment with trained clinicians.</string>

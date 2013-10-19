@@ -102,7 +102,13 @@ import android.widget.TextView;
     	//Check for the FSH, NGF and MMA results and remove them from the list 
     	for(int i = 0;i < results.size();i++){
     		if(results.get(i).getType().equals(Result.Type.FSH.toString())){
-    			fshresultString = getString(R.string.fshresult) + results.get(i).getValue() + "%";
+    			if(results.get(i).getStatus().equals(Result.Status.GREEN.toString()))
+    				fshresultString = getString(R.string.fshGresult);
+    			else if(results.get(i).getStatus().equals(Result.Status.ORANGE.toString()) || results.get(i).getStatus().equals(Result.Status.YELLOW.toString()))
+    				fshresultString = getString(R.string.fshYresult);
+    			else
+    				fshresultString = getString(R.string.fshRresult);
+    				
     			fshResult = results.get(i);
     		}
     		else if(results.get(i).getType().equals(Result.Type.MMA.toString())) {

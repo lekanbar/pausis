@@ -118,7 +118,8 @@ import android.widget.TextView;
 			lblTitle.setText(getString(R.string.fshvalue));
 			
 			TextView lblDetails = (TextView)findViewById(R.id.lblDetails);
-			lblDetails.setText(getString(R.string.fshvaluetext));
+			lblDetails.setText(Html.fromHtml(getString(R.string.fshvaluetext) + "<a href=\"http://www.ncbi.nlm.nih.gov/pubmed/16776638\">http://www.ncbi.nlm.nih.gov/pubmed/16776638</a>"));
+			lblDetails.setMovementMethod(LinkMovementMethod.getInstance());
 		}
 		else if (infotype == MMAge_INFO) {
 			TextView lblTitle = (TextView)findViewById(R.id.lblTitle);

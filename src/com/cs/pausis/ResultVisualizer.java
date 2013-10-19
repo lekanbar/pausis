@@ -103,7 +103,7 @@ public class ResultVisualizer extends Activity  {
     		//put together the message
     		if(result.getType().equals(Result.Type.AMH.toString())){
 				resultmessage = getString(R.string.amhdescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
-				researchpaper = "http://www.pubmedcentral.nih.gov/pubmed/21789206";
+				researchpaper = "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3137624/";
 			}
 			else{
 				resultmessage = getString(R.string.ovadescription) + (sd <= 0 ? sd : "+" + sd) + (sd < 0 ? getString(R.string.belowmean) : getString(R.string.abovemean));
