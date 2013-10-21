@@ -207,7 +207,7 @@ public class Central_Calculator extends AsyncTask<String, Integer, Drawable>
     			
     			if(this.observedAMH.doubleValue() < 0.4 || zscore < -2)
     				result2.setStatus(Result.Status.RED.toString());
-    			else if(zscore >= -1)
+    			else if(zscore <= -1)
     				result2.setStatus(Result.Status.YELLOW.toString());
     			else 
     				result2.setStatus(Result.Status.GREEN.toString());
